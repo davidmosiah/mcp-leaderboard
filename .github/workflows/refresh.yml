@@ -1,0 +1,46 @@
+name: Refresh leaderboard
+on:
+  schedule:
+    - cron: "0 6 * * 1" # weekly, Monday 06:00 UTC
+  workflow_dispatch:
+    inputs:
+      limit:
+        description: "Cap the number of servers scored (blank = whole corpus)"
+        required: false
+        default: ""
+permissions:
+  contents: write
+concurrency:
+  group: refresh
+  cancel-in-progress: false
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - name: Build corpus
+        run: npm run corpus
+      - name: Score corpus
+        run: node scripts/run-leaderboard.mjs ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
+        env:
+          CONCURRENCY: "4"
+          TARGET_TIMEOUT_MS: "120000"
+      - name: Render
+        run: npm run render
+      - name: Commit refreshed leaderboard
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add LEADERBOARD.md data/corpus.json data/leaderboard.json
+          if git diff --staged --quiet; then
+            echo "no changes"
+          else
+            git commit -m "chore: refresh leaderboard $(date -u +%Y-%m-%d)"
+            git push
+          fi

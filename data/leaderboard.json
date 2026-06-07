@@ -1,0 +1,721 @@
+{
+  "generatedAt": "2026-06-07T13:22:10.442Z",
+  "engine": "mcp-scorecard",
+  "counts": {
+    "total": 10,
+    "scored": 10,
+    "unreachable": 0
+  },
+  "results": [
+    {
+      "name": "astral-mcp",
+      "npm": "astral-mcp",
+      "repo": null,
+      "status": "scored",
+      "score": 77,
+      "serverName": "astral-mcp-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 10,
+          "status": "pass"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "delx-memory",
+      "npm": "delx-memory",
+      "repo": null,
+      "status": "scored",
+      "score": 57,
+      "serverName": "delx-memory",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "delx-mcp-server",
+      "npm": "delx-mcp-server",
+      "repo": null,
+      "status": "scored",
+      "score": 58,
+      "serverName": "Delx Witness Protocol",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 1,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 6,
+          "status": "warn"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Agent manifest"
+    },
+    {
+      "name": "wellness-nourish",
+      "npm": "wellness-nourish",
+      "repo": null,
+      "status": "scored",
+      "score": 85,
+      "serverName": "nourish-mcp",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 4,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 8,
+          "status": "warn"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 9,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 10,
+          "status": "pass"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "delx-living-body",
+      "npm": "delx-living-body",
+      "repo": null,
+      "status": "scored",
+      "score": 74,
+      "serverName": "living-body-mcp-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 7,
+          "status": "warn"
+        }
+      ],
+      "topGap": "Agent manifest"
+    },
+    {
+      "name": "whoop-mcp-unofficial",
+      "npm": "whoop-mcp-unofficial",
+      "repo": null,
+      "status": "scored",
+      "score": 90,
+      "serverName": "whoop-mcp-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 3,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 10,
+          "status": "pass"
+        }
+      ],
+      "topGap": "Mutation gating"
+    },
+    {
+      "name": "oura-mcp-unofficial",
+      "npm": "oura-mcp-unofficial",
+      "repo": null,
+      "status": "scored",
+      "score": 90,
+      "serverName": "oura-mcp-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 3,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 10,
+          "status": "pass"
+        }
+      ],
+      "topGap": "Mutation gating"
+    },
+    {
+      "name": "@modelcontextprotocol/server-everything",
+      "npm": "@modelcontextprotocol/server-everything",
+      "repo": null,
+      "status": "scored",
+      "score": 44,
+      "serverName": "mcp-servers/everything",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 4,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Tool naming convention"
+    },
+    {
+      "name": "@modelcontextprotocol/server-sequential-thinking",
+      "npm": "@modelcontextprotocol/server-sequential-thinking",
+      "repo": null,
+      "status": "scored",
+      "score": 44,
+      "serverName": "sequential-thinking-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "@modelcontextprotocol/server-memory",
+      "npm": "@modelcontextprotocol/server-memory",
+      "repo": null,
+      "status": "scored",
+      "score": 34,
+      "serverName": "memory-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    }
+  ]
+}

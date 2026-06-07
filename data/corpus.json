@@ -1,0 +1,3610 @@
+[
+  {
+    "name": "io.github.10iii/air",
+    "npm": "@10iii/air-mcp-server",
+    "version": "0.2.2",
+    "repo": "https://github.com/10iii/air",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.1clawAI/1claw-mcp",
+    "npm": "@1claw/mcp",
+    "version": "0.31.1",
+    "repo": "https://github.com/1clawAI/1claw-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.1lystore/mcp-server",
+    "npm": "@1ly/mcp-server",
+    "version": "0.1.7",
+    "repo": "https://github.com/1lystore/1ly-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.2s-io/mcp",
+    "npm": "@2sio/mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/2s-io/sdk",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.636865636b73756d/mcp-v1",
+    "npm": "@636865636b73756d/mcp-v1",
+    "version": "1.0.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.adbutler/mcp-server",
+    "npm": "@adbutler/mcp-server",
+    "version": "2.3.0",
+    "repo": "https://github.com/adbutler/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.adeu/adeu",
+    "npm": "@adeu/mcp-server",
+    "version": "1.7.1",
+    "repo": "https://github.com/dealfluence/adeu",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Aganium/mcp-server",
+    "npm": "@agenium/mcp-server",
+    "version": "0.1.4",
+    "repo": "https://github.com/Aganium/agenium",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Agent360dk/browser-mcp",
+    "npm": "@agent360/browser-mcp",
+    "version": "1.16.1",
+    "repo": "https://github.com/Agent360dk/browser-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Agentled/mcp-server",
+    "npm": "@agentled/mcp-server",
+    "version": "0.15.13",
+    "repo": "https://github.com/Agentled/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.agenttrust/mcp-server",
+    "npm": "@agenttrust/mcp-server",
+    "version": "1.1.1",
+    "repo": "https://github.com/agenttrust/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Agonx402/agon-gateway",
+    "npm": "@agonx402/gateway-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Agonx402/agon-gateway-agentic",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Agonx402/agon-protocol",
+    "npm": "@agonx402/protocol-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/Agonx402/agon-gateway-agentic",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.imboard/dossier",
+    "npm": "@ai-dossier/mcp-server",
+    "version": "1.0.4",
+    "repo": "https://github.com/imboard-ai/ai-dossier",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Aimino-Tech/fast-html-mcp",
+    "npm": "@aimino.xdn/fast-html-mcp-server",
+    "version": "0.1.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Aimino-Tech/fast-html-mcp",
+    "npm": "@aimino/fast-html-mcp-server",
+    "version": "0.1.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AInoAKARI/keymaster-mcp",
+    "npm": "@akari-os/keymaster-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/AInoAKARI/keymaster-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Akka-Finance/mcp-server",
+    "npm": "@akka-finance/mcp-server",
+    "version": "1.0.1",
+    "repo": "https://github.com/Akka-Finance/akka-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AlephantAI/alephant-mcp",
+    "npm": "@alephantai/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/AlephantAI/alephant-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AlexDeMichieli/weather",
+    "npm": "@alexdemichieli/mcp-weather-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/alexdemichieli/mcp-weather-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Alexendros/proton-mail-mcp",
+    "npm": "@alexendros/proton-mail-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/Alexendros/proton-mail-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Algiras/debugium",
+    "npm": "@algiras/debugium",
+    "version": "0.1.2",
+    "repo": "https://github.com/Algiras/debugium",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.allourthings/mcp-server",
+    "npm": "@allourthings/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/matt-harding/AllOurThings",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AmitGurbani/mcp-server-woocommerce",
+    "npm": "@amitgurbani/mcp-server-woocommerce",
+    "version": "1.0.1",
+    "repo": "https://github.com/AmitGurbani/mcp-server-woocommerce",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.ankimcp/anki-mcp-server",
+    "npm": "@ankimcp/anki-mcp-server",
+    "version": "0.18.4",
+    "repo": "https://github.com/ankimcp/anki-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "eu.ansvar/argentine-law-mcp",
+    "npm": "@ansvar/argentine-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/argentine-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/australian-law-mcp",
+    "npm": "@ansvar/australian-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/australian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/austrian-law-mcp",
+    "npm": "@ansvar/austrian-law-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/Ansvar-Systems/Austrian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Ansvar-Systems/automotive-cybersecurity",
+    "npm": "@ansvar/automotive-cybersecurity-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Automotive-MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/bahraini-law-mcp",
+    "npm": "@ansvar/bahraini-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/bahraini-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/bangladeshi-law-mcp",
+    "npm": "@ansvar/bangladeshi-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Bangladeshi-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/belgian-law-mcp",
+    "npm": "@ansvar/belgian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Belgium-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/botswana-law-mcp",
+    "npm": "@ansvar/botswana-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/botswana-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/brazil-law-mcp",
+    "npm": "@ansvar/brazil-law-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/Ansvar-Systems/brazil-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/bulgarian-law-mcp",
+    "npm": "@ansvar/bulgarian-law-mcp",
+    "version": "1.2.0",
+    "repo": "https://github.com/Ansvar-Systems/Bulgarian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/cambodian-law-mcp",
+    "npm": "@ansvar/cambodian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/cambodian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/cameroonian-law-mcp",
+    "npm": "@ansvar/cameroonian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/cameroonian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/canadian-law-mcp",
+    "npm": "@ansvar/canadian-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/canadian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/chilean-law-mcp",
+    "npm": "@ansvar/chilean-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Chilean-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/chinese-law-mcp",
+    "npm": "@ansvar/chinese-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/chinese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/colombian-law-mcp",
+    "npm": "@ansvar/colombian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Colombian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/costa-rican-law-mcp",
+    "npm": "@ansvar/costa-rican-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Costa-Rican-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/croatian-law-mcp",
+    "npm": "@ansvar/croatian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Croatian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/cypriot-law-mcp",
+    "npm": "@ansvar/cypriot-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Cypriot-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/czech-law-mcp",
+    "npm": "@ansvar/czech-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Czech-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/danish-law-mcp",
+    "npm": "@ansvar/danish-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Denmark-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/dominican-law-mcp",
+    "npm": "@ansvar/dominican-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/dominican-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/dutch-law-mcp",
+    "npm": "@ansvar/dutch-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/Dutch-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/ecuadorian-law-mcp",
+    "npm": "@ansvar/ecuadorian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/ecuadorian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/egyptian-law-mcp",
+    "npm": "@ansvar/egyptian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Egyptian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/estonian-law-mcp",
+    "npm": "@ansvar/estonian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Estonian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/ethiopian-law-mcp",
+    "npm": "@ansvar/ethiopian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/ethiopian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/eu-regulations-mcp",
+    "npm": "@ansvar/eu-regulations-mcp",
+    "version": "0.4.2",
+    "repo": "https://github.com/Ansvar-Systems/EU_compliance_MCP",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "eu.ansvar/finnish-law-mcp",
+    "npm": "@ansvar/finnish-law-mcp",
+    "version": "1.2.3",
+    "repo": "https://github.com/Ansvar-Systems/finnish-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/french-law-mcp",
+    "npm": "@ansvar/french-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/French-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/georgian-law-mcp",
+    "npm": "@ansvar/georgian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Georgian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/german-law-mcp",
+    "npm": "@ansvar/german-law-mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/Ansvar-Systems/German-law-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "eu.ansvar/ghana-law-mcp",
+    "npm": "@ansvar/ghana-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/ghana-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/greek-law-mcp",
+    "npm": "@ansvar/greek-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Greek-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/hungarian-law-mcp",
+    "npm": "@ansvar/hungarian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Hungarian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/icelandic-law-mcp",
+    "npm": "@ansvar/icelandic-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/icelandic-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/india-law-mcp",
+    "npm": "@ansvar/india-law-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Ansvar-Systems/india-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/indonesian-law-mcp",
+    "npm": "@ansvar/indonesian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/indonesian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/irish-law-mcp",
+    "npm": "@ansvar/irish-law-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/Ansvar-Systems/Irish-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/israel-law-mcp",
+    "npm": "@ansvar/israel-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/israel-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/italian-law-mcp",
+    "npm": "@ansvar/italian-law-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Ansvar-Systems/italian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/ivorian-law-mcp",
+    "npm": "@ansvar/ivorian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/ivorian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/jamaican-law-mcp",
+    "npm": "@ansvar/jamaican-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Jamaican-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/japan-law-mcp",
+    "npm": "@ansvar/japan-law-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Ansvar-Systems/japan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/jordanian-law-mcp",
+    "npm": "@ansvar/jordanian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/jordanian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/kenya-law-mcp",
+    "npm": "@ansvar/kenya-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/kenya-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/latvian-law-mcp",
+    "npm": "@ansvar/latvian-law-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Ansvar-Systems/Latvian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/liechtenstein-law-mcp",
+    "npm": "@ansvar/liechtenstein-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Liechtenstein-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/lithuanian-law-mcp",
+    "npm": "@ansvar/lithuanian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Lithuanian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/luxembourg-law-mcp",
+    "npm": "@ansvar/luxembourg-law-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/Ansvar-Systems/Luxembourg-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/malawi-law-mcp",
+    "npm": "@ansvar/malawi-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/malawi-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/malaysian-law-mcp",
+    "npm": "@ansvar/malaysian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/malaysian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/maltese-law-mcp",
+    "npm": "@ansvar/maltese-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Maltese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/mexican-law-mcp",
+    "npm": "@ansvar/mexican-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/mexican-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/moroccan-law-mcp",
+    "npm": "@ansvar/moroccan-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Moroccan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/mozambican-law-mcp",
+    "npm": "@ansvar/mozambican-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/mozambican-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/namibian-law-mcp",
+    "npm": "@ansvar/namibian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/namibian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/nepal-law-mcp",
+    "npm": "@ansvar/nepal-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/nepal-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/newzealand-law-mcp",
+    "npm": "@ansvar/newzealand-law-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Ansvar-Systems/newzealand-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/nigeria-law-mcp",
+    "npm": "@ansvar/nigeria-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/nigeria-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/norwegian-law-mcp",
+    "npm": "@ansvar/norwegian-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/norwegian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Ansvar-Systems/ot-security-mcp",
+    "npm": "@ansvar/ot-security-mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/Ansvar-Systems/ot-security-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/pakistani-law-mcp",
+    "npm": "@ansvar/pakistani-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Pakistani-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/paraguayan-law-mcp",
+    "npm": "@ansvar/paraguayan-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/paraguayan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/peruvian-law-mcp",
+    "npm": "@ansvar/peruvian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Peruvian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/philippine-law-mcp",
+    "npm": "@ansvar/philippine-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/philippine-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/polish-law-mcp",
+    "npm": "@ansvar/polish-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/polish-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/portuguese-law-mcp",
+    "npm": "@ansvar/portuguese-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/portuguese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/qatari-law-mcp",
+    "npm": "@ansvar/qatari-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Qatari-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/romanian-law-mcp",
+    "npm": "@ansvar/romanian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Romanian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/russian-law-mcp",
+    "npm": "@ansvar/russian-law-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/Ansvar-Systems/Russian-Law-MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/rwandan-law-mcp",
+    "npm": "@ansvar/rwandan-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Rwandan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/saudi-law-mcp",
+    "npm": "@ansvar/saudi-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Saudi-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/senegalese-law-mcp",
+    "npm": "@ansvar/senegalese-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/senegalese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/serbian-law-mcp",
+    "npm": "@ansvar/serbian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Serbian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/singapore-law-mcp",
+    "npm": "@ansvar/singapore-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/singapore-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/slovak-law-mcp",
+    "npm": "@ansvar/slovak-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/Slovak-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/slovenian-law-mcp",
+    "npm": "@ansvar/slovenian-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/Slovenian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/south-korea-law-mcp",
+    "npm": "@ansvar/south-korea-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/south-korea-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/southafrica-law-mcp",
+    "npm": "@ansvar/southafrica-law-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Ansvar-Systems/southafrica-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/spanish-law-mcp",
+    "npm": "@ansvar/spanish-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/spanish-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/srilanka-law-mcp",
+    "npm": "@ansvar/srilanka-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/srilanka-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/swedish-law-mcp",
+    "npm": "@ansvar/swedish-law-mcp",
+    "version": "1.2.1",
+    "repo": "https://github.com/Ansvar-Systems/swedish-law-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "eu.ansvar/switzerland-law-mcp",
+    "npm": "@ansvar/switzerland-law-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/Ansvar-Systems/switzerland-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/taiwanese-law-mcp",
+    "npm": "@ansvar/taiwanese-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Taiwanese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/tanzanian-law-mcp",
+    "npm": "@ansvar/tanzanian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/tanzanian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/thailand-law-mcp",
+    "npm": "@ansvar/thailand-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/thailand-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/tunisian-law-mcp",
+    "npm": "@ansvar/tunisian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/tunisian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/turkish-law-mcp",
+    "npm": "@ansvar/turkish-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/turkish-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/uae-law-mcp",
+    "npm": "@ansvar/uae-law-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Ansvar-Systems/uae-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/ugandan-law-mcp",
+    "npm": "@ansvar/ugandan-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/ugandan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/uk-law-mcp",
+    "npm": "@ansvar/uk-law-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Ansvar-Systems/UK-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/ukrainian-law-mcp",
+    "npm": "@ansvar/ukrainian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Ukrainian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/uruguayan-law-mcp",
+    "npm": "@ansvar/uruguayan-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/Uruguayan-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/us-law-mcp",
+    "npm": "@ansvar/us-law-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Ansvar-Systems/US-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/us-regulations-mcp",
+    "npm": "@ansvar/us-regulations-mcp",
+    "version": "1.2.5",
+    "repo": "https://github.com/Ansvar-Systems/US_compliance_MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/vietnamese-law-mcp",
+    "npm": "@ansvar/vietnamese-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/vietnamese-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/zambian-law-mcp",
+    "npm": "@ansvar/zambian-law-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Ansvar-Systems/zambian-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "eu.ansvar/zimbabwe-law-mcp",
+    "npm": "@ansvar/zimbabwe-law-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Ansvar-Systems/zimbabwe-law-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.apideck/mcp",
+    "npm": "@apideck/mcp",
+    "version": "0.1.12",
+    "repo": "https://github.com/apideck-libraries/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.apogeoapi/apogeoapi-mcp",
+    "npm": "@apogeoapi/mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/APOGEOAPI/apogeoapi-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "digital.shineup/appcn",
+    "npm": "@app-cn/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Salah-XD/appCN",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.appfigures/mcp",
+    "npm": "@appfigures/cli",
+    "version": "1.0.3",
+    "repo": "https://github.com/appfigures/cli",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.appsai/mcp-server",
+    "npm": "@appsai/mcp-server",
+    "version": "1.0.1",
+    "repo": "https://github.com/appsai-inc/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.ARCXS-Protocol/mcp-server",
+    "npm": "@arcxs-protocol/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/ARCXS-Protocol/arcxs-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.artifacta/mcp",
+    "npm": "@artifacta-mcp/mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/sagapeak/artifacta",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.ascendkit/ascendkit",
+    "npm": "@ascendkit/cli",
+    "version": "0.3.19",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.ASGCompute/asgcard-mcp-server",
+    "npm": "@asgcard/mcp-server",
+    "version": "0.5.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.asksakina/islamic-knowledge",
+    "npm": "@asksakina/islamic-knowledge-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/yserrag/sakina-v3",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.astrocal/mcp-server",
+    "npm": "@astrocal/mcp-server",
+    "version": "0.1.3",
+    "repo": "https://github.com/astrocal-dev/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.attrove/mcp",
+    "npm": "@attrove/mcp",
+    "version": "0.1.10",
+    "repo": "https://github.com/attrove/attrove-js.git",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.auth0/mcp",
+    "npm": "@auth0/auth0-mcp-server",
+    "version": "0.1.0-beta.10",
+    "repo": "https://github.com/auth0/auth0-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.autonomad/computeback",
+    "npm": "@autonomad1/computeback-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/Autonomad1/computeback-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.averra/extract",
+    "npm": "@averra/extract-mcp",
+    "version": "0.1.4",
+    "repo": "https://github.com/Swwyymm/averra-extract-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.microsoft/azure",
+    "npm": "@azure/mcp",
+    "version": "2.0.0",
+    "repo": "https://github.com/microsoft/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.microsoft/template-server-name",
+    "npm": "@azure/mcp-template",
+    "version": "0.0.12-alpha.5776860",
+    "repo": "https://github.com/microsoft/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.banksync/mcp",
+    "npm": "@banksync/mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/banksynchq/banksync-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.bighub/mcp",
+    "npm": "@bighub/bighub-mcp",
+    "version": "0.1.4",
+    "repo": "https://github.com/bighub-io/bighub",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.bitsbound/contract-analysis",
+    "npm": "@bitsbound/mcp-server",
+    "version": "1.0.6",
+    "repo": "https://github.com/taytrom/bitsbound-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.blackduck/mcp-server",
+    "npm": "@black-duck/mcp-server",
+    "version": "1.1.5",
+    "repo": "https://github.com/blackducksoftware/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Able-rip/agent-mosaic-skill",
+    "npm": "@bmbrick/agent-mosaic-skill",
+    "version": "1.0.2",
+    "repo": "https://github.com/Able-rip/agent-mosaic-skill",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "app.qwady/borough",
+    "npm": "@borough/mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/jdmay2/borough",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.bounceprotect.www/mcp",
+    "npm": "@bounceprotect/mcp",
+    "version": "1.0.6",
+    "repo": "https://github.com/bounceprotect/bounceprotect-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "app.businys/mcp-server",
+    "npm": "@businys/mcp-server",
+    "version": "1.0.1",
+    "repo": "https://github.com/hiatys/businys-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.buywhere/buywhere-mcp",
+    "npm": "@buywhere/mcp-server",
+    "version": "0.3.1",
+    "repo": "https://github.com/BuyWhere/buywhere-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "app.selis.mcp/pmo",
+    "npm": "@calx/selis-mcp",
+    "version": "0.2.2",
+    "repo": "https://github.com/calx-sa/selis-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.cg3/prior",
+    "npm": "@cg3/prior-mcp",
+    "version": "0.5.21",
+    "repo": "https://github.com/cg3-llc/prior_mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.chamade/server",
+    "npm": "@chamade/mcp-server",
+    "version": "3.0.1",
+    "repo": "https://github.com/chamade-io/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.claidex/failure-intelligence",
+    "npm": "@claidex-mcp/claidex-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/ssatanis/claidex-sentinel",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.clauderecall/recall",
+    "npm": "@clauderecallhq/cli",
+    "version": "0.61.4",
+    "repo": "https://gitlab.com/clauderecallhq/claude-recall-plugin",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AlexFloyd13/clevername-mcp",
+    "npm": "@clevername/clevername-mcp",
+    "version": "1.1.2",
+    "repo": "https://github.com/AlexFloyd13/clevername",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.clihub/clihub",
+    "npm": "@clihub/cli",
+    "version": "0.1.0-beta.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.codescene/codescene-mcp-server",
+    "npm": "@codescene/codehealth-mcp",
+    "version": "0.3.1",
+    "repo": "https://github.com/codescene-oss/codescene-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.codmir/mcp",
+    "npm": "@codmir/mcp",
+    "version": "0.2.3",
+    "repo": "https://github.com/codmir/codmir",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.getcoherence/mcp",
+    "npm": "@coherenceos/mcp-server",
+    "version": "0.2.1",
+    "repo": "https://github.com/Brightyard/brightyard-platform",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.shiftinbits/constellation",
+    "npm": "@constellationdev/mcp",
+    "version": "0.1.3",
+    "repo": "https://github.com/ShiftinBits/constellation-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.autoblocks/contextlayer-mcp",
+    "npm": "@contextlayer/mcp",
+    "version": "0.0.3",
+    "repo": "https://github.com/autoblocksai/ctxl",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.crawlconsole/crawlconsole",
+    "npm": "@crawlconsole/mcp",
+    "version": "0.1.4",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.cueapi/mcp",
+    "npm": "@cueapi/mcp",
+    "version": "0.1.3",
+    "repo": "https://github.com/cueapi/cueapi-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.cz-agents/adis",
+    "npm": "@czagents/adis",
+    "version": "0.1.1",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/ares",
+    "npm": "@czagents/ares",
+    "version": "0.1.2",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/cnb",
+    "npm": "@czagents/cnb",
+    "version": "0.1.2",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/dd",
+    "npm": "@czagents/dd",
+    "version": "0.1.0",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/eu-registry",
+    "npm": "@czagents/eu-registry",
+    "version": "0.1.1",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/isir",
+    "npm": "@czagents/isir",
+    "version": "0.1.0",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/payqr",
+    "npm": "@czagents/payqr",
+    "version": "0.1.4",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.cz-agents/realestate",
+    "npm": "@czagents/realestate",
+    "version": "0.2.1",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.cz-agents/sanctions",
+    "npm": "@czagents/sanctions",
+    "version": "0.1.0",
+    "repo": "https://github.com/martinhavel/cz-agents-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.dealsurface/dealsurface",
+    "npm": "@dealsurface/mcp-server",
+    "version": "0.1.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.32bitsret/demostudio",
+    "npm": "@demostudio/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/32bitsret/demostudio-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.doomscrollr/mcp",
+    "npm": "@doomscrollr/mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/aaayersss/doomscrollr",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.driflyte/driflyte-mcp-server",
+    "npm": "@driflyte/mcp-server",
+    "version": "0.0.18",
+    "repo": "https://github.com/serkan-ozal/driflyte-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.e18e/e18e",
+    "npm": "@e18e/mcp",
+    "version": "0.0.4",
+    "repo": "https://github.com/e18e/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AaronVick/echorift-mcp",
+    "npm": "@echorift/mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/AaronVick/ECHO_RIFT_MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.echosaw/mcp-server",
+    "npm": "@echosaw/mcp-server",
+    "version": "1.1.1",
+    "repo": "https://github.com/Orange-Sky-Software-Inc/echosaw-com",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.exactpdf/mcp",
+    "npm": "@exactpdf/mcp",
+    "version": "0.2.3",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.ezstats/ezstats-mcp",
+    "npm": "@ezstats/ezstats-mcp",
+    "version": "0.2.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.eztexting/mcp",
+    "npm": "@eztexting/mcp-server",
+    "version": "0.3.0",
+    "repo": "https://gitlab.com/eztexting/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.fentz.envcp/envcp",
+    "npm": "@fentz26/envcp",
+    "version": "1.0.83",
+    "repo": "https://github.com/fentz26/EnvCP",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.ffmpeg-micro/mcp-server",
+    "npm": "@ffmpeg-micro/mcp-server",
+    "version": "0.1.3",
+    "repo": "https://github.com/javidjamae/ffmpeg-micro-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.fhirfly/mcp-server",
+    "npm": "@fhirfly-io/mcp-server",
+    "version": "0.2.2",
+    "repo": "https://gitlab.com/fhirfly-io/fhirfly-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.fidensa/mcp-server",
+    "npm": "@fidensa/mcp-server",
+    "version": "0.4.1",
+    "repo": "https://github.com/fidensa/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.fixyourdocs/mcp-server",
+    "npm": "@fixyourdocs/mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/fixyourdocs/fixyourdocs",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.flowcontent/mcp-server",
+    "npm": "@flowcontent/mcp-server",
+    "version": "0.1.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.form/uag",
+    "npm": "@formio/uag",
+    "version": "1.11.1",
+    "repo": "https://github.com/formio/uag",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.frase/mcp-server",
+    "npm": "@frase/mcp-server",
+    "version": "0.2.0",
+    "repo": "https://github.com/frase-io/frase.git",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.frihet/erp",
+    "npm": "@frihet/mcp-server",
+    "version": "1.5.1",
+    "repo": "https://github.com/Frihet-io/frihet-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.fusionauth/mcp-api",
+    "npm": "@fusionauth/mcp-api",
+    "version": "0.1.14",
+    "repo": "https://github.com/FusionAuth/fusionauth-mcp-api",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.gammainfra/mcp-server",
+    "npm": "@gammainfra/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/yuz0101/gammainfra-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.gaudiolab/mcp-developers",
+    "npm": "@gaudiolab/mcp-developers",
+    "version": "1.0.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.gildara/mcp-server",
+    "npm": "@gildara/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/gildara-io/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.gitkraken/gk-cli",
+    "npm": "@gitkraken/gk",
+    "version": "3.1.43",
+    "repo": "https://github.com/gitkraken/gk-cli",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.gitscrum/mcp",
+    "npm": "@gitscrum-studio/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/gitscrum-core/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.gradusmusic/notation",
+    "npm": "@gradusmusic/notation-mcp",
+    "version": "0.2.2",
+    "repo": "https://github.com/delmas41/gradusnotation",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.halalterminal/mcp",
+    "npm": "@halalterminal/mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/goww7/halalterminal-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hapticpaper/mcp",
+    "npm": "@hapticpaper/mcp-server",
+    "version": "1.0.10",
+    "repo": "https://github.com/hapticpaper/hh",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.heyoden/mcp",
+    "npm": "@heyoden/mcp",
+    "version": "1.0.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "capital.hove/read-only-local-mysql-mcp-server",
+    "npm": "@hovecapital/read-only-mysql-mcp-server",
+    "version": "0.0.13",
+    "repo": "https://github.com/hovecapital/read-only-local-mysql-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "capital.hove/read-only-local-postgres-mcp-server",
+    "npm": "@hovecapital/read-only-postgres-mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/hovecapital/read-only-local-postgres-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Aiomx/hydite-mcp",
+    "npm": "@hydite/hydite-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Aiomx/hydite-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.i18nagent/i18n-agent",
+    "npm": "@i18n-agent/mcp-client",
+    "version": "1.16.3",
+    "repo": "https://github.com/i18n-agent/mcp-client",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.earnidle/mcp",
+    "npm": "@idleprotocol/mcp",
+    "version": "1.0.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.jettyd/mcp",
+    "npm": "@jettyd/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/jettydiot/jettyd-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AlvaroRamirezCastillo/greeting-mcp-server",
+    "npm": "@jinba-ittai/greeting-mcp-server",
+    "version": "1.0.7",
+    "repo": "https://github.com/AlvaroRamirezCastillo/greeting-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.jasonpearson/auto-mobile",
+    "npm": "@kaeawc/auto-mobile",
+    "version": "0.0.13",
+    "repo": "https://github.com/kaeawc/auto-mobile",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.kawacode/mcp",
+    "npm": "@kawacode/mcp",
+    "version": "5.0.2",
+    "repo": "https://github.com/codeawareness/kawa.mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.kekwanu/syncline-mcp-server",
+    "npm": "@kekwanulabs/syncline-mcp-server",
+    "version": "1.0.14",
+    "repo": "https://github.com/KekwanuLabs/syncline",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.kekwanu/syncline-mcp-server-go",
+    "npm": "@kekwanulabs/syncline-mcp-server-go",
+    "version": "1.0.20",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AmoghReddy45/kiwiclaw-mcp-server",
+    "npm": "@kiwiclaw/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/AmoghReddy45/openclaw-marketplace-skill",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.kultur/mcp-server",
+    "npm": "@kultur-dev/mcp-server",
+    "version": "1.0.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.laddro/career",
+    "npm": "@laddro/career-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/laddro-app/laddro-career-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.lattis/mcp",
+    "npm": "@lattis-dev/cli",
+    "version": "0.3.0",
+    "repo": "https://github.com/wastedcode/lattis",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Ali1041/leadloadz",
+    "npm": "@leadloadz/mcp-server",
+    "version": "1.0.4",
+    "repo": "https://github.com/Ali1041/leadloadz-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.letta/memory-mcp",
+    "npm": "@letta-ai/memory-mcp",
+    "version": "2.0.2",
+    "repo": "https://github.com/letta-ai/memory-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-domain-to-linkedin-url-resolver",
+    "npm": "@mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-domain-to-linkedin-url-resolver",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-gtm-hiring-signal-scraper",
+    "npm": "@mambalabsdev/mcp-gtm-hiring-signal-scraper",
+    "version": "1.0.2",
+    "repo": "https://github.com/mambalabsdev/mcp-gtm-hiring-signal-scraper",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-gtm-signals-aggregator",
+    "npm": "@mambalabsdev/mcp-gtm-signals-aggregator",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-gtm-signals-aggregator",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-gtm-suite",
+    "npm": "@mambalabsdev/mcp-gtm-suite",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-gtm-suite",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-gtm-tech-stack-signal-scraper",
+    "npm": "@mambalabsdev/mcp-gtm-tech-stack-signal-scraper",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-gtm-tech-stack-signal-scraper",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-icp-fit-scorer",
+    "npm": "@mambalabsdev/mcp-icp-fit-scorer",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-icp-fit-scorer",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mambabuilt/mcp-job-board-keyword-signal-scanner",
+    "npm": "@mambalabsdev/mcp-job-board-keyword-signal-scanner",
+    "version": "1.0.1",
+    "repo": "https://github.com/mambalabsdev/mcp-job-board-keyword-signal-scanner",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.mcpfinder/server",
+    "npm": "@mcpfinder/server",
+    "version": "0.4.2",
+    "repo": "https://github.com/lksrz/mcpfinder",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.mdtidy/mcp",
+    "npm": "@mdtidy/mcp",
+    "version": "1.1.11",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.meertrack/mcp-server",
+    "npm": "@meertrack/mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/meertrack/meertrack-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.meetdewey/dewey",
+    "npm": "@meetdewey/mcp",
+    "version": "1.5.4",
+    "repo": "https://github.com/meetdewey/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.meetlark/mcp-server",
+    "npm": "@meetlark/mcp-server",
+    "version": "1.0.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.metricspot/seo-mcp",
+    "npm": "@metricspot/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/MetricSpot/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.microsoft.esrp/esrp-oss-mcp-test",
+    "npm": "@microsoft/esrp-release-test-integration",
+    "version": "26.212.111214",
+    "repo": "https://github.com/sravanism/esrp-oss-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.microsoft/microsoft-fabric",
+    "npm": "@microsoft/fabric-mcp",
+    "version": "0.0.0-beta.10",
+    "repo": "https://github.com/microsoft/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.microsoft/powerbi-modeling-mcp",
+    "npm": "@microsoft/powerbi-modeling-mcp",
+    "version": "0.5.0-beta.9",
+    "repo": "https://github.com/microsoft/powerbi-modeling-mcp.git",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mnemopay/sdk",
+    "npm": "@mnemopay/sdk",
+    "version": "1.11.0",
+    "repo": "https://github.com/mnemopay/mnemopay-sdk",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.monikaskorykow/workshops",
+    "npm": "@monikaskorykow/mcp-workshops",
+    "version": "1.0.0",
+    "repo": "https://github.com/monikaskorykow/mcp-workshops",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.multimail/mcp-server",
+    "npm": "@multimail/mcp-server",
+    "version": "0.1.5",
+    "repo": "https://github.com/multimail-dev/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.munispot/municipal-data",
+    "npm": "@munispot/mcp",
+    "version": "1.0.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mux/mcp",
+    "npm": "@mux/mcp",
+    "version": "12.8.0",
+    "repo": "https://github.com/muxinc/mux-node-sdk",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mysupermarket/grocery-prices",
+    "npm": "@mysupermarket/mcp-grocery-prices",
+    "version": "0.1.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.nannykeeper.www/mcp-server",
+    "npm": "@nannykeeper/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/imaznation/nannykeeper",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.nitrosend/nitrosend",
+    "npm": "@nitrosend/mcp",
+    "version": "0.6.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "cloud.nordicdata/nordic-data",
+    "npm": "@nordic-data/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/sofiajameson20-star/Nordicdata",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.nyx-intelligence/val",
+    "npm": "@nyx-intelligence/val-mcp",
+    "version": "0.10.1",
+    "repo": "https://github.com/Wakizara/val-action",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.openfeature/mcp",
+    "npm": "@openfeature/mcp",
+    "version": "0.0.16",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.getoptimal/optibot",
+    "npm": "@optimalai/optibot-mcp",
+    "version": "1.4.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "finance.orbt/intelligence",
+    "npm": "@orbt-finance/mcp-server",
+    "version": "3.2.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AlexAlves87/otskit-mcp",
+    "npm": "@otskit/mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/OTSkit/OTSkit-MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AIweather-Anurag/ottasia",
+    "npm": "@ottasia/mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/Alweather-Anurag/ottasia",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "gl.parse/mcp",
+    "npm": "@parse-gl/mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Parsegl/parse",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.perplexity/mcp-server",
+    "npm": "@perplexity-ai/mcp-server",
+    "version": "0.8.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.phasefolio/phasefolio",
+    "npm": "@phasefolio/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/TamalAdebisi/Phasefolio_v1",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.picaos/mcp",
+    "npm": "@picahq/mcp",
+    "version": "2.0.3",
+    "repo": "https://github.com/picahq/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pilotgentic/mcp-server",
+    "npm": "@pilotgentic/mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/1genadam/pilotgentic",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.usepopup/organizer",
+    "npm": "@popupspacesystems/mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/usepopup/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.postman/postman-mcp-server",
+    "npm": "@postman/postman-mcp-server",
+    "version": "2.4.2",
+    "repo": "https://github.com/postmanlabs/postman-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.prereason/mcp",
+    "npm": "@prereason/mcp",
+    "version": "0.1.13",
+    "repo": "https://github.com/PreReason/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.prismism/mcp",
+    "npm": "@prismism/mcp-server",
+    "version": "0.2.2",
+    "repo": "https://github.com/prismism-dev/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.prizmad/mcp-server",
+    "npm": "@prizmad/mcp-server",
+    "version": "2.0.1",
+    "repo": "https://github.com/prizmad/Prizmad-MCP-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.promptot/mcp",
+    "npm": "@prompt-ot/mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/appdevexpert/prompt-ot",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "co.promptguard/security",
+    "npm": "@promptguard/mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/acebot712/promptguard",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.promptibus/mcp",
+    "npm": "@promptibus/mcp",
+    "version": "0.4.2",
+    "repo": "https://github.com/promptibus/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.proofslip/mcp-server",
+    "npm": "@proofslip/mcp-server",
+    "version": "0.2.3",
+    "repo": "https://github.com/Johnny-Z13/proofslip",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.runmemento/memento",
+    "npm": "@psraghuveer/memento",
+    "version": "0.6.3",
+    "repo": "https://github.com/veerps57/memento.git",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/image-diff",
+    "npm": "@pulsemcp/image-diff-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp.servers/pulse-fetch",
+    "npm": "@pulsemcp/pulse-fetch",
+    "version": "0.2.14",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "deprecated",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/pulse-subregistry",
+    "npm": "@pulsemcp/pulse-subregistry",
+    "version": "0.0.7",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/svg-tracer",
+    "npm": "@pulsemcp/svg-tracer-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.quantrisk/mcp-server",
+    "npm": "@quantrisk/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/78degrees/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.rapay/mcp-server",
+    "npm": "@rapay/mcp-server",
+    "version": "1.2.5",
+    "repo": "https://github.com/Ra-Pay-AI/rapay",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.luneresearch/lune",
+    "npm": "@retrograde-labs/lune-mcp-server",
+    "version": "1.2.3",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.rolli/mcp",
+    "npm": "@rolli/mcp",
+    "version": "1.1.4",
+    "repo": "https://github.com/rolliinc/rolli-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.0xsims/rubric-protocol",
+    "npm": "@rubric-protocol/mcp-server",
+    "version": "2.0.2",
+    "repo": "https://github.com/0xsims/rubric-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.ruddia/being-mcp-server",
+    "npm": "@ruddia/being-mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/wnbhr/being",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.savvly/savvly",
+    "npm": "@savvly/mcp-server",
+    "version": "1.0.19",
+    "repo": "https://github.com/Savvly/savvly-public-api",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "app.scanbim/scanbim-mcp",
+    "npm": "@scanbim-labs/scanbim-mcp",
+    "version": "1.0.6",
+    "repo": "https://github.com/ScanBIM-Labs/scanbim-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "bid.scope/aec",
+    "npm": "@scope-bid/scope-aec-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/scope-bid/scope-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "bid.scope/claims",
+    "npm": "@scope-bid/scope-claims-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/scope-bid/scope-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "bid.scope/legal",
+    "npm": "@scope-bid/scope-mcp",
+    "version": "0.2.2",
+    "repo": "https://github.com/scope-bid/scope-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.scopeblind/passport",
+    "npm": "@scopeblind/passport",
+    "version": "0.4.3",
+    "repo": "https://github.com/scopeblind/ScopeBlindD2",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.scopeblind/verify-mcp",
+    "npm": "@scopeblind/verify-mcp",
+    "version": "0.1.3",
+    "repo": "https://github.com/scopeblind/ScopeBlindD2",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.8infinitelabs/scoreflow",
+    "npm": "@scoreflow/mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/8infinitelabs/scoreflow",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.scrapeer/mcp-server",
+    "npm": "@scrapeer/mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/Scrapeer/scrapeer-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.scriptivox.www/transcription",
+    "npm": "@scriptivox/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://github.com/SparkleOfficial/scriptivox-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.servicialo/mcp-server",
+    "npm": "@servicialo/mcp-server",
+    "version": "0.7.0",
+    "repo": "https://github.com/servicialo/mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.sgpdirectory/mcp",
+    "npm": "@sgpdirectory/mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/sgpdirectory/sgpdirectory-mcp-package",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.sgpdirectory/singapore-business-directory",
+    "npm": "@sgpdirectory/mcp-server",
+    "version": "1.0.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.shipstatic/mcp",
+    "npm": "@shipstatic/mcp",
+    "version": "0.1.13",
+    "repo": "https://github.com/shipstatic/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.smartbear/smartbear-mcp",
+    "npm": "@smartbear/mcp",
+    "version": "0.10.0",
+    "repo": "https://github.com/SmartBear/smartbear-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.smartergpt/axf",
+    "npm": "@smartergpt/axf",
+    "version": "0.1.2",
+    "repo": "https://github.com/Guffawaffle/ax-framework",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.smartergpt/lex",
+    "npm": "@smartergpt/lex-mcp",
+    "version": "2.1.2",
+    "repo": "https://github.com/Guffawaffle/lex",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.socialneuron/mcp-server",
+    "npm": "@socialneuron/mcp-server",
+    "version": "1.6.0",
+    "repo": "https://github.com/socialneuron/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.speko/mcp",
+    "npm": "@spekoai/mcp",
+    "version": "1.0.9",
+    "repo": "https://github.com/SpekoAI/mcp-bridge",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.ssemble/mcp-server",
+    "npm": "@ssemble/mcp-server",
+    "version": "1.0.2",
+    "repo": "https://gitlab.com/vlogr/ssemble-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.supabase/mcp",
+    "npm": "@supabase/mcp-server-supabase",
+    "version": "0.5.10",
+    "repo": "https://github.com/supabase-community/supabase-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.0xSoftBoi/suwappu",
+    "npm": "@suwappu/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/0xSoftBoi/suwappubot",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.svelte/mcp",
+    "npm": "@sveltejs/mcp",
+    "version": "0.1.10",
+    "repo": "https://github.com/sveltejs/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.seanwinslow/intent-engineering",
+    "npm": "@swins/intent-engineering-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/seanwinslow28/sw-mcp-intent-engineering",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.seanwinslow/vault-knowledge",
+    "npm": "@swins/vault-knowledge-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/seanwinslow28/sw-mcp-vault-knowledge",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "app.takehub/mcp",
+    "npm": "@takehub/mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/mauurda/takehub",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.tensorfeed/mcp-server",
+    "npm": "@tensorfeed/mcp-server",
+    "version": "1.11.0",
+    "repo": "https://github.com/RipperMercs/tensorfeed",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.tensorfeed/x402-base-mcp",
+    "npm": "@tensorfeed/x402-base-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/RipperMercs/tensorfeed-x402-base-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Akinduko/travel-mcp",
+    "npm": "@tixxly-ai/travel-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/TeamTixxly/tixxly-v2",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.toolprint/hypertool-mcp",
+    "npm": "@toolprint/hypertool-mcp",
+    "version": "0.0.42",
+    "repo": "https://github.com/toolprint/hypertool-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.tradallo/reputation",
+    "npm": "@tradallo/reputation",
+    "version": "0.3.3",
+    "repo": "https://github.com/tradallo/reputation",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.traderouter/trade-router-mcp",
+    "npm": "@traderouter/trade-router-mcp",
+    "version": "1.0.10",
+    "repo": "https://github.com/TradeRouter/trade-router-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.true402/mcp-server",
+    "npm": "@true402.dev/mcp-server",
+    "version": "0.2.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "co.truncus/mcp-server",
+    "npm": "@truncus/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/vanmoose/truncus-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "app.trustrails/server",
+    "npm": "@trustrails/mcp-server",
+    "version": "1.0.7",
+    "repo": "https://github.com/james-webdev/trustrails-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.tuteliq/mcp",
+    "npm": "@tuteliq/mcp",
+    "version": "3.12.0",
+    "repo": "https://github.com/Tuteliq/mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "app.undisk.mcp/stdio-proxy",
+    "npm": "@undisk-mcp/stdio-proxy",
+    "version": "0.46.2",
+    "repo": "https://github.com/kiarashplusplus/undisk-mcp-tracker",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.unifiedoffer/mcp-server",
+    "npm": "@unifiedoffer/mcp-server",
+    "version": "2.0.1",
+    "repo": "https://github.com/Chris85appding/unified-offer-protocol-front",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.getunleash/unleash-mcp",
+    "npm": "@unleash/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Unleash/unleash-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.123Ergo/unphurl",
+    "npm": "@unphurl/mcp-server",
+    "version": "0.1.5",
+    "repo": "https://github.com/123Ergo/unphurl-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Aderix/vantagate-mcp-server",
+    "npm": "@vantagate/mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/Aderix/vantagate-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.verlon/mcp",
+    "npm": "@verlon-ai/mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/micah-nettey/verlon-ai-internal",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.voxell/forge",
+    "npm": "@voxell/forge-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/VoxellInc/forge-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.wild-card/deepcontext",
+    "npm": "@wildcard-ai/deepcontext",
+    "version": "0.1.15",
+    "repo": "https://github.com/Wildcard-Official/deepcontext",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.worldcitisim/mcp-esim",
+    "npm": "@worldcitisim/mcp-esim",
+    "version": "0.2.1",
+    "repo": "https://github.com/easyname889/worldcitisim-frontend",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.zeroheight/zeroheight",
+    "npm": "@zeroheight/mcp-server",
+    "version": "2.1.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.zype.mcp/server",
+    "npm": "@zype-com/mcp",
+    "version": "0.5.2",
+    "repo": "https://github.com/zype/zype-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.0nork/0nMCP",
+    "npm": "0nmcp",
+    "version": "1.2.1",
+    "repo": "https://github.com/0nork/0nMCP",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "app.3dstreet/3dstreet",
+    "npm": "3dstreet-mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/3DStreet/3dstreet-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.forgesworn/402-mcp",
+    "npm": "402-mcp",
+    "version": "3.15.2",
+    "repo": "https://github.com/forgesworn/402-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AIAppsAPI/adaptive-recall",
+    "npm": "adaptive-recall",
+    "version": "1.0.1",
+    "repo": "https://github.com/AIAppsAPI/adaptive-recall",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AgentAnycast/agentanycast",
+    "npm": "agentanycast",
+    "version": "0.3.2",
+    "repo": "https://github.com/AgentAnycast/agentanycast-node",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.0xbrainkid/agentfolio",
+    "npm": "agentfolio-mcp-server",
+    "version": "1.1.1",
+    "repo": "https://github.com/0xbrainkid/agentfolio-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AgentPhone-AI/agentphone",
+    "npm": "agentphone-mcp",
+    "version": "0.5.2",
+    "repo": "https://github.com/AgentPhone-AI/agentphone-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Aakashbhardwaj27/ai-scanner",
+    "npm": "ai-scanner-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Aakashbhardwaj27/ai-scanner-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.alterlab/mcp-server",
+    "npm": "alterlab-mcp-server",
+    "version": "1.1.1",
+    "repo": "https://github.com/RapierCraft/alterlab-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/appsignal",
+    "npm": "appsignal-mcp-server",
+    "version": "0.5.3",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.arcself/arc-security",
+    "npm": "arc-security-mcp",
+    "version": "0.5.1",
+    "repo": "https://github.com/ArcSelf/arc-security-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.A7OM-AI/atom-mcp-server",
+    "npm": "atom-mcp-server",
+    "version": "1.1.1",
+    "repo": "https://github.com/A7OM-AI/atom-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.ausdata/ausdata-mcp",
+    "npm": "ausdata-mcp",
+    "version": "0.4.2",
+    "repo": "https://github.com/Bigred97/ausdata-mcp-client",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.autonomad/travel",
+    "npm": "autonomad-travel",
+    "version": "1.4.0",
+    "repo": "https://github.com/Autonomad1/autonomad1",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/dynamodb",
+    "npm": "aws-dynamodb-mcp-server",
+    "version": "0.2.6",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.bellwethermetrics/bellwether-mcp",
+    "npm": "bellwether-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/elliotjames-paschal/bellwether-platform",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.bidsparq/mcp",
+    "npm": "bidsparq-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/n0edlg/bidsparq-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.000safah000-ai/blackhawk-mcp",
+    "npm": "blackhawk-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/000safah000-ai/BlackHawkMCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.blackveilsecurity/dns",
+    "npm": "blackveil-dns",
+    "version": "2.10.1",
+    "repo": "https://github.com/MadaBurns/bv-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.blackwalltier/blackwall",
+    "npm": "blackwall-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/bluetieroperations-create/blackwall-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.boostedchat/travel",
+    "npm": "boostedtravel-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Boosted-Chat/BoostedTravel",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.buywhere/buywhere-mcp",
+    "npm": "buywhere-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/BuyWhere/buywhere-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.0rkz/byte-protocol",
+    "npm": "byte-mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/0rkz/byte-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.carbone/carbone-mcp",
+    "npm": "carbone-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/carboneio/carbone-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AlekseiMarchenko/central-intelligence",
+    "npm": "central-intelligence-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/AlekseiMarchenko/central-intelligence",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.chartforgeai/chartforge",
+    "npm": "chartforge-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/crawde/chartforge-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.ARAS-Workspace/claude-kvm",
+    "npm": "claude-kvm",
+    "version": "2.0.10",
+    "repo": "https://github.com/ARAS-Workspace/claude-kvm",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Alex-Kaff/claude-wrap-mcp",
+    "npm": "claude-wrap-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/Alex-Kaff/claude-wrap-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AlligatorC0der/conkurrence",
+    "npm": "conkurrence",
+    "version": "1.0.3",
+    "repo": "https://github.com/AlligatorC0der/conkurrence",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.contextstudios/mcp",
+    "npm": "contextstudios-mcp",
+    "version": "2.0.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.0xMassi/webclaw",
+    "npm": "create-webclaw",
+    "version": "0.1.3",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AlgoVaultFi/crypto-quant-signal-mcp",
+    "npm": "crypto-quant-signal-mcp",
+    "version": "1.10.4",
+    "repo": "https://github.com/AlgoVaultLabs/crypto-quant-signal-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.autoblocks/ctxl",
+    "npm": "ctxl",
+    "version": "0.0.2",
+    "repo": "https://github.com/autoblocksai/ctxl",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.autoblocks/ctxl-mcp",
+    "npm": "ctxl-mcp",
+    "version": "0.0.2",
+    "repo": "https://github.com/autoblocksai/ctxl",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.depscope/mcp",
+    "npm": "depscope-mcp",
+    "version": "0.8.2",
+    "repo": "https://github.com/cuttalo/depscope-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.docfork/docfork-mcp",
+    "npm": "docfork",
+    "version": "0.7.2",
+    "repo": "https://github.com/docfork/docfork-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.agentsconsultants.api/docqa",
+    "npm": "docqa-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/digitalpromptmarket-beep/docqa-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.drengr/server",
+    "npm": "drengr",
+    "version": "0.1.6",
+    "repo": "https://github.com/SharminSirajudeen/drengr-community",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Agnuxo1/enigmagent-mcp",
+    "npm": "enigmagent-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Agnuxo1/enigmagent-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.microsoft.esrp/esrp-oss-mcp-test",
+    "npm": "esrp-oss-mcp-test",
+    "version": "1.0.0",
+    "repo": "https://github.com/sravanism/esrp-oss-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AIBOLLINGMO/eustore",
+    "npm": "eustore-mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/AIBOLLINGMO/eustore-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/fetchpet",
+    "npm": "fetchpet-mcp-server",
+    "version": "0.1.7",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.toutcreer/finoptima",
+    "npm": "finoptima",
+    "version": "1.3.1",
+    "repo": "https://github.com/toutcreer/finoptima",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.flatlandfi/flatland",
+    "npm": "flatland-setup",
+    "version": "1.1.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/fly-io",
+    "npm": "fly-io-mcp-server",
+    "version": "0.1.6",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.fodda/mcp-server",
+    "npm": "fodda-mcp",
+    "version": "1.3.0",
+    "repo": "https://github.com/fodda/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/gcs",
+    "npm": "gcs-google-mcp-server",
+    "version": "0.1.8",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.930m310n/geomelon-mcp",
+    "npm": "geomelon-mcp",
+    "version": "1.0.8",
+    "repo": "https://github.com/930m310n/geomelon-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.78degrees/ghosthunt",
+    "npm": "ghosthunt",
+    "version": "1.0.0",
+    "repo": "https://github.com/78degrees/ghosthunt",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AlexikM/gibil",
+    "npm": "gibil",
+    "version": "0.5.1",
+    "repo": "https://github.com/AlexikM/gibil",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/gmail",
+    "npm": "gmail-workspace-mcp-server",
+    "version": "0.4.10",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/good-eggs",
+    "npm": "good-eggs-mcp-server",
+    "version": "0.1.9",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/google-calendar",
+    "npm": "google-calendar-workspace-mcp-server",
+    "version": "0.0.11",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/google-docs",
+    "npm": "google-docs-workspace-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/google-flights",
+    "npm": "google-flights-mcp-server",
+    "version": "0.2.4",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.mnemopay/gridstamp",
+    "npm": "gridstamp",
+    "version": "1.1.4",
+    "repo": "https://github.com/mnemopay/gridstamp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/hatchbox",
+    "npm": "hatchbox-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hemmabo/hemmabo-mcp-server",
+    "npm": "hemmabo-mcp-server",
+    "version": "3.2.4",
+    "repo": "https://github.com/HemmaBo-se/hemmabo-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.7figures007/highstory-mcp",
+    "npm": "highstory-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/petpicksco/soloca-content-flow",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Aimiten/hilma-mcp",
+    "npm": "hilma-mcp",
+    "version": "1.1.1",
+    "repo": "https://github.com/Aimiten/hilma-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.ibitlabs.www/ibitlabs-mcp",
+    "npm": "ibitlabs-mcp",
+    "version": "0.2.2",
+    "repo": "https://github.com/AgentBonnybb/ibitlabs",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.6figr-com/jobgpt-mcp-server",
+    "npm": "jobgpt-mcp-server",
+    "version": "1.1.3",
+    "repo": "https://github.com/6figr-com/jobgpt-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.kernelcad/kernelcad",
+    "npm": "kernelcad",
+    "version": "0.11.2",
+    "repo": "https://github.com/w1ne/kernelCAD-web",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/langfuse",
+    "npm": "langfuse-observability-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.law/lawyer-search",
+    "npm": "lawai-mcp-server",
+    "version": "0.2.1",
+    "repo": "https://github.com/risk-ai/lawai-mcp-server",
+    "status": "deprecated",
+    "isLatest": true
+  },
+  {
+    "name": "com.linklyhq/linkly",
+    "npm": "linkly-mcp-server",
+    "version": "1.2.0",
+    "repo": "https://github.com/Linkly-HQ/linkly-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.waxberry/live-translate-mcp",
+    "npm": "live-translate-mcp",
+    "version": "0.1.6",
+    "repo": "https://github.com/waxberry-dev/live-translate-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.local-mcp/local-mcp",
+    "npm": "local-mcp",
+    "version": "1.10.0",
+    "repo": "https://github.com/lanchuske/local-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AmanMakesStuff/mappls-mcp",
+    "npm": "mappls-mcp",
+    "version": "2.0.0",
+    "repo": "https://github.com/AmanMakesStuff/mappls-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.marketintell/marketintell",
+    "npm": "marketintell",
+    "version": "0.2.1",
+    "repo": "https://github.com/ravidsrk/marketintell",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.adrianczuczka/mason",
+    "npm": "mason-context",
+    "version": "0.3.6",
+    "repo": "https://github.com/adrianczuczka/mason",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.shawndurrani/mcp-merchant",
+    "npm": "mcp-merchant",
+    "version": "0.1.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "app.scfcontrolsplatform/mcp-server-scf",
+    "npm": "mcp-server-scf",
+    "version": "0.5.12",
+    "repo": "https://github.com/MarkAC007/mcp-server-scf",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.social-api/socialapi",
+    "npm": "mcp-socialapi",
+    "version": "1.0.1",
+    "repo": "https://github.com/SocialAPI-AI/mcp-socialapi",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.memotrader/mcp",
+    "npm": "memotrader-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/jimbursch/memotrader-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "exchange.merx/mcp",
+    "npm": "merx-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Hovsteder/merx-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.AliKarami/mikromcp",
+    "npm": "mikromcp",
+    "version": "1.0.10",
+    "repo": "https://github.com/AliKarami/MikroMCP",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Akkshay10/MCPClientMock",
+    "npm": "mockserver-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/Akkshay10/MCPClientMock",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/monarch-money",
+    "npm": "monarch-money-mcp-server",
+    "version": "0.0.7",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.murphys-laws/murphys-laws",
+    "npm": "murphys-laws-mcp",
+    "version": "1.2.1",
+    "repo": "https://github.com/ravidorr/murphys-laws",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AdelElo13/neurohive",
+    "npm": "neurohive",
+    "version": "1.0.2",
+    "repo": "https://github.com/AdelElo13/neurohive",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AdelElo13/neuromcp",
+    "npm": "neuromcp",
+    "version": "0.4.2",
+    "repo": "https://github.com/AdelElo13/neuromcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.nocturnus/logic-server",
+    "npm": "nocturnusai-mcp",
+    "version": "0.3.11",
+    "repo": "https://github.com/Auctalis/nocturnusai",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "icu.steeped.registry/nodejsmcp",
+    "npm": "nodejsmcp",
+    "version": "1.0.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "dev.forgesworn/bray",
+    "npm": "nostr-bray",
+    "version": "1.27.7",
+    "repo": "https://github.com/forgesworn/bray",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "es.ofixio/professionals",
+    "npm": "ofixio-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/AllTerrainDeveloper/ofixio-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/onepassword",
+    "npm": "onepassword-mcp-server",
+    "version": "0.5.3",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hellobasestation/pdfkit",
+    "npm": "pdfkit-mcp",
+    "version": "1.0.3",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Achilles1089/pentagonal-mcp",
+    "npm": "pentagonal-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Pentagonal-ai/pentagonal",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/playwright-stealth",
+    "npm": "playwright-stealth-mcp-server",
+    "version": "0.2.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/pointsyeah",
+    "npm": "pointsyeah-mcp-server",
+    "version": "0.2.8",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.ponlo/server",
+    "npm": "ponlo-ai",
+    "version": "1.13.2",
+    "repo": "https://github.com/ClaudioGodoyB/ponlo-ai",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.100xPercent/pop-pay",
+    "npm": "pop-pay",
+    "version": "0.5.4",
+    "repo": "https://github.com/100xPercent/pop-pay",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/proctor",
+    "npm": "proctor-mcp-server",
+    "version": "0.1.8",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.scopeblind/protect-mcp",
+    "npm": "protect-mcp",
+    "version": "0.5.4",
+    "repo": "https://github.com/scopeblind/scopeblind-gateway",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.quanttogo/quanttogo-mcp",
+    "npm": "quanttogo-mcp",
+    "version": "0.2.2",
+    "repo": "https://github.com/QuantToGo/quanttogo-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.random-profiles/mcp",
+    "npm": "random-profiles-mcp",
+    "version": "1.4.3",
+    "repo": "https://github.com/gusdeboer/random-profiles-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.ravenmcp/raven-mcp",
+    "npm": "raven-mcp",
+    "version": "1.3.3",
+    "repo": "https://github.com/rhinocap/raven-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/remote-filesystem",
+    "npm": "remote-filesystem-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.forgesworn/rendezvous-mcp",
+    "npm": "rendezvous-mcp",
+    "version": "1.1.3",
+    "repo": "https://github.com/forgesworn/rendezvous-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/s3",
+    "npm": "s3-aws-mcp-server",
+    "version": "0.0.4",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.satrank/mcp",
+    "npm": "satrank-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/proofoftrust21/satrank",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/serpapi-hotels",
+    "npm": "serpapi-hotels-mcp-server",
+    "version": "0.0.3",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.420247jake/session-forge",
+    "npm": "session-forge",
+    "version": "2.0.3",
+    "repo": "https://github.com/420247jake/session-forge",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.skillssafe/scanner",
+    "npm": "skillssafe-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/GUCCI-atlasv/Skillssafe.com",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/slack",
+    "npm": "slack-workspace-mcp-server",
+    "version": "0.0.6",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.06ketan/slideshot",
+    "npm": "slideshot-mcp",
+    "version": "4.4.0",
+    "repo": "https://github.com/06ketan/slideshot",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.soulcraftagency/soulcraft-mcp",
+    "npm": "soulcraft-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/iamevandrake/soulcraft-agents",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.spritecook/generate",
+    "npm": "spritecook-mcp",
+    "version": "0.2.6",
+    "repo": "https://github.com/SpriteCook/spritecook-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/ssh",
+    "npm": "ssh-agent-mcp-server",
+    "version": "0.1.4",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ee.stacktr/publish",
+    "npm": "stacktree-mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/stevysmith/stacktree-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.3DUNLMTD/stylemcp",
+    "npm": "stylemcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/3DUNLMTD/stylemcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.tapetide/stock-research-mcp",
+    "npm": "tapetide-mcp",
+    "version": "1.0.4",
+    "repo": "https://github.com/Tapetide-hq/tapetide-stock-research-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.jamesrosingmd/tebra",
+    "npm": "tebra-mcp-server",
+    "version": "0.2.1",
+    "repo": "https://github.com/jamesrosing/tebra-mcp-server",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "ai.telbase/deploy",
+    "npm": "telbase",
+    "version": "0.14.0-beta.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "io.github.Advertflair/threadmap-mcp",
+    "npm": "threadmap-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/Advertflair/threadmap-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.tickerdb/mcp-server",
+    "npm": "tickerdb-mcp",
+    "version": "1.7.10",
+    "repo": "https://github.com/tickerdb/tickerdb-mcp",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.guffeyholdings/token-oracle",
+    "npm": "token-oracle-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/VictoryInTech/TokenOracle-MCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AgentSafe-AI/tooltrust-scanner",
+    "npm": "tooltrust-mcp",
+    "version": "1.0.9",
+    "repo": "https://github.com/AgentSafe-AI/tooltrust-scanner",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.8beeeaaat/touchdesigner-mcp-server",
+    "npm": "touchdesigner-mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/8beeeaaat/touchdesigner-mcp.git",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.pulsemcp/twist",
+    "npm": "twist-mcp-server",
+    "version": "0.2.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.urlsnap/urlsnap-mcp",
+    "npm": "urlsnap-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/urlsnapdev/urlsnap-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.utilsforagents/utilsforagents-mcp",
+    "npm": "utilsforagents-mcp",
+    "version": "1.0.4",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.pulsemcp/vercel",
+    "npm": "vercel-platform-mcp-server",
+    "version": "0.1.2",
+    "repo": "https://github.com/pulsemcp/mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AndyAnh174/vibe-hnindex",
+    "npm": "vibe-hnindex",
+    "version": "0.1.2",
+    "repo": "https://github.com/AndyAnh174/vibe-hnindex",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.AishwaryShrivastav/vibe-testing",
+    "npm": "vibe-testing",
+    "version": "0.3.10",
+    "repo": "https://github.com/AishwaryShrivastav/vibe-testing",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.vp0/vp0-mcp",
+    "npm": "vp0-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/VP0COM/vp0com-official-site-2026",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.xcodebuildmcp/XcodeBuildMCP",
+    "npm": "xcodebuildmcp",
+    "version": "1.12.10",
+    "repo": "https://github.com/cameroncooke/XcodeBuildMCP",
+    "status": "active",
+    "isLatest": false
+  },
+  {
+    "name": "com.jamesrosingmd/zenoti",
+    "npm": "zenoti-mcp-server",
+    "version": "1.0.0",
+    "repo": "https://github.com/tacit-code/zenoti-mcp-server",
+    "status": "active",
+    "isLatest": true
+  }
+]

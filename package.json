@@ -1,0 +1,27 @@
+{
+  "name": "mcp-leaderboard",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Public agent-readiness leaderboard for the MCP ecosystem, scored by mcp-scorecard.",
+  "scripts": {
+    "corpus": "node scripts/build-corpus.mjs",
+    "run": "node scripts/run-leaderboard.mjs",
+    "render": "node scripts/render.mjs",
+    "all": "npm run corpus && npm run run && npm run render"
+  },
+  "keywords": ["mcp", "model-context-protocol", "leaderboard", "agent-readiness", "scorecard"],
+  "author": "David Mosiah",
+  "license": "MIT",
+  "devDependencies": {
+    "mcp-scorecard": "^0.5.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidmosiah/mcp-leaderboard.git"
+  },
+  "homepage": "https://github.com/davidmosiah/mcp-leaderboard"
+}
