@@ -29,8 +29,8 @@ jobs:
       - name: Score corpus
         run: node scripts/run-leaderboard.mjs ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
         env:
-          CONCURRENCY: "4"
-          TARGET_TIMEOUT_MS: "120000"
+          CONCURRENCY: "8"
+          TARGET_TIMEOUT_MS: "60000"
       - name: Render
         run: npm run render
       - name: Commit refreshed leaderboard
