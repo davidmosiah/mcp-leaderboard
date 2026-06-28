@@ -1,0 +1,704 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Leaderboard - Agent-readiness ranking of the MCP ecosystem</title>
+  <meta name="description" content="Public agent-readiness ranking of the MCP ecosystem. Every npm server in the official registry is booted and graded 0-100 on 10 checks. Auto-refreshed weekly.">
+  <meta name="author" content="David Mosiah">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="keywords" content="MCP leaderboard, Model Context Protocol, agent-readiness, MCP servers, mcp-scorecard, MCP registry, AI agents, MCP ranking, tool naming, agent manifest">
+  <meta name="theme-color" content="#0b1120">
+  <meta property="og:title" content="MCP Leaderboard - agent-readiness, ranked">
+  <meta property="og:description" content="Every MCP server in the official registry, booted and scored 0-100 on 10 agent-readiness checks. Auto-refreshed weekly. Nothing hand-edited.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MCP Leaderboard">
+  <meta property="og:url" content="https://leaderboard.delx.ai/">
+  <meta property="og:image" content="https://leaderboard.delx.ai/assets/og-card.png">
+  <meta property="og:image:secure_url" content="https://leaderboard.delx.ai/assets/og-card.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MCP Leaderboard - agent-readiness, ranked. Every MCP server in the registry, booted and scored 0-100.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@delx369">
+  <meta name="twitter:creator" content="@delx369">
+  <meta name="twitter:title" content="MCP Leaderboard - agent-readiness, ranked">
+  <meta name="twitter:description" content="Every MCP server in the official registry, booted and scored 0-100 on 10 agent-readiness checks. Auto-refreshed weekly.">
+  <meta name="twitter:image" content="https://leaderboard.delx.ai/assets/og-card.png">
+  <meta name="twitter:image:alt" content="MCP Leaderboard - agent-readiness, ranked.">
+  <link rel="canonical" href="https://leaderboard.delx.ai/">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">
+  <link rel="stylesheet" href="assets/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://leaderboard.delx.ai/#website",
+        "url": "https://leaderboard.delx.ai/",
+        "name": "MCP Leaderboard",
+        "description": "Public agent-readiness ranking of the MCP ecosystem.",
+        "publisher": { "@id": "https://github.com/davidmosiah#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "https://github.com/davidmosiah#person",
+        "name": "David Mosiah",
+        "url": "https://github.com/davidmosiah",
+        "sameAs": ["https://x.com/delx369", "https://github.com/davidmosiah"]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://leaderboard.delx.ai/#engine",
+        "name": "mcp-scorecard",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Node.js",
+        "description": "CLI + MCP that boots any MCP server over stdio and grades its agent-readiness on 10 checks for a 0-100 score. It is the scoring engine behind the MCP Leaderboard. Install: npx -y mcp-scorecard <target>",
+        "downloadUrl": "https://www.npmjs.com/package/mcp-scorecard",
+        "url": "https://github.com/davidmosiah/mcp-scorecard",
+        "codeRepository": "https://github.com/davidmosiah/mcp-scorecard",
+        "license": "https://opensource.org/licenses/MIT",
+        "isAccessibleForFree": true,
+        "author": { "@id": "https://github.com/davidmosiah#person" },
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+      },
+      {
+        "@type": "Dataset",
+        "@id": "https://leaderboard.delx.ai/#dataset",
+        "name": "MCP Agent-Readiness Leaderboard",
+        "description": "A periodically regenerated ranking of public Model Context Protocol (MCP) servers from the official registry, each booted over stdio and scored 0-100 by mcp-scorecard on 10 agent-readiness checks (schema validity, tool naming, tool descriptions, annotations, mutation gating, privacy modes, resources, agent manifest, manifest discoverability, smoke test).",
+        "url": "https://leaderboard.delx.ai/",
+        "license": "https://opensource.org/licenses/MIT",
+        "isAccessibleForFree": true,
+        "creator": { "@id": "https://github.com/davidmosiah#person" },
+        "dateModified": "2026-06-14",
+        "keywords": ["Model Context Protocol", "MCP", "agent-readiness", "leaderboard", "AI agents"],
+        "measurementTechnique": "Boot each MCP server over stdio in an isolated child process; run mcp-scorecard's 10 agent-readiness checks; sum to a 0-100 score.",
+        "distribution": [
+          {
+            "@type": "DataDownload",
+            "encodingFormat": "application/json",
+            "contentUrl": "https://leaderboard.delx.ai/leaderboard.json"
+          }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://leaderboard.delx.ai/#ranking",
+        "name": "MCP Leaderboard ranking",
+        "description": "MCP servers ranked by agent-readiness score (0-100), highest first.",
+        "numberOfItems": 11,
+        "itemListOrder": "https://schema.org/ItemListOrderDescending",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "@636865636b73756d/mcp-v1", "url": "https://www.npmjs.com/package/@636865636b73756d/mcp-v1" },
+          { "@type": "ListItem", "position": 2, "name": "@ai-dossier/mcp-server", "url": "https://www.npmjs.com/package/@ai-dossier/mcp-server" },
+          { "@type": "ListItem", "position": 3, "name": "@agentled/mcp-server", "url": "https://www.npmjs.com/package/@agentled/mcp-server" },
+          { "@type": "ListItem", "position": 4, "name": "@agonx402/gateway-mcp", "url": "https://www.npmjs.com/package/@agonx402/gateway-mcp" },
+          { "@type": "ListItem", "position": 5, "name": "@agonx402/protocol-mcp", "url": "https://www.npmjs.com/package/@agonx402/protocol-mcp" },
+          { "@type": "ListItem", "position": 6, "name": "@adeu/mcp-server", "url": "https://www.npmjs.com/package/@adeu/mcp-server" },
+          { "@type": "ListItem", "position": 7, "name": "@2sio/mcp", "url": "https://www.npmjs.com/package/@2sio/mcp" },
+          { "@type": "ListItem", "position": 8, "name": "@10iii/air-mcp-server", "url": "https://www.npmjs.com/package/@10iii/air-mcp-server" },
+          { "@type": "ListItem", "position": 9, "name": "@agent360/browser-mcp", "url": "https://www.npmjs.com/package/@agent360/browser-mcp" },
+          { "@type": "ListItem", "position": 10, "name": "@adbutler/mcp-server", "url": "https://www.npmjs.com/package/@adbutler/mcp-server" },
+          { "@type": "ListItem", "position": 11, "name": "@1ly/mcp-server", "url": "https://www.npmjs.com/package/@1ly/mcp-server" }
+        ]
+      },
+      {
+        "@type": "FAQPage",
+        "@id": "https://leaderboard.delx.ai/#faq-schema",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What does the MCP Leaderboard measure?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Agent-readiness: whether an AI agent can discover an MCP server's tools, trust its schemas, and onboard itself without a human reading the source. It is shape, metadata and discoverability, not correctness or security."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How is each server scored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Each npm-installable server from the official MCP registry is booted over stdio in an isolated child process and graded by mcp-scorecard on 10 checks (each 0-10) summed to a 0-100 score. A weekly GitHub Action re-runs the sweep and commits the result. Nothing is hand-edited."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I climb the board?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Run npx -y mcp-scorecard <your-package-or-repo> to get itemized fixes, then adopt the conventions the score rewards: snake_case tool names, read-only annotations, an *_agent_manifest or *_capabilities discovery surface, and a smoke test. You climb on the next weekly refresh."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Why is a server listed as unreachable instead of low-scored?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Servers that require auth before listTools() and don't honor the MCP_PROBE hook can't be graded fairly, so they are marked unreachable, not penalized. Supporting MCP_PROBE makes a server gradeable."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-generated="2026-06-14T13:55:45.017Z">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+  <div class="stage-light stage-light-a" aria-hidden="true"></div>
+  <div class="stage-light stage-light-b" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MCP Leaderboard home">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span>
+        <strong>MCP Leaderboard</strong>
+        <small>by Delx · agent-readiness, ranked</small>
+      </span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#leaderboard">Leaderboard</a>
+      <a href="#why">Why</a>
+      <a href="#method">Methodology</a>
+      <a href="#climb">Climb</a>
+      <a href="#faq">FAQ</a>
+      <a href="#agents">For agents</a>
+      <a class="nav-pill" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top">
+      <div class="hero-copy" data-reveal>
+        <p class="eyebrow">leaderboard.delx.ai · open source · auto-refreshed weekly</p>
+        <h1><span class="grad">Agent-readiness,</span><span>ranked.</span></h1>
+        <p class="hero-text">
+          A public, neutral ranking of the entire MCP ecosystem. Every npm server in the
+          <a href="https://registry.modelcontextprotocol.io">official registry</a> is booted over stdio and graded by
+          <a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a> on 10 agent-readiness checks for a
+          0-100 score. Downloads measure popularity. This measures whether an agent can actually pick your server up.
+        </p>
+        <div class="hero-actions">
+          <a class="button primary" href="#leaderboard">See the ranking</a>
+          <a class="button secondary" href="#climb">Climb the board</a>
+        </div>
+        <div class="hero-command" data-reveal>
+          <code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code>
+          <button type="button" data-copy="npx -y mcp-scorecard <your-package-or-repo>">Copy</button>
+        </div>
+        <ul class="hero-proof" aria-label="Leaderboard facts">
+          <li><strong><span data-live="scored">11</span></strong><span>servers scored this run</span></li>
+          <li><strong>0-100</strong><span>agent-readiness score</span></li>
+          <li><strong>10</strong><span>checks per server</span></li>
+          <li><strong>Weekly</strong><span>auto-refreshed by CI</span></li>
+        </ul>
+      </div>
+
+      <aside class="board-card" aria-label="Top MCP servers by agent-readiness score" data-reveal>
+        <div class="board-card-head">
+          <strong>🏆 Top of the board</strong>
+          <span>updated <span data-live="generated">2026-06-14</span></span>
+        </div>
+        <table class="board-table">
+          <thead>
+            <tr>
+              <th scope="col" class="col-rank">#</th>
+              <th scope="col">MCP server (npm)</th>
+              <th scope="col">score</th>
+              <th scope="col">biggest gap</th>
+            </tr>
+          </thead>
+          <tbody id="hero-board-body">
+          <tr class="top-1">
+            <td class="col-rank">1</td>
+            <td class="col-srv"><a href="https://www.npmjs.com/package/@636865636b73756d/mcp-v1" target="_blank" rel="noopener">@636865636b73756d/mcp-v1</a></td>
+            <td><span class="score-pill tier-d">48</span></td>
+            <td class="gap-cell"><span class="dot"></span>Agent manifest</td>
+          </tr>
+          <tr class="top-2">
+            <td class="col-rank">2</td>
+            <td class="col-srv"><a href="https://www.npmjs.com/package/@ai-dossier/mcp-server" target="_blank" rel="noopener">@ai-dossier/mcp-server</a></td>
+            <td><span class="score-pill tier-d">48</span></td>
+            <td class="gap-cell"><span class="dot"></span>Mutation gating</td>
+          </tr>
+          <tr class="top-3">
+            <td class="col-rank">3</td>
+            <td class="col-srv"><a href="https://www.npmjs.com/package/@agentled/mcp-server" target="_blank" rel="noopener">@agentled/mcp-server</a></td>
+            <td><span class="score-pill tier-d">47</span></td>
+            <td class="gap-cell"><span class="dot"></span>Agent manifest</td>
+          </tr>
+          <tr class="">
+            <td class="col-rank">4</td>
+            <td class="col-srv"><a href="https://www.npmjs.com/package/@agonx402/gateway-mcp" target="_blank" rel="noopener">@agonx402/gateway-mcp</a></td>
+            <td><span class="score-pill tier-d">45</span></td>
+            <td class="gap-cell"><span class="dot"></span>Privacy modes documented</td>
+          </tr>
+          <tr class="">
+            <td class="col-rank">5</td>
+            <td class="col-srv"><a href="https://www.npmjs.com/package/@agonx402/protocol-mcp" target="_blank" rel="noopener">@agonx402/protocol-mcp</a></td>
+            <td><span class="score-pill tier-d">45</span></td>
+            <td class="gap-cell"><span class="dot"></span>Privacy modes documented</td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="board-card-foot">
+          Full table below · machine-readable at <a href="/leaderboard.json">/leaderboard.json</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="notice" aria-label="Seed run notice" data-reveal>
+      <strong>Seed run.</strong>
+      <span>This board currently shows the first <span data-live="scored">11</span> scored servers of the registry corpus. The weekly CI sweep widens the field every refresh, including the wellness MCPs that score 90+ on the engine's own board. Scope: agent-readiness shape and metadata, not correctness or security.</span>
+    </section>
+
+    <section class="launch-strip" aria-label="Project links" data-reveal>
+      <a href="https://leaderboard.delx.ai/"><span>Live board</span><strong>leaderboard.delx.ai</strong></a>
+      <a href="https://github.com/davidmosiah/mcp-leaderboard"><span>Source</span><strong>GitHub repo</strong></a>
+      <a href="https://github.com/davidmosiah/mcp-scorecard"><span>Engine</span><strong>mcp-scorecard</strong></a>
+      <a href="https://registry.modelcontextprotocol.io"><span>Corpus</span><strong>MCP registry</strong></a>
+    </section>
+
+    <section class="leaderboard-section" id="leaderboard">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">The live ranking</p>
+        <h2>The whole board, by score.</h2>
+        <p class="section-lede">Every server here was booted in its own child process and graded on 10 checks. Sorted by agent-readiness, highest first. The <span style="color:var(--ok)">+ green</span> tags are passing checks; the <span style="color:var(--bad)">– red</span> tags are the gaps holding the score down.</p>
+      </div>
+
+      <div class="full-board-wrap" data-reveal>
+        <div class="full-board-meta">
+          <span>engine <b>mcp-scorecard</b></span>
+          <span>generated <b data-live="generated">2026-06-14</b></span>
+          <span>scored <b data-live="scored">11</b></span>
+          <span>corpus this run <b data-live="total">15</b></span>
+          <span>unreachable <b data-live="unreachable">4</b></span>
+        </div>
+        <div class="table-scroll">
+          <table class="full-board">
+            <thead>
+              <tr>
+                <th scope="col" class="fb-rank">#</th>
+                <th scope="col">MCP server (npm)</th>
+                <th scope="col">score</th>
+                <th scope="col">agent-readiness</th>
+                <th scope="col">key passing / failing checks</th>
+              </tr>
+            </thead>
+            <tbody id="full-board-body">
+          <tr class="top-1">
+            <td class="fb-rank">1</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@636865636b73756d/mcp-v1" target="_blank" rel="noopener">@636865636b73756d/mcp-v1</a><small>server: cs-mcp</small></td>
+            <td><span class="score-pill tier-d">48</span></td>
+            <td><div class="bar"><i style="width:48%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Mutation gating</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="top-2">
+            <td class="fb-rank">2</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@ai-dossier/mcp-server" target="_blank" rel="noopener">@ai-dossier/mcp-server</a><small>server: @ai-dossier/mcp-server</small></td>
+            <td><span class="score-pill tier-d">48</span></td>
+            <td><div class="bar"><i style="width:48%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Resources advertised</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Mutation gating</span>
+            </div></td>
+          </tr>
+          <tr class="top-3">
+            <td class="fb-rank">3</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@agentled/mcp-server" target="_blank" rel="noopener">@agentled/mcp-server</a><small>server: agentled</small></td>
+            <td><span class="score-pill tier-d">47</span></td>
+            <td><div class="bar"><i style="width:47%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Mutation gating</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">4</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@agonx402/gateway-mcp" target="_blank" rel="noopener">@agonx402/gateway-mcp</a><small>server: agon-gateway-mcp</small></td>
+            <td><span class="score-pill tier-d">45</span></td>
+            <td><div class="bar"><i style="width:45%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool naming convention</span>
+              <span class="pass">+ Mutation gating</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">5</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@agonx402/protocol-mcp" target="_blank" rel="noopener">@agonx402/protocol-mcp</a><small>server: agon-protocol-mcp</small></td>
+            <td><span class="score-pill tier-d">45</span></td>
+            <td><div class="bar"><i style="width:45%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool naming convention</span>
+              <span class="pass">+ Mutation gating</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">6</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@adeu/mcp-server" target="_blank" rel="noopener">@adeu/mcp-server</a><small>server: adeu-redlining-service</small></td>
+            <td><span class="score-pill tier-d">43</span></td>
+            <td><div class="bar"><i style="width:43%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Mutation gating</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">7</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@2sio/mcp" target="_blank" rel="noopener">@2sio/mcp</a><small>server: 2sio</small></td>
+            <td><span class="score-pill tier-f">37</span></td>
+            <td><div class="bar"><i style="width:37%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Mutation gating</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Tool naming convention</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">8</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@10iii/air-mcp-server" target="_blank" rel="noopener">@10iii/air-mcp-server</a><small>server: air</small></td>
+            <td><span class="score-pill tier-f">35</span></td>
+            <td><div class="bar"><i style="width:35%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool naming convention</span>
+              <span class="pass">+ Mutation gating</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">9</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@agent360/browser-mcp" target="_blank" rel="noopener">@agent360/browser-mcp</a><small>server: agent360-browser</small></td>
+            <td><span class="score-pill tier-f">30</span></td>
+            <td><div class="bar"><i style="width:30%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool naming convention</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+              <span class="fail">&ndash; Mutation gating</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">10</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@adbutler/mcp-server" target="_blank" rel="noopener">@adbutler/mcp-server</a><small>server: adbutler</small></td>
+            <td><span class="score-pill tier-f">29</span></td>
+            <td><div class="bar"><i style="width:29%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="fail">&ndash; Mutation gating</span>
+              <span class="fail">&ndash; Agent manifest</span>
+            </div></td>
+          </tr>
+          <tr class="">
+            <td class="fb-rank">11</td>
+            <td class="fb-srv"><a href="https://www.npmjs.com/package/@1ly/mcp-server" target="_blank" rel="noopener">@1ly/mcp-server</a><small>server: 1ly</small></td>
+            <td><span class="score-pill tier-f">27</span></td>
+            <td><div class="bar"><i style="width:27%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="check-tags">
+              <span class="pass">+ Schema validity</span>
+              <span class="pass">+ Tool descriptions</span>
+              <span class="fail">&ndash; Tool naming convention</span>
+              <span class="fail">&ndash; Privacy modes documented</span>
+            </div></td>
+          </tr>
+            </tbody>
+          </table>
+        </div>
+        <p class="unreachable-note">
+          <b>4 servers were unreachable this run</b> and are intentionally not scored:
+          <code>@1claw/mcp</code>, <code>@agenium/mcp-server</code>, <code>@agenttrust/mcp-server</code> and
+          <code>@aimino.xdn/fast-html-mcp-server</code>. Servers that require auth before <code>listTools()</code> and
+          don't honor the <code>MCP_PROBE</code> hook can't be graded fairly, so they are listed as unreachable, not
+          penalized. Support <code>MCP_PROBE</code> to become gradeable.
+        </p>
+      </div>
+    </section>
+
+    <section class="story-section" id="why">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Why this exists</p>
+        <h2>A neutral signal for agent-readiness.</h2>
+        <p class="section-lede">Hundreds of MCP servers ship every month with no shared measure of whether an agent can actually pick one up cleanly. Downloads measure popularity, not quality.</p>
+      </div>
+      <div class="story-grid">
+        <article class="story-card" data-reveal>
+          <span>01</span>
+          <h3>Discoverable</h3>
+          <p>Can an LLM enumerate the tools, read their descriptions, and understand what the server does without opening the source?</p>
+        </article>
+        <article class="story-card" data-reveal>
+          <span>02</span>
+          <h3>Trustworthy shape</h3>
+          <p>Valid JSON schemas, snake_case tool names, read-only annotations and gated mutations make a server safe to wire into an agent.</p>
+        </article>
+        <article class="story-card" data-reveal>
+          <span>03</span>
+          <h3>Self-onboarding</h3>
+          <p>An <code>*_agent_manifest</code> / <code>*_capabilities</code> surface and a smoke test let an agent verify the server before it relies on it.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="architecture-section" id="method">
+      <div class="architecture-copy" data-reveal>
+        <p class="eyebrow">Methodology &amp; fairness</p>
+        <h2>Booted, not guessed.</h2>
+        <p class="section-lede">Nothing here is hand-edited. The corpus comes from the official registry, every target is graded by the same engine in isolation, and a weekly GitHub Action commits the result.</p>
+        <div class="architecture-points">
+          <article>
+            <strong>Real corpus</strong>
+            <span>npm-installable servers from the official MCP registry, latest active version, deduped.</span>
+          </article>
+          <article>
+            <strong>Isolated runs</strong>
+            <span>Each server boots in its own child process with a hard timeout. One hang can't stall the batch.</span>
+          </article>
+          <article>
+            <strong>Fair to auth-gated servers</strong>
+            <span>Unreachable &ne; bad. Servers that can't be probed without credentials are listed, not low-scored.</span>
+          </article>
+          <article>
+            <strong>Scope is honest</strong>
+            <span>This grades shape, metadata and discoverability. A server can score 100 and still return wrong data.</span>
+          </article>
+        </div>
+      </div>
+      <figure class="method-visual" data-reveal>
+        <p class="eyebrow" style="margin-bottom:1rem">The weekly pipeline</p>
+        <ol class="method-steps">
+          <li><strong>Corpus</strong> — pull npm-installable servers from the MCP registry into <code>data/corpus.json</code>.</li>
+          <li><strong>Run</strong> — boot + score each target with mcp-scorecard into <code>data/leaderboard.json</code>.</li>
+          <li><strong>Render</strong> — generate <code>LEADERBOARD.md</code> and serve this page + JSON.</li>
+          <li><strong>Commit</strong> — a GitHub Action commits the refreshed board. No human in the loop.</li>
+        </ol>
+      </figure>
+    </section>
+
+    <section class="setup-section" id="climb">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Climb the board</p>
+        <h2>Score your server, then fix what it tells you.</h2>
+        <p class="section-lede">The engine is the same CLI that built this board. Run it locally against your own package or repo, read the itemized fixes, ship them, and climb on the next weekly refresh.</p>
+      </div>
+
+      <div class="path-grid">
+        <article class="path-card" data-reveal>
+          <span>Step 1</span>
+          <h3>Get your score</h3>
+          <p>Point mcp-scorecard at any npm package, GitHub URL, or local <code>dist/index.js</code>. It boots the server and prints your 0-100 score with the exact failing checks.</p>
+        </article>
+        <article class="path-card" data-reveal>
+          <span>Step 2</span>
+          <h3>Adopt the conventions</h3>
+          <p>snake_case tool names, read-only annotations, an <code>*_agent_manifest</code> / <code>*_capabilities</code> discovery surface, documented privacy modes, and a smoke test. These are what the score rewards.</p>
+        </article>
+      </div>
+
+      <div class="setup-flow">
+        <article class="setup-card command-card" data-reveal>
+          <div class="setup-topline">Score</div>
+          <h3>One command, itemized fixes</h3>
+          <p>No credentials, runs locally over stdio. Add <code>--json</code> to pipe into CI, or <code>--min-score 80</code> to gate a build.</p>
+          <div class="terminal">
+            <button type="button" data-copy="npx -y mcp-scorecard <your-package-or-repo>">Copy</button>
+<pre><code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code></pre>
+          </div>
+        </article>
+
+        <article class="setup-card" data-reveal>
+          <div class="setup-topline">Badge</div>
+          <h3>Show your score in your README</h3>
+          <p>Generate a live badge so agents and humans see your agent-readiness at a glance, straight from your repo.</p>
+          <div class="terminal">
+            <button type="button" data-copy="npx -y mcp-scorecard <your-package> --badge">Copy</button>
+<pre><code>npx -y mcp-scorecard &lt;your-package&gt; --badge</code></pre>
+          </div>
+        </article>
+
+        <article class="setup-card" data-reveal>
+          <div class="setup-topline">Run it as MCP</div>
+          <h3>Wire the engine into your agent</h3>
+          <p>mcp-scorecard is also an MCP server, so an agent can grade other servers on demand. Add it to any client that speaks MCP over stdio.</p>
+          <div class="client-pills" role="list" aria-label="Supported clients">
+            <span>Claude</span>
+            <span>Cursor</span>
+            <span>Windsurf</span>
+            <span>Hermes</span>
+            <span>OpenClaw</span>
+            <span>Generic MCP</span>
+          </div>
+          <details class="config-details">
+            <summary>Show the MCP config</summary>
+            <div class="terminal">
+              <button type="button" data-copy='{
+  "mcpServers": {
+    "mcp-scorecard": {
+      "command": "npx",
+      "args": ["-y", "mcp-scorecard"]
+    }
+  }
+}'>Copy config</button>
+<pre><code>{
+  "mcpServers": {
+    "mcp-scorecard": {
+      "command": "npx",
+      "args": ["-y", "mcp-scorecard"]
+    }
+  }
+}</code></pre>
+            </div>
+          </details>
+        </article>
+      </div>
+    </section>
+
+    <section class="use-section" id="checks">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">The 10 checks</p>
+        <h2>What the score is made of.</h2>
+        <p class="section-lede">Each check scores 0-10 and they sum to 100. Together they describe whether an agent can find, trust and safely use the server.</p>
+      </div>
+      <div class="story-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
+        <article class="story-card" data-reveal><span>1</span><h3>Manifest discoverability</h3><p>A standard, fetchable description of the server an agent can read first.</p></article>
+        <article class="story-card" data-reveal><span>2</span><h3>Tool naming</h3><p>Consistent, snake_case, namespaced tool names an agent can predict.</p></article>
+        <article class="story-card" data-reveal><span>3</span><h3>Tool descriptions</h3><p>Every tool explains what it does, its inputs, and its side effects.</p></article>
+        <article class="story-card" data-reveal><span>4</span><h3>Schema validity</h3><p>Input schemas are valid JSON Schema an agent can rely on.</p></article>
+        <article class="story-card" data-reveal><span>5</span><h3>Annotations</h3><p>Read-only / destructive / idempotent hints so agents act safely.</p></article>
+        <article class="story-card" data-reveal><span>6</span><h3>Mutation gating</h3><p>Write and destructive actions are explicit, not accidental.</p></article>
+        <article class="story-card" data-reveal><span>7</span><h3>Privacy modes</h3><p>Sensitive output is opt-in and documented, not leaked by default.</p></article>
+        <article class="story-card" data-reveal><span>8</span><h3>Resources</h3><p>The server advertises resources, not just tools, where it makes sense.</p></article>
+        <article class="story-card" data-reveal><span>9</span><h3>Agent manifest</h3><p>An <code>*_agent_manifest</code> / <code>*_capabilities</code> surface for self-onboarding.</p></article>
+        <article class="story-card" data-reveal><span>10</span><h3>Smoke test</h3><p>A safe, callable check that proves the server is actually alive.</p></article>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="section-head" data-reveal>
+        <p class="eyebrow">Questions people ask first</p>
+        <h2>Before you trust the ranking.</h2>
+        <p class="section-lede">A neutral leaderboard should be explicit about what it measures, how it scores, and where it is deliberately fair.</p>
+      </div>
+      <div class="faq-grid">
+        <details class="faq-item" data-reveal open>
+          <summary>What does this actually measure?</summary>
+          <p>Agent-readiness: whether an agent can discover the tools, trust the schemas, and onboard itself without a human reading the source. It is shape, metadata and discoverability — <strong>not</strong> correctness or security.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>How is each server scored?</summary>
+          <p>Each npm server from the official registry is booted over stdio in an isolated child process and graded by <code>mcp-scorecard</code> on 10 checks (each 0-10) summed to 0-100. A weekly GitHub Action re-runs the sweep and commits the result.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>How do I climb the board?</summary>
+          <p>Run <code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code>, read the itemized fixes, and adopt the conventions the score rewards. You climb on the next weekly refresh — nothing is hand-edited.</p>
+        </details>
+        <details class="faq-item" data-reveal>
+          <summary>Why is a server "unreachable" not "low"?</summary>
+          <p>Servers that need auth before <code>listTools()</code> and don't honor the <code>MCP_PROBE</code> hook can't be graded fairly, so they're listed as unreachable rather than penalized. Support <code>MCP_PROBE</code> to be gradeable.</p>
+        </details>
+      </div>
+      <p class="inline-link-row" data-reveal>
+        <a href="https://github.com/davidmosiah/mcp-leaderboard/blob/main/LEADERBOARD.md">Full LEADERBOARD.md</a>
+        <a href="/leaderboard.json">leaderboard.json</a>
+        <a href="https://github.com/davidmosiah/mcp-scorecard#what-it-checks">What the engine checks</a>
+      </p>
+    </section>
+
+    <section class="agent-section" id="agents">
+      <div class="agent-panel" data-reveal>
+        <div>
+          <p class="eyebrow">For AI agents</p>
+          <h2>A delegation prompt that does the work.</h2>
+          <p>Hand this to your assistant to score a server and read back exactly what to fix. It points at the engine, runs it over stdio, and never invents a score.</p>
+        </div>
+        <div class="terminal">
+          <button type="button" data-copy="Score the agent-readiness of an MCP server for me using mcp-scorecard. Engine: https://github.com/davidmosiah/mcp-scorecard (npm: mcp-scorecard). The public leaderboard lives at https://leaderboard.delx.ai and its machine-readable data is at https://leaderboard.delx.ai/leaderboard.json. Run: npx -y mcp-scorecard <TARGET> --json where <TARGET> is my npm package, GitHub repo URL, or local dist/index.js. Parse the JSON, then give me: (1) my 0-100 score and grade, (2) each of the 10 checks with pass/warn/fail, (3) the top 3 failing checks ranked by points lost, and (4) concrete fixes for each (snake_case tool names, read-only annotations, an *_agent_manifest / *_capabilities discovery surface, documented privacy modes, a smoke test). Do not fabricate a score; if the server is unreachable, say so and explain MCP_PROBE.">Copy agent prompt</button>
+<pre><code>Score the agent-readiness of an MCP server for me using
+mcp-scorecard.
+
+Engine: github.com/davidmosiah/mcp-scorecard (npm: mcp-scorecard)
+Leaderboard: https://leaderboard.delx.ai
+Data: https://leaderboard.delx.ai/leaderboard.json
+
+Run:  npx -y mcp-scorecard &lt;TARGET&gt; --json
+(&lt;TARGET&gt; = npm package, GitHub URL, or local dist/index.js)
+
+Then give me:
+1. my 0-100 score and grade
+2. all 10 checks with pass / warn / fail
+3. the top 3 gaps, ranked by points lost
+4. a concrete fix for each
+
+Don't fabricate a score. If it's unreachable, say so
+and explain the MCP_PROBE hook.</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <section class="community-section" id="community">
+      <div class="community-card" data-reveal>
+        <div>
+          <p class="eyebrow">For builders</p>
+          <h2>Open source, end to end.</h2>
+          <p>Both the leaderboard (<a href="https://github.com/davidmosiah/mcp-leaderboard">mcp-leaderboard</a>) and the scoring engine (<a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a>) are MIT and built by <a href="https://github.com/davidmosiah">David Mosiah</a>. Methodology issues and corpus additions are welcome — the rules live in the scripts, not in anyone's head.</p>
+        </div>
+        <div class="community-actions">
+          <a class="button primary" href="https://github.com/davidmosiah/mcp-leaderboard/issues/new/choose">Open an issue</a>
+          <a class="button secondary" href="https://github.com/davidmosiah/mcp-leaderboard">Leaderboard repo</a>
+          <a class="button secondary" href="https://github.com/davidmosiah/mcp-scorecard">Engine repo</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="closing">
+      <div data-reveal>
+        <p class="eyebrow">The agent-readiness bar</p>
+        <h2>See where your server lands.</h2>
+        <p>Score it in one command, fix what the engine flags, and climb on the next weekly refresh.</p>
+      </div>
+      <div class="closing-actions" data-reveal>
+        <a class="button primary" href="#climb">Climb the board</a>
+        <a class="button secondary" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub</a>
+        <a class="button secondary" href="/leaderboard.json">leaderboard.json</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p><strong>MCP Leaderboard</strong> by <a href="https://github.com/davidmosiah">David Mosiah</a> (<a href="https://x.com/delx369">@delx369</a>). MIT licensed. Part of <a href="https://delx.ai">Delx</a>.</p>
+    <p>Scored by <a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a>. Corpus from the <a href="https://registry.modelcontextprotocol.io">official MCP registry</a>. Auto-refreshed weekly — nothing hand-edited.</p>
+    <p>This grades agent-readiness shape and metadata, not correctness or security. A server can score 100 and still return wrong data. Always review before production.</p>
+  </footer>
+
+  <script src="assets/site.js" defer></script>
+</body>
+</html>

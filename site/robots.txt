@@ -1,0 +1,25 @@
+# MCP Leaderboard — open source, agents welcome.
+User-agent: *
+Allow: /
+# Content usage preferences (open-source, agent-readiness data — agent use encouraged)
+Content-Signal: ai-train=yes, search=yes, ai-input=yes
+
+User-agent: GPTBot
+Allow: /
+User-agent: ClaudeBot
+Allow: /
+User-agent: Claude-User
+Allow: /
+User-agent: Claude-Web
+Allow: /
+User-agent: anthropic-ai
+Allow: /
+User-agent: PerplexityBot
+Allow: /
+User-agent: Google-Extended
+Allow: /
+User-agent: CCBot
+Allow: /
+
+Sitemap: https://leaderboard.delx.ai/sitemap.xml
+Host: https://leaderboard.delx.ai

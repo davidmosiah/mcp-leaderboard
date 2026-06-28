@@ -1,0 +1,61 @@
+# MCP Leaderboard
+
+> A public, neutral agent-readiness ranking of the Model Context Protocol (MCP) ecosystem. Every npm-installable server in the official MCP registry is booted over stdio and graded by mcp-scorecard on 10 agent-readiness checks for a 0-100 score. Auto-refreshed weekly by a GitHub Action. Nothing is hand-edited.
+
+Primary URL: https://leaderboard.delx.ai/
+Machine-readable ranking (JSON): https://leaderboard.delx.ai/leaderboard.json
+Source (GitHub): https://github.com/davidmosiah/mcp-leaderboard
+Scoring engine (GitHub): https://github.com/davidmosiah/mcp-scorecard
+Scoring engine (npm): https://www.npmjs.com/package/mcp-scorecard
+Corpus source: https://registry.modelcontextprotocol.io
+Creator: David Mosiah, https://github.com/davidmosiah (@delx369). Part of Delx, https://delx.ai
+
+## What it is
+
+The MCP Leaderboard ranks public MCP servers by *agent-readiness*: whether an AI agent can discover the tools, trust the schemas, and onboard itself without a human reading the source. Downloads measure popularity; this measures whether an agent can actually pick the server up cleanly. It is built on top of the mcp-scorecard engine and is data + automation, not a published library.
+
+## Scope and boundaries
+
+- This grades shape, metadata and discoverability — NOT correctness or security. A server can score 100 and still return wrong data. Always review before production.
+- The corpus is npm-installable servers from the official MCP registry, latest active version, deduped.
+- Each server boots in its own isolated child process with a hard timeout. This is not a security sandbox for untrusted packages.
+- Unreachable is not the same as bad: servers that require auth before listTools() and don't honor the MCP_PROBE hook are listed as "unreachable", not scored low. Supporting MCP_PROBE makes a server gradeable.
+
+## The 10 agent-readiness checks (each 0-10, summed to 100)
+
+1. Manifest discoverability - a standard, fetchable description an agent reads first
+2. Tool naming - consistent, snake_case, namespaced tool names
+3. Tool descriptions - each tool explains what it does, its inputs and side effects
+4. Schema validity - input schemas are valid JSON Schema
+5. Annotations - read-only / destructive / idempotent hints
+6. Mutation gating - write and destructive actions are explicit, not accidental
+7. Privacy modes - sensitive output is opt-in and documented
+8. Resources - the server advertises resources, not just tools
+9. Agent manifest - an *_agent_manifest / *_capabilities surface for self-onboarding
+10. Smoke test - a safe, callable check that proves the server is alive
+
+## How an agent should use this
+
+1. Fetch https://leaderboard.delx.ai/leaderboard.json for the current ranking. Fields: generatedAt (ISO date), engine, counts {total, scored, unreachable}, results[] with name, npm, repo, status, score, serverName, checks[] {id, label, score, status}, topGap.
+2. To score a specific server: run `npx -y mcp-scorecard <npm-package | github-url | local-dist> --json` and parse the JSON. Add --min-score 80 to gate a CI build.
+3. To climb the board: adopt the conventions the score rewards (snake_case tool names, read-only annotations, an *_agent_manifest / *_capabilities discovery surface, documented privacy modes, a smoke test). The board re-scores weekly.
+
+## Climb the board
+
+```
+npx -y mcp-scorecard <your-package-or-repo>     # score + itemized fixes
+npx -y mcp-scorecard <your-package> --badge      # live README badge
+```
+
+## How it is built (weekly pipeline)
+
+1. corpus - pull npm-installable servers from the MCP registry into data/corpus.json
+2. run - boot + score each target with mcp-scorecard into data/leaderboard.json
+3. render - generate LEADERBOARD.md and serve this page + JSON
+4. commit - a GitHub Action commits the refreshed board, no human in the loop
+
+## Useful links
+
+- Full leaderboard (Markdown): https://github.com/davidmosiah/mcp-leaderboard/blob/main/LEADERBOARD.md
+- What the engine checks: https://github.com/davidmosiah/mcp-scorecard#what-it-checks
+- Issues / corpus additions: https://github.com/davidmosiah/mcp-leaderboard/issues

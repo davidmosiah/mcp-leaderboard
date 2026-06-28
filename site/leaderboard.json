@@ -1,0 +1,820 @@
+{
+  "generatedAt": "2026-06-14T13:55:45.017Z",
+  "engine": "mcp-scorecard",
+  "counts": {
+    "total": 15,
+    "scored": 11,
+    "unreachable": 4
+  },
+  "results": [
+    {
+      "name": "io.github.10iii/air",
+      "npm": "@10iii/air-mcp-server",
+      "repo": "https://github.com/10iii/air",
+      "status": "scored",
+      "score": 35,
+      "serverName": "air",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "io.github.1clawAI/1claw-mcp",
+      "npm": "@1claw/mcp",
+      "repo": "https://github.com/1clawAI/1claw-mcp",
+      "status": "error",
+      "error": "Audit error: MCP error -32000: Connection closed"
+    },
+    {
+      "name": "io.github.1lystore/mcp-server",
+      "npm": "@1ly/mcp-server",
+      "repo": "https://github.com/1lystore/1ly-mcp-server",
+      "status": "scored",
+      "score": 27,
+      "serverName": "1ly",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Tool naming convention"
+    },
+    {
+      "name": "io.github.2s-io/mcp",
+      "npm": "@2sio/mcp",
+      "repo": "https://github.com/2s-io/sdk",
+      "status": "scored",
+      "score": 37,
+      "serverName": "2sio",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Tool naming convention"
+    },
+    {
+      "name": "com.636865636b73756d/mcp-v1",
+      "npm": "@636865636b73756d/mcp-v1",
+      "repo": null,
+      "status": "scored",
+      "score": 48,
+      "serverName": "cs-mcp",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 4,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Agent manifest"
+    },
+    {
+      "name": "com.adbutler/mcp-server",
+      "npm": "@adbutler/mcp-server",
+      "repo": "https://github.com/adbutler/mcp-server",
+      "status": "scored",
+      "score": 29,
+      "serverName": "adbutler",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Mutation gating"
+    },
+    {
+      "name": "ai.adeu/adeu",
+      "npm": "@adeu/mcp-server",
+      "repo": "https://github.com/dealfluence/adeu",
+      "status": "scored",
+      "score": 43,
+      "serverName": "adeu-redlining-service",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 4,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Mutation gating"
+    },
+    {
+      "name": "io.github.Aganium/mcp-server",
+      "npm": "@agenium/mcp-server",
+      "repo": "https://github.com/Aganium/agenium",
+      "status": "error",
+      "error": "Audit error: MCP error -32000: Connection closed"
+    },
+    {
+      "name": "io.github.Agent360dk/browser-mcp",
+      "npm": "@agent360/browser-mcp",
+      "repo": "https://github.com/Agent360dk/browser-mcp",
+      "status": "scored",
+      "score": 30,
+      "serverName": "agent360-browser",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "io.github.Agentled/mcp-server",
+      "npm": "@agentled/mcp-server",
+      "repo": "https://github.com/Agentled/mcp-server",
+      "status": "scored",
+      "score": 47,
+      "serverName": "agentled",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 1,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Agent manifest"
+    },
+    {
+      "name": "ai.agenttrust/mcp-server",
+      "npm": "@agenttrust/mcp-server",
+      "repo": "https://github.com/agenttrust/mcp-server",
+      "status": "error",
+      "error": "Audit error: MCP error -32000: Connection closed"
+    },
+    {
+      "name": "io.github.Agonx402/agon-gateway",
+      "npm": "@agonx402/gateway-mcp",
+      "repo": "https://github.com/Agonx402/agon-gateway-agentic",
+      "status": "scored",
+      "score": 45,
+      "serverName": "agon-gateway-mcp",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "io.github.Agonx402/agon-protocol",
+      "npm": "@agonx402/protocol-mcp",
+      "repo": "https://github.com/Agonx402/agon-gateway-agentic",
+      "status": "scored",
+      "score": 45,
+      "serverName": "agon-protocol-mcp",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 5,
+          "status": "warn"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Privacy modes documented"
+    },
+    {
+      "name": "ai.imboard/dossier",
+      "npm": "@ai-dossier/mcp-server",
+      "repo": "https://github.com/imboard-ai/ai-dossier",
+      "status": "scored",
+      "score": 48,
+      "serverName": "@ai-dossier/mcp-server",
+      "checks": [
+        {
+          "id": "schema_validity",
+          "label": "Schema validity",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_naming",
+          "label": "Tool naming convention",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "privacy_modes",
+          "label": "Privacy modes documented",
+          "score": 4,
+          "status": "fail"
+        },
+        {
+          "id": "mutation_gating",
+          "label": "Mutation gating",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "agent_manifest",
+          "label": "Agent manifest",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "smoke_test",
+          "label": "Smoke test",
+          "score": 7,
+          "status": "warn"
+        },
+        {
+          "id": "resources",
+          "label": "Resources advertised",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "tool_descriptions",
+          "label": "Tool descriptions",
+          "score": 10,
+          "status": "pass"
+        },
+        {
+          "id": "annotations",
+          "label": "Annotations",
+          "score": 0,
+          "status": "fail"
+        },
+        {
+          "id": "manifest_discoverability",
+          "label": "Manifest discoverability",
+          "score": 0,
+          "status": "fail"
+        }
+      ],
+      "topGap": "Mutation gating"
+    },
+    {
+      "name": "io.github.Aimino-Tech/fast-html-mcp",
+      "npm": "@aimino.xdn/fast-html-mcp-server",
+      "repo": null,
+      "status": "error",
+      "error": "npm error A complete log of this run can be found in: /Users/davidmosiah/.npm/_logs/2026-06-14T13_55_31_853Z-debug-0.log"
+    }
+  ]
+}
