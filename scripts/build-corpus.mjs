@@ -5,7 +5,11 @@ import { writeFileSync, mkdirSync } from "node:fs";
 
 const REGISTRY = "https://registry.modelcontextprotocol.io/v0/servers";
 const LIMIT = 100;
-const MAX_PAGES = 60;
+// Safety cap only — with version=latest the registry serves one entry per server.
+// If we ever hit it, the corpus is TRUNCATED and the warning below must be heeded;
+// a silently partial corpus breaks the board's "every public MCP server" claim
+// (that exact bug hid every server published after ~page 60 until 2026-07-06).
+const MAX_PAGES = 200;
 const BLOCKED_PACKAGES = new Set([
   // Installs a macOS background app + LaunchAgent during normal execution.
   "local-mcp"
@@ -13,8 +17,8 @@ const BLOCKED_PACKAGES = new Set([
 
 async function fetchPage(cursor) {
   const url = cursor
-    ? `${REGISTRY}?limit=${LIMIT}&cursor=${encodeURIComponent(cursor)}`
-    : `${REGISTRY}?limit=${LIMIT}`;
+    ? `${REGISTRY}?limit=${LIMIT}&version=latest&cursor=${encodeURIComponent(cursor)}`
+    : `${REGISTRY}?limit=${LIMIT}&version=latest`;
   const res = await fetch(url, { headers: { accept: "application/json" } });
   if (!res.ok) throw new Error(`registry ${res.status}`);
   return res.json();
@@ -50,6 +54,7 @@ async function main() {
     cursor = data.metadata?.nextCursor || data.metadata?.next_cursor || null;
     pages += 1;
   } while (cursor && pages < MAX_PAGES);
+  if (cursor) console.error(`WARNING: MAX_PAGES (${MAX_PAGES}) hit with more registry pages pending — corpus is TRUNCATED`);
 
   // Keep latest + active, dedupe by npm package name.
   const seen = new Set();

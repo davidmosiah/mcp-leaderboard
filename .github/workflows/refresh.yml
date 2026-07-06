@@ -33,9 +33,9 @@ jobs:
       - name: Score corpus
         run: node scripts/run-leaderboard.mjs ${{ github.event.inputs.limit && format('--limit {0}', github.event.inputs.limit) || '' }}
         env:
-          CONCURRENCY: "8"
+          CONCURRENCY: "12"
           TARGET_TIMEOUT_MS: "60000"
-          RUN_BUDGET_MS: "9000000" # 150 min — publish what we have instead of dying at the 180-min job cap
+          RUN_BUDGET_MS: "9900000" # 165 min — publish what we have instead of dying at the 180-min job cap
       - name: Render
         run: npm run render
       - name: Render site
