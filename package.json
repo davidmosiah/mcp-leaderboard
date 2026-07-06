@@ -8,9 +8,16 @@
     "corpus": "node scripts/build-corpus.mjs",
     "run": "node scripts/run-leaderboard.mjs",
     "render": "node scripts/render.mjs",
-    "all": "npm run corpus && npm run run && npm run render"
+    "all": "npm run corpus && npm run run && npm run render && npm run render:site",
+    "render:site": "node scripts/render-site.mjs"
   },
-  "keywords": ["mcp", "model-context-protocol", "leaderboard", "agent-readiness", "scorecard"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "leaderboard",
+    "agent-readiness",
+    "scorecard"
+  ],
   "author": "David Mosiah",
   "license": "MIT",
   "devDependencies": {

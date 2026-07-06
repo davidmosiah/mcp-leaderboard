@@ -36,7 +36,7 @@ The MCP Leaderboard ranks public MCP servers by *agent-readiness*: whether an AI
 
 ## How an agent should use this
 
-1. Fetch https://leaderboard.delx.ai/leaderboard.json for the current ranking. Fields: generatedAt (ISO date), engine, counts {total, scored, unreachable}, results[] with name, npm, repo, status, score, serverName, checks[] {id, label, score, status}, topGap.
+1. Fetch https://leaderboard.delx.ai/leaderboard.json for the current ranking. Fields: generatedAt (ISO date), engine, counts {total, scored, unreachable, deferred}, results[] with name, npm, repo, status, score, serverName, checks[] {id, label, score, status}, topGap.
 2. To score a specific server: run `npx -y mcp-scorecard <npm-package | github-url | local-dist> --json` and parse the JSON. Add --min-score 80 to gate a CI build.
 3. To climb the board: adopt the conventions the score rewards (snake_case tool names, read-only annotations, an *_agent_manifest / *_capabilities discovery surface, documented privacy modes, a smoke test). The board re-scores weekly.
 

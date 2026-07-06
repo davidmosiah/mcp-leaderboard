@@ -38,6 +38,8 @@ jobs:
           RUN_BUDGET_MS: "9000000" # 150 min — publish what we have instead of dying at the 180-min job cap
       - name: Render
         run: npm run render
+      - name: Render site
+        run: npm run render:site
       - name: Upload refreshed leaderboard
         uses: actions/upload-artifact@v4
         with:
@@ -46,6 +48,9 @@ jobs:
             LEADERBOARD.md
             data/corpus.json
             data/leaderboard.json
+            site/index.html
+            site/leaderboard.json
+            site/sitemap.xml
           if-no-files-found: error
 
   commit:
@@ -64,7 +69,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add LEADERBOARD.md data/corpus.json data/leaderboard.json
+          git add LEADERBOARD.md data/corpus.json data/leaderboard.json site/index.html site/leaderboard.json site/sitemap.xml
           if git diff --staged --quiet; then
             echo "no changes"
           else
