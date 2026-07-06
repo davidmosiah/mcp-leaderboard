@@ -74,5 +74,7 @@ jobs:
             echo "no changes"
           else
             git commit -m "chore: refresh leaderboard $(date -u +%Y-%m-%d)"
+            # the sweep takes minutes — main may have moved since this job's checkout
+            git pull --rebase origin main
             git push
           fi
