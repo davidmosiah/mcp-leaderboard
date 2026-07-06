@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-06T22:43:41.448Z",
+  "generatedAt": "2026-07-06T22:53:12.534Z",
   "engine": "mcp-scorecard",
   "counts": {
     "total": 306,
@@ -381,7 +381,7 @@
       "npm": "@apideck/mcp",
       "repo": "https://github.com/apideck-libraries/mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_34_51_127Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_44_35_193Z-debug-0.log"
     },
     {
       "name": "com.apogeoapi/apogeoapi-mcp",
@@ -741,7 +741,7 @@
       "npm": "@borough/mcp",
       "repo": "https://github.com/jdmay2/borough",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_29_161Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_14_483Z-debug-0.log"
     },
     {
       "name": "com.bounceprotect.www/mcp",
@@ -819,7 +819,7 @@
       "npm": "@businys/mcp-server",
       "repo": "https://github.com/hiatys/businys-mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_31_995Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_17_749Z-debug-0.log"
     },
     {
       "name": "ai.buywhere/buywhere-mcp",
@@ -911,7 +911,7 @@
       "npm": "@certscore/mcp",
       "repo": "https://github.com/ergoveritas1-alt/certscore.ai",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_35_197Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_20_320Z-debug-0.log"
     },
     {
       "name": "ai.chronary/mcp",
@@ -996,7 +996,7 @@
       "npm": "@clarxai/mcp",
       "repo": "https://github.com/Gernika-Labs/clarx-cloud",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_40_200Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_25_183Z-debug-0.log"
     },
     {
       "name": "com.clauderecall/recall",
@@ -1081,7 +1081,7 @@
       "npm": "@clihub/cli",
       "repo": null,
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_42_813Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_28_081Z-debug-0.log"
     },
     {
       "name": "com.codescene/codescene-mcp-server",
@@ -1840,7 +1840,7 @@
       "npm": "@dpf.it.com/mcp-server",
       "repo": null,
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_36_11_121Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_54_377Z-debug-0.log"
     },
     {
       "name": "com.dragapp/mcp-server",
@@ -2229,7 +2229,7 @@
       "npm": "@fidacy/mcp",
       "repo": "https://github.com/lucaslubi/fidacy-mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_36_27_431Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_46_10_563Z-debug-0.log"
     },
     {
       "name": "com.fidensa/mcp-server",
@@ -3321,7 +3321,7 @@
       "npm": "@keepmysubs/mcp",
       "repo": "https://github.com/golts/SubsTracker",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_18_491Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_46_57_823Z-debug-0.log"
     },
     {
       "name": "com.kekwanu/syncline-mcp-server",
@@ -4435,7 +4435,7 @@
       "npm": "@mdtidy/mcp",
       "repo": null,
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_48_527Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_47_28_804Z-debug-0.log"
     },
     {
       "name": "com.meertrack/mcp-server",
@@ -4449,7 +4449,7 @@
       "npm": "@meetdewey/mcp",
       "repo": "https://github.com/meetdewey/mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_50_038Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_47_30_255Z-debug-0.log"
     },
     {
       "name": "ai.meetlark/mcp-server",
@@ -5611,7 +5611,7 @@
       "npm": "@pilotgentic/mcp-server",
       "repo": "https://github.com/1genadam/pilotgentic",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_38_38_162Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_48_17_036Z-debug-0.log"
     },
     {
       "name": "com.postman/postman-mcp-server",
@@ -6235,7 +6235,7 @@
       "npm": "@retrograde-labs/lune-mcp-server",
       "repo": null,
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_13_474Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_48_49_588Z-debug-0.log"
     },
     {
       "name": "ai.rolli/mcp",
@@ -7249,28 +7249,28 @@
       "npm": "@spideriq/mcp-gate",
       "repo": "https://github.com/SpiderIQ/SpiderIQ",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_59_501Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_35_303Z-debug-0.log"
     },
     {
       "name": "ai.spideriq/mail",
       "npm": "@spideriq/mcp-mail",
       "repo": "https://github.com/SpiderIQ/SpiderIQ",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_59_379Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_35_770Z-debug-0.log"
     },
     {
       "name": "ai.spideriq/media",
       "npm": "@spideriq/mcp-media",
       "repo": "https://github.com/SpiderIQ/SpiderIQ",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_01_367Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_37_733Z-debug-0.log"
     },
     {
       "name": "ai.spideriq/publish",
       "npm": "@spideriq/mcp-publish",
       "repo": "https://github.com/SpiderIQ/SpiderIQ",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_05_186Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_38_485Z-debug-0.log"
     },
     {
       "name": "com.ssemble/mcp-server",
@@ -8093,7 +8093,7 @@
       "npm": "@variel/mcp-server",
       "repo": "https://github.com/jeisenberg/ai-brand-studio",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_37_904Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_12_516Z-debug-0.log"
     },
     {
       "name": "app.vayapin/mcp",
@@ -8639,7 +8639,7 @@
       "npm": "blackveil-dns",
       "repo": "https://github.com/MadaBurns/bv-mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_06_153Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_42_092Z-debug-0.log"
     },
     {
       "name": "com.blackwalltier/blackwall",
@@ -9100,7 +9100,7 @@
       "npm": "docfork",
       "repo": "https://github.com/docfork/docfork-mcp",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_22_093Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_57_152Z-debug-0.log"
     },
     {
       "name": "com.agentsconsultants.api/docqa",
@@ -9178,7 +9178,7 @@
       "npm": "esrp-oss-mcp-test",
       "repo": "https://github.com/sravanism/esrp-oss-mcp-server",
       "status": "error",
-      "error": "Audit error: Resolved bin does not exist after extract: /tmp/scorecard-work/probe-UkMJug/pkg/dist/src/{index.js,functions/*.js}"
+      "error": "Audit error: Resolved bin does not exist after extract: /tmp/scorecard-work/probe-WGRswF/pkg/dist/src/{index.js,functions/*.js}"
     },
     {
       "name": "com.familiarvtt/familiar",
@@ -9637,7 +9637,7 @@
       "npm": "kernelcad",
       "repo": "https://github.com/w1ne/kernelCAD-web",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_55_387Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_51_29_455Z-debug-0.log"
     },
     {
       "name": "com.azurecarbon/kodiak",
@@ -10020,7 +10020,7 @@
       "npm": "marketintell",
       "repo": "https://github.com/ravidsrk/marketintell",
       "status": "error",
-      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_42_08_667Z-debug-0.log"
+      "error": "npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_51_43_765Z-debug-0.log"
     },
     {
       "name": "com.adrianczuczka/mason",

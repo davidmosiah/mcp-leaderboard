@@ -191,7 +191,7 @@ npx -y mcp-scorecard <your-package> --badge
 
 - `@agenttrust/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@ankimcp/anki-mcp-server` — timeout
-- `@apideck/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_34_51_127Z-debug-0.log
+- `@apideck/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_44_35_193Z-debug-0.log
 - `@appfigures/cli` — error: Audit error: MCP error -32000: Connection closed
 - `@argosvix/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@asksakina/islamic-knowledge-mcp` — timeout
@@ -202,27 +202,27 @@ npx -y mcp-scorecard <your-package> --badge
 - `@billingserv/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@bitsbound/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@bolthub/mcp-registry` — error: Audit error: MCP error -32000: Connection closed
-- `@borough/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_29_161Z-debug-0.log
-- `@businys/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_31_995Z-debug-0.log
+- `@borough/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_14_483Z-debug-0.log
+- `@businys/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_17_749Z-debug-0.log
 - `@bvcc/agent-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@calx/selis-mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@certscore/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_35_197Z-debug-0.log
+- `@certscore/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_20_320Z-debug-0.log
 - `@chronary/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@clarxai/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_40_200Z-debug-0.log
+- `@clarxai/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_25_183Z-debug-0.log
 - `@clauderecallhq/cli` — error: Audit error: MCP error -32000: Connection closed
-- `@clihub/cli` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_35_42_813Z-debug-0.log
+- `@clihub/cli` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_28_081Z-debug-0.log
 - `@contextlayer/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@corralimited/snapdiff-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@crawlconsole/mcp` — error: Audit error: Probe step "connect" timed out after 30000ms
 - `@cueapi/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@dealsurface/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@doomscrollr/mcp-server` — error: Audit error: MCP error -32000: Connection closed
-- `@dpf.it.com/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_36_11_121Z-debug-0.log
+- `@dpf.it.com/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_45_54_377Z-debug-0.log
 - `@dropwarp/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@echosaw/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@eztexting/mcp-server` — timeout
 - `@ffmpeg-micro/mcp-server` — error: Audit error: MCP error -32000: Connection closed
-- `@fidacy/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_36_27_431Z-debug-0.log
+- `@fidacy/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_46_10_563Z-debug-0.log
 - `@gadgethumans/x402` — error: Audit error: MCP error -32000: Connection closed
 - `@gammainfra/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@gaudiolab/mcp-developers` — error: Audit error: MCP error -32000: Connection closed
@@ -236,16 +236,16 @@ npx -y mcp-scorecard <your-package> --badge
 - `@idleprotocol/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@instavar/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@jettyd/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@keepmysubs/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_18_491Z-debug-0.log
+- `@keepmysubs/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_46_57_823Z-debug-0.log
 - `@kekwanulabs/syncline-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@kekwanulabs/syncline-mcp-server-go` — error: Audit error: MCP error -32000: Connection closed
 - `@ledgenter/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@letta-ai/memory-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@marchward/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@matihlabs/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@mdtidy/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_48_527Z-debug-0.log
+- `@mdtidy/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_47_28_804Z-debug-0.log
 - `@meertrack/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@meetdewey/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_37_50_038Z-debug-0.log
+- `@meetdewey/mcp` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_47_30_255Z-debug-0.log
 - `@microsoft/esrp-release-test-integration` — error: Audit error: MCP error -32000: Connection closed
 - `@microsoft/fabric-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@microsoft/powerbi-modeling-mcp` — error: Audit error: MCP error -32000: Connection closed
@@ -259,7 +259,7 @@ npx -y mcp-scorecard <your-package> --badge
 - `@nyxory/mcp` — timeout
 - `@perplexity-ai/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@picahq/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@pilotgentic/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_38_38_162Z-debug-0.log
+- `@pilotgentic/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_48_17_036Z-debug-0.log
 - `@postman/postman-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@prizmad/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@prompt-ot/mcp` — error: Audit error: MCP error -32000: Connection closed
@@ -267,7 +267,7 @@ npx -y mcp-scorecard <your-package> --badge
 - `@psraghuveer/memento` — error: Audit error: MCP error -32000: Connection closed
 - `@pulsemcp/pulse-subregistry` — error: Audit error: MCP error -32000: Connection closed
 - `@qmailing/mcp-server` — error: Audit error: MCP error -32000: Connection closed
-- `@retrograde-labs/lune-mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_13_474Z-debug-0.log
+- `@retrograde-labs/lune-mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_48_49_588Z-debug-0.log
 - `@rolli/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@ruddia/being-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@scanbim-labs/scanbim-mcp` — error: Audit error: MCP error -32000: Connection closed
@@ -280,29 +280,29 @@ npx -y mcp-scorecard <your-package> --badge
 - `@socialneuron/mcp-server` — error: [MCP] Requires a paid plan (Starter+). See: https://socialneuron.com/pricing
 - `@sonarapp/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@spekoai/mcp` — error: Audit error: MCP error -32000: Connection closed
-- `@spideriq/mcp-gate` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_59_501Z-debug-0.log
-- `@spideriq/mcp-mail` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_39_59_379Z-debug-0.log
-- `@spideriq/mcp-media` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_01_367Z-debug-0.log
-- `@spideriq/mcp-publish` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_05_186Z-debug-0.log
+- `@spideriq/mcp-gate` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_35_303Z-debug-0.log
+- `@spideriq/mcp-mail` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_35_770Z-debug-0.log
+- `@spideriq/mcp-media` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_37_733Z-debug-0.log
+- `@spideriq/mcp-publish` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_49_38_485Z-debug-0.log
 - `@ssemble/mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `@toolprint/hypertool-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@trusty-squire/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@tuteliq/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@undisk-mcp/stdio-proxy` — error: Audit error: MCP error -32000: Connection closed
-- `@variel/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_40_37_904Z-debug-0.log
+- `@variel/mcp-server` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_12_516Z-debug-0.log
 - `@vayacore/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `@webuplink/mcp` — error: Audit error: MCP error -32000: Connection closed
 - `altmetric-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `appsignal-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `aws-dynamodb-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `bidsparq-mcp-server` — error: Audit error: MCP error -32000: Connection closed
-- `blackveil-dns` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_06_153Z-debug-0.log
+- `blackveil-dns` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_42_092Z-debug-0.log
 - `contextstudios-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `cortex-memory-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `ctxl` — error: Audit error: MCP error -32000: Connection closed
 - `ctxl-mcp` — error: Audit error: MCP error -32000: Connection closed
-- `docfork` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_22_093Z-debug-0.log
-- `esrp-oss-mcp-test` — error: Audit error: Resolved bin does not exist after extract: /tmp/scorecard-work/probe-UkMJug/pkg/dist/src/{index.js,functions/*.js}
+- `docfork` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_50_57_152Z-debug-0.log
+- `esrp-oss-mcp-test` — error: Audit error: Resolved bin does not exist after extract: /tmp/scorecard-work/probe-WGRswF/pkg/dist/src/{index.js,functions/*.js}
 - `familiar-vtt` — error: Audit error: MCP error -32000: Connection closed
 - `fetchpet-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `flatland-client` — error: Audit error: MCP error -32000: Connection closed
@@ -317,11 +317,11 @@ npx -y mcp-scorecard <your-package> --badge
 - `google-docs-workspace-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `hatchbox-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `hemmabo-mcp-server` — error: Audit error: Package hemmabo-mcp-server has no bin or main — cannot launch.
-- `kernelcad` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_41_55_387Z-debug-0.log
+- `kernelcad` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_51_29_455Z-debug-0.log
 - `kogiqa-mcp` — error: Audit error: MCP error -32000: Connection closed
 - `langfuse-observability-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `linkly-mcp-server` — error: Audit error: MCP error -32000: Connection closed
-- `marketintell` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_42_08_667Z-debug-0.log
+- `marketintell` — error: npm error A complete log of this run can be found in: /home/runner/.npm/_logs/2026-07-06T22_51_43_765Z-debug-0.log
 - `mason-context` — error: Audit error: MCP error -32000: Connection closed
 - `onepassword-mcp-server` — error: Audit error: MCP error -32000: Connection closed
 - `pdfkit-mcp` — error: Audit error: MCP error -32000: Connection closed
@@ -346,4 +346,4 @@ npx -y mcp-scorecard <your-package> --badge
 </details>
 
 ---
-<sub>Generated by [mcp-leaderboard](https://github.com/davidmosiah/mcp-leaderboard) · engine [mcp-scorecard](https://github.com/davidmosiah/mcp-scorecard) · 2026-07-06T22:43:41.448Z</sub>
+<sub>Generated by [mcp-leaderboard](https://github.com/davidmosiah/mcp-leaderboard) · engine [mcp-scorecard](https://github.com/davidmosiah/mcp-scorecard) · 2026-07-06T22:53:12.534Z</sub>
