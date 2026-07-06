@@ -54,7 +54,7 @@ npm run run -- --targets whoop-mcp-unofficial,astral-mcp
 ## Methodology & fairness
 
 - **Corpus:** npm-installable servers from the official registry, latest active version, deduped.
-- **Isolation:** each server boots in its own child process with a hard timeout; one hang can't stall the run.
+- **Process boundary:** each server boots in its own child process with a hard timeout; one hang can't stall the run. This is not a security sandbox for untrusted packages.
 - **Unreachable ≠ bad:** servers that require auth before `listTools()` and don't honor the `MCP_PROBE` hook are listed as *unreachable*, not scored low. Support `MCP_PROBE` to be gradeable.
 - **Scope:** this grades shape, metadata and discoverability — **not** correctness or security. A server can score 100 and still return wrong data. Always review before production.
 

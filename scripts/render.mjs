@@ -19,7 +19,7 @@ L.push("> Every public MCP server in the [official registry](https://registry.mo
 const corpusNote = corpusSize ? ` of ${corpusSize} in the registry corpus` : "";
 L.push(`**${scored.length} servers scored**${corpusNote} · ${unreachable.length} unreachable this run · updated ${date}`, "");
 if (corpusSize && data.results.length < corpusSize) {
-  L.push("", `> ⏳ Seed run. The weekly CI sweep scores the full ${corpusSize}-server corpus — this board grows on the next refresh.`);
+  L.push("", `> ⏳ Partial sweep: ${data.results.length} of the ${corpusSize}-server corpus attempted this run (time-budgeted). Coverage completes on the next weekly refresh.`);
 }
 const avg = scored.length ? Math.round(scored.reduce((s, r) => s + r.score, 0) / scored.length) : 0;
 const top = scored[0];
@@ -40,7 +40,7 @@ L.push("Then add the live badge to your README so agents (and humans) see your s
 
 L.push("## Methodology", "");
 L.push("- Targets come from the official MCP registry (npm-installable servers only, latest active version).", "");
-L.push("- Each server is booted over stdio in an isolated child process with a hard timeout. Servers that require auth before `listTools()` and don't honor the `MCP_PROBE` hook show as **unreachable** — not a low score, just not gradeable without credentials.", "");
+L.push("- Each server is booted over stdio in its own child process with a hard timeout. This is a process boundary, not a security sandbox for untrusted packages. Servers that require auth before `listTools()` and don't honor the `MCP_PROBE` hook show as **unreachable** — not a low score, just not gradeable without credentials.", "");
 L.push("- Scoring is shape/metadata/discoverability only. A server can score 100 and still return wrong data. This grades agent-*readiness*, not correctness. See [mcp-scorecard checks](https://github.com/davidmosiah/mcp-scorecard#what-it-checks).", "");
 
 if (unreachable.length) {

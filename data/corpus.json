@@ -3112,14 +3112,6 @@
     "isLatest": true
   },
   {
-    "name": "com.local-mcp/local-mcp",
-    "npm": "local-mcp",
-    "version": "1.10.0",
-    "repo": "https://github.com/lanchuske/local-mcp",
-    "status": "active",
-    "isLatest": false
-  },
-  {
     "name": "io.github.AmanMakesStuff/mappls-mcp",
     "npm": "mappls-mcp",
     "version": "2.0.0",

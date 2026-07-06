@@ -9,7 +9,7 @@ on:
         required: false
         default: ""
 permissions:
-  contents: write
+  contents: read
 concurrency:
   group: refresh
   cancel-in-progress: false
@@ -17,8 +17,12 @@ jobs:
   refresh:
     runs-on: ubuntu-latest
     timeout-minutes: 180
+    permissions:
+      contents: read
     steps:
       - uses: actions/checkout@v4
+        with:
+          persist-credentials: false
       - uses: actions/setup-node@v4
         with:
           node-version: 22
@@ -31,8 +35,31 @@ jobs:
         env:
           CONCURRENCY: "8"
           TARGET_TIMEOUT_MS: "60000"
+          RUN_BUDGET_MS: "9000000" # 150 min — publish what we have instead of dying at the 180-min job cap
       - name: Render
         run: npm run render
+      - name: Upload refreshed leaderboard
+        uses: actions/upload-artifact@v4
+        with:
+          name: refreshed-leaderboard
+          path: |
+            LEADERBOARD.md
+            data/corpus.json
+            data/leaderboard.json
+          if-no-files-found: error
+
+  commit:
+    needs: refresh
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download refreshed leaderboard
+        uses: actions/download-artifact@v4
+        with:
+          name: refreshed-leaderboard
+          path: .
       - name: Commit refreshed leaderboard
         run: |
           git config user.name "github-actions[bot]"

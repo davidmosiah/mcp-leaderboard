@@ -6,6 +6,10 @@ import { writeFileSync, mkdirSync } from "node:fs";
 const REGISTRY = "https://registry.modelcontextprotocol.io/v0/servers";
 const LIMIT = 100;
 const MAX_PAGES = 60;
+const BLOCKED_PACKAGES = new Set([
+  // Installs a macOS background app + LaunchAgent during normal execution.
+  "local-mcp"
+]);
 
 async function fetchPage(cursor) {
   const url = cursor
@@ -33,6 +37,7 @@ async function main() {
       const meta = entry._meta?.["io.modelcontextprotocol.registry/official"] || {};
       const npm = npmPackage(s);
       if (!npm) continue;
+      if (BLOCKED_PACKAGES.has(npm.identifier)) continue;
       rows.push({
         name: s.name,
         npm: npm.identifier,

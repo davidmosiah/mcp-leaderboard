@@ -11,6 +11,14 @@ import { spawn } from "node:child_process";
 
 const TIMEOUT_MS = Number(process.env.TARGET_TIMEOUT_MS || 120000);
 const CONCURRENCY = Number(process.env.CONCURRENCY || 4);
+// Wall-clock budget for the whole run (0 = unlimited). When it expires, in-flight
+// targets finish but no new ones start — the sweep publishes what it has instead of
+// dying with nothing when the CI job hits its hard timeout.
+const RUN_BUDGET_MS = Number(process.env.RUN_BUDGET_MS || 0);
+const BLOCKED_PACKAGES = new Set([
+  // Installs a macOS background app + LaunchAgent during normal execution.
+  "local-mcp"
+]);
 
 const args = process.argv.slice(2);
 const argVal = (flag) => { const i = args.indexOf(flag); return i >= 0 ? args[i + 1] : null; };
@@ -33,16 +41,32 @@ const SCORECARD_BIN = existsSync("node_modules/.bin/mcp-scorecard")
 
 function scoreOne(target) {
   return new Promise((resolve) => {
+    if (BLOCKED_PACKAGES.has(target.npm)) {
+      resolve({
+        name: target.name,
+        npm: target.npm,
+        repo: target.repo,
+        status: "skipped",
+        error: "Blocked because this package installs host-level background components during probe."
+      });
+      return;
+    }
+
     const cmd = SCORECARD_BIN || "npx";
     const cmdArgs = SCORECARD_BIN ? [target.npm, "--json"] : ["-y", "mcp-scorecard", target.npm, "--json"];
-    const child = spawn(cmd, cmdArgs, { env: { ...process.env, MCP_PROBE: "1" } });
+    // detached: the child leads its own process group, so we can kill the WHOLE tree.
+    // scorecard spawns npx/npm and the MCP server itself; killing only the direct child
+    // leaves orphans that pile up and exhaust the runner over a 450-target sweep.
+    const child = spawn(cmd, cmdArgs, { env: { ...process.env, MCP_PROBE: "1" }, detached: true });
     let out = "", err = "";
-    const timer = setTimeout(() => { child.kill("SIGKILL"); resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "timeout" }); }, TIMEOUT_MS);
+    const nuke = () => { try { process.kill(-child.pid, "SIGKILL"); } catch { /* group already gone */ } };
+    const timer = setTimeout(() => { nuke(); resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "timeout" }); }, TIMEOUT_MS);
     child.stdout.on("data", (d) => (out += d));
     child.stderr.on("data", (d) => (err += d));
     child.on("error", (e) => { clearTimeout(timer); resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "error", error: e.message }); });
     child.on("close", (code) => {
       clearTimeout(timer);
+      nuke(); // scorecard exited but may have leaked its probed server — reap the group
       const jsonStart = out.indexOf("{");
       if (jsonStart < 0) { resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "error", error: (err.trim().split("\n").pop() || `exit ${code}`).slice(0, 200) }); return; }
       try {
@@ -57,9 +81,10 @@ function scoreOne(target) {
 
 async function run() {
   const results = new Array(targets.length);
+  const deadline = RUN_BUDGET_MS > 0 ? Date.now() + RUN_BUDGET_MS : Infinity;
   let idx = 0;
   async function worker() {
-    while (idx < targets.length) {
+    while (idx < targets.length && Date.now() < deadline) {
       const i = idx++;
       process.stderr.write(`[${i + 1}/${targets.length}] ${targets[i].npm}\n`);
       results[i] = await scoreOne(targets[i]);
@@ -70,13 +95,18 @@ async function run() {
 }
 
 const results = await run();
-const scored = results.filter((r) => r.status === "scored");
+// Targets never attempted (budget expired) stay undefined — keep them OUT of results
+// so render doesn't list them as "unreachable"; they're just deferred to next refresh.
+const attempted = results.filter(Boolean);
+const deferred = results.length - attempted.length;
+if (deferred > 0) process.stderr.write(`run budget exhausted: ${deferred} targets deferred to the next refresh\n`);
+const scored = attempted.filter((r) => r.status === "scored");
 mkdirSync("data", { recursive: true });
 const payload = {
   generatedAt: new Date().toISOString(),
   engine: "mcp-scorecard",
-  counts: { total: results.length, scored: scored.length, unreachable: results.length - scored.length },
-  results
+  counts: { total: attempted.length, scored: scored.length, unreachable: attempted.length - scored.length, deferred },
+  results: attempted
 };
 writeFileSync("data/leaderboard.json", JSON.stringify(payload, null, 2) + "\n");
-console.log(`scored ${scored.length}/${results.length} (unreachable: ${results.length - scored.length})`);
+console.log(`scored ${scored.length}/${attempted.length} (unreachable: ${attempted.length - scored.length}, deferred: ${deferred})`);
