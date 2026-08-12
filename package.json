@@ -13,7 +13,8 @@
     "test": "npm run test:infra && npm run test:complete && npm run test:seo",
     "test:infra": "node scripts/infrastructure-failure-test.mjs",
     "test:complete": "node scripts/incomplete-run-test.mjs",
-    "test:seo": "node scripts/seo-geo-test.mjs"
+    "test:seo": "node scripts/seo-geo-test.mjs",
+    "notify:indexnow": "node scripts/submit-indexnow.mjs"
   },
   "keywords": [
     "mcp",

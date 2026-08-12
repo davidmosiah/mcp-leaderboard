@@ -13,6 +13,7 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `scripts/run-leaderboard.mjs` — boot + score each target with mcp-scorecard (isolated child process, hard timeout) → `data/leaderboard.json`.
 - `scripts/render.mjs` — `data/leaderboard.json` → `LEADERBOARD.md`.
 - `scripts/render-site.mjs` — generate the root, paginated rankings, one canonical HTML scorecard per scored server, sitemap and agent-readable indexes.
+- `scripts/submit-indexnow.mjs` — notify participating search engines after a verified public deployment; its 200/202 receipt proves receipt, never indexing.
 - `docs/GROK_CLOUD_REFRESH.md` — weekly Grok Cloud refresh and publish gates. The old GitHub Actions workflow is archived.
 
 ## Commands

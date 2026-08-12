@@ -30,6 +30,8 @@ maintainer's Mac or the shared Hetzner host.
    rechecking that remote `main` still equals the recorded SHA.
 8. Verify `https://leaderboard.delx.ai/leaderboard.json` and the HTML site show
    the new timestamp and the same counts as the committed JSON.
+9. Run `npm run notify:indexnow` only after the public deployment is verified.
+   Require an HTTP 200 or 202 receipt for the complete canonical URL set.
 
 ## Mandatory fail-closed gates
 
@@ -54,6 +56,9 @@ maintainer's Mac or the shared Hetzner host.
 After deployment, verify the root, a scoped-package scorecard, an unscoped
 scorecard, a ranking page, `sitemap.xml`, `llms.txt`, `llms-full.txt`, and
 `leaderboard.json` over public HTTPS.
+
+IndexNow submission is a discovery notification, not proof that any search
+engine indexed a URL. Never describe the batch receipt as an indexing result.
 
 Any failed gate means no commit, no deployment, and a concise failure report.
 The last known-good production board remains live.

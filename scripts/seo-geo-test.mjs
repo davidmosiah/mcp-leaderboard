@@ -8,6 +8,7 @@ const data = JSON.parse(readFileSync("data/leaderboard.json", "utf8"));
 const scored = (data.results || [])
   .filter((result) => result.status === "scored")
   .sort((a, b) => b.score - a.score || a.npm.localeCompare(b.npm));
+const expectedCanonicalUrlCount = scored.length + Math.ceil(scored.length / 100);
 
 const render = spawnSync(process.execPath, ["scripts/render-site.mjs"], {
   encoding: "utf8"
@@ -20,6 +21,11 @@ const rerender = spawnSync(process.execPath, ["scripts/render-site.mjs"], {
 assert.equal(rerender.status, 0, rerender.stderr || rerender.stdout);
 const secondIndex = readFileSync("site/index.html", "utf8");
 assert.equal(secondIndex, firstIndex, "render-site must be idempotent");
+const indexNowDryRun = spawnSync(process.execPath, ["scripts/submit-indexnow.mjs", "--dry-run"], {
+  encoding: "utf8"
+});
+assert.equal(indexNowDryRun.status, 0, indexNowDryRun.stderr || indexNowDryRun.stdout);
+assert.match(indexNowDryRun.stdout, new RegExp(`IndexNow dry run: ok \\(${expectedCanonicalUrlCount} canonical URLs\\)`));
 
 const serverUrl = (npm) => `${origin}/servers/${npm.split("/").map(encodeURIComponent).join("/")}`;
 const serverFile = (npm) => join("site", "servers", ...npm.split("/"), "index.html");
