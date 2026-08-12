@@ -30,5 +30,13 @@
     "type": "git",
     "url": "git+https://github.com/davidmosiah/mcp-leaderboard.git"
   },
-  "homepage": "https://github.com/davidmosiah/mcp-leaderboard"
+  "homepage": "https://github.com/davidmosiah/mcp-leaderboard",
+  "overrides": {
+    "hono": "4.13.1",
+    "@hono/node-server": "2.1.0",
+    "fast-uri": "3.1.5",
+    "ip-address": "10.4.0",
+    "body-parser": "2.3.0",
+    "dompurify": "3.4.13"
+  }
 }
