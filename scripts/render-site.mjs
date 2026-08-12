@@ -40,6 +40,10 @@ const write = (path, contents) => {
   mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, contents);
 };
+const analyticsSnippet = `  <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+  </script>
+  <script defer src="/_vercel/insights/script.js"></script>`;
 
 const checksSummary = (result) => {
   const checks = result.checks || [];
@@ -206,6 +210,9 @@ if (!html.includes('href="/llms.txt"')) {
     '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">\n  <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable project summary">\n  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">'
   );
 }
+if (!html.includes('/_vercel/insights/script.js')) {
+  html = html.replace("</head>", `${analyticsSnippet}\n</head>`);
+}
 
 if (missing.length) {
   console.error(`render-site: anchors missing in site/index.html: ${missing.join(", ")}`);
@@ -240,6 +247,7 @@ const pageHead = ({ title, description, canonical, structuredData }) => `<!docty
   <script type="application/ld+json">
 ${json(structuredData)}
   </script>
+${analyticsSnippet}
 </head>`;
 
 const pageHeader = `<a class="skip-link" href="#main">Skip to content</a>

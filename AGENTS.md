@@ -15,6 +15,7 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `scripts/render-site.mjs` — generate the root, paginated rankings, one canonical HTML scorecard per scored server, sitemap and agent-readable indexes.
 - `scripts/submit-indexnow.mjs` — notify participating search engines after a verified public deployment; its 200/202 receipt proves receipt, never indexing.
 - `docs/GROK_CLOUD_REFRESH.md` — weekly Grok Cloud refresh and publish gates. The old GitHub Actions workflow is archived.
+- `docs/MONETIZATION_PILOT.md` — bounded paid-offer draft and hosting/independence gates; selling stays off until every activation gate is explicit.
 
 ## Commands
 

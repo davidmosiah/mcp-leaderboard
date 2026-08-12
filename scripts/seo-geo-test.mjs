@@ -31,10 +31,18 @@ const serverUrl = (npm) => `${origin}/servers/${npm.split("/").map(encodeURIComp
 const serverFile = (npm) => join("site", "servers", ...npm.split("/"), "index.html");
 const jsonLd = (html) => [...html.matchAll(/<script type="application\/ld\+json">\s*([\s\S]*?)\s*<\/script>/g)]
   .map((match) => JSON.parse(match[1]));
+const assertAnalytics = (html, label) => {
+  assert.equal(
+    (html.match(/\/_vercel\/insights\/script\.js/g) || []).length,
+    1,
+    `${label} must include Vercel Web Analytics exactly once`
+  );
+};
 
 assert.ok(scored.length > 100, "fixture must contain a substantive scored corpus");
 
 const index = secondIndex;
+assertAnalytics(index, "root");
 assert.doesNotMatch(index, /GitHub Action/i, "public copy must describe the Grok Cloud refresh");
 for (const result of scored.slice(0, 100)) {
   assert.match(index, new RegExp(`href="${serverUrl(result.npm).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
@@ -58,6 +66,7 @@ for (const result of samples) {
   const path = serverFile(result.npm);
   assert.ok(existsSync(path), `missing detail page ${path}`);
   const html = readFileSync(path, "utf8");
+  assertAnalytics(html, result.npm);
   assert.match(html, new RegExp(`<link rel="canonical" href="${serverUrl(result.npm).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}">`));
   assert.match(html, new RegExp(`<h1[^>]*>${result.npm.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}</h1>`));
   assert.match(html, new RegExp(`Score ${result.score} out of 100`));
@@ -79,6 +88,7 @@ const rankingPageCount = Math.ceil(scored.length / 100);
 for (let page = 2; page <= rankingPageCount; page += 1) {
   const path = join("site", "rankings", String(page), "index.html");
   assert.ok(existsSync(path), `missing ranking page ${page}`);
+  assertAnalytics(readFileSync(path, "utf8"), `ranking page ${page}`);
   assert.ok(sitemap.includes(`<loc>${origin}/rankings/${page}</loc>`), `sitemap missing ranking page ${page}`);
 }
 assert.equal((sitemap.match(/<url>/g) || []).length, scored.length + rankingPageCount);
