@@ -46,6 +46,8 @@ npm run render    # → LEADERBOARD.md
 
 The production refresh runbook is in [`docs/GROK_CLOUD_REFRESH.md`](docs/GROK_CLOUD_REFRESH.md). It does not depend on GitHub Actions or the maintainer's Mac.
 
+The static site exposes a canonical evidence page for every scored server, paginated crawlable rankings, current Dataset/ItemList JSON-LD, an XML sitemap, `llms.txt`, `llms-full.txt`, and the complete `leaderboard.json`. All of these surfaces are regenerated from the same committed dataset.
+
 Bounded runs while iterating:
 
 ```bash

@@ -10,9 +10,10 @@
     "render": "node scripts/render.mjs",
     "all": "npm run corpus && npm run run && npm run render && npm run render:site",
     "render:site": "node scripts/render-site.mjs",
-    "test": "npm run test:infra && npm run test:complete",
+    "test": "npm run test:infra && npm run test:complete && npm run test:seo",
     "test:infra": "node scripts/infrastructure-failure-test.mjs",
-    "test:complete": "node scripts/incomplete-run-test.mjs"
+    "test:complete": "node scripts/incomplete-run-test.mjs",
+    "test:seo": "node scripts/seo-geo-test.mjs"
   },
   "keywords": [
     "mcp",

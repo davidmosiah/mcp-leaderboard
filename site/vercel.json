@@ -8,7 +8,7 @@
       "headers": [
         {
           "key": "Link",
-          "value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </sitemap.xml>; rel=\"sitemap\", </leaderboard.json>; rel=\"describedby\"; type=\"application/json\""
+          "value": "</llms.txt>; rel=\"alternate\"; type=\"text/plain\", </llms-full.txt>; rel=\"alternate\"; type=\"text/plain\", </sitemap.xml>; rel=\"sitemap\", </leaderboard.json>; rel=\"describedby\"; type=\"application/json\""
         },
         {
           "key": "X-Robots-Tag",
@@ -50,7 +50,7 @@
       ]
     },
     {
-      "source": "/llms.txt",
+      "source": "/llms(.*).txt",
       "headers": [
         { "key": "Content-Type", "value": "text/plain; charset=utf-8" }
       ]

@@ -34,8 +34,14 @@ for (const button of document.querySelectorAll('[data-copy]')) {
 
 // Progressive enhancement: refresh the rankings from the live /leaderboard.json.
 // The server-rendered <table> rows are the source of truth; this only refreshes
-// them when a newer dataset is served (e.g. after the weekly GitHub Action commit).
+// them when a newer dataset is served (e.g. after the weekly Grok Cloud refresh).
 const tierClass = (s) => s >= 90 ? 'tier-a' : s >= 75 ? 'tier-b' : s >= 60 ? 'tier-c' : s >= 40 ? 'tier-d' : 'tier-f';
+const esc = (value) => String(value ?? '')
+  .replaceAll('&', '&amp;')
+  .replaceAll('<', '&lt;')
+  .replaceAll('>', '&gt;')
+  .replaceAll('"', '&quot;');
+const scorecardUrl = (npm) => '/servers/' + npm.split('/').map(encodeURIComponent).join('/');
 
 function fmtDate(iso) {
   try { return new Date(iso).toISOString().slice(0, 10); } catch { return iso; }
@@ -51,22 +57,21 @@ fetch('/leaderboard.json', { cache: 'no-store' })
 
     const scored = (data.results || [])
       .filter((r) => r.status === 'scored')
-      .sort((a, b) => b.score - a.score);
+      .sort((a, b) => b.score - a.score || a.npm.localeCompare(b.npm));
     if (!scored.length) return;
 
     const tbody = document.getElementById('full-board-body');
     if (tbody) {
-      tbody.innerHTML = scored.map((r, i) => {
+      tbody.innerHTML = scored.slice(0, 100).map((r, i) => {
         const rank = i + 1;
         const tc = tierClass(r.score);
         const passes = r.checks.filter((c) => c.status === 'pass').map((c) => c.label).slice(0, 3);
         const fails = r.checks.filter((c) => c.status === 'fail').map((c) => c.label).slice(0, 2);
-        const tags = passes.map((p) => `<span class="pass">+ ${p}</span>`).join('') +
-                     fails.map((f) => `<span class="fail">– ${f}</span>`).join('');
-        const npmUrl = 'https://www.npmjs.com/package/' + encodeURIComponent(r.npm).replace('%40', '@').replace('%2F', '/');
+        const tags = passes.map((p) => `<span class="pass">+ ${esc(p)}</span>`).join('') +
+                     fails.map((f) => `<span class="fail">– ${esc(f)}</span>`).join('');
         return `<tr class="${rank <= 3 ? 'top-' + rank : ''}">
           <td class="fb-rank">${rank}</td>
-          <td class="fb-srv"><a href="${npmUrl}" target="_blank" rel="noopener">${r.npm}</a><small>${r.serverName || ''}</small></td>
+          <td class="fb-srv"><a href="${scorecardUrl(r.npm)}">${esc(r.npm)}</a><small>${esc(r.serverName || 'View the complete scorecard')}</small></td>
           <td><span class="score-pill ${tc}">${r.score}</span></td>
           <td><div class="bar"><i style="width:${r.score}%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
           <td><div class="check-tags">${tags}</div></td>
