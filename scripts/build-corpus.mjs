@@ -6,10 +6,10 @@ import { writeFileSync, mkdirSync } from "node:fs";
 const REGISTRY = "https://registry.modelcontextprotocol.io/v0/servers";
 const LIMIT = 100;
 // Safety cap only — with version=latest the registry serves one entry per server.
-// If we ever hit it, the corpus is TRUNCATED and the warning below must be heeded;
+// If we ever hit it, the corpus is TRUNCATED and the hard failure below must remain;
 // a silently partial corpus breaks the board's "every public MCP server" claim
 // (that exact bug hid every server published after ~page 60 until 2026-07-06).
-const MAX_PAGES = 200;
+const DEFAULT_MAX_PAGES = 1000;
 const BLOCKED_PACKAGES = new Set([
   // Installs a macOS background app + LaunchAgent during normal execution.
   "local-mcp"
@@ -29,11 +29,29 @@ function npmPackage(server) {
   return pkgs.find((p) => (p.registryType || p.registry_type) === "npm");
 }
 
+function maxPagesFromEnv() {
+  const raw = process.env.MAX_PAGES;
+  if (raw === undefined) return DEFAULT_MAX_PAGES;
+  const value = Number(raw);
+  if (!Number.isSafeInteger(value) || value < 1) {
+    throw new Error(`MAX_PAGES must be a positive integer, got ${JSON.stringify(raw)}`);
+  }
+  return value;
+}
+
 async function main() {
+  const maxPages = maxPagesFromEnv();
   const rows = [];
+  const requestedCursors = new Set();
   let cursor = null;
   let pages = 0;
   do {
+    if (cursor) {
+      if (requestedCursors.has(cursor)) {
+        throw new Error(`registry pagination loop detected after ${pages} pages`);
+      }
+      requestedCursors.add(cursor);
+    }
     const data = await fetchPage(cursor);
     const servers = data.servers || [];
     for (const entry of servers) {
@@ -53,8 +71,10 @@ async function main() {
     }
     cursor = data.metadata?.nextCursor || data.metadata?.next_cursor || null;
     pages += 1;
-  } while (cursor && pages < MAX_PAGES);
-  if (cursor) console.error(`WARNING: MAX_PAGES (${MAX_PAGES}) hit with more registry pages pending — corpus is TRUNCATED`);
+  } while (cursor && pages < maxPages);
+  if (cursor) {
+    throw new Error(`MAX_PAGES (${maxPages}) hit with more registry pages pending — refusing to write a truncated corpus`);
+  }
 
   // Keep latest + active, dedupe by npm package name.
   const seen = new Set();
