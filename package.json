@@ -9,7 +9,10 @@
     "run": "node scripts/run-leaderboard.mjs",
     "render": "node scripts/render.mjs",
     "all": "npm run corpus && npm run run && npm run render && npm run render:site",
-    "render:site": "node scripts/render-site.mjs"
+    "render:site": "node scripts/render-site.mjs",
+    "test": "npm run test:infra && npm run test:complete",
+    "test:infra": "node scripts/infrastructure-failure-test.mjs",
+    "test:complete": "node scripts/incomplete-run-test.mjs"
   },
   "keywords": [
     "mcp",
@@ -21,7 +24,7 @@
   "author": "David Mosiah",
   "license": "MIT",
   "devDependencies": {
-    "mcp-scorecard": "^0.5.9"
+    "mcp-scorecard": "^0.5.10"
   },
   "engines": {
     "node": ">=22"

@@ -100,6 +100,17 @@ const results = await run();
 const attempted = results.filter(Boolean);
 const deferred = results.length - attempted.length;
 if (deferred > 0) process.stderr.write(`run budget exhausted: ${deferred} targets deferred to the next refresh\n`);
+const infrastructureFailures = attempted.filter((result) =>
+  result.status === "error" && /ENOSPC|EMFILE|ENFILE|no space left on device/i.test(result.error || "")
+);
+if (infrastructureFailures.length > 0) {
+  throw new Error(
+    `infrastructure failure: ${infrastructureFailures.length} targets hit runner storage/file limits; previous leaderboard preserved`
+  );
+}
+if (deferred > 0) {
+  throw new Error(`incomplete run: ${deferred} targets deferred; previous leaderboard preserved`);
+}
 const scored = attempted.filter((r) => r.status === "scored");
 mkdirSync("data", { recursive: true });
 const payload = {

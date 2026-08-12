@@ -16,7 +16,7 @@
 
 ## 👉 [See the live leaderboard → LEADERBOARD.md](LEADERBOARD.md)
 
-Every public MCP server in the [official registry](https://registry.modelcontextprotocol.io) is booted over stdio and graded by [**mcp-scorecard**](https://github.com/davidmosiah/mcp-scorecard) on 10 agent-readiness checks — schema validity, tool naming, read-only annotations, discovery surfaces, mutation gating, privacy modes, and more — for a 0–100 score. A weekly GitHub Action re-scores the field and commits the result. Nothing is hand-edited.
+Every public MCP server in the [official registry](https://registry.modelcontextprotocol.io) is booted over stdio and graded by [**mcp-scorecard**](https://github.com/davidmosiah/mcp-scorecard) on 10 agent-readiness checks — schema validity, tool naming, read-only annotations, discovery surfaces, mutation gating, privacy modes, and more — for a 0–100 score. A weekly Grok Cloud routine re-scores the field in an ephemeral VM and publishes only after completeness and infrastructure gates pass. Nothing is hand-edited.
 
 ## Why this exists
 
@@ -43,6 +43,8 @@ npm run run       # boot + score each with mcp-scorecard → data/leaderboard.js
 npm run render    # → LEADERBOARD.md
 # or: npm run all
 ```
+
+The production refresh runbook is in [`docs/GROK_CLOUD_REFRESH.md`](docs/GROK_CLOUD_REFRESH.md). It does not depend on GitHub Actions or the maintainer's Mac.
 
 Bounded runs while iterating:
 
