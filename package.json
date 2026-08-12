@@ -21,7 +21,7 @@
   "author": "David Mosiah",
   "license": "MIT",
   "devDependencies": {
-    "mcp-scorecard": "^0.5.9"
+    "mcp-scorecard": "0.5.10"
   },
   "engines": {
     "node": ">=22"
