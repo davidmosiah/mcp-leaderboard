@@ -8,7 +8,10 @@ const data = JSON.parse(readFileSync("data/leaderboard.json", "utf8"));
 const scored = (data.results || [])
   .filter((result) => result.status === "scored")
   .sort((a, b) => b.score - a.score || a.npm.localeCompare(b.npm));
-const expectedCanonicalUrlCount = scored.length + Math.ceil(scored.length / 100);
+const editionCount = existsSync("data/editions")
+  ? readdirSync("data/editions").filter((name) => /^\d{4}-\d{2}-\d{2}\.json$/.test(name)).length
+  : 0;
+const expectedCanonicalUrlCount = scored.length + Math.ceil(scored.length / 100) + (editionCount ? editionCount + 1 : 0);
 
 const render = spawnSync(process.execPath, ["scripts/render-site.mjs"], {
   encoding: "utf8"
@@ -91,7 +94,7 @@ for (let page = 2; page <= rankingPageCount; page += 1) {
   assertAnalytics(readFileSync(path, "utf8"), `ranking page ${page}`);
   assert.ok(sitemap.includes(`<loc>${origin}/rankings/${page}</loc>`), `sitemap missing ranking page ${page}`);
 }
-assert.equal((sitemap.match(/<url>/g) || []).length, scored.length + rankingPageCount);
+assert.equal((sitemap.match(/<url>/g) || []).length, expectedCanonicalUrlCount);
 
 const robots = readFileSync("site/robots.txt", "utf8");
 assert.match(robots, /User-agent: OAI-SearchBot\s+Allow: \//);

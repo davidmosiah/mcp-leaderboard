@@ -3,37 +3,34 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MCP Leaderboard - Agent-readiness ranking of the MCP ecosystem</title>
+  <title>MCP Leaderboard — the MCP ecosystem, measured</title>
   <meta name="description" content="Compare 3976 MCP servers by agent-readiness score, rank and check-level evidence. Built from the official MCP registry and refreshed weekly.">
   <meta name="author" content="David Mosiah">
   <meta name="robots" content="index, follow, max-image-preview:large">
-  <meta name="keywords" content="MCP leaderboard, Model Context Protocol, agent-readiness, MCP servers, mcp-scorecard, MCP registry, AI agents, MCP ranking, tool naming, agent manifest">
-  <meta name="theme-color" content="#0b1120">
-  <meta property="og:title" content="MCP Leaderboard - agent-readiness, ranked">
+  <meta name="theme-color" content="#f2efe5">
+  <meta property="og:title" content="MCP Leaderboard — the MCP ecosystem, measured">
   <meta property="og:description" content="Compare 3976 MCP servers by agent-readiness score with a canonical evidence page for every scored package.">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MCP Leaderboard">
   <meta property="og:url" content="https://leaderboard.delx.ai/">
   <meta property="og:image" content="https://leaderboard.delx.ai/assets/og-card.png">
-  <meta property="og:image:secure_url" content="https://leaderboard.delx.ai/assets/og-card.png">
-  <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="MCP Leaderboard - agent-readiness, ranked. Every MCP server in the registry, booted and scored 0-100.">
+  <meta property="og:image:alt" content="MCP Leaderboard — the MCP ecosystem, measured.">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@delx369">
   <meta name="twitter:creator" content="@delx369">
-  <meta name="twitter:title" content="MCP Leaderboard - agent-readiness, ranked">
+  <meta name="twitter:title" content="MCP Leaderboard — the MCP ecosystem, measured">
   <meta name="twitter:description" content="Compare 3976 MCP servers by agent-readiness score with check-level evidence.">
   <meta name="twitter:image" content="https://leaderboard.delx.ai/assets/og-card.png">
-  <meta name="twitter:image:alt" content="MCP Leaderboard - agent-readiness, ranked.">
   <link rel="canonical" href="https://leaderboard.delx.ai/">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="sitemap" type="application/xml" href="/sitemap.xml">
   <link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">
+  <link rel="alternate" type="application/rss+xml" href="/issues/feed.xml" title="MCP Scoreboard Weekly">
   <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable project summary">
   <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">
-  <link rel="stylesheet" href="assets/site.css">
+  <link rel="stylesheet" href="/assets/site.css">
   <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -734,78 +731,71 @@
   ]
 }
   </script>
-  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
-<body data-generated="2026-08-12T21:41:20.376Z">
+<body data-generated="2026-08-12T21:41:20.376Z" data-design="registry-observatory">
   <a class="skip-link" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
-  <div class="stage-light stage-light-a" aria-hidden="true"></div>
-  <div class="stage-light stage-light-b" aria-hidden="true"></div>
+  <div class="paper-grid" aria-hidden="true"></div>
 
   <header class="site-header">
     <a class="brand" href="#top" aria-label="MCP Leaderboard home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span>
-        <strong>MCP Leaderboard</strong>
-        <small>by Delx · agent-readiness, ranked</small>
-      </span>
+      <span class="brand-index" aria-hidden="true">MCP<br>01</span>
+      <span class="brand-wordmark"><strong>Leaderboard</strong><small>Registry observatory by Delx</small></span>
     </a>
     <nav class="nav" aria-label="Primary navigation">
-      <a href="#leaderboard">Leaderboard</a>
-      <a href="#why">Why</a>
-      <a href="#method">Methodology</a>
-      <a href="#climb">Climb</a>
-      <a href="#faq">FAQ</a>
-      <a href="#agents">For agents</a>
-      <a class="nav-pill" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub</a>
+      <a href="#leaderboard">Ranking</a>
+      <a href="/issues/">Weekly</a>
+      <a href="#method">Method</a>
+      <a href="#agents">Data</a>
+      <a class="nav-mark" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub ↗</a>
     </nav>
   </header>
 
   <main id="main">
-    <section class="hero" id="top">
+    <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero-copy" data-reveal>
-        <p class="eyebrow">leaderboard.delx.ai · open source · auto-refreshed weekly</p>
-        <h1><span class="grad">Agent-readiness,</span><span>ranked.</span></h1>
-        <p class="hero-text">
-          A public, neutral ranking of the entire MCP ecosystem. Every npm server in the
-          <a href="https://registry.modelcontextprotocol.io">official registry</a> is booted over stdio and graded by
-          <a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a> on 10 agent-readiness checks for a
-          0-100 score. Downloads measure popularity. This measures whether an agent can actually pick your server up.
-        </p>
+        <div class="edition-line"><span>Live index</span><time data-live="generated">2026-08-12</time><span class="live-dot">Verified run</span></div>
+        <p class="eyebrow">Independent infrastructure intelligence</p>
+        <h1 id="hero-title">The MCP ecosystem,<br><em>measured.</em></h1>
+        <p class="hero-text">Every npm-installable server in the official MCP registry, booted over stdio and evaluated against the same ten agent-readiness checks. No popularity proxy. No paid ranking. Just reproducible evidence.</p>
         <div class="hero-actions">
-          <a class="button primary" href="#leaderboard">See the ranking</a>
-          <a class="button secondary" href="#climb">Climb the board</a>
+          <a class="button primary" href="#leaderboard">Explore the index <span aria-hidden="true">↓</span></a>
+          <a class="button text-button" href="/issues/latest/">Read the weekly brief <span aria-hidden="true">↗</span></a>
         </div>
-        <div class="hero-command" data-reveal>
-          <code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code>
-          <button type="button" data-copy="npx -y mcp-scorecard <your-package-or-repo>">Copy</button>
-        </div>
-        <ul class="hero-proof" aria-label="Leaderboard facts">
-          <li><strong><span data-live="scored">3976</span></strong><span>servers scored this run</span></li>
-          <li><strong>0-100</strong><span>agent-readiness score</span></li>
-          <li><strong>10</strong><span>checks per server</span></li>
-          <li><strong>Weekly</strong><span>auto-refreshed by CI</span></li>
-        </ul>
       </div>
 
-      <aside class="board-card" aria-label="Top MCP servers by agent-readiness score" data-reveal>
-        <div class="board-card-head">
-          <strong>🏆 Top of the board</strong>
-          <span>updated <span data-live="generated">2026-08-12</span></span>
+      <aside class="index-panel" aria-label="Current MCP registry coverage" data-reveal>
+        <div class="index-panel-head"><span>Coverage / current run</span><span>01</span></div>
+        <div class="index-number"><strong data-live="scored">3976</strong><span>servers scored</span></div>
+        <progress id="coverage-progress" max="6947" value="3976">57%</progress>
+        <div class="index-facts">
+          <div><span>Corpus</span><strong data-live="total">6947</strong></div>
+          <div><span>Unreachable</span><strong data-live="unreachable">2971</strong></div>
+          <div><span>Average</span><strong><span data-live="average">48</span><small>/100</small></strong></div>
+          <div><span>Median</span><strong><span data-live="median">46</span><small>/100</small></strong></div>
         </div>
-        <table class="board-table">
-          <thead>
-            <tr>
-              <th scope="col" class="col-rank">#</th>
-              <th scope="col">MCP server (npm)</th>
-              <th scope="col">score</th>
-              <th scope="col">biggest gap</th>
-            </tr>
-          </thead>
-          <tbody id="hero-board-body">
+        <p class="index-note">Unreachable packages are separated from low scores so infrastructure failures do not become fake quality judgments.</p>
+      </aside>
+    </section>
+
+    <section class="signal-line" aria-label="Complete registry run" data-reveal>
+      <strong>Complete registry run.</strong>
+      <span>This edition covers <span data-live="total">6947</span> unique npm packages from the official registry: <span data-live="scored">3976</span> scored and <span data-live="unreachable">2971</span> reported as unreachable rather than unfairly penalized.</span>
+    </section>
+
+    <section class="top-index" aria-labelledby="top-index-title">
+      <div class="section-kicker" data-reveal><span>Top of the index</span><span>Updated <time data-live="generated">2026-08-12</time></span></div>
+      <div class="top-index-layout">
+        <div class="top-index-copy" data-reveal>
+          <h2 id="top-index-title">The current<br>frontier.</h2>
+          <p>Five servers currently set the benchmark. Equal scores are ordered by npm package name, never by editorial preference.</p>
+          <a class="underlined-link" href="#leaderboard">See all scorecards →</a>
+        </div>
+        <div class="top-board" data-reveal>
+          <table class="board-table">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Package</th><th scope="col">Score</th><th scope="col">Primary gap</th></tr></thead>
+            <tbody id="hero-board-body">
           <tr class="top-1">
             <td class="col-rank">1</td>
             <td class="col-srv"><a href="https://leaderboard.delx.ai/servers/apple-health-mcp-unofficial">apple-health-mcp-unofficial</a></td>
@@ -837,54 +827,40 @@
             <td class="gap-cell"><span class="dot"></span>Smoke test</td>
           </tr>
           </tbody>
-        </table>
-        <div class="board-card-foot">
-          Top 100 below · 3976 detailed scorecards · machine-readable at <a href="/leaderboard.json">/leaderboard.json</a>
+          </table>
         </div>
-      </aside>
+      </div>
     </section>
 
-    <section class="notice" aria-label="Complete registry run" data-reveal><strong>Complete registry run.</strong><span>This edition covers <span data-live="total">6947</span> unique npm packages from the official registry: <span data-live="scored">3976</span> scored and <span data-live="unreachable">2971</span> reported as unreachable rather than unfairly penalized.</span></section>
-
-    <section class="launch-strip" aria-label="Project links" data-reveal>
-      <a href="https://leaderboard.delx.ai/"><span>Live board</span><strong>leaderboard.delx.ai</strong></a>
-      <a href="https://github.com/davidmosiah/mcp-leaderboard"><span>Source</span><strong>GitHub repo</strong></a>
-      <a href="https://github.com/davidmosiah/mcp-scorecard"><span>Engine</span><strong>mcp-scorecard</strong></a>
-      <a href="https://registry.modelcontextprotocol.io"><span>Corpus</span><strong>MCP registry</strong></a>
+    <section class="weekly-rail" aria-labelledby="weekly-title" data-reveal>
+      <div><span class="rail-label">New / MCP Scoreboard Weekly</span><h2 id="weekly-title">A baseline the ecosystem can actually compare against.</h2></div>
+      <p>The weekly edition separates methodology changes, package releases, reachability shifts and verified score movement. Directional claims only appear when both runs are comparable.</p>
+      <div class="rail-actions"><a href="/issues/latest/">Latest edition ↗</a><a href="/issues/feed.xml">RSS</a><a href="/issues/latest.json">Evidence JSON</a></div>
     </section>
 
-    <section class="leaderboard-section" id="leaderboard">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">The live ranking</p>
-        <h2>Top 100 servers. Browse every scorecard.</h2>
-        <p class="section-lede">Page 1 of 40. Every server here was booted in its own child process and graded on 10 checks. Sorted by agent-readiness, highest first. The <span style="color:var(--ok)">+ green</span> tags are passing checks; the <span style="color:var(--bad)">– red</span> tags are the gaps holding the score down.</p>
+    <section class="leaderboard-section" id="leaderboard" aria-labelledby="leaderboard-title">
+      <div class="leaderboard-intro" data-reveal>
+        <div><p class="eyebrow">The live ranking</p><h2 id="leaderboard-title">Find any server.<br>Inspect every point.</h2></div>
+        <p>Search all <strong data-live="scored">3976</strong> scored packages, or browse the top 100 below. Every result opens a permanent scorecard with check-level evidence.</p>
       </div>
 
+      <div class="search-area" data-reveal>
+        <label class="search-shell" for="server-search"><span>Search the complete index</span><input id="server-search" type="search" inputmode="search" autocomplete="off" spellcheck="false" placeholder="Package or server name…" aria-describedby="search-help"><kbd>/</kbd></label>
+        <p id="search-help">Type at least two characters. Results come from the same public leaderboard.json dataset.</p>
+        <div id="search-results" class="search-results" aria-live="polite" aria-label="Server search results"></div>
+      </div>
+
+      <div class="board-heading" data-reveal><div><span>Index / page 01</span><strong>Top 100 by agent-readiness</strong></div><div><span>Engine</span><strong>mcp-scorecard</strong></div><div><span>Generated</span><strong data-live="generated">2026-08-12</strong></div></div>
       <div class="full-board-wrap" data-reveal>
-        <div class="full-board-meta">
-          <span>engine <b>mcp-scorecard</b></span>
-          <span>generated <b data-live="generated">2026-08-12</b></span>
-          <span>scored <b data-live="scored">3976</b></span>
-          <span>corpus this run <b data-live="total">6947</b></span>
-          <span>unreachable <b data-live="unreachable">2971</b></span>
-        </div>
         <div class="table-scroll">
           <table class="full-board">
-            <thead>
-              <tr>
-                <th scope="col" class="fb-rank">#</th>
-                <th scope="col">MCP server (npm)</th>
-                <th scope="col">score</th>
-                <th scope="col">agent-readiness</th>
-                <th scope="col">key passing / failing checks</th>
-              </tr>
-            </thead>
+            <thead><tr><th scope="col" class="fb-rank">#</th><th scope="col">MCP server / npm</th><th scope="col">Score</th><th scope="col">Readiness</th><th scope="col">Key evidence</th></tr></thead>
             <tbody id="full-board-body">
           <tr class="top-1">
             <td class="fb-rank">1</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/apple-health-mcp-unofficial">apple-health-mcp-unofficial</a><small>server: apple-health-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -894,7 +870,7 @@
             <td class="fb-rank">2</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/delx-living-body">delx-living-body</a><small>server: living-body-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -904,7 +880,7 @@
             <td class="fb-rank">3</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/eight-sleep-mcp-unofficial">eight-sleep-mcp-unofficial</a><small>server: eight-sleep-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -914,7 +890,7 @@
             <td class="fb-rank">4</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/garmin-mcp-unofficial">garmin-mcp-unofficial</a><small>server: garmin-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -924,7 +900,7 @@
             <td class="fb-rank">5</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/google-health-fitbit-mcp">google-health-fitbit-mcp</a><small>server: google-health-fitbit-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -934,7 +910,7 @@
             <td class="fb-rank">6</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/google-health-mcp-unofficial">google-health-mcp-unofficial</a><small>server: google-health-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -944,7 +920,7 @@
             <td class="fb-rank">7</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/oura-mcp-unofficial">oura-mcp-unofficial</a><small>server: oura-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -954,7 +930,7 @@
             <td class="fb-rank">8</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/samsung-health-mcp-unofficial">samsung-health-mcp-unofficial</a><small>server: samsung-health-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -964,7 +940,7 @@
             <td class="fb-rank">9</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/wellness-air">wellness-air</a><small>server: wellness-air-mcp</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -974,7 +950,7 @@
             <td class="fb-rank">10</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/wellness-cgm-mcp">wellness-cgm-mcp</a><small>server: wellness-cgm-mcp</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -984,7 +960,7 @@
             <td class="fb-rank">11</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/wellness-cycle-coach">wellness-cycle-coach</a><small>server: wellness-cycle-coach-mcp</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -994,7 +970,7 @@
             <td class="fb-rank">12</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/wellness-nourish">wellness-nourish</a><small>server: nourish-mcp</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1004,7 +980,7 @@
             <td class="fb-rank">13</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/whoop-mcp-unofficial">whoop-mcp-unofficial</a><small>server: whoop-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1014,7 +990,7 @@
             <td class="fb-rank">14</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/withings-mcp-unofficial">withings-mcp-unofficial</a><small>server: withings-mcp-server</small></td>
             <td><span class="score-pill tier-a">97</span></td>
-            <td><div class="bar"><i style="width:97%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:97%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1024,7 +1000,7 @@
             <td class="fb-rank">15</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/fitbit-mcp-unofficial">fitbit-mcp-unofficial</a><small>server: fitbit-mcp-server</small></td>
             <td><span class="score-pill tier-a">93</span></td>
-            <td><div class="bar"><i style="width:93%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:93%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Privacy modes documented</span>
@@ -1035,7 +1011,7 @@
             <td class="fb-rank">16</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/strava-mcp-unofficial">strava-mcp-unofficial</a><small>server: strava-mcp-server</small></td>
             <td><span class="score-pill tier-a">93</span></td>
-            <td><div class="bar"><i style="width:93%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:93%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Privacy modes documented</span>
@@ -1046,7 +1022,7 @@
             <td class="fb-rank">17</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/astral-mcp">astral-mcp</a><small>server: astral-mcp-server</small></td>
             <td><span class="score-pill tier-b">88</span></td>
-            <td><div class="bar"><i style="width:88%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:88%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1057,7 +1033,7 @@
             <td class="fb-rank">18</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/delx-memory">delx-memory</a><small>server: delx-memory</small></td>
             <td><span class="score-pill tier-b">88</span></td>
-            <td><div class="bar"><i style="width:88%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:88%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1068,7 +1044,7 @@
             <td class="fb-rank">19</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/polar-mcp-unofficial">polar-mcp-unofficial</a><small>server: polar-mcp-server</small></td>
             <td><span class="score-pill tier-b">88</span></td>
-            <td><div class="bar"><i style="width:88%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:88%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Privacy modes documented</span>
@@ -1079,7 +1055,7 @@
             <td class="fb-rank">20</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/google-ads-mcp-unofficial">google-ads-mcp-unofficial</a><small>server: google-ads-mcp-server</small></td>
             <td><span class="score-pill tier-b">82</span></td>
-            <td><div class="bar"><i style="width:82%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:82%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1090,7 +1066,7 @@
             <td class="fb-rank">21</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/circuitarium-mcp">circuitarium-mcp</a><small>server: circuitarium-mcp</small></td>
             <td><span class="score-pill tier-b">78</span></td>
-            <td><div class="bar"><i style="width:78%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:78%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1101,7 +1077,7 @@
             <td class="fb-rank">22</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/timeline-pulse">timeline-pulse</a><small>server: timeline-pulse</small></td>
             <td><span class="score-pill tier-b">77</span></td>
-            <td><div class="bar"><i style="width:77%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:77%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1112,7 +1088,7 @@
             <td class="fb-rank">23</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40pseolint/mcp">@pseolint/mcp</a><small>server: pseolint</small></td>
             <td><span class="score-pill tier-b">76</span></td>
-            <td><div class="bar"><i style="width:76%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:76%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1123,7 +1099,7 @@
             <td class="fb-rank">24</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/oilpriceapi-mcp">oilpriceapi-mcp</a><small>server: oilpriceapi</small></td>
             <td><span class="score-pill tier-b">76</span></td>
-            <td><div class="bar"><i style="width:76%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:76%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1134,7 +1110,7 @@
             <td class="fb-rank">25</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/partner-center-mcp">partner-center-mcp</a><small>server: partner-center-mcp</small></td>
             <td><span class="score-pill tier-b">76</span></td>
-            <td><div class="bar"><i style="width:76%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:76%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1145,7 +1121,7 @@
             <td class="fb-rank">26</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40droidagentkit/launcher">@droidagentkit/launcher</a><small>server: droidagentkit</small></td>
             <td><span class="score-pill tier-b">75</span></td>
-            <td><div class="bar"><i style="width:75%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:75%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1156,7 +1132,7 @@
             <td class="fb-rank">27</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/pokeapi-mcp-server">@cyanheads/pokeapi-mcp-server</a><small>server: pokeapi-mcp-server</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1167,7 +1143,7 @@
             <td class="fb-rank">28</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40gener8v/mcp-geographic-data">@gener8v/mcp-geographic-data</a><small>server: gener8v-geographic-data</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1178,7 +1154,7 @@
             <td class="fb-rank">29</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40ios-web-bluetooth/mcp">@ios-web-bluetooth/mcp</a><small>server: @ios-web-bluetooth/mcp</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1189,7 +1165,7 @@
             <td class="fb-rank">30</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40quantustik/mcp-server">@quantustik/mcp-server</a><small>server: Quantustik</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1200,7 +1176,7 @@
             <td class="fb-rank">31</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40smarterweather/mcp-weather">@smarterweather/mcp-weather</a><small>server: sw-mcp</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1211,7 +1187,7 @@
             <td class="fb-rank">32</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/agent-ready-mcp">agent-ready-mcp</a><small>server: agent-ready</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1222,7 +1198,7 @@
             <td class="fb-rank">33</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/agent-search-mcp">agent-search-mcp</a><small>server: agent-search-mcp</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1233,7 +1209,7 @@
             <td class="fb-rank">34</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/fdic-mcp-server">fdic-mcp-server</a><small>server: fdic-mcp-server</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1244,7 +1220,7 @@
             <td class="fb-rank">35</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/noto-crm-mcp-server">noto-crm-mcp-server</a><small>server: noto-crm-mcp-server</small></td>
             <td><span class="score-pill tier-c">74</span></td>
-            <td><div class="bar"><i style="width:74%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:74%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1255,7 +1231,7 @@
             <td class="fb-rank">36</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40blueprint-chart/mcp">@blueprint-chart/mcp</a><small>server: @blueprint-chart/mcp</small></td>
             <td><span class="score-pill tier-c">73</span></td>
-            <td><div class="bar"><i style="width:73%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:73%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1266,7 +1242,7 @@
             <td class="fb-rank">37</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40apexfdn/copilot-mcp">@apexfdn/copilot-mcp</a><small>server: copilot-mcp</small></td>
             <td><span class="score-pill tier-c">72</span></td>
-            <td><div class="bar"><i style="width:72%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:72%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1277,7 +1253,7 @@
             <td class="fb-rank">38</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40signaledi/mcp-server">@signaledi/mcp-server</a><small>server: signaledi</small></td>
             <td><span class="score-pill tier-c">72</span></td>
-            <td><div class="bar"><i style="width:72%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:72%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1288,7 +1264,7 @@
             <td class="fb-rank">39</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/avito-mcp">avito-mcp</a><small>server: avito-mcp</small></td>
             <td><span class="score-pill tier-c">72</span></td>
-            <td><div class="bar"><i style="width:72%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:72%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Resources advertised</span>
@@ -1299,7 +1275,7 @@
             <td class="fb-rank">40</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/mistral-mcp">mistral-mcp</a><small>server: mistral-mcp</small></td>
             <td><span class="score-pill tier-c">72</span></td>
-            <td><div class="bar"><i style="width:72%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:72%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1310,7 +1286,7 @@
             <td class="fb-rank">41</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40aioproductoscom/mcp">@aioproductoscom/mcp</a><small>server: AIOProductOS Demo</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1321,7 +1297,7 @@
             <td class="fb-rank">42</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40ansvar/us-regulations-mcp">@ansvar/us-regulations-mcp</a><small>server: us-regulations-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1332,7 +1308,7 @@
             <td class="fb-rank">43</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40mapbox/mcp-server">@mapbox/mcp-server</a><small>server: Mapbox MCP server</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1343,7 +1319,7 @@
             <td class="fb-rank">44</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40mfdaves/okf-mcp">@mfdaves/okf-mcp</a><small>server: okf-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1354,7 +1330,7 @@
             <td class="fb-rank">45</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40ryancardin/noaa-tides-currents-mcp-server">@ryancardin/noaa-tides-currents-mcp-server</a><small>server: noaa-tides-currents-mcp-server</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1365,7 +1341,7 @@
             <td class="fb-rank">46</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40sugukuru/japan-real-estate-intel-mcp">@sugukuru/japan-real-estate-intel-mcp</a><small>server: japan-real-estate-intel-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1376,7 +1352,7 @@
             <td class="fb-rank">47</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40whisper-security/whisper-graph-mcp">@whisper-security/whisper-graph-mcp</a><small>server: whisper-graph</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1387,7 +1363,7 @@
             <td class="fb-rank">48</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/japan-seasons-mcp">japan-seasons-mcp</a><small>server: japan-seasons-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1398,7 +1374,7 @@
             <td class="fb-rank">49</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/manoma-mcp">manoma-mcp</a><small>server: manoma-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1409,7 +1385,7 @@
             <td class="fb-rank">50</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/medical-terminologies-mcp">medical-terminologies-mcp</a><small>server: medical-terminologies-mcp</small></td>
             <td><span class="score-pill tier-c">71</span></td>
-            <td><div class="bar"><i style="width:71%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:71%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1420,7 +1396,7 @@
             <td class="fb-rank">51</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40agentrysh/mcp">@agentrysh/mcp</a><small>server: agentry-mcp</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1431,7 +1407,7 @@
             <td class="fb-rank">52</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40constellationdev/mcp">@constellationdev/mcp</a><small>server: @constellationdev/mcp</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1442,7 +1418,7 @@
             <td class="fb-rank">53</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/cdc-health-mcp-server">@cyanheads/cdc-health-mcp-server</a><small>server: @cyanheads/cdc-health-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1453,7 +1429,7 @@
             <td class="fb-rank">54</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/coingecko-mcp-server">@cyanheads/coingecko-mcp-server</a><small>server: coingecko-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1464,7 +1440,7 @@
             <td class="fb-rank">55</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/earthquake-mcp-server">@cyanheads/earthquake-mcp-server</a><small>server: earthquake-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1475,7 +1451,7 @@
             <td class="fb-rank">56</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/ensembl-mcp-server">@cyanheads/ensembl-mcp-server</a><small>server: ensembl-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1486,7 +1462,7 @@
             <td class="fb-rank">57</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/un-comtrade-mcp-server">@cyanheads/un-comtrade-mcp-server</a><small>server: un-comtrade-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1497,7 +1473,7 @@
             <td class="fb-rank">58</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/wikidata-mcp-server">@cyanheads/wikidata-mcp-server</a><small>server: wikidata-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1508,7 +1484,7 @@
             <td class="fb-rank">59</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40orygn/opa-mcp">@orygn/opa-mcp</a><small>server: orygn-opa-mcp</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Resources advertised</span>
@@ -1519,7 +1495,7 @@
             <td class="fb-rank">60</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40stocktrends-publications/stocktrends-mcp-server">@stocktrends-publications/stocktrends-mcp-server</a><small>server: stocktrends-mcp-server</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1530,7 +1506,7 @@
             <td class="fb-rank">61</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/purmemo-mcp">purmemo-mcp</a><small>server: purmemo-mcp</small></td>
             <td><span class="score-pill tier-c">70</span></td>
-            <td><div class="bar"><i style="width:70%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:70%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1541,7 +1517,7 @@
             <td class="fb-rank">62</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40automatelab/ai-seo-mcp">@automatelab/ai-seo-mcp</a><small>server: @automatelab/ai-seo-mcp</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1552,7 +1528,7 @@
             <td class="fb-rank">63</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/attack-surface-mcp-server">@cyanheads/attack-surface-mcp-server</a><small>server: attack-surface-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1563,7 +1539,7 @@
             <td class="fb-rank">64</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/fcc-broadband-mcp-server">@cyanheads/fcc-broadband-mcp-server</a><small>server: fcc-broadband-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1574,7 +1550,7 @@
             <td class="fb-rank">65</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/noaa-cdo-mcp-server">@cyanheads/noaa-cdo-mcp-server</a><small>server: noaa-cdo-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1585,7 +1561,7 @@
             <td class="fb-rank">66</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/noaa-climate-mcp-server">@cyanheads/noaa-climate-mcp-server</a><small>server: noaa-climate-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1596,7 +1572,7 @@
             <td class="fb-rank">67</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/onebusaway-mcp-server">@cyanheads/onebusaway-mcp-server</a><small>server: onebusaway-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1607,7 +1583,7 @@
             <td class="fb-rank">68</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/pubmed-mcp-server">@cyanheads/pubmed-mcp-server</a><small>server: @cyanheads/pubmed-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1618,7 +1594,7 @@
             <td class="fb-rank">69</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/sanctions-screening-mcp-server">@cyanheads/sanctions-screening-mcp-server</a><small>server: sanctions-screening-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1629,7 +1605,7 @@
             <td class="fb-rank">70</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/usda-mcp-server">@cyanheads/usda-mcp-server</a><small>server: usda-mcp-server</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1640,7 +1616,7 @@
             <td class="fb-rank">71</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40groundtruth-mcp/gt-mcp">@groundtruth-mcp/gt-mcp</a><small>server: GroundTruth</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1651,7 +1627,7 @@
             <td class="fb-rank">72</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40kundlit/mcp">@kundlit/mcp</a><small>server: kundlit-astro</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1662,7 +1638,7 @@
             <td class="fb-rank">73</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/mcp-server-dig">mcp-server-dig</a><small>server: dig</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1673,7 +1649,7 @@
             <td class="fb-rank">74</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/mcp-server-madeonsol">mcp-server-madeonsol</a><small>server: madeonsol</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1684,7 +1660,7 @@
             <td class="fb-rank">75</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/mcp-sports-hub">mcp-sports-hub</a><small>server: sports-hub</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1695,7 +1671,7 @@
             <td class="fb-rank">76</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/shipcheck-mcp">shipcheck-mcp</a><small>server: shipcheck-mcp</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1706,7 +1682,7 @@
             <td class="fb-rank">77</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/shopops-mcp-server">shopops-mcp-server</a><small>server: shopops-mcp</small></td>
             <td><span class="score-pill tier-c">69</span></td>
-            <td><div class="bar"><i style="width:69%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:69%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1717,7 +1693,7 @@
             <td class="fb-rank">78</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40metalift/mcp">@metalift/mcp</a><small>server: metalift</small></td>
             <td><span class="score-pill tier-c">68</span></td>
-            <td><div class="bar"><i style="width:68%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:68%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1728,7 +1704,7 @@
             <td class="fb-rank">79</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/agoragentic-mcp">agoragentic-mcp</a><small>server: agoragentic</small></td>
             <td><span class="score-pill tier-c">68</span></td>
-            <td><div class="bar"><i style="width:68%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:68%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1739,7 +1715,7 @@
             <td class="fb-rank">80</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/copilot-money-mcp">copilot-money-mcp</a><small>server: copilot-money-mcp</small></td>
             <td><span class="score-pill tier-c">68</span></td>
-            <td><div class="bar"><i style="width:68%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:68%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1750,7 +1726,7 @@
             <td class="fb-rank">81</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40blockrun/mcp">@blockrun/mcp</a><small>server: blockrun-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1761,7 +1737,7 @@
             <td class="fb-rank">82</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40chrischall/flightaware-mcp">@chrischall/flightaware-mcp</a><small>server: flightaware-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1772,7 +1748,7 @@
             <td class="fb-rank">83</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/aviation-weather-mcp-server">@cyanheads/aviation-weather-mcp-server</a><small>server: aviation-weather-mcp-server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1783,7 +1759,7 @@
             <td class="fb-rank">84</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40cyanheads/census-mcp-server">@cyanheads/census-mcp-server</a><small>server: census-mcp-server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1794,7 +1770,7 @@
             <td class="fb-rank">85</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40gitdealflow/mcp-signal">@gitdealflow/mcp-signal</a><small>server: vc-deal-flow-signal</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1805,7 +1781,7 @@
             <td class="fb-rank">86</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40j0hanz/code-assistant">@j0hanz/code-assistant</a><small>server: code-assistant</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1816,7 +1792,7 @@
             <td class="fb-rank">87</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40j0hanz/code-lens-mcp">@j0hanz/code-lens-mcp</a><small>server: code-lens</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1827,7 +1803,7 @@
             <td class="fb-rank">88</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40mapbox/mcp-docs-server">@mapbox/mcp-docs-server</a><small>server: Mapbox Documentation MCP Server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1838,7 +1814,7 @@
             <td class="fb-rank">89</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40parse-gl/mcp">@parse-gl/mcp</a><small>server: parse</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1849,7 +1825,7 @@
             <td class="fb-rank">90</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/%40withinfocus/statbotics-mcp-server">@withinfocus/statbotics-mcp-server</a><small>server: Statbotics MCP Server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1860,7 +1836,7 @@
             <td class="fb-rank">91</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/admob-mcp-server">admob-mcp-server</a><small>server: admob-mcp-server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1871,7 +1847,7 @@
             <td class="fb-rank">92</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/agentic-os-mcp">agentic-os-mcp</a><small>server: agentic-os</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1882,7 +1858,7 @@
             <td class="fb-rank">93</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/bestproxy4agents-mcp">bestproxy4agents-mcp</a><small>server: proxy4agents-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1893,7 +1869,7 @@
             <td class="fb-rank">94</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/boondmanager-mcp-server">boondmanager-mcp-server</a><small>server: boondmanager-mcp-server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Tool naming convention</span>
 <span class="pass">+ Dense series caps</span>
@@ -1904,7 +1880,7 @@
             <td class="fb-rank">95</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/dero-mcp-server">dero-mcp-server</a><small>server: dero-daemon-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1915,7 +1891,7 @@
             <td class="fb-rank">96</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/intelthreadlinqs-mcp">intelthreadlinqs-mcp</a><small>server: threadlinqs-intelligence</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1926,7 +1902,7 @@
             <td class="fb-rank">97</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/japan-ux-mcp">japan-ux-mcp</a><small>server: japan-ux-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1937,7 +1913,7 @@
             <td class="fb-rank">98</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/koko-call-mcp">koko-call-mcp</a><small>server: KokoCallMCP</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1948,7 +1924,7 @@
             <td class="fb-rank">99</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/kolada-mcp-server">kolada-mcp-server</a><small>server: kolada-mcp-server</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1959,7 +1935,7 @@
             <td class="fb-rank">100</td>
             <td class="fb-srv"><a href="https://leaderboard.delx.ai/servers/nankai-trough-mcp">nankai-trough-mcp</a><small>server: nankai-trough-mcp</small></td>
             <td><span class="score-pill tier-c">67</span></td>
-            <td><div class="bar"><i style="width:67%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:67%"></i></div></td>
             <td><div class="check-tags"><span class="pass">+ Schema validity</span>
 <span class="pass">+ Dense series caps</span>
 <span class="pass">+ Mutation gating</span>
@@ -1977,261 +1953,63 @@
       </div>
     </section>
 
-    <section class="story-section" id="why">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Why this exists</p>
-        <h2>A neutral signal for agent-readiness.</h2>
-        <p class="section-lede">Hundreds of MCP servers ship every month with no shared measure of whether an agent can actually pick one up cleanly. Downloads measure popularity, not quality.</p>
-      </div>
-      <div class="story-grid">
-        <article class="story-card" data-reveal>
-          <span>01</span>
-          <h3>Discoverable</h3>
-          <p>Can an LLM enumerate the tools, read their descriptions, and understand what the server does without opening the source?</p>
-        </article>
-        <article class="story-card" data-reveal>
-          <span>02</span>
-          <h3>Trustworthy shape</h3>
-          <p>Valid JSON schemas, snake_case tool names, read-only annotations and gated mutations make a server safe to wire into an agent.</p>
-        </article>
-        <article class="story-card" data-reveal>
-          <span>03</span>
-          <h3>Self-onboarding</h3>
-          <p>An <code>*_agent_manifest</code> / <code>*_capabilities</code> surface and a smoke test let an agent verify the server before it relies on it.</p>
-        </article>
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="method-lead" data-reveal><p class="eyebrow">Method / fairness</p><h2 id="method-title">Booted,<br><em>not guessed.</em></h2><p>The scoring engine observes what an agent can actually discover and safely understand. The pipeline fails closed: incomplete runs never publish.</p></div>
+      <ol class="method-list">
+        <li data-reveal><span>01</span><div><strong>Build the corpus</strong><p>Pull the official MCP registry, keep npm-installable active versions and deduplicate package identities.</p></div></li>
+        <li data-reveal><span>02</span><div><strong>Run in isolation</strong><p>Boot each package over stdio in a clean process with hard timeouts and no production credentials.</p></div></li>
+        <li data-reveal><span>03</span><div><strong>Score visible evidence</strong><p>Grade schemas, naming, descriptions, safety annotations, mutation gates, privacy, resources, discovery and smoke tests.</p></div></li>
+        <li data-reveal><span>04</span><div><strong>Publish or stop</strong><p>Verify complete coverage, deterministic output and methodology compatibility before committing the static dataset.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="checks-section" aria-labelledby="checks-title">
+      <div class="section-kicker" data-reveal><span>Ten checks / 100 points</span><span>Same instrument for every package</span></div>
+      <h2 id="checks-title" data-reveal>What the index can see.</h2>
+      <div class="checks-grid">
+        <article data-reveal><span>01</span><strong>Schema validity</strong><p>Inputs an agent can validate before calling.</p></article>
+        <article data-reveal><span>02</span><strong>Tool naming</strong><p>Predictable, namespaced operations.</p></article>
+        <article data-reveal><span>03</span><strong>Descriptions</strong><p>Purpose, inputs and side effects made explicit.</p></article>
+        <article data-reveal><span>04</span><strong>Annotations</strong><p>Read-only, destructive and idempotent cues.</p></article>
+        <article data-reveal><span>05</span><strong>Mutation gates</strong><p>Writes separated from accidental execution.</p></article>
+        <article data-reveal><span>06</span><strong>Privacy modes</strong><p>Sensitive output opt-in and documented.</p></article>
+        <article data-reveal><span>07</span><strong>Resources</strong><p>Useful context beyond callable tools.</p></article>
+        <article data-reveal><span>08</span><strong>Discoverability</strong><p>A standard entry point before source reading.</p></article>
+        <article data-reveal><span>09</span><strong>Agent manifest</strong><p>Self-describing capabilities and constraints.</p></article>
+        <article data-reveal><span>10</span><strong>Smoke test</strong><p>A safe proof that the server is alive.</p></article>
       </div>
     </section>
 
-    <section class="architecture-section" id="method">
-      <div class="architecture-copy" data-reveal>
-        <p class="eyebrow">Methodology &amp; fairness</p>
-        <h2>Booted, not guessed.</h2>
-        <p class="section-lede">Nothing here is hand-edited. The corpus comes from the official registry, every target is graded by the same engine in isolation, and a weekly Grok Cloud routine commits the result.</p>
-        <div class="architecture-points">
-          <article>
-            <strong>Real corpus</strong>
-            <span>npm-installable servers from the official MCP registry, latest active version, deduped.</span>
-          </article>
-          <article>
-            <strong>Isolated runs</strong>
-            <span>Each server boots in its own child process with a hard timeout. One hang can't stall the batch.</span>
-          </article>
-          <article>
-            <strong>Fair to auth-gated servers</strong>
-            <span>Unreachable &ne; bad. Servers that can't be probed without credentials are listed, not low-scored.</span>
-          </article>
-          <article>
-            <strong>Scope is honest</strong>
-            <span>This grades shape, metadata and discoverability. A server can score 100 and still return wrong data.</span>
-          </article>
-        </div>
-      </div>
-      <figure class="method-visual" data-reveal>
-        <p class="eyebrow" style="margin-bottom:1rem">The weekly pipeline</p>
-        <ol class="method-steps">
-          <li><strong>Corpus</strong> — pull npm-installable servers from the MCP registry into <code>data/corpus.json</code>.</li>
-          <li><strong>Run</strong> — boot + score each target with mcp-scorecard into <code>data/leaderboard.json</code>.</li>
-          <li><strong>Render</strong> — generate <code>LEADERBOARD.md</code> and serve this page + JSON.</li>
-          <li><strong>Commit</strong> — a Grok Cloud routine commits the refreshed board. No human in the loop.</li>
-        </ol>
-      </figure>
+    <section class="boundary-section" aria-labelledby="boundary-title" data-reveal>
+      <div><p class="eyebrow">Evidence boundary</p><h2 id="boundary-title">A score is a map,<br>not a certificate.</h2></div>
+      <div class="boundary-copy"><p>The index measures agent-readiness shape and metadata. It does <strong>not</strong> certify correctness, security, uptime or business quality.</p><ul><li>A score can be reproduced from the open-source engine.</li><li>Unreachable is a separate state, never a disguised zero.</li><li>Rank cannot be bought; the editorial surface contains no commercial placement.</li></ul></div>
     </section>
 
-    <section class="setup-section" id="climb">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Climb the board</p>
-        <h2>Score your server, then fix what it tells you.</h2>
-        <p class="section-lede">The engine is the same CLI that built this board. Run it locally against your own package or repo, read the itemized fixes, ship them, and climb on the next weekly refresh.</p>
-      </div>
+    <section class="agents-section" id="agents" aria-labelledby="agents-title">
+      <div class="agents-copy" data-reveal><p class="eyebrow">For agents / researchers</p><h2 id="agents-title">Every surface has a machine-readable twin.</h2><p>Use the exhaustive JSON dataset for analysis, llms.txt for a compact orientation, or the weekly feed for changes. The human pages and machine surfaces are generated from one committed source.</p><div class="data-links"><a href="/leaderboard.json"><span>JSON dataset</span><strong>/leaderboard.json ↗</strong></a><a href="/llms.txt"><span>Agent summary</span><strong>/llms.txt ↗</strong></a><a href="/issues/latest.json"><span>Latest change evidence</span><strong>/issues/latest.json ↗</strong></a><a href="/sitemap.xml"><span>Canonical pages</span><strong>/sitemap.xml ↗</strong></a></div></div>
+      <div class="command-panel" data-reveal><div class="command-panel-head"><span>Run the instrument</span><span>Shell</span></div><pre><code>npx -y mcp-scorecard \
+  &lt;package-or-repository&gt; \
+  --json</code></pre><button type="button" data-copy="npx -y mcp-scorecard <package-or-repository> --json">Copy command</button><p>Returns the 0–100 score, all ten checks and actionable gaps. It never invents a score when the package cannot be graded.</p></div>
+    </section>
 
-      <div class="path-grid">
-        <article class="path-card" data-reveal>
-          <span>Step 1</span>
-          <h3>Get your score</h3>
-          <p>Point mcp-scorecard at any npm package, GitHub URL, or local <code>dist/index.js</code>. It boots the server and prints your 0-100 score with the exact failing checks.</p>
-        </article>
-        <article class="path-card" data-reveal>
-          <span>Step 2</span>
-          <h3>Adopt the conventions</h3>
-          <p>snake_case tool names, read-only annotations, an <code>*_agent_manifest</code> / <code>*_capabilities</code> discovery surface, documented privacy modes, and a smoke test. These are what the score rewards.</p>
-        </article>
-      </div>
-
-      <div class="setup-flow">
-        <article class="setup-card command-card" data-reveal>
-          <div class="setup-topline">Score</div>
-          <h3>One command, itemized fixes</h3>
-          <p>No credentials, runs locally over stdio. Add <code>--json</code> to pipe into CI, or <code>--min-score 80</code> to gate a build.</p>
-          <div class="terminal">
-            <button type="button" data-copy="npx -y mcp-scorecard <your-package-or-repo>">Copy</button>
-<pre><code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code></pre>
-          </div>
-        </article>
-
-        <article class="setup-card" data-reveal>
-          <div class="setup-topline">Badge</div>
-          <h3>Show your score in your README</h3>
-          <p>Generate a live badge so agents and humans see your agent-readiness at a glance, straight from your repo.</p>
-          <div class="terminal">
-            <button type="button" data-copy="npx -y mcp-scorecard <your-package> --badge">Copy</button>
-<pre><code>npx -y mcp-scorecard &lt;your-package&gt; --badge</code></pre>
-          </div>
-        </article>
-
-        <article class="setup-card" data-reveal>
-          <div class="setup-topline">Run it as MCP</div>
-          <h3>Wire the engine into your agent</h3>
-          <p>mcp-scorecard is also an MCP server, so an agent can grade other servers on demand. Add it to any client that speaks MCP over stdio.</p>
-          <div class="client-pills" role="list" aria-label="Supported clients">
-            <span>Claude</span>
-            <span>Cursor</span>
-            <span>Windsurf</span>
-            <span>Hermes</span>
-            <span>OpenClaw</span>
-            <span>Generic MCP</span>
-          </div>
-          <details class="config-details">
-            <summary>Show the MCP config</summary>
-            <div class="terminal">
-              <button type="button" data-copy='{
-  "mcpServers": {
-    "mcp-scorecard": {
-      "command": "npx",
-      "args": ["-y", "mcp-scorecard"]
-    }
-  }
-}'>Copy config</button>
-<pre><code>{
-  "mcpServers": {
-    "mcp-scorecard": {
-      "command": "npx",
-      "args": ["-y", "mcp-scorecard"]
-    }
-  }
-}</code></pre>
-            </div>
-          </details>
-        </article>
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="section-kicker" data-reveal><span>Questions / answers</span><span>Before you trust the index</span></div>
+      <h2 id="faq-title" data-reveal>Read the caveats first.</h2>
+      <div class="faq-list">
+        <details data-reveal open><summary><span>01</span>How often does the index refresh?</summary><p>A weekly Grok Cloud routine runs the complete corpus in a fresh ephemeral VM. It publishes only after coverage, metadata, weekly-edition and SEO gates pass. This Mac is not part of the scheduled pipeline.</p></details>
+        <details data-reveal><summary><span>02</span>Why are some packages unreachable?</summary><p>Auth gates, startup errors or timeouts can prevent fair inspection. Those packages remain visible in the dataset with an unreachable status rather than receiving a misleading low score.</p></details>
+        <details data-reveal><summary><span>03</span>Can a maintainer influence the ranking?</summary><p>Only by changing the public package and improving reproducible evidence. There is no manual score override, paid placement or private credential path.</p></details>
       </div>
     </section>
 
-    <section class="use-section" id="checks">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">The 10 checks</p>
-        <h2>What the score is made of.</h2>
-        <p class="section-lede">Each check scores 0-10 and they sum to 100. Together they describe whether an agent can find, trust and safely use the server.</p>
-      </div>
-      <div class="story-grid" style="grid-template-columns:repeat(auto-fit,minmax(220px,1fr))">
-        <article class="story-card" data-reveal><span>1</span><h3>Manifest discoverability</h3><p>A standard, fetchable description of the server an agent can read first.</p></article>
-        <article class="story-card" data-reveal><span>2</span><h3>Tool naming</h3><p>Consistent, snake_case, namespaced tool names an agent can predict.</p></article>
-        <article class="story-card" data-reveal><span>3</span><h3>Tool descriptions</h3><p>Every tool explains what it does, its inputs, and its side effects.</p></article>
-        <article class="story-card" data-reveal><span>4</span><h3>Schema validity</h3><p>Input schemas are valid JSON Schema an agent can rely on.</p></article>
-        <article class="story-card" data-reveal><span>5</span><h3>Annotations</h3><p>Read-only / destructive / idempotent hints so agents act safely.</p></article>
-        <article class="story-card" data-reveal><span>6</span><h3>Mutation gating</h3><p>Write and destructive actions are explicit, not accidental.</p></article>
-        <article class="story-card" data-reveal><span>7</span><h3>Privacy modes</h3><p>Sensitive output is opt-in and documented, not leaked by default.</p></article>
-        <article class="story-card" data-reveal><span>8</span><h3>Resources</h3><p>The server advertises resources, not just tools, where it makes sense.</p></article>
-        <article class="story-card" data-reveal><span>9</span><h3>Agent manifest</h3><p>An <code>*_agent_manifest</code> / <code>*_capabilities</code> surface for self-onboarding.</p></article>
-        <article class="story-card" data-reveal><span>10</span><h3>Smoke test</h3><p>A safe, callable check that proves the server is actually alive.</p></article>
-      </div>
-    </section>
-
-    <section class="faq-section" id="faq">
-      <div class="section-head" data-reveal>
-        <p class="eyebrow">Questions people ask first</p>
-        <h2>Before you trust the ranking.</h2>
-        <p class="section-lede">A neutral leaderboard should be explicit about what it measures, how it scores, and where it is deliberately fair.</p>
-      </div>
-      <div class="faq-grid">
-        <details class="faq-item" data-reveal open>
-          <summary>What does this actually measure?</summary>
-          <p>Agent-readiness: whether an agent can discover the tools, trust the schemas, and onboard itself without a human reading the source. It is shape, metadata and discoverability — <strong>not</strong> correctness or security.</p>
-        </details>
-        <details class="faq-item" data-reveal>
-          <summary>How is each server scored?</summary>
-          <p>Each npm server from the official registry is booted over stdio in an isolated child process and graded by <code>mcp-scorecard</code> on 10 checks (each 0-10) summed to 0-100. A weekly Grok Cloud routine re-runs the sweep and commits the result.</p>
-        </details>
-        <details class="faq-item" data-reveal>
-          <summary>How do I climb the board?</summary>
-          <p>Run <code>npx -y mcp-scorecard &lt;your-package-or-repo&gt;</code>, read the itemized fixes, and adopt the conventions the score rewards. You climb on the next weekly refresh — nothing is hand-edited.</p>
-        </details>
-        <details class="faq-item" data-reveal>
-          <summary>Why is a server "unreachable" not "low"?</summary>
-          <p>Servers that need auth before <code>listTools()</code> and don't honor the <code>MCP_PROBE</code> hook can't be graded fairly, so they're listed as unreachable rather than penalized. Support <code>MCP_PROBE</code> to be gradeable.</p>
-        </details>
-      </div>
-      <p class="inline-link-row" data-reveal>
-        <a href="https://github.com/davidmosiah/mcp-leaderboard/blob/main/LEADERBOARD.md">Full LEADERBOARD.md</a>
-        <a href="/leaderboard.json">leaderboard.json</a>
-        <a href="https://github.com/davidmosiah/mcp-scorecard#what-it-checks">What the engine checks</a>
-      </p>
-    </section>
-
-    <section class="agent-section" id="agents">
-      <div class="agent-panel" data-reveal>
-        <div>
-          <p class="eyebrow">For AI agents</p>
-          <h2>A delegation prompt that does the work.</h2>
-          <p>Hand this to your assistant to score a server and read back exactly what to fix. It points at the engine, runs it over stdio, and never invents a score.</p>
-        </div>
-        <div class="terminal">
-          <button type="button" data-copy="Score the agent-readiness of an MCP server for me using mcp-scorecard. Engine: https://github.com/davidmosiah/mcp-scorecard (npm: mcp-scorecard). The public leaderboard lives at https://leaderboard.delx.ai and its machine-readable data is at https://leaderboard.delx.ai/leaderboard.json. Run: npx -y mcp-scorecard <TARGET> --json where <TARGET> is my npm package, GitHub repo URL, or local dist/index.js. Parse the JSON, then give me: (1) my 0-100 score and grade, (2) each of the 10 checks with pass/warn/fail, (3) the top 3 failing checks ranked by points lost, and (4) concrete fixes for each (snake_case tool names, read-only annotations, an *_agent_manifest / *_capabilities discovery surface, documented privacy modes, a smoke test). Do not fabricate a score; if the server is unreachable, say so and explain MCP_PROBE.">Copy agent prompt</button>
-<pre><code>Score the agent-readiness of an MCP server for me using
-mcp-scorecard.
-
-Engine: github.com/davidmosiah/mcp-scorecard (npm: mcp-scorecard)
-Leaderboard: https://leaderboard.delx.ai
-Data: https://leaderboard.delx.ai/leaderboard.json
-
-Run:  npx -y mcp-scorecard &lt;TARGET&gt; --json
-(&lt;TARGET&gt; = npm package, GitHub URL, or local dist/index.js)
-
-Then give me:
-1. my 0-100 score and grade
-2. all 10 checks with pass / warn / fail
-3. the top 3 gaps, ranked by points lost
-4. a concrete fix for each
-
-Don't fabricate a score. If it's unreachable, say so
-and explain the MCP_PROBE hook.</code></pre>
-        </div>
-      </div>
-    </section>
-
-    <section class="community-section" id="community">
-      <div class="community-card" data-reveal>
-        <div>
-          <p class="eyebrow">For builders</p>
-          <h2>Open source, end to end.</h2>
-          <p>Both the leaderboard (<a href="https://github.com/davidmosiah/mcp-leaderboard">mcp-leaderboard</a>) and the scoring engine (<a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a>) are MIT and built by <a href="https://github.com/davidmosiah">David Mosiah</a>. Methodology issues and corpus additions are welcome — the rules live in the scripts, not in anyone's head.</p>
-        </div>
-        <div class="community-actions">
-          <a class="button primary" href="https://github.com/davidmosiah/mcp-leaderboard/issues/new/choose">Open an issue</a>
-          <a class="button secondary" href="https://github.com/davidmosiah/mcp-leaderboard">Leaderboard repo</a>
-          <a class="button secondary" href="https://github.com/davidmosiah/mcp-scorecard">Engine repo</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="closing">
-      <div data-reveal>
-        <p class="eyebrow">The agent-readiness bar</p>
-        <h2>See where your server lands.</h2>
-        <p>Score it in one command, fix what the engine flags, and climb on the next weekly refresh.</p>
-      </div>
-      <div class="closing-actions" data-reveal>
-        <a class="button primary" href="#climb">Climb the board</a>
-        <a class="button secondary" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub</a>
-        <a class="button secondary" href="/leaderboard.json">leaderboard.json</a>
-      </div>
-    </section>
+    <section class="closing" data-reveal><p class="eyebrow">Open evidence / open source</p><h2>Inspect the instrument.<br>Challenge the methodology.</h2><div><a class="button primary" href="https://github.com/davidmosiah/mcp-leaderboard">Leaderboard source ↗</a><a class="button text-button" href="https://github.com/davidmosiah/mcp-scorecard">Scoring engine ↗</a></div></section>
   </main>
 
   <footer class="footer">
-    <p><strong>MCP Leaderboard</strong> by <a href="https://github.com/davidmosiah">David Mosiah</a> (<a href="https://x.com/delx369">@delx369</a>). MIT licensed. Part of <a href="https://delx.ai">Delx</a>.</p>
-    <p>Scored by <a href="https://github.com/davidmosiah/mcp-scorecard">mcp-scorecard</a>. Corpus from the <a href="https://registry.modelcontextprotocol.io">official MCP registry</a>. Auto-refreshed weekly — nothing hand-edited.</p>
-    <p>This grades agent-readiness shape and metadata, not correctness or security. A server can score 100 and still return wrong data. Always review before production.</p>
+    <div class="footer-brand"><span class="brand-index" aria-hidden="true">MCP<br>01</span><p><strong>MCP Leaderboard</strong><br>Independent agent-readiness evidence by Delx.</p></div>
+    <div class="footer-links"><a href="/issues/">Weekly</a><a href="/leaderboard.json">Dataset</a><a href="https://github.com/davidmosiah/mcp-leaderboard">Source</a><a href="https://registry.modelcontextprotocol.io">Registry</a></div>
+    <p class="footer-fine">Scored by open-source mcp-scorecard. Agent-readiness is not correctness or security. Always review before production.</p>
   </footer>
-
-  <script src="assets/site.js" defer></script>
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>

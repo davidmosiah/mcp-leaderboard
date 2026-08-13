@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Leaderboard — the MCP ecosystem, measured</title>
+  <meta name="description" content="Compare 0 MCP servers by agent-readiness score, rank and check-level evidence. Built from the official MCP registry and refreshed weekly.">
+  <meta name="author" content="David Mosiah">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="theme-color" content="#f2efe5">
+  <meta property="og:title" content="MCP Leaderboard — the MCP ecosystem, measured">
+  <meta property="og:description" content="Compare MCP servers by agent-readiness score with a canonical evidence page for every scored package.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MCP Leaderboard">
+  <meta property="og:url" content="https://leaderboard.delx.ai/">
+  <meta property="og:image" content="https://leaderboard.delx.ai/assets/og-card.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="MCP Leaderboard — the MCP ecosystem, measured.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@delx369">
+  <meta name="twitter:creator" content="@delx369">
+  <meta name="twitter:title" content="MCP Leaderboard — the MCP ecosystem, measured">
+  <meta name="twitter:description" content="Compare MCP servers by agent-readiness score with check-level evidence.">
+  <meta name="twitter:image" content="https://leaderboard.delx.ai/assets/og-card.png">
+  <link rel="canonical" href="https://leaderboard.delx.ai/">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+  <link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">
+  <link rel="alternate" type="application/rss+xml" href="/issues/feed.xml" title="MCP Scoreboard Weekly">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable project summary">
+  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">
+  <link rel="stylesheet" href="/assets/site.css">
+  <script type="application/ld+json">{}</script>
+  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/_vercel/insights/script.js"></script>
+</head>
+<body data-generated="1970-01-01T00:00:00.000Z" data-design="registry-observatory">
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="paper-grid" aria-hidden="true"></div>
+
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="MCP Leaderboard home">
+      <span class="brand-index" aria-hidden="true">MCP<br>01</span>
+      <span class="brand-wordmark"><strong>Leaderboard</strong><small>Registry observatory by Delx</small></span>
+    </a>
+    <nav class="nav" aria-label="Primary navigation">
+      <a href="#leaderboard">Ranking</a>
+      <a href="/issues/">Weekly</a>
+      <a href="#method">Method</a>
+      <a href="#agents">Data</a>
+      <a class="nav-mark" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub ↗</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy" data-reveal>
+        <div class="edition-line"><span>Live index</span><time data-live="generated">1970-01-01</time><span class="live-dot">Verified run</span></div>
+        <p class="eyebrow">Independent infrastructure intelligence</p>
+        <h1 id="hero-title">The MCP ecosystem,<br><em>measured.</em></h1>
+        <p class="hero-text">Every npm-installable server in the official MCP registry, booted over stdio and evaluated against the same ten agent-readiness checks. No popularity proxy. No paid ranking. Just reproducible evidence.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#leaderboard">Explore the index <span aria-hidden="true">↓</span></a>
+          <a class="button text-button" href="/issues/latest/">Read the weekly brief <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+
+      <aside class="index-panel" aria-label="Current MCP registry coverage" data-reveal>
+        <div class="index-panel-head"><span>Coverage / current run</span><span>01</span></div>
+        <div class="index-number"><strong data-live="scored">0</strong><span>servers scored</span></div>
+        <progress id="coverage-progress" max="1" value="0">0%</progress>
+        <div class="index-facts">
+          <div><span>Corpus</span><strong data-live="total">0</strong></div>
+          <div><span>Unreachable</span><strong data-live="unreachable">0</strong></div>
+          <div><span>Average</span><strong><span data-live="average">0</span><small>/100</small></strong></div>
+          <div><span>Median</span><strong><span data-live="median">0</span><small>/100</small></strong></div>
+        </div>
+        <p class="index-note">Unreachable packages are separated from low scores so infrastructure failures do not become fake quality judgments.</p>
+      </aside>
+    </section>
+
+    <section class="signal-line" aria-label="Complete registry run" data-reveal>
+      <strong>Complete registry run.</strong>
+      <span>This edition covers <span data-live="total">0</span> unique npm packages from the official registry: <span data-live="scored">0</span> scored and <span data-live="unreachable">0</span> reported as unreachable rather than unfairly penalized.</span>
+    </section>
+
+    <section class="top-index" aria-labelledby="top-index-title">
+      <div class="section-kicker" data-reveal><span>Top of the index</span><span>Updated <time data-live="generated">1970-01-01</time></span></div>
+      <div class="top-index-layout">
+        <div class="top-index-copy" data-reveal>
+          <h2 id="top-index-title">The current<br>frontier.</h2>
+          <p>Five servers currently set the benchmark. Equal scores are ordered by npm package name, never by editorial preference.</p>
+          <a class="underlined-link" href="#leaderboard">See all scorecards →</a>
+        </div>
+        <div class="top-board" data-reveal>
+          <table class="board-table">
+            <thead><tr><th scope="col">Rank</th><th scope="col">Package</th><th scope="col">Score</th><th scope="col">Primary gap</th></tr></thead>
+            <tbody id="hero-board-body"></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <section class="weekly-rail" aria-labelledby="weekly-title" data-reveal>
+      <div><span class="rail-label">New / MCP Scoreboard Weekly</span><h2 id="weekly-title">A baseline the ecosystem can actually compare against.</h2></div>
+      <p>The weekly edition separates methodology changes, package releases, reachability shifts and verified score movement. Directional claims only appear when both runs are comparable.</p>
+      <div class="rail-actions"><a href="/issues/latest/">Latest edition ↗</a><a href="/issues/feed.xml">RSS</a><a href="/issues/latest.json">Evidence JSON</a></div>
+    </section>
+
+    <section class="leaderboard-section" id="leaderboard" aria-labelledby="leaderboard-title">
+      <div class="leaderboard-intro" data-reveal>
+        <div><p class="eyebrow">The live ranking</p><h2 id="leaderboard-title">Find any server.<br>Inspect every point.</h2></div>
+        <p>Search all <strong data-live="scored">0</strong> scored packages, or browse the top 100 below. Every result opens a permanent scorecard with check-level evidence.</p>
+      </div>
+
+      <div class="search-area" data-reveal>
+        <label class="search-shell" for="server-search"><span>Search the complete index</span><input id="server-search" type="search" inputmode="search" autocomplete="off" spellcheck="false" placeholder="Package or server name…" aria-describedby="search-help"><kbd>/</kbd></label>
+        <p id="search-help">Type at least two characters. Results come from the same public leaderboard.json dataset.</p>
+        <div id="search-results" class="search-results" aria-live="polite" aria-label="Server search results"></div>
+      </div>
+
+      <div class="board-heading" data-reveal><div><span>Index / page 01</span><strong>Top 100 by agent-readiness</strong></div><div><span>Engine</span><strong>mcp-scorecard</strong></div><div><span>Generated</span><strong data-live="generated">1970-01-01</strong></div></div>
+      <div class="full-board-wrap" data-reveal>
+        <div class="table-scroll">
+          <table class="full-board">
+            <thead><tr><th scope="col" class="fb-rank">#</th><th scope="col">MCP server / npm</th><th scope="col">Score</th><th scope="col">Readiness</th><th scope="col">Key evidence</th></tr></thead>
+            <tbody id="full-board-body"></tbody>
+          </table>
+        </div>
+        <p class="unreachable-note"><b>0 servers were unreachable this run</b> and are intentionally not scored.</p>
+        <nav class="pagination" aria-label="Leaderboard pages"></nav>
+      </div>
+    </section>
+
+    <section class="method-section" id="method" aria-labelledby="method-title">
+      <div class="method-lead" data-reveal><p class="eyebrow">Method / fairness</p><h2 id="method-title">Booted,<br><em>not guessed.</em></h2><p>The scoring engine observes what an agent can actually discover and safely understand. The pipeline fails closed: incomplete runs never publish.</p></div>
+      <ol class="method-list">
+        <li data-reveal><span>01</span><div><strong>Build the corpus</strong><p>Pull the official MCP registry, keep npm-installable active versions and deduplicate package identities.</p></div></li>
+        <li data-reveal><span>02</span><div><strong>Run in isolation</strong><p>Boot each package over stdio in a clean process with hard timeouts and no production credentials.</p></div></li>
+        <li data-reveal><span>03</span><div><strong>Score visible evidence</strong><p>Grade schemas, naming, descriptions, safety annotations, mutation gates, privacy, resources, discovery and smoke tests.</p></div></li>
+        <li data-reveal><span>04</span><div><strong>Publish or stop</strong><p>Verify complete coverage, deterministic output and methodology compatibility before committing the static dataset.</p></div></li>
+      </ol>
+    </section>
+
+    <section class="checks-section" aria-labelledby="checks-title">
+      <div class="section-kicker" data-reveal><span>Ten checks / 100 points</span><span>Same instrument for every package</span></div>
+      <h2 id="checks-title" data-reveal>What the index can see.</h2>
+      <div class="checks-grid">
+        <article data-reveal><span>01</span><strong>Schema validity</strong><p>Inputs an agent can validate before calling.</p></article>
+        <article data-reveal><span>02</span><strong>Tool naming</strong><p>Predictable, namespaced operations.</p></article>
+        <article data-reveal><span>03</span><strong>Descriptions</strong><p>Purpose, inputs and side effects made explicit.</p></article>
+        <article data-reveal><span>04</span><strong>Annotations</strong><p>Read-only, destructive and idempotent cues.</p></article>
+        <article data-reveal><span>05</span><strong>Mutation gates</strong><p>Writes separated from accidental execution.</p></article>
+        <article data-reveal><span>06</span><strong>Privacy modes</strong><p>Sensitive output opt-in and documented.</p></article>
+        <article data-reveal><span>07</span><strong>Resources</strong><p>Useful context beyond callable tools.</p></article>
+        <article data-reveal><span>08</span><strong>Discoverability</strong><p>A standard entry point before source reading.</p></article>
+        <article data-reveal><span>09</span><strong>Agent manifest</strong><p>Self-describing capabilities and constraints.</p></article>
+        <article data-reveal><span>10</span><strong>Smoke test</strong><p>A safe proof that the server is alive.</p></article>
+      </div>
+    </section>
+
+    <section class="boundary-section" aria-labelledby="boundary-title" data-reveal>
+      <div><p class="eyebrow">Evidence boundary</p><h2 id="boundary-title">A score is a map,<br>not a certificate.</h2></div>
+      <div class="boundary-copy"><p>The index measures agent-readiness shape and metadata. It does <strong>not</strong> certify correctness, security, uptime or business quality.</p><ul><li>A score can be reproduced from the open-source engine.</li><li>Unreachable is a separate state, never a disguised zero.</li><li>Rank cannot be bought; the editorial surface contains no commercial placement.</li></ul></div>
+    </section>
+
+    <section class="agents-section" id="agents" aria-labelledby="agents-title">
+      <div class="agents-copy" data-reveal><p class="eyebrow">For agents / researchers</p><h2 id="agents-title">Every surface has a machine-readable twin.</h2><p>Use the exhaustive JSON dataset for analysis, llms.txt for a compact orientation, or the weekly feed for changes. The human pages and machine surfaces are generated from one committed source.</p><div class="data-links"><a href="/leaderboard.json"><span>JSON dataset</span><strong>/leaderboard.json ↗</strong></a><a href="/llms.txt"><span>Agent summary</span><strong>/llms.txt ↗</strong></a><a href="/issues/latest.json"><span>Latest change evidence</span><strong>/issues/latest.json ↗</strong></a><a href="/sitemap.xml"><span>Canonical pages</span><strong>/sitemap.xml ↗</strong></a></div></div>
+      <div class="command-panel" data-reveal><div class="command-panel-head"><span>Run the instrument</span><span>Shell</span></div><pre><code>npx -y mcp-scorecard \
+  &lt;package-or-repository&gt; \
+  --json</code></pre><button type="button" data-copy="npx -y mcp-scorecard <package-or-repository> --json">Copy command</button><p>Returns the 0–100 score, all ten checks and actionable gaps. It never invents a score when the package cannot be graded.</p></div>
+    </section>
+
+    <section class="faq-section" aria-labelledby="faq-title">
+      <div class="section-kicker" data-reveal><span>Questions / answers</span><span>Before you trust the index</span></div>
+      <h2 id="faq-title" data-reveal>Read the caveats first.</h2>
+      <div class="faq-list">
+        <details data-reveal open><summary><span>01</span>How often does the index refresh?</summary><p>A weekly Grok Cloud routine runs the complete corpus in a fresh ephemeral VM. It publishes only after coverage, metadata, weekly-edition and SEO gates pass. This Mac is not part of the scheduled pipeline.</p></details>
+        <details data-reveal><summary><span>02</span>Why are some packages unreachable?</summary><p>Auth gates, startup errors or timeouts can prevent fair inspection. Those packages remain visible in the dataset with an unreachable status rather than receiving a misleading low score.</p></details>
+        <details data-reveal><summary><span>03</span>Can a maintainer influence the ranking?</summary><p>Only by changing the public package and improving reproducible evidence. There is no manual score override, paid placement or private credential path.</p></details>
+      </div>
+    </section>
+
+    <section class="closing" data-reveal><p class="eyebrow">Open evidence / open source</p><h2>Inspect the instrument.<br>Challenge the methodology.</h2><div><a class="button primary" href="https://github.com/davidmosiah/mcp-leaderboard">Leaderboard source ↗</a><a class="button text-button" href="https://github.com/davidmosiah/mcp-scorecard">Scoring engine ↗</a></div></section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-brand"><span class="brand-index" aria-hidden="true">MCP<br>01</span><p><strong>MCP Leaderboard</strong><br>Independent agent-readiness evidence by Delx.</p></div>
+    <div class="footer-links"><a href="/issues/">Weekly</a><a href="/leaderboard.json">Dataset</a><a href="https://github.com/davidmosiah/mcp-leaderboard">Source</a><a href="https://registry.modelcontextprotocol.io">Registry</a></div>
+    <p class="footer-fine">Scored by open-source mcp-scorecard. Agent-readiness is not correctness or security. Always review before production.</p>
+  </footer>
+  <script src="/assets/site.js" defer></script>
+</body>
+</html>

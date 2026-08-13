@@ -1,7 +1,9 @@
 # Monetization pilot — decision draft
 
-Date prepared: 2026-08-12. Public selling is **not active** until the hosting
-commercial-use gate below is resolved.
+Date prepared: 2026-08-12. Implementation status: the neutral publication is
+kept on the existing non-commercial Scoreboard host; the commercial offer is
+implemented separately under Delx Commerce. It becomes active only after both
+production surfaces are verified from their pushed commits.
 
 ## One offer
 
@@ -42,11 +44,14 @@ Observed comparable public offers on 2026-08-12:
 The founding price deliberately sits below security-audit pricing because the
 deliverable is narrower and makes no security or certification claim.
 
-## Funnel after the hosting gate
+## Funnel
 
-1. Add a clearly separate `Improve this MCP` CTA to each generated scorecard.
-2. Link to one `/improve` landing page that repeats the independence guarantee,
-   scope, price, capacity and exclusions.
+1. Publish the free MCP Scoreboard Weekly evidence under
+   `leaderboard.delx.ai/issues/`. It contains no paid CTA and never sells
+   ranking, score, editorial treatment or refresh priority.
+2. Publish the separately governed offer at
+   `commerce.delx.ai/services/mcp-score-improvement`, with the same scope,
+   price, capacity and exclusions in human HTML and machine JSON.
 3. Use `support@delx.ai` for a prefilled inquiry containing only the public npm
    package and scorecard URL. Never transmit repository credentials through the
    form or URL.
@@ -59,17 +64,18 @@ deliverable is narrower and makes no security or certification claim.
 
 - Vercel Web Analytics was enabled on 2026-08-12 and the generated HTML now
   includes its anonymous, cookie-free page-view script.
-- The current Vercel account reports `billing.plan = hobby`. Vercel documents
-  Hobby as non-commercial/personal use only. Therefore the paid CTA must not be
-  published while the project remains on Hobby.
-- Activation requires either Vercel Pro owner approval or a separately approved
-  migration to a host whose terms permit commercial use. Do not silently incur
-  a subscription or move DNS.
+- The current Scoreboard Vercel account reports `billing.plan = hobby`, so the
+  Scoreboard remains neutral and free. No paid CTA is rendered there.
+- The commercial offer lives on the existing Delx Commerce production surface
+  and therefore does not require Vercel Pro, new DNS, a new service, GitHub
+  Actions, or compute on the maintainer's Mac.
 - Proposed measurement window: 14 days after activation.
 - Pass: at least one external paid order, or two qualified external inquiries.
 - Fail: zero qualified inquiries; remove the CTA and return to maintenance.
-- Sponsorships, featured listings, subscriptions and additional offers stay
-  frozen until this first offer has a measured verdict.
+- Sponsorships, featured listings, subscriptions and bounties stay frozen until
+  this first offer has a measured verdict. Advertising also requires audience
+  evidence: at least 100 verified human views on a weekly edition or 25 email
+  subscribers before inventory is offered.
 
 Sources checked for the decision:
 

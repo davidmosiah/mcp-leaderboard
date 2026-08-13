@@ -16,6 +16,11 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `scripts/submit-indexnow.mjs` — notify participating search engines after a verified public deployment; its 200/202 receipt proves receipt, never indexing.
 - `docs/GROK_CLOUD_REFRESH.md` — weekly Grok Cloud refresh and publish gates. The old GitHub Actions workflow is archived.
 - `docs/MONETIZATION_PILOT.md` — bounded paid-offer draft and hosting/independence gates; selling stays off until every activation gate is explicit.
+- `docs/WOULD_PAY_AGAIN_MODEL_ADAPTATION.md` — evidence behind the Scoreboard Weekly + remediation flywheel, including what was deliberately not copied.
+- `docs/DESIGN_SYSTEM.md` — Registry Observatory visual contract, responsive/accessibility gates and generated-versus-hand-owned boundaries.
+- `data/editions/` — canonical, deterministic MCP Scoreboard Weekly evidence. `render-site.mjs` owns the public issue HTML, JSON, RSS and index.
+- `templates/index.html` — hand-owned source for the public home page. `site/index.html` is generated from it.
+- `site/assets/site.css`, `site/assets/directory.css`, and `site/assets/site.js` — hand-owned shared presentation and progressive enhancement. `design/og-card.html` is the reproducible source for `site/assets/og-card.png`.
 
 ## Commands
 
@@ -26,8 +31,10 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 ## Rules
 
 - Never hand-edit `LEADERBOARD.md` or `data/*.json` — they are generated. Change the scripts instead.
-- Never hand-edit `site/servers/`, `site/rankings/`, `site/sitemap.xml`, `site/llms.txt`, or `site/llms-full.txt` — `render-site.mjs` owns them.
+- Never hand-edit `site/index.html`, `site/servers/`, `site/rankings/`, `site/sitemap.xml`, `site/llms.txt`, or `site/llms-full.txt` — `render-site.mjs` owns them. Edit `templates/index.html` or the render code instead.
+- Never hand-edit `site/issues/` or `data/editions/*` — generate an edition with `npm run weekly:generate`, then render the site.
 - Keep the run resilient: every target is isolated with a timeout; one bad server must never stall or crash the batch. New failure modes resolve to `unreachable`, never a fake low score.
 - Runner infrastructure failures (`ENOSPC`, `EMFILE`, `ENFILE`) and deferred targets are fatal. Preserve the last known-good board instead of publishing a degraded run.
 - Keep it fair: auth-gated servers are `unreachable`, not low-scored. Don't penalize what can't be probed.
 - Scoring logic lives in mcp-scorecard, not here. To change what's measured, change the engine.
+- Weekly directional claims require the same recorded scorecard version and the same npm package version in both runs. Otherwise publish a baseline/methodology-change edition and suppress improvement/decline claims.

@@ -13,6 +13,9 @@ Deferred servers: 0
 - Human-readable ranking: https://leaderboard.delx.ai/
 - Complete agent-readable index: https://leaderboard.delx.ai/llms-full.txt
 - Machine-readable dataset: https://leaderboard.delx.ai/leaderboard.json
+- MCP Scoreboard Weekly: https://leaderboard.delx.ai/issues/
+- Latest weekly evidence JSON: https://leaderboard.delx.ai/issues/latest.json
+- Weekly RSS feed: https://leaderboard.delx.ai/issues/feed.xml
 - Sitemap of canonical HTML pages: https://leaderboard.delx.ai/sitemap.xml
 - Source and methodology: https://github.com/davidmosiah/mcp-leaderboard
 - Scoring engine: https://github.com/davidmosiah/mcp-scorecard

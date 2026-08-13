@@ -1,0 +1,186 @@
+{
+  "schemaVersion": "1",
+  "slug": "2026-08-12",
+  "title": "MCP Scoreboard Weekly — 2026-08-12 baseline",
+  "kind": "baseline",
+  "generatedAt": "2026-08-12T21:41:20.376Z",
+  "previousGeneratedAt": null,
+  "engine": "mcp-scorecard",
+  "engineVersion": null,
+  "coverage": {
+    "total": 6947,
+    "scored": 3976,
+    "unreachable": 2971,
+    "deferred": 0
+  },
+  "ecosystem": {
+    "averageScore": 48,
+    "medianScore": 46,
+    "distribution": [
+      {
+        "tier": "90-100",
+        "servers": 16
+      },
+      {
+        "tier": "75-89",
+        "servers": 10
+      },
+      {
+        "tier": "60-74",
+        "servers": 373
+      },
+      {
+        "tier": "40-59",
+        "servers": 2967
+      },
+      {
+        "tier": "0-39",
+        "servers": 610
+      }
+    ],
+    "topServers": [
+      {
+        "npm": "apple-health-mcp-unofficial",
+        "score": 97,
+        "rank": 1,
+        "version": "0.5.0"
+      },
+      {
+        "npm": "delx-living-body",
+        "score": 97,
+        "rank": 2,
+        "version": "0.3.0"
+      },
+      {
+        "npm": "eight-sleep-mcp-unofficial",
+        "score": 97,
+        "rank": 3,
+        "version": "0.2.5"
+      },
+      {
+        "npm": "garmin-mcp-unofficial",
+        "score": 97,
+        "rank": 4,
+        "version": "0.5.3"
+      },
+      {
+        "npm": "google-health-fitbit-mcp",
+        "score": 97,
+        "rank": 5,
+        "version": "1.0.2"
+      },
+      {
+        "npm": "google-health-mcp-unofficial",
+        "score": 97,
+        "rank": 6,
+        "version": "0.5.2"
+      },
+      {
+        "npm": "oura-mcp-unofficial",
+        "score": 97,
+        "rank": 7,
+        "version": "0.4.6"
+      },
+      {
+        "npm": "samsung-health-mcp-unofficial",
+        "score": 97,
+        "rank": 8,
+        "version": "0.5.0"
+      },
+      {
+        "npm": "wellness-air",
+        "score": 97,
+        "rank": 9,
+        "version": "0.5.6"
+      },
+      {
+        "npm": "wellness-cgm-mcp",
+        "score": 97,
+        "rank": 10,
+        "version": "0.4.0"
+      }
+    ]
+  },
+  "commonGaps": [
+    {
+      "checkId": "smoke_test",
+      "label": "Smoke test",
+      "servers": 3968,
+      "shareOfScored": 0.998
+    },
+    {
+      "checkId": "agent_manifest",
+      "label": "Agent manifest",
+      "servers": 3956,
+      "shareOfScored": 0.995
+    },
+    {
+      "checkId": "manifest_discoverability",
+      "label": "Manifest discoverability",
+      "servers": 3956,
+      "shareOfScored": 0.995
+    },
+    {
+      "checkId": "privacy_modes",
+      "label": "Privacy modes documented",
+      "servers": 3955,
+      "shareOfScored": 0.9947
+    },
+    {
+      "checkId": "resources",
+      "label": "Resources advertised",
+      "servers": 3648,
+      "shareOfScored": 0.9175
+    },
+    {
+      "checkId": "annotations",
+      "label": "Annotations",
+      "servers": 3302,
+      "shareOfScored": 0.8305
+    },
+    {
+      "checkId": "tool_naming",
+      "label": "Tool naming convention",
+      "servers": 2797,
+      "shareOfScored": 0.7035
+    },
+    {
+      "checkId": "mutation_gating",
+      "label": "Mutation gating",
+      "servers": 1399,
+      "shareOfScored": 0.3519
+    },
+    {
+      "checkId": "tool_descriptions",
+      "label": "Tool descriptions",
+      "servers": 335,
+      "shareOfScored": 0.0843
+    },
+    {
+      "checkId": "dense_series_caps",
+      "label": "Dense series caps",
+      "servers": 129,
+      "shareOfScored": 0.0324
+    }
+  ],
+  "comparability": {
+    "scoreDeltasComparable": false,
+    "reason": "This is the baseline edition; no earlier comparable run is used for directional claims."
+  },
+  "movements": {
+    "improvements": [],
+    "declines": [],
+    "recovered": [],
+    "becameUnreachable": [],
+    "newPackages": [],
+    "removedPackages": [],
+    "packageUpdates": []
+  },
+  "limitations": [
+    "The score measures agent-readiness metadata, schemas, discovery and declared safety cues — not correctness or security.",
+    "Unreachable means the package could not be graded fairly; it is not a low score.",
+    "A score movement is directional evidence only when both runs use the same engine version and the package version is unchanged."
+  ],
+  "canonicalUrl": "https://leaderboard.delx.ai/issues/2026-08-12",
+  "machineUrl": "https://leaderboard.delx.ai/issues/2026-08-12/edition.json"
+}

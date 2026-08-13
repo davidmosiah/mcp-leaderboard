@@ -38,14 +38,26 @@ if (explicit) {
 const SCORECARD_BIN = existsSync("node_modules/.bin/mcp-scorecard")
   ? "node_modules/.bin/mcp-scorecard"
   : null;
+const engineVersion = (() => {
+  try {
+    return JSON.parse(readFileSync("node_modules/mcp-scorecard/package.json", "utf8")).version || null;
+  } catch {
+    return null;
+  }
+})();
+
+const targetMeta = (target) => ({
+  name: target.name,
+  npm: target.npm,
+  version: target.version || null,
+  repo: target.repo
+});
 
 function scoreOne(target) {
   return new Promise((resolve) => {
     if (BLOCKED_PACKAGES.has(target.npm)) {
       resolve({
-        name: target.name,
-        npm: target.npm,
-        repo: target.repo,
+        ...targetMeta(target),
         status: "skipped",
         error: "Blocked because this package installs host-level background components during probe."
       });
@@ -60,21 +72,21 @@ function scoreOne(target) {
     const child = spawn(cmd, cmdArgs, { env: { ...process.env, MCP_PROBE: "1" }, detached: true });
     let out = "", err = "";
     const nuke = () => { try { process.kill(-child.pid, "SIGKILL"); } catch { /* group already gone */ } };
-    const timer = setTimeout(() => { nuke(); resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "timeout" }); }, TIMEOUT_MS);
+    const timer = setTimeout(() => { nuke(); resolve({ ...targetMeta(target), status: "timeout" }); }, TIMEOUT_MS);
     child.stdout.on("data", (d) => (out += d));
     child.stderr.on("data", (d) => (err += d));
-    child.on("error", (e) => { clearTimeout(timer); resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "error", error: e.message }); });
+    child.on("error", (e) => { clearTimeout(timer); resolve({ ...targetMeta(target), status: "error", error: e.message }); });
     child.on("close", (code) => {
       clearTimeout(timer);
       nuke(); // scorecard exited but may have leaked its probed server — reap the group
       const jsonStart = out.indexOf("{");
-      if (jsonStart < 0) { resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "error", error: (err.trim().split("\n").pop() || `exit ${code}`).slice(0, 200) }); return; }
+      if (jsonStart < 0) { resolve({ ...targetMeta(target), status: "error", error: (err.trim().split("\n").pop() || `exit ${code}`).slice(0, 200) }); return; }
       try {
         const r = JSON.parse(out.slice(jsonStart));
         const checks = (r.checks || []).map((c) => ({ id: c.id, label: c.label, score: c.score, status: c.status }));
         const topGap = checks.filter((c) => c.status !== "pass").sort((a, b) => a.score - b.score)[0]?.label || null;
-        resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "scored", score: r.totalScore, serverName: r.target?.serverName || null, checks, topGap });
-      } catch { resolve({ name: target.name, npm: target.npm, repo: target.repo, status: "error", error: "unparseable scorecard output" }); }
+        resolve({ ...targetMeta(target), status: "scored", score: r.totalScore, serverName: r.target?.serverName || null, checks, topGap });
+      } catch { resolve({ ...targetMeta(target), status: "error", error: "unparseable scorecard output" }); }
     });
   });
 }
@@ -116,6 +128,7 @@ mkdirSync("data", { recursive: true });
 const payload = {
   generatedAt: new Date().toISOString(),
   engine: "mcp-scorecard",
+  engineVersion,
   counts: { total: attempted.length, scored: scored.length, unreachable: attempted.length - scored.length, deferred },
   results: attempted
 };

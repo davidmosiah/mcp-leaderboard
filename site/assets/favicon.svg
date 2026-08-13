@@ -1,11 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MCP Leaderboard trophy mark">
-  <rect width="64" height="64" rx="16" fill="#0B1120"/>
-  <g fill="none" stroke="#FBBF24" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M20 14h24v9c0 8-5.5 14-12 14s-12-6-12-14v-9Z"/>
-    <path d="M20 17h-6v4c0 5 4 8.5 8 9"/>
-    <path d="M44 17h6v4c0 5-4 8.5-8 9"/>
-  </g>
-  <rect x="29" y="37" width="6" height="9" fill="#FBBF24"/>
-  <rect x="22" y="46" width="20" height="6" rx="2.5" fill="#FBBF24"/>
-  <circle cx="32" cy="25" r="5.5" fill="#7C3AED"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="MCP Leaderboard registry mark">
+  <rect width="64" height="64" fill="#F2EFE5"/>
+  <rect x="6" y="6" width="52" height="52" fill="#11110F"/>
+  <path d="M16 44V19h6l10 12 10-12h6v25h-7V30L32 41 23 30v14Z" fill="#F2EFE5"/>
+  <rect x="44" y="10" width="10" height="10" fill="#F04B2F"/>
+  <circle cx="12" cy="52" r="4" fill="#DFF263"/>
 </svg>

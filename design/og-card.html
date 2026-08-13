@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MCP Leaderboard social card source</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=DM+Mono:wght@500&family=Instrument+Serif:ital@0;1&family=Manrope:wght@600;800&display=swap");
+    * { box-sizing: border-box; }
+    html, body { width: 1200px; height: 630px; margin: 0; overflow: hidden; }
+    body { position: relative; color: #11110f; background: #f2efe5; font-family: Manrope, sans-serif; }
+    body::before { content: ""; position: absolute; inset: 0; background-image: linear-gradient(to right, rgba(17,17,15,.055) 1px, transparent 1px), linear-gradient(to bottom, rgba(17,17,15,.055) 1px, transparent 1px); background-size: 32px 32px; }
+    main { position: relative; display: grid; grid-template-columns: 1fr 330px; gap: 70px; height: 100%; padding: 54px 62px; }
+    .brand { display: flex; align-items: center; gap: 16px; font: 500 18px "DM Mono", monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .mark { display: grid; width: 56px; height: 56px; place-content: center; color: #f2efe5; background: #11110f; font-size: 12px; line-height: 1.05; text-align: center; }
+    .eyebrow { margin: 72px 0 22px; color: #f04b2f; font: 500 15px "DM Mono", monospace; letter-spacing: .12em; text-transform: uppercase; }
+    h1 { margin: 0; font: 400 104px/.76 "Instrument Serif", Georgia, serif; letter-spacing: -.055em; }
+    h1 em { display: block; margin-left: 88px; color: #f04b2f; font-weight: 400; }
+    .meta { display: flex; gap: 28px; margin-top: 42px; font: 500 13px "DM Mono", monospace; text-transform: uppercase; }
+    .panel { align-self: center; padding: 24px; color: #f2efe5; background: #11110f; box-shadow: 18px 18px 0 #f04b2f; }
+    .panel-top { display: flex; justify-content: space-between; padding-bottom: 14px; border-bottom: 1px solid rgba(242,239,229,.35); font: 500 11px "DM Mono", monospace; text-transform: uppercase; }
+    .number { margin: 54px 0 6px; font: 400 112px/.7 "Instrument Serif", Georgia, serif; letter-spacing: -.06em; }
+    .label { color: rgba(242,239,229,.65); font: 500 11px "DM Mono", monospace; text-transform: uppercase; }
+    .line { height: 7px; margin: 34px 0 20px; background: #dff263; }
+    .facts { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: rgba(242,239,229,.3); }
+    .facts div { padding: 12px; background: #11110f; }
+    .facts span { display: block; color: rgba(242,239,229,.6); font: 500 9px "DM Mono", monospace; text-transform: uppercase; }
+    .facts strong { display: block; margin-top: 5px; font: 400 28px "Instrument Serif", Georgia, serif; }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <div class="brand"><span class="mark">MCP<br>01</span><span>Leaderboard / Delx</span></div>
+      <p class="eyebrow">Independent registry observatory</p>
+      <h1>The MCP ecosystem,<em>measured.</em></h1>
+      <div class="meta"><span>3,976 scorecards</span><span>10 checks</span><span>Weekly evidence</span></div>
+    </section>
+    <aside class="panel">
+      <div class="panel-top"><span>Current run</span><span>01</span></div>
+      <div class="number">48</div>
+      <div class="label">Ecosystem average / 100</div>
+      <div class="line"></div>
+      <div class="facts"><div><span>Scored</span><strong>3,976</strong></div><div><span>Corpus</span><strong>6,947</strong></div></div>
+    </aside>
+  </main>
+</body>
+</html>

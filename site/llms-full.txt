@@ -4,6 +4,7 @@ Generated: 2026-08-12T21:41:20.376Z
 Scoring engine: mcp-scorecard
 Canonical dataset: https://leaderboard.delx.ai/leaderboard.json
 Methodology: https://leaderboard.delx.ai/#method
+Latest weekly evidence: https://leaderboard.delx.ai/issues/2026-08-12/edition.json
 
 Each entry links to a canonical HTML scorecard with visible check-level evidence. Scores measure agent-readiness, not correctness or security.
 

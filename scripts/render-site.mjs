@@ -3,16 +3,29 @@
 // from the same dataset so search engines and answer engines see one truth.
 import {
   copyFileSync,
+  existsSync,
   mkdirSync,
   readFileSync,
+  readdirSync,
   rmSync,
   writeFileSync
 } from "node:fs";
 import { dirname, join } from "node:path";
+import { renderEditionHtml } from "./lib/weekly-brief.mjs";
 
 const ORIGIN = "https://leaderboard.delx.ai";
 const PAGE_SIZE = 100;
 const data = JSON.parse(readFileSync("data/leaderboard.json", "utf8"));
+const editionFiles = existsSync("data/editions")
+  ? readdirSync("data/editions").filter((name) => /^\d{4}-\d{2}-\d{2}\.json$/.test(name)).sort()
+  : [];
+const editions = editionFiles.map((name) => JSON.parse(readFileSync(join("data/editions", name), "utf8")));
+for (const edition of editions) {
+  if (edition.slug !== edition.generatedAt.slice(0, 10)) {
+    throw new Error(`render-site: edition slug/timestamp mismatch for ${edition.slug}`);
+  }
+}
+const latestEdition = editions.at(-1) || null;
 const scored = (data.results || [])
   .filter((result) => result.status === "scored")
   .sort((a, b) => b.score - a.score || a.npm.localeCompare(b.npm));
@@ -24,6 +37,12 @@ if (!scored.length) {
 
 const pageCount = Math.ceil(scored.length / PAGE_SIZE);
 const dateShort = data.generatedAt.slice(0, 10);
+const scoreValues = scored.map((result) => result.score).sort((a, b) => a - b);
+const averageScore = Math.round(scoreValues.reduce((sum, score) => sum + score, 0) / scoreValues.length);
+const medianScore = scoreValues.length % 2
+  ? scoreValues[Math.floor(scoreValues.length / 2)]
+  : Math.round((scoreValues[(scoreValues.length / 2) - 1] + scoreValues[scoreValues.length / 2]) / 2);
+const coveragePercent = Math.round((scored.length / data.counts.total) * 100);
 const esc = (value) => String(value ?? "")
   .replace(/&/g, "&amp;")
   .replace(/</g, "&lt;")
@@ -60,7 +79,7 @@ const rankingRows = (results, offset = 0) => results.map((result, index) => {
             <td class="fb-rank">${rank}</td>
             <td class="fb-srv"><a href="${serverUrl(result.npm)}">${esc(result.npm)}</a><small>${result.serverName ? `server: ${esc(result.serverName)}` : "View the complete scorecard"}</small></td>
             <td><span class="score-pill ${tierClass(result.score)}">${result.score}</span></td>
-            <td><div class="bar"><i style="width:${result.score}%;background:linear-gradient(90deg,var(--gold),var(--violet))"></i></div></td>
+            <td><div class="bar"><i style="width:${result.score}%"></i></div></td>
             <td><div class="check-tags">${checksSummary(result)}</div></td>
           </tr>`;
 }).join("\n");
@@ -160,7 +179,7 @@ const rootStructuredData = {
   ]
 };
 
-let html = readFileSync("site/index.html", "utf8");
+let html = readFileSync("templates/index.html", "utf8");
 const missing = [];
 const swap = (pattern, replacement, label) => {
   if (!pattern.test(html)) {
@@ -186,7 +205,14 @@ swapLive("generated", dateShort);
 swapLive("scored", String(data.counts?.scored ?? scored.length));
 swapLive("total", String(data.counts?.total ?? data.results.length));
 swapLive("unreachable", String(data.counts?.unreachable ?? data.results.length - scored.length));
-swap(/<body data-generated="[^"]*">/, `<body data-generated="${data.generatedAt}">`, "body[data-generated]");
+swapLive("average", String(averageScore));
+swapLive("median", String(medianScore));
+swap(/<body data-generated="[^"]*" data-design="registry-observatory">/, `<body data-generated="${data.generatedAt}" data-design="registry-observatory">`, "body[data-generated]");
+swap(
+  /<progress id="coverage-progress" max="[^"]*" value="[^"]*">[^<]*<\/progress>/,
+  `<progress id="coverage-progress" max="${data.counts.total}" value="${data.counts.scored}">${coveragePercent}%</progress>`,
+  "coverage progress"
+);
 swap(/<script type="application\/ld\+json">[\s\S]*?<\/script>/, `<script type="application/ld+json">\n${json(rootStructuredData)}\n  </script>`, "root JSON-LD");
 swap(/<meta name="description" content="[^"]*">/, `<meta name="description" content="Compare ${scored.length} MCP servers by agent-readiness score, rank and check-level evidence. Built from the official MCP registry and refreshed weekly.">`, "meta description");
 swap(/<meta property="og:description" content="[^"]*">/, `<meta property="og:description" content="Compare ${scored.length} MCP servers by agent-readiness score with a canonical evidence page for every scored package.">`, "Open Graph description");
@@ -213,6 +239,15 @@ if (!html.includes('href="/llms.txt"')) {
 if (!html.includes('/_vercel/insights/script.js')) {
   html = html.replace("</head>", `${analyticsSnippet}\n</head>`);
 }
+if (!html.includes('href="/issues/"')) {
+  html = html.replace('<a href="#leaderboard">Leaderboard</a>', '<a href="#leaderboard">Leaderboard</a>\n      <a href="/issues/">Weekly</a>');
+}
+if (!html.includes('type="application/rss+xml"')) {
+  html = html.replace(
+    '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">',
+    '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">\n  <link rel="alternate" type="application/rss+xml" href="/issues/feed.xml" title="MCP Scoreboard Weekly">'
+  );
+}
 
 if (missing.length) {
   console.error(`render-site: anchors missing in site/index.html: ${missing.join(", ")}`);
@@ -229,7 +264,7 @@ const pageHead = ({ title, description, canonical, structuredData }) => `<!docty
   <meta name="description" content="${esc(description)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <meta name="author" content="David Mosiah">
-  <meta name="theme-color" content="#0b1120">
+  <meta name="theme-color" content="#f2efe5">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="MCP Leaderboard">
   <meta property="og:title" content="${esc(title)}">
@@ -251,17 +286,18 @@ ${analyticsSnippet}
 </head>`;
 
 const pageHeader = `<a class="skip-link" href="#main">Skip to content</a>
-  <div class="grain" aria-hidden="true"></div>
+  <div class="paper-grid" aria-hidden="true"></div>
   <header class="site-header">
     <a class="brand" href="${ORIGIN}/" aria-label="MCP Leaderboard home">
-      <span class="brand-mark" aria-hidden="true"></span>
-      <span><strong>MCP Leaderboard</strong><small>by Delx · agent-readiness, ranked</small></span>
+      <span class="brand-index" aria-hidden="true">MCP<br>01</span>
+      <span class="brand-wordmark"><strong>Leaderboard</strong><small>Registry observatory by Delx</small></span>
     </a>
     <nav class="nav" aria-label="Primary navigation">
       <a href="${ORIGIN}/#leaderboard">Leaderboard</a>
+      <a href="${ORIGIN}/issues/">Weekly</a>
       <a href="${ORIGIN}/#method">Methodology</a>
       <a href="${ORIGIN}/#agents">For agents</a>
-      <a class="nav-pill" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub</a>
+      <a class="nav-mark" href="https://github.com/davidmosiah/mcp-leaderboard">GitHub ↗</a>
     </nav>
   </header>`;
 
@@ -272,6 +308,7 @@ const pageFooter = `<footer class="footer">
 
 rmSync("site/servers", { recursive: true, force: true });
 rmSync("site/rankings", { recursive: true, force: true });
+rmSync("site/issues", { recursive: true, force: true });
 
 for (const [index, result] of scored.entries()) {
   const rank = index + 1;
@@ -387,10 +424,67 @@ for (let page = 2; page <= pageCount; page += 1) {
   write(join("site", "rankings", String(page), "index.html"), document);
 }
 
+if (editions.length) {
+  for (const edition of editions) {
+    const issueDir = join("site", "issues", edition.slug);
+    write(join(issueDir, "index.html"), renderEditionHtml(edition));
+    write(join(issueDir, "edition.json"), `${JSON.stringify(edition, null, 2)}\n`);
+    const markdownPath = join("data", "editions", `${edition.slug}.md`);
+    if (existsSync(markdownPath)) copyFileSync(markdownPath, join(issueDir, "edition.md"));
+  }
+
+  const descendingEditions = [...editions].reverse();
+  const issueIndexUrl = `${ORIGIN}/issues/`;
+  const issueIndexDescription = "Evidence-first weekly changes in MCP agent-readiness, generated from the complete public leaderboard run.";
+  const issueIndexStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    url: issueIndexUrl,
+    name: "MCP Scoreboard Weekly",
+    description: issueIndexDescription,
+    dateModified: latestEdition.generatedAt,
+    isPartOf: { "@id": `${ORIGIN}/#website` },
+    hasPart: descendingEditions.map((edition) => ({ "@type": "Article", name: edition.title, url: edition.canonicalUrl, datePublished: edition.generatedAt }))
+  };
+  const issueCards = descendingEditions.map((edition) => `<article class="scorecard-context"><p class="eyebrow">${esc(edition.kind.replaceAll("_", " "))}</p><h2><a href="${edition.canonicalUrl}">${esc(edition.title)}</a></h2><p>${edition.coverage.scored} scored · ${edition.coverage.unreachable} unreachable · ecosystem average ${edition.ecosystem.averageScore}/100.</p><div class="scorecard-actions"><a class="button primary" href="${edition.canonicalUrl}">Read edition</a><a class="button secondary" href="${edition.machineUrl}">Evidence JSON</a></div></article>`).join("\n");
+  const issueIndex = `${pageHead({ title: "MCP Scoreboard Weekly · Evidence-first ecosystem changes", description: issueIndexDescription, canonical: issueIndexUrl, structuredData: issueIndexStructuredData })}
+<body>
+  ${pageHeader}
+  <main id="main" class="directory-main"><section class="ranking-page"><header><p class="eyebrow">Generated from the same fail-closed run</p><h1>MCP Scoreboard Weekly.</h1><p>${issueIndexDescription}</p></header>${issueCards}</section></main>
+  ${pageFooter}
+</body>
+</html>\n`;
+  write(join("site", "issues", "index.html"), issueIndex);
+
+  const latestJson = `${JSON.stringify(latestEdition, null, 2)}\n`;
+  write(join("site", "issues", "latest.json"), latestJson);
+  write(join("site", "issues", "index.json"), `${JSON.stringify({ schemaVersion: "1", latest: latestEdition.slug, editions: descendingEditions.map((edition) => ({ slug: edition.slug, title: edition.title, kind: edition.kind, generatedAt: edition.generatedAt, canonicalUrl: edition.canonicalUrl, machineUrl: edition.machineUrl })) }, null, 2)}\n`);
+  write(join("site", "issues", "latest", "index.html"), `<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="robots" content="noindex, follow"><meta http-equiv="refresh" content="0; url=${latestEdition.canonicalUrl}"><link rel="canonical" href="${latestEdition.canonicalUrl}"><title>Latest MCP Scoreboard Weekly</title></head><body><p><a href="${latestEdition.canonicalUrl}">Open the latest MCP Scoreboard Weekly edition.</a></p></body></html>\n`);
+
+  const rssItems = descendingEditions.slice(0, 20).map((edition) => `    <item>
+      <title>${xmlEsc(edition.title)}</title>
+      <link>${xmlEsc(edition.canonicalUrl)}</link>
+      <guid isPermaLink="true">${xmlEsc(edition.canonicalUrl)}</guid>
+      <pubDate>${new Date(edition.generatedAt).toUTCString()}</pubDate>
+      <description>${xmlEsc(`${edition.coverage.scored} MCP servers scored; ecosystem average ${edition.ecosystem.averageScore}/100. ${edition.comparability.reason}`)}</description>
+    </item>`).join("\n");
+  write(join("site", "issues", "feed.xml"), `<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0"><channel>
+    <title>MCP Scoreboard Weekly</title>
+    <link>${ORIGIN}/issues/</link>
+    <description>${xmlEsc(issueIndexDescription)}</description>
+    <language>en</language>
+    <lastBuildDate>${new Date(latestEdition.generatedAt).toUTCString()}</lastBuildDate>
+${rssItems}
+  </channel></rss>\n`);
+}
+
 const sitemapUrls = [
   `${ORIGIN}/`,
   ...Array.from({ length: pageCount - 1 }, (_, index) => `${ORIGIN}/rankings/${index + 2}`),
-  ...scored.map((result) => serverUrl(result.npm))
+  ...scored.map((result) => serverUrl(result.npm)),
+  ...(editions.length ? [`${ORIGIN}/issues/`, ...editions.map((edition) => edition.canonicalUrl)] : [])
 ];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -413,6 +507,9 @@ Deferred servers: ${data.counts.deferred}
 - Human-readable ranking: ${ORIGIN}/
 - Complete agent-readable index: ${ORIGIN}/llms-full.txt
 - Machine-readable dataset: ${ORIGIN}/leaderboard.json
+- MCP Scoreboard Weekly: ${ORIGIN}/issues/
+- Latest weekly evidence JSON: ${ORIGIN}/issues/latest.json
+- Weekly RSS feed: ${ORIGIN}/issues/feed.xml
 - Sitemap of canonical HTML pages: ${ORIGIN}/sitemap.xml
 - Source and methodology: https://github.com/davidmosiah/mcp-leaderboard
 - Scoring engine: https://github.com/davidmosiah/mcp-scorecard
@@ -434,6 +531,7 @@ Generated: ${data.generatedAt}
 Scoring engine: ${data.engine || "mcp-scorecard"}
 Canonical dataset: ${ORIGIN}/leaderboard.json
 Methodology: ${ORIGIN}/#method
+Latest weekly evidence: ${latestEdition ? latestEdition.machineUrl : "not published yet"}
 
 Each entry links to a canonical HTML scorecard with visible check-level evidence. Scores measure agent-readiness, not correctness or security.
 
