@@ -59,9 +59,7 @@ const write = (path, contents) => {
   mkdirSync(dirname(path), { recursive: true });
   writeFileSync(path, contents);
 };
-const analyticsSnippet = `  <script>
-    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
-  </script>
+const analyticsSnippet = `  <script defer src="/assets/analytics-init.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>`;
 
 const checksSummary = (result) => {
@@ -95,11 +93,22 @@ const pagination = (current) => {
   const link = (page) => page === 1 ? `${ORIGIN}/#leaderboard` : `${ORIGIN}/rankings/${page}`;
   const previous = current > 1 ? `<a class="pagination-step" href="${link(current - 1)}" rel="prev">← Previous</a>` : "";
   const next = current < pageCount ? `<a class="pagination-step" href="${link(current + 1)}" rel="next">Next →</a>` : "";
-  const pages = Array.from({ length: pageCount }, (_, index) => index + 1)
-    .map((page) => page === current
+  const visible = new Set([1, pageCount, current - 2, current - 1, current, current + 1, current + 2]
+    .filter((page) => page >= 1 && page <= pageCount));
+  const pageItems = [];
+  let gap = false;
+  for (let page = 1; page <= pageCount; page += 1) {
+    if (!visible.has(page)) {
+      if (!gap) pageItems.push(`<span class="pagination-gap" aria-hidden="true">…</span>`);
+      gap = true;
+      continue;
+    }
+    gap = false;
+    pageItems.push(page === current
       ? `<span aria-current="page">${page}</span>`
-      : `<a href="${link(page)}">${page}</a>`)
-    .join("");
+      : `<a href="${link(page)}">${page}</a>`);
+  }
+  const pages = pageItems.join("");
   return `<nav class="pagination" aria-label="Leaderboard pages">${previous ? `\n    ${previous}` : ""}
     <div class="pagination-pages">${pages}</div>${next ? `\n    ${next}` : ""}
   </nav>`;

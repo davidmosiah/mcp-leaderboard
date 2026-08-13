@@ -10,6 +10,7 @@ assert.equal(render.status, 0, render.stderr || render.stdout);
 const html = readFileSync("site/index.html", "utf8");
 const css = readFileSync("site/assets/site.css", "utf8");
 const js = readFileSync("site/assets/site.js", "utf8");
+const vercel = readFileSync("site/vercel.json", "utf8");
 
 assert.match(html, /data-design="registry-observatory"/);
 assert.match(html, /id="server-search"/);
@@ -31,6 +32,11 @@ assert.match(js, /server-search/);
 assert.match(js, /search-results/);
 assert.match(js, /scorecardUrl/);
 assert.match(js, /textContent/);
+assert.match(html, /analytics-init\.js/);
+assert.doesNotMatch(html, /window\.va\s*=|<script>window\.va/);
+assert.match(vercel, /fonts\.googleapis\.com/);
+assert.match(vercel, /fonts\.gstatic\.com/);
+assert.match(css, /\.full-board thead/);
 
 const ogCard = readFileSync("site/assets/og-card.png");
 assert.equal(ogCard.readUInt32BE(16), 1200, "Open Graph card must remain 1200 px wide");

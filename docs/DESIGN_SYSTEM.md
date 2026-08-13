@@ -29,6 +29,12 @@ gradient card.
   ranking treatment. The separate Commerce offer does not influence this UI.
 - Unreachable remains visually and semantically separate from a low score.
 - The readiness/correctness/security limitation stays visible.
+- The public pages keep analytics and typography CSP-compatible: the Vercel
+  bootstrap is a same-origin asset, Google Fonts are explicitly allowlisted,
+  and no inline executable script is required.
+- Ranking tables become readable stacked evidence cards below 640px instead of
+  forcing a horizontal viewport scroll. Pagination exposes a compact window of
+  links while the full canonical URL set remains in the sitemap.
 
 ## Quality gates
 
