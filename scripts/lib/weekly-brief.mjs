@@ -298,6 +298,7 @@ export function renderEditionHtml(edition) {
   <link rel="canonical" href="${edition.canonicalUrl}">
   <link rel="alternate" type="application/json" href="${edition.machineUrl}">
   <link rel="alternate" type="application/rss+xml" href="${ORIGIN}/issues/feed.xml" title="MCP Scoreboard Weekly">
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="/assets/site.css">
   <link rel="stylesheet" href="/assets/directory.css">
   <script type="application/ld+json">
