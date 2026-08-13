@@ -303,7 +303,7 @@ export function renderEditionHtml(edition) {
   <script type="application/ld+json">
 ${jsonForHtml(structuredData)}
   </script>
-  <script>window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };</script>
+  <script defer src="/assets/analytics-init.js"></script>
   <script defer src="/_vercel/insights/script.js"></script>
 </head>
 <body>
