@@ -1,4 +1,5 @@
 import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
+import { log } from "./logger.mjs";
 
 const SCOPE = "scoreboard:operate";
 const FIVE_MINUTES_MS = 5 * 60 * 1000;
@@ -158,24 +159,34 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
     token(req, res) {
       prune();
       const credentials = clientCredentials(req);
+      const authMethod = String(req.headers.authorization || "").startsWith("Basic ") ? "client_secret_basic" : "client_secret_post";
       if (credentials.clientId !== config.oauthClientId || !sameSecret(credentials.clientSecret, config.oauthClientSecret)) {
+        log.warn("oauth_token_rejected", { reason: "invalid_client", auth_method: authMethod });
         res.set("www-authenticate", 'Basic realm="mcp-scoreboard-oauth"');
         return oauthError(res, 401, "invalid_client", "client authentication failed");
       }
       if (req.body?.grant_type !== "authorization_code") {
+        log.warn("oauth_token_rejected", { reason: "unsupported_grant_type", auth_method: authMethod });
         return oauthError(res, 400, "unsupported_grant_type", "authorization_code required");
       }
       const code = String(req.body?.code || "");
       const row = authorizationCodes.get(code);
-      if (!row || row.clientId !== credentials.clientId || row.redirectUri !== safeRedirectUri(req.body?.redirect_uri)) {
+      if (!row) {
+        log.warn("oauth_token_rejected", { reason: "unknown_or_used_code", auth_method: authMethod });
+        return oauthError(res, 400, "invalid_grant", "authorization code is invalid");
+      }
+      if (row.clientId !== credentials.clientId || row.redirectUri !== safeRedirectUri(req.body?.redirect_uri)) {
+        log.warn("oauth_token_rejected", { reason: "client_or_redirect_mismatch", auth_method: authMethod });
         return oauthError(res, 400, "invalid_grant", "authorization code is invalid");
       }
       const verifier = String(req.body?.code_verifier || "");
       const calculated = createHash("sha256").update(verifier).digest("base64url");
       if (!verifier || calculated !== row.codeChallenge) {
+        log.warn("oauth_token_rejected", { reason: "pkce_mismatch", auth_method: authMethod });
         return oauthError(res, 400, "invalid_grant", "PKCE verification failed");
       }
       authorizationCodes.delete(code);
+      log.info("oauth_token_issued", { auth_method: authMethod, scope: SCOPE });
       res.set("cache-control", "no-store").set("pragma", "no-cache");
       return res.json({
         access_token: config.agentToken,
