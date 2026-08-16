@@ -96,6 +96,7 @@ Public host: `https://pay.leaderboard.delx.ai`
 | `POST` | `/api/admin/delivery/complete` | Bearer | → `delivered`. Draft PR URL must match the purchased `owner/repo`. Live GitHub verification is a later operational gate, not this phase. |
 | `POST` | `/api/admin/cancel` | Bearer | Explicit `cancelled` only before payment. Validates conflicts before any mutation. Pre-payment cancel frees the seat. |
 | `POST` | `/api/admin/refund` | Bearer | Without on-chain proof: non-terminal `refund_pending` + `refund_request` receipt. With coherent transfer proof: terminal `refunded` + `refund` receipt. The service never broadcasts a chain refund. |
+| `POST` | `/api/admin/reconcile` | Bearer | Auditable resolution of `payment_reconciliation_required`. `decision: paid` requires a transaction reference; `decision: release` frees the seat. Never retries settle. |
 
 ### Inquiry body
 
@@ -161,9 +162,13 @@ Receive path is the official TypeScript v2 SDK, not hand-rolled headers:
 
 - Packages and exact versions recorded in `pay-service/package-lock.json`:
   `@x402/core@2.22.0`, `@x402/evm@2.22.0`, `@x402/express@2.22.0`,
-  `@x402/extensions@2.22.0`, `@x402/svm@2.22.0` (CDP x402 barrel peer only;
+  `@x402/extensions@2.22.0`,   `@x402/svm@2.22.0` (CDP x402 barrel peer only;
   this service settles USDC on Base, not Solana), `@coinbase/cdp-sdk@1.55.0`,
-  `express@5.2.1`
+  `express@5.2.1`.
+  `@coinbase/cdp-sdk@1.55.0` still declares `axios@1.16.0`, which npm audit
+  flags. This package pins an explicit npm override to **axios@1.19.0**
+  (documented, not `audit fix --force`) so production verify/settle auth stays
+  on CDP 1.55.0 without the 1.16.0 advisories.
 - Network: `eip155:8453` (Base mainnet)
 - Asset: USDC `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` (6 decimals)
 - Amount: `49000000` atomic (`price: "$49.00"` in official route config)
@@ -194,8 +199,21 @@ an unauthenticated `HTTPFacilitatorClient({ url })` for mainnet. Tests inject a
 `PAY_SERVICE_PAY_TO` remains a public address only — no wallet secret.
 
 Two concurrent paid POSTs against the same reservation serialize on a durable
-per-reservation claim before `verify`+`settle`. A stale claim older than 60s
-may be recovered. Unpaid 402 challenges do not take a claim.
+per-reservation claim before `verify`+`settle`. Claims are **not** released by
+TTL. Unpaid 402 challenges do not take a claim.
+
+A timeout or exception after settlement has started is treated as
+`payment_reconciliation_required` (`settlement_unknown`). Official FAQ: a
+timed-out settle may still have landed on-chain and must be reconciled by
+transaction reference, not retried
+(<https://docs.cdp.coinbase.com/x402/support/faq#going-to-production>).
+A second `PAYMENT-SIGNATURE` must not call settle. Only an explicitly final
+rejected verify or an explicitly final settle failure (`invalid_signature`,
+`invalid_scheme`, `verification_failed`, `unsupported_payload_type`,
+`kyt_risk_detected`, and no transaction) may return the reservation to
+`payment_pending`. Admin `POST /api/admin/reconcile` (`decision: paid|release`)
+is the auditable path that records `paid` from a transaction reference or
+releases the seat.
 
 This phase never calls a live facilitator for a real transfer.
 

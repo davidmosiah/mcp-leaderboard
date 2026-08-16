@@ -15,10 +15,16 @@ export const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
 export const X402_VERSION = 2;
 export const SLOT_STATES = new Set([
   "payment_pending",
+  "settlement_unknown",
+  "payment_reconciliation_required",
   "paid",
   "delivery_in_progress",
   "delivered",
   "refund_pending",
   "refunded"
+]);
+export const RECONCILIATION_STATES = new Set([
+  "settlement_unknown",
+  "payment_reconciliation_required"
 ]);
 export const SECRET_KEY = /secret|token|password|private_key|authorization|credential|api[_-]?key|ssh/i;

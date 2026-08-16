@@ -7,7 +7,8 @@ import { openApiDocument } from "./openapi.mjs";
 import { adminAuthorized, clientIp, hashIp, publicInquiry, publicOrder, publicReceipt, publicReservation } from "./privacy.mjs";
 import { createFileStore } from "./store.mjs";
 import { draftPrMatchesRepo, publicGithubPr, validateInquiry } from "./validation.mjs";
-import { createX402HttpServer, hasPaymentSignature, processOfficialPayment, sendX402Result } from "./x402-server.mjs";
+import { RECONCILIATION_STATES } from "./constants.mjs";
+import { createX402HttpServer, hasPaymentSignature, isExplicitFinalSettleFailure, processOfficialPayment, sendX402Result } from "./x402-server.mjs";
 
 function requireAdmin(config) {
   return (req, res, next) => {
@@ -140,6 +141,9 @@ export async function createApp(options = {}) {
     const reservation = await store.getReservation(req.params.reservation, now);
     if (!reservation) return res.status(404).json({ error: "not_found" });
     if (reservation.state === "reservation_expired") return res.status(410).json({ error: "expired" });
+    if (RECONCILIATION_STATES.has(reservation.state)) {
+      return res.status(409).json({ error: "reconciliation_required", state: reservation.state });
+    }
     if (reservation.order_id) {
       const existing = await store.getOrder(reservation.order_id);
       if (existing) return res.json({ ...publicOrder(existing), order_id: existing.order_id });
@@ -163,16 +167,31 @@ export async function createApp(options = {}) {
     }
     if (claim.busy) {
       const waited = await store.waitForOrder(reservation.reservation_code);
+      if (waited?.reconciliation) {
+        return res.status(409).json({ error: "reconciliation_required", state: waited.state });
+      }
       if (waited) return res.json({ ...publicOrder(waited), order_id: waited.order_id });
       return res.status(409).json({ error: "pay_in_progress" });
+    }
+    if (claim.error === "reconciliation_required") {
+      return res.status(409).json({ error: "reconciliation_required", state: claim.state });
     }
     if (claim.error) return res.status(409).json({ error: claim.error, state: claim.state });
 
     let result;
     let settleResult;
+    let settleStarted = false;
     try {
-      ({ result, settleResult } = await processOfficialPayment(httpServer, req));
+      ({ result, settleResult, settleStarted } = await processOfficialPayment(httpServer, req));
     } catch (error) {
+      if (error.settleStarted) {
+        await store.markReconciliationRequired({
+          reservationCode: reservation.reservation_code,
+          now,
+          reason: error.message || "settlement_interrupted"
+        });
+        return res.status(409).json({ error: "reconciliation_required", state: "payment_reconciliation_required" });
+      }
       await store.releasePayClaim(reservation.reservation_code);
       throw error;
     }
@@ -184,9 +203,18 @@ export async function createApp(options = {}) {
       await store.releasePayClaim(reservation.reservation_code);
       return res.status(500).json({ error: "payment_processing_failed" });
     }
-    if (!settleResult?.success || !settleResult.transaction) {
+    if (settleResult?.success && settleResult.transaction) {
+      // continue to createOrder
+    } else if (settleStarted && isExplicitFinalSettleFailure(settleResult)) {
       await store.releasePayClaim(reservation.reservation_code);
       return res.status(402).json({ error: "settlement_unverified" });
+    } else {
+      await store.markReconciliationRequired({
+        reservationCode: reservation.reservation_code,
+        now,
+        reason: settleResult?.errorReason || "settlement_unknown"
+      });
+      return res.status(409).json({ error: "reconciliation_required", state: "payment_reconciliation_required" });
     }
 
     const created = await store.createOrder({
@@ -203,8 +231,12 @@ export async function createApp(options = {}) {
       }
     });
     if (created.error) {
-      await store.releasePayClaim(reservation.reservation_code);
-      return res.status(409).json({ error: created.error, state: created.state });
+      await store.markReconciliationRequired({
+        reservationCode: reservation.reservation_code,
+        now,
+        reason: created.error
+      });
+      return res.status(409).json({ error: "reconciliation_required", state: "payment_reconciliation_required" });
     }
     log.info("paid", { order_id: created.order.order_id });
     for (const [key, value] of Object.entries(settleResult.headers || {})) {
@@ -317,6 +349,32 @@ export async function createApp(options = {}) {
       order_id: result.order.order_id,
       receipt_id: result.receipt.receipt_id,
       disclaimer: result.receipt.disclaimer
+    });
+  });
+
+  app.post("/api/admin/reconcile", admin, async (req, res) => {
+    const result = await store.reconcile({
+      reservationCode: req.body?.reservation_code,
+      decision: req.body?.decision,
+      settlement: req.body?.settlement,
+      now: clock(),
+      note: req.body?.note
+    });
+    if (result.error === "not_found") return res.status(404).json({ error: "not_found" });
+    if (result.error === "invalid_decision") return res.status(400).json({ error: "invalid_decision" });
+    if (result.error) return res.status(409).json({ error: result.error, state: result.state });
+    if (result.decision === "paid") {
+      return res.status(201).json({
+        state: "paid",
+        decision: "paid",
+        order_id: result.order.order_id,
+        reservation_code: result.reservation.reservation_code
+      });
+    }
+    return res.json({
+      state: "cancelled",
+      decision: "release",
+      reservation_code: result.reservation.reservation_code
     });
   });
 

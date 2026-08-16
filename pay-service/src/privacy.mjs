@@ -47,7 +47,7 @@ export function publicReservation(row, { includePayRoute = false, publicBaseUrl 
     expires_at: row.expires_at,
     created_at: row.created_at
   };
-  if (includePayRoute && row.state === "payment_pending") {
+  if (includePayRoute && row.state === "payment_pending" && !row.settlement_unknown) {
     body.pay_route = `${publicBaseUrl}/api/pay/${row.reservation_code}`;
   }
   return body;

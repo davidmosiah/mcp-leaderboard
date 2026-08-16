@@ -43,6 +43,20 @@ export async function createX402HttpServer({
   return httpServer;
 }
 
+const FINAL_SETTLE_FAILURES = new Set([
+  "invalid_signature",
+  "invalid_scheme",
+  "verification_failed",
+  "unsupported_payload_type",
+  "kyt_risk_detected"
+]);
+
+export function isExplicitFinalSettleFailure(settleResult) {
+  if (!settleResult || settleResult.success) return false;
+  if (settleResult.transaction) return false;
+  return FINAL_SETTLE_FAILURES.has(String(settleResult.errorReason || ""));
+}
+
 export async function processOfficialPayment(httpServer, req) {
   const adapter = new ExpressAdapter(req);
   const context = {
@@ -52,16 +66,21 @@ export async function processOfficialPayment(httpServer, req) {
     paymentHeader: adapter.getHeader("payment-signature") || adapter.getHeader("x-payment")
   };
   const result = await httpServer.processHTTPRequest(context);
-  if (result.type !== "payment-verified") return { result };
-  const settleResult = await httpServer.processSettlement(
-    result.paymentPayload,
-    result.paymentRequirements,
-    result.declaredExtensions,
-    { request: context },
-    undefined,
-    result.beforeHandlerSettlement
-  );
-  return { result, settleResult };
+  if (result.type !== "payment-verified") return { result, settleStarted: false };
+  try {
+    const settleResult = await httpServer.processSettlement(
+      result.paymentPayload,
+      result.paymentRequirements,
+      result.declaredExtensions,
+      { request: context },
+      undefined,
+      result.beforeHandlerSettlement
+    );
+    return { result, settleResult, settleStarted: true };
+  } catch (error) {
+    error.settleStarted = true;
+    throw error;
+  }
 }
 
 export function sendX402Result(res, response) {

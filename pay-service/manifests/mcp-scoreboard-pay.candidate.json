@@ -30,7 +30,8 @@
     "asset_address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "amount_atomic": "49000000",
     "scheme": "exact",
-    "facilitator": "createCdpFacilitatorClient"
+    "facilitator": "createCdpFacilitatorClient",
+    "axios_override": "1.19.0"
   },
   "runtime_env_not_in_repo": [
     "PAY_SERVICE_ADMIN_TOKEN",

@@ -2,17 +2,23 @@ import { createHash } from "node:crypto";
 import { constants as fsConstants } from "node:fs";
 import { mkdir, open, readFile, rename, unlink, writeFile } from "node:fs/promises";
 import { join } from "node:path";
-import { CAPACITY, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS } from "./constants.mjs";
+import { CAPACITY, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS, RECONCILIATION_STATES } from "./constants.mjs";
 import { unguessableCode } from "./ids.mjs";
 import { publicOrder, publicReceipt } from "./privacy.mjs";
 
-const PAY_CLAIM_TTL_MS = 60_000;
 const POST_PAYMENT_STATES = new Set([
   "paid",
   "delivery_in_progress",
   "delivered",
   "refunded",
-  "refund_pending"
+  "refund_pending",
+  "settlement_unknown",
+  "payment_reconciliation_required"
+]);
+const ORDERABLE_STATES = new Set([
+  "payment_pending",
+  "settlement_unknown",
+  "payment_reconciliation_required"
 ]);
 
 const emptyState = () => ({
@@ -23,7 +29,8 @@ const emptyState = () => ({
   receipts: {},
   idempotency: {},
   rateLimits: {},
-  metrics: { inquiries: 0, approvals: 0, paid: 0, refunds: 0, cancelled: 0 }
+  reconciliations: [],
+  metrics: { inquiries: 0, approvals: 0, paid: 0, refunds: 0, cancelled: 0, reconciliations: 0 }
 });
 
 export function inquiryPayloadHash(value) {
@@ -166,9 +173,53 @@ export async function createFileStore(dataDir) {
   };
 
   const usedSlots = () => {
-    const pendingReservations = Object.values(state.reservations)
-      .filter((row) => row.state === "payment_pending").length;
-    return pendingReservations + Object.values(state.orders).length;
+    const heldReservations = Object.values(state.reservations)
+      .filter((row) => row.state === "payment_pending" || RECONCILIATION_STATES.has(row.state)).length;
+    return heldReservations + Object.values(state.orders).length;
+  };
+
+  const createOrderLocked = ({ reservationCode, settlement, now }) => {
+    const reservation = state.reservations[reservationCode];
+    if (!reservation) return { error: "not_found" };
+    if (reservation.order_id && state.orders[reservation.order_id]) {
+      reservation.pay_claim = null;
+      return { order: state.orders[reservation.order_id], replay: true };
+    }
+    if (!ORDERABLE_STATES.has(reservation.state)) return { error: "conflict", state: reservation.state };
+    if (!settlement?.transaction) return { error: "settlement_missing" };
+    const order_id = unguessableCode();
+    const inquiry = state.inquiries[reservation.inquiry_code];
+    const order = {
+      order_id,
+      reservation_code: reservationCode,
+      inquiry_code: reservation.inquiry_code,
+      state: "paid",
+      npm_package: reservation.npm_package,
+      public_repository_url: reservation.public_repository_url,
+      scoreboard_url: reservation.scoreboard_url,
+      draft_pr_url: null,
+      settlement,
+      created_at: new Date(now).toISOString(),
+      updated_at: new Date(now).toISOString()
+    };
+    const receipt = {
+      receipt_id: order_id,
+      type: "payment",
+      order_id,
+      state: "paid",
+      npm_package: order.npm_package,
+      settlement,
+      created_at: order.created_at
+    };
+    state.orders[order_id] = order;
+    state.receipts[order_id] = receipt;
+    reservation.state = "paid";
+    reservation.order_id = order_id;
+    reservation.pay_claim = null;
+    reservation.settlement_unknown = false;
+    if (inquiry) inquiry.state = "paid";
+    state.metrics.paid += 1;
+    return { order, receipt };
   };
 
   const existingIdempotency = (key) => {
@@ -295,15 +346,14 @@ export async function createFileStore(dataDir) {
         if (reservation.order_id && state.orders[reservation.order_id]) {
           return { existing: state.orders[reservation.order_id] };
         }
+        if (RECONCILIATION_STATES.has(reservation.state)) {
+          return { error: "reconciliation_required", state: reservation.state };
+        }
         if (reservation.state !== "payment_pending") {
           return { error: "not_payable", state: reservation.state };
         }
-        const claim = reservation.pay_claim;
-        if (claim?.claimed_at) {
-          const age = now - Date.parse(claim.claimed_at);
-          if (Number.isFinite(age) && age >= 0 && age < PAY_CLAIM_TTL_MS) {
-            return { busy: true };
-          }
+        if (reservation.pay_claim?.claimed_at) {
+          return { busy: true };
         }
         reservation.pay_claim = { claimed_at: new Date(now).toISOString(), pid: process.pid };
         await persist(state);
@@ -322,61 +372,96 @@ export async function createFileStore(dataDir) {
     async waitForOrder(reservationCode, timeoutMs = 8000) {
       const started = Date.now();
       while (Date.now() - started < timeoutMs) {
-        const order = await withLock(async () => {
+        const snapshot = await withLock(async () => {
           const reservation = state.reservations[reservationCode];
-          if (reservation?.order_id) return state.orders[reservation.order_id] || null;
+          if (reservation?.order_id) {
+            const order = state.orders[reservation.order_id];
+            if (order) return { order };
+          }
+          if (RECONCILIATION_STATES.has(reservation?.state)) {
+            return { reconciliation: true, state: reservation.state };
+          }
           return null;
         });
-        if (order) return order;
+        if (snapshot?.order) return snapshot.order;
+        if (snapshot?.reconciliation) return snapshot;
         await new Promise((resolve) => setTimeout(resolve, 20));
       }
       return null;
     },
-    async createOrder({ reservationCode, settlement, now }) {
+    async markReconciliationRequired({ reservationCode, now, reason }) {
       return withLock(async () => {
-        expireLocked(now);
         const reservation = state.reservations[reservationCode];
         if (!reservation) return { error: "not_found" };
         if (reservation.order_id && state.orders[reservation.order_id]) {
-          reservation.pay_claim = null;
-          await persist(state);
-          return { order: state.orders[reservation.order_id], replay: true };
+          return { order: state.orders[reservation.order_id] };
         }
-        if (reservation.state !== "payment_pending") return { error: "conflict", state: reservation.state };
-        if (!settlement?.transaction) return { error: "settlement_missing" };
-        const order_id = unguessableCode();
+        reservation.state = "payment_reconciliation_required";
+        reservation.settlement_unknown = true;
+        reservation.reconciliation_reason = reason || "settlement_interrupted";
+        reservation.updated_at = new Date(now).toISOString();
         const inquiry = state.inquiries[reservation.inquiry_code];
-        const order = {
-          order_id,
+        if (inquiry) inquiry.state = "payment_reconciliation_required";
+        state.reconciliations.push({
+          id: unguessableCode(),
+          type: "settlement_unknown",
           reservation_code: reservationCode,
-          inquiry_code: reservation.inquiry_code,
-          state: "paid",
-          npm_package: reservation.npm_package,
-          public_repository_url: reservation.public_repository_url,
-          scoreboard_url: reservation.scoreboard_url,
-          draft_pr_url: null,
-          settlement,
           created_at: new Date(now).toISOString(),
-          updated_at: new Date(now).toISOString()
-        };
-        const receipt = {
-          receipt_id: order_id,
-          type: "payment",
-          order_id,
-          state: "paid",
-          npm_package: order.npm_package,
-          settlement,
-          created_at: order.created_at
-        };
-        state.orders[order_id] = order;
-        state.receipts[order_id] = receipt;
-        reservation.state = "paid";
-        reservation.order_id = order_id;
-        reservation.pay_claim = null;
-        if (inquiry) inquiry.state = "paid";
-        state.metrics.paid += 1;
+          reason: reason || "settlement_interrupted"
+        });
+        state.metrics.reconciliations += 1;
         await persist(state);
-        return { order, receipt };
+        return { reservation };
+      });
+    },
+    async reconcile({ reservationCode, decision, settlement, now, note }) {
+      return withLock(async () => {
+        const reservation = state.reservations[reservationCode];
+        if (!reservation) return { error: "not_found" };
+        if (!RECONCILIATION_STATES.has(reservation.state)) {
+          return { error: "conflict", state: reservation.state };
+        }
+        if (decision === "paid") {
+          const created = createOrderLocked({ reservationCode, settlement, now });
+          if (created.error) return created;
+          state.reconciliations.push({
+            id: unguessableCode(),
+            type: "admin_paid",
+            reservation_code: reservationCode,
+            order_id: created.order.order_id,
+            created_at: new Date(now).toISOString(),
+            note: note || "admin_reconcile_paid",
+            settlement
+          });
+          await persist(state);
+          return { decision: "paid", order: created.order, reservation };
+        }
+        if (decision === "release") {
+          reservation.state = "cancelled";
+          reservation.pay_claim = null;
+          const inquiry = state.inquiries[reservation.inquiry_code];
+          if (inquiry) inquiry.state = "cancelled";
+          state.metrics.cancelled += 1;
+          state.reconciliations.push({
+            id: unguessableCode(),
+            type: "admin_release",
+            reservation_code: reservationCode,
+            created_at: new Date(now).toISOString(),
+            note: note || "admin_reconcile_release"
+          });
+          await persist(state);
+          return { decision: "release", reservation, inquiry };
+        }
+        return { error: "invalid_decision" };
+      });
+    },
+    async createOrder({ reservationCode, settlement, now }) {
+      return withLock(async () => {
+        expireLocked(now);
+        const created = createOrderLocked({ reservationCode, settlement, now });
+        if (created.error) return created;
+        await persist(state);
+        return created;
       });
     },
     async getOrder(id) {

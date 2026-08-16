@@ -19,5 +19,8 @@
     "@x402/extensions": "2.22.0",
     "@x402/svm": "2.22.0",
     "express": "5.2.1"
+  },
+  "overrides": {
+    "axios": "1.19.0"
   }
 }
