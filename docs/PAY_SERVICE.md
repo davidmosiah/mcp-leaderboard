@@ -279,6 +279,9 @@ Unguessable codes: 32 cryptographically random bytes, base64url.
 No production secret is saved in this repository. The CDP PEM is stored as
 `/etc/mcp-scoreboard-pay/cdp-api-key.pem` and delivered through systemd
 `LoadCredential`; it is not flattened into the shared environment file.
+Coinbase downloads ECDSA keys as SEC1 (`BEGIN EC PRIVATE KEY`), while the pinned
+SDK imports PKCS8. Provisioning must convert it with `openssl pkcs8 -topk8
+-nocrypt` and the deploy gate refuses any other PEM header.
 
 | Variable | Secret? | Purpose |
 | --- | --- | --- |

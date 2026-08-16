@@ -48,6 +48,7 @@ test("deploy script pins a commit, verifies dependencies, and never embeds secre
   assert.match(deploy, /chown root:\"\$service\" \/etc\/mcp-scoreboard-pay\/pay\.env/);
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/pay\.env/);
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem/);
+  assert.match(deploy, /grep -qx -- '-----BEGIN PRIVATE KEY-----' \/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem/);
   assert.match(deploy, /systemctl restart mcp-scoreboard-pay\.service/);
   assert.match(deploy, /curl -fsS http:\/\/127\.0\.0\.1:8797\/readyz/);
   assert.doesNotMatch(deploy, /CDP_API_KEY_SECRET=|PAY_SERVICE_ADMIN_TOKEN=/);
