@@ -24,6 +24,7 @@ test("systemd unit runs as a dedicated user with a private state directory", () 
   assert.match(unit, /^Group=mcp-scoreboard-pay$/m);
   assert.match(unit, /^EnvironmentFile=\/etc\/mcp-scoreboard-pay\/pay\.env$/m);
   assert.match(unit, /^LoadCredential=cdp-api-key\.pem:\/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem$/m);
+  assert.match(unit, /^Environment=NODE_OPTIONS=--dns-result-order=ipv4first$/m);
   assert.match(unit, /CDP_API_KEY_SECRET=.*CREDENTIALS_DIRECTORY\/cdp-api-key\.pem/);
   assert.match(unit, /^WorkingDirectory=\/opt\/mcp-scoreboard-pay\/current\/pay-service$/m);
   assert.match(unit, /^ReadWritePaths=\/var\/lib\/mcp-scoreboard-pay$/m);

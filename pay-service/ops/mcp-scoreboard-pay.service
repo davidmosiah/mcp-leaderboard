@@ -9,6 +9,7 @@ User=mcp-scoreboard-pay
 Group=mcp-scoreboard-pay
 WorkingDirectory=/opt/mcp-scoreboard-pay/current/pay-service
 EnvironmentFile=/etc/mcp-scoreboard-pay/pay.env
+Environment=NODE_OPTIONS=--dns-result-order=ipv4first
 LoadCredential=cdp-api-key.pem:/etc/mcp-scoreboard-pay/cdp-api-key.pem
 ExecStart=/bin/sh -c 'CDP_API_KEY_SECRET=$(cat "$CREDENTIALS_DIRECTORY/cdp-api-key.pem"); export CDP_API_KEY_SECRET; exec /usr/bin/node src/server.mjs'
 Restart=on-failure
