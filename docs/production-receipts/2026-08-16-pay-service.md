@@ -4,7 +4,7 @@
 
 The isolated MCP Scoreboard pay-service is live at
 `https://pay.leaderboard.delx.ai` from immutable release
-`d8fa8fb2ae2c601a88b6eb71b7a6c34f675a25b1`.
+`35d27c774c754fa9b5846615da80bb2ec7f27845`.
 
 This receipt proves deployment and operational readiness. It does **not** prove
 an external inquiry, payment, delivery, revenue, ranking improvement, merge,
@@ -64,3 +64,24 @@ deploy, or publication.
 
 No production inquiry, reservation, order, payment, self-buy, delivery, or
 revenue was created during activation. Live capacity remained `used: 0`.
+
+## Grok Bot autonomous connector activation
+
+- Grok Bot connector `mcp-scoreboard-ops` completed authorization-code OAuth
+  with S256 PKCE and a one-time owner approval entered directly on
+  `pay.leaderboard.delx.ai`. The OAuth client secret was not stored in the bot.
+- The server recorded `oauth_token_issued` with scope `scoreboard:operate` and
+  `owner_approved: true`; no token, code, verifier, nonce, or secret was logged.
+- The connected bot listed exactly five tools. A read-only smoke called
+  `scoreboard_get_status` and `scoreboard_list_work`: capacity `0/5`, zero
+  inquiries, zero orders, zero external revenue, and no mutation.
+- The Grok routine is active hourly, pinned to the production release above,
+  and instructed to use only `mcp-scoreboard-ops`. Legacy connector cards are
+  ignored and grant no additional capability.
+- Cross-role checks remained closed: the agent Bearer received HTTP 401 from
+  the admin API, the admin Bearer received HTTP 401 from `/mcp`, and the agent
+  Bearer listed exactly five MCP tools.
+- The final gateway audit was `status=ok`; every existing Delx, Reacher, Build
+  Week, Nourish, Ani Ritmo, Mediagen and Scoreboard probe passed. The final
+  `serverctl` audit covered 22 services and 15 probes with one residual warning:
+  disk usage `81.2%`. No retention candidate was deleted.
