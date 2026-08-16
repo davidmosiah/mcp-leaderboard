@@ -4,9 +4,12 @@ export function hashIp(ip) {
   return createHash("sha256").update(String(ip || "unknown")).digest("hex");
 }
 
-export function clientIp(req) {
-  const forwarded = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
-  return forwarded || req.socket?.remoteAddress || "unknown";
+export function clientIp(req, { trustProxy = false } = {}) {
+  if (trustProxy) {
+    const forwarded = String(req.headers["x-forwarded-for"] || "").split(",")[0].trim();
+    if (forwarded) return forwarded;
+  }
+  return req.socket?.remoteAddress || "unknown";
 }
 
 export function adminAuthorized(req, token) {

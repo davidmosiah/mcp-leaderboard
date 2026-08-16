@@ -47,3 +47,18 @@ export function validateInquiry(body) {
 export function publicGithubPr(url) {
   return /^https:\/\/github\.com\/[A-Za-z0-9_.-]+\/[A-Za-z0-9._-]+\/pull\/\d+\/?$/.test(String(url || ""));
 }
+
+export function githubOwnerRepo(url) {
+  const match = String(url || "").match(/^https:\/\/github\.com\/([^/]+)\/([^/#?]+)/i);
+  if (!match) return null;
+  const owner = match[1].toLowerCase();
+  const repo = match[2].replace(/\.git$/i, "").replace(/\/+$/, "").toLowerCase();
+  if (!owner || !repo) return null;
+  return `${owner}/${repo}`;
+}
+
+export function draftPrMatchesRepo(draftPrUrl, publicRepositoryUrl) {
+  const draft = githubOwnerRepo(draftPrUrl);
+  const purchased = githubOwnerRepo(publicRepositoryUrl);
+  return Boolean(draft && purchased && draft === purchased);
+}

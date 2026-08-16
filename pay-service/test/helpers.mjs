@@ -15,7 +15,7 @@ export function adminToken() {
   return randomBytes(32).toString("base64url");
 }
 
-export function createMockFacilitator() {
+export function createMockFacilitator({ settleDelayMs = 0 } = {}) {
   const calls = { verify: [], settle: [], supported: 0 };
   return {
     calls,
@@ -36,6 +36,7 @@ export function createMockFacilitator() {
       return { isValid: false, invalidReason: "invalid_signature" };
     },
     async settle(paymentPayload, paymentRequirements) {
+      if (settleDelayMs) await new Promise((resolve) => setTimeout(resolve, settleDelayMs));
       calls.settle.push({ paymentPayload, paymentRequirements });
       const signature = paymentPayload?.payload?.signature;
       if (typeof signature !== "string" || !signature.startsWith("0xvalid")) {
@@ -129,6 +130,8 @@ export async function startService(overrides = {}) {
       PAY_SERVICE_DATA_DIR: dataDir,
       PAY_SERVICE_RESERVATION_TTL_SECONDS: String(overrides.ttlSeconds || 86400),
       PAY_SERVICE_FACILITATOR_URL: "https://x402.org/facilitator",
+      CDP_API_KEY_ID: "test-cdp-key-id",
+      CDP_API_KEY_SECRET: "test-cdp-key-secret",
       ...overrides.env
     },
     facilitator,
@@ -149,6 +152,7 @@ export async function startService(overrides = {}) {
     clockState,
     async close() {
       await new Promise((resolve, reject) => server.close((error) => (error ? reject(error) : resolve())));
+      await app.locals.store?.close?.();
     }
   };
 }

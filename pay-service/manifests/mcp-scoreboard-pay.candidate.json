@@ -17,10 +17,12 @@
   },
   "x402": {
     "sdk": {
-      "@x402/core": "2.10.0",
-      "@x402/evm": "2.10.0",
-      "@x402/express": "2.10.0",
-      "@x402/extensions": "2.10.0"
+      "@x402/core": "2.22.0",
+      "@x402/evm": "2.22.0",
+      "@x402/express": "2.22.0",
+      "@x402/extensions": "2.22.0",
+      "@x402/svm": "2.22.0",
+      "@coinbase/cdp-sdk": "1.55.0"
     },
     "version": 2,
     "network": "eip155:8453",
@@ -28,12 +30,13 @@
     "asset_address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
     "amount_atomic": "49000000",
     "scheme": "exact",
-    "facilitator_url_config": "PAY_SERVICE_FACILITATOR_URL"
+    "facilitator": "createCdpFacilitatorClient"
   },
   "runtime_env_not_in_repo": [
     "PAY_SERVICE_ADMIN_TOKEN",
     "PAY_SERVICE_PAY_TO",
-    "PAY_SERVICE_FACILITATOR_URL"
+    "CDP_API_KEY_ID",
+    "CDP_API_KEY_SECRET"
   ],
   "notes": [
     "Coordinate later with the Delx host operator. This file is not an activation.",

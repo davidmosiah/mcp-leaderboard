@@ -35,7 +35,7 @@ Business flow (document only; do not execute against customers):
 1. Free inquiry (`public_repository_url`, `npm_package`, `scoreboard_url`, `reply_email`).
 2. Fit recommendation (human).
 3. David's human approval.
-4. Reserve 1 of 5 slots (no anonymous hold).
+4. Reserve 1 of 5 **founding seats** (lifetime capacity, not concurrency).
 5. Official x402 v2 payment, exactly 49 USDC on Base.
 6. Public order + receipt with verifiable settlement.
 7. One focused draft PR on the matching public customer repo.
@@ -93,9 +93,9 @@ Public host: `https://pay.leaderboard.delx.ai`
 | `GET` | `/api/admin/orders` | Bearer | Orders without inventing a production token. |
 | `GET` | `/api/admin/metrics` | Bearer | Counts only. No PII. |
 | `POST` | `/api/admin/delivery/start` | Bearer | `paid` → `delivery_in_progress`. |
-| `POST` | `/api/admin/delivery/complete` | Bearer | → `delivered`. Optional public draft PR URL. |
-| `POST` | `/api/admin/cancel` | Bearer | Explicit `cancelled`. Frees the slot. |
-| `POST` | `/api/admin/refund` | Bearer | Manual refund ledger + separate receipt. No automatic on-chain refund. |
+| `POST` | `/api/admin/delivery/complete` | Bearer | → `delivered`. Draft PR URL must match the purchased `owner/repo`. Live GitHub verification is a later operational gate, not this phase. |
+| `POST` | `/api/admin/cancel` | Bearer | Explicit `cancelled` only before payment. Validates conflicts before any mutation. Pre-payment cancel frees the seat. |
+| `POST` | `/api/admin/refund` | Bearer | Without on-chain proof: non-terminal `refund_pending` + `refund_request` receipt. With coherent transfer proof: terminal `refunded` + `refund` receipt. The service never broadcasts a chain refund. |
 
 ### Inquiry body
 
@@ -112,7 +112,15 @@ Rejected: extra properties; fields named like secrets; credential-bearing URLs;
 non-https GitHub URLs; private-repo indicators; non-Scoreboard scorecard URLs;
 bodies over 8 KiB; more than 10 inquiries / hashed-IP / hour.
 
-Idempotency: `Idempotency-Key` header. Replay the original public response.
+Idempotency: `Idempotency-Key` header bound to a canonical SHA-256 of
+`public_repository_url`, `npm_package`, `scoreboard_url`, and `reply_email`.
+Same key + same body replays the original public response. Same key + different
+body returns `409 idempotency_conflict`.
+
+Rate limit uses the socket `remoteAddress` by default. `X-Forwarded-For` is
+trusted only when `PAY_SERVICE_TRUSTED_PROXY=1`. The TLS edge that terminates
+HTTPS must overwrite `X-Forwarded-For`; this process must not trust an
+arbitrary client-supplied header.
 
 ### State machine
 
@@ -131,13 +139,18 @@ delivery_in_progress
         ▼
     delivered
 
-cancelled and refunded are explicit terminals.
-reservation_expired is a non-slot state after TTL; a new approval may mint a
+cancelled is an explicit pre-payment terminal.
+refund_pending is a non-terminal refund request (no transfer proof yet).
+refunded is terminal only after operator-supplied transfer proof.
+reservation_expired is a non-seat state after TTL; a new approval may mint a
 new reservation if capacity remains.
 ```
 
-Slot-holding states (capacity 5): `payment_pending`, `paid`, `delivery_in_progress`.
-Inquiries do **not** hold a slot. Expired reservations free the slot.
+Founding capacity is **5 total seats**, not concurrency 5. A seat is consumed by
+a `payment_pending` reservation or by **any** order (`paid`,
+`delivery_in_progress`, `delivered`, `refund_pending`, `refunded`). Delivery
+does **not** free the seat. Pre-payment cancel or expiry may free it. Inquiries
+do **not** hold a seat.
 
 Default reservation TTL: **24 hours** (`PAY_SERVICE_RESERVATION_TTL_SECONDS`).
 Assumption: a short hold prevents griefing without an anonymous inventory lock.
@@ -147,8 +160,10 @@ Assumption: a short hold prevents griefing without an anonymous inventory lock.
 Receive path is the official TypeScript v2 SDK, not hand-rolled headers:
 
 - Packages and exact versions recorded in `pay-service/package-lock.json`:
-  `@x402/core@2.10.0`, `@x402/evm@2.10.0`, `@x402/express@2.10.0`,
-  `@x402/extensions@2.10.0`, `express@5.2.1`
+  `@x402/core@2.22.0`, `@x402/evm@2.22.0`, `@x402/express@2.22.0`,
+  `@x402/extensions@2.22.0`, `@x402/svm@2.22.0` (CDP x402 barrel peer only;
+  this service settles USDC on Base, not Solana), `@coinbase/cdp-sdk@1.55.0`,
+  `express@5.2.1`
 - Network: `eip155:8453` (Base mainnet)
 - Asset: USDC `0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913` (6 decimals)
 - Amount: `49000000` atomic (`price: "$49.00"` in official route config)
@@ -171,8 +186,18 @@ an order. A simulated / QA header such as `X-Simulate-Paid` is ignored.
 `paid` is recorded only after facilitator `verify` + `settle` both succeed
 with a non-empty transaction id.
 
-This phase never calls a live facilitator for a real transfer. Tests inject a
-`FacilitatorClient`. Production facilitator URL is configuration only.
+Production receive path keeps the official `@x402/express` resource server and
+uses `createCdpFacilitatorClient()` from `@coinbase/cdp-sdk/x402` so CDP
+`verify`/`settle` carry `CDP_API_KEY_ID` / `CDP_API_KEY_SECRET`. Do not wire
+an unauthenticated `HTTPFacilitatorClient({ url })` for mainnet. Tests inject a
+`FacilitatorClient`; production wiring reads the two CDP secrets from env.
+`PAY_SERVICE_PAY_TO` remains a public address only — no wallet secret.
+
+Two concurrent paid POSTs against the same reservation serialize on a durable
+per-reservation claim before `verify`+`settle`. A stale claim older than 60s
+may be recovered. Unpaid 402 challenges do not take a claim.
+
+This phase never calls a live facilitator for a real transfer.
 
 ## Isolation
 
@@ -194,8 +219,15 @@ Durable single-writer JSON store under `pay-service/var/` (gitignored):
 
 - `var/private/state.json` — source of truth, includes reply email and hashed IP
 - `var/public/receipts.json` — public orders/receipts only (no email/IP)
-- `var/private/STATE.lock` — exclusive lock
+- `var/private/STATE.lock` — exclusive inter-process lock (`O_CREAT|O_EXCL`).
+  A second instance fails closed at startup. `store.close()` releases the lock.
+  Persist does **not** rewrite the lock file. A leftover lock whose PID is dead
+  may be recovered; a live PID is refused.
 - writes: temp file + `fsync` + atomic rename
+
+Startup: missing `private/state.json` (`ENOENT`) initializes empty state.
+Corrupted JSON, permission errors, or other IO failures **fail closed** and
+must not rewrite the file.
 
 Recovery: restart reloads `private/state.json`. Ignore leftover `*.tmp`.
 Restore from the last intact private snapshot; rebuild the public projection.
@@ -213,17 +245,19 @@ No production secret is saved in this repository.
 
 | Variable | Secret? | Purpose |
 | --- | --- | --- |
-| `PAY_SERVICE_PAY_TO` | no (public address) | x402 `payTo` on Base |
+| `PAY_SERVICE_PAY_TO` | no (public address) | x402 `payTo` on Base. Never a wallet secret. |
 | `PAY_SERVICE_ADMIN_TOKEN` | yes | Bearer for fit/admin. Generate at deploy. Never commit. |
-| `PAY_SERVICE_FACILITATOR_URL` | no | Official facilitator base URL |
+| `CDP_API_KEY_ID` | yes | CDP JWT key id for authenticated facilitator `verify`/`settle`. Never commit. |
+| `CDP_API_KEY_SECRET` | yes | CDP JWT key secret. Never commit. Never echo from `/readyz`. |
+| `PAY_SERVICE_TRUSTED_PROXY` | no | Set to `1` only behind an edge that overwrites `X-Forwarded-For`. Default: ignore that header. |
 | `PAY_SERVICE_PUBLIC_BASE_URL` | no | Defaults to `https://pay.leaderboard.delx.ai` |
 | `PAY_SERVICE_DATA_DIR` | no | Defaults to `pay-service/var` |
 | `PAY_SERVICE_RESERVATION_TTL_SECONDS` | no | Defaults to `86400` |
 | `PAY_SERVICE_PORT` | no | Defaults to `8787` |
 
 `/readyz` fails closed if the admin token is missing or shorter than 32 bytes,
-or if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed 20-byte address.
-Do not print these values.
+if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed 20-byte address, or if either CDP
+API secret env is missing. Do not print these values.
 
 ## Commands
 
@@ -247,11 +281,17 @@ Do not run `npm run all`, do not rewrite `data/*`, `LEADERBOARD.md`, or
    private-repo indicators in the body. A network probe can be added at
    deploy time without changing the contract.
 2. Reservation TTL is 24 hours unless overridden.
-3. Capacity counts in-flight approved work, not raw inquiries.
-4. Refund writes a **ledger receipt** only. It does not broadcast an on-chain
-   refund and the API must not promise one.
-5. Official `@x402/*` v2 packages are the receive path. Legacy `x402` /
-   `x402-express` v1 packages are not used.
-6. The weekly Scoreboard publisher stays on Vercel Hobby and remains CTA-free.
-7. `support@delx.ai` remains the human reply identity for later outreach.
+3. Founding capacity is 5 **total** seats. Delivery keeps the seat. Pre-payment
+   cancel/expiry may free it. Inquiries do not hold a seat.
+4. A refund request without transfer proof is `refund_pending` +
+   `refund_request`. Terminal `refunded` requires operator-supplied proof
+   (transaction, network, amount, merchant payer = `PAY_TO`, recipient = original
+   settlement payer). The service does not broadcast a chain refund.
+5. Draft `draft_pr_url` owner/repo must match `order.public_repository_url`.
+   Confirming the PR exists and is a draft on GitHub is an operational gate
+   before calling complete, not an automated check in this phase.
+6. Official `@x402/*` v2.22.0 packages plus `@coinbase/cdp-sdk@1.55.0` are the
+   receive path. Legacy `x402` / `x402-express` v1 packages are not used.
+7. The weekly Scoreboard publisher stays on Vercel Hobby and remains CTA-free.
+8. `support@delx.ai` remains the human reply identity for later outreach.
    This phase does not send mail.

@@ -1,12 +1,19 @@
-import { HTTPFacilitatorClient } from "@x402/core/server";
+import { createCdpFacilitatorClient } from "@coinbase/cdp-sdk/x402";
 import { ExactEvmScheme } from "@x402/evm/exact/server";
 import { ExpressAdapter, x402HTTPResourceServer, x402ResourceServer } from "@x402/express";
 import { bazaarResourceServerExtension, declareDiscoveryExtension } from "@x402/extensions/bazaar";
 import { NETWORK, PRICE_SDK, SERVICE_NAME } from "./constants.mjs";
 
-export async function createX402HttpServer({ facilitator, payTo, initialize = true, facilitatorUrl } = {}) {
-  const client = facilitator || new HTTPFacilitatorClient({
-    url: facilitatorUrl || "https://api.cdp.coinbase.com/platform/v2/x402"
+export async function createX402HttpServer({
+  facilitator,
+  payTo,
+  initialize = true,
+  cdpApiKeyId,
+  cdpApiKeySecret
+} = {}) {
+  const client = facilitator || createCdpFacilitatorClient({
+    apiKeyId: cdpApiKeyId,
+    apiKeySecret: cdpApiKeySecret
   });
   const resourceServer = new x402ResourceServer(client).register(NETWORK, new ExactEvmScheme());
   resourceServer.registerExtension(bazaarResourceServerExtension);
@@ -64,4 +71,8 @@ export function sendX402Result(res, response) {
   }
   if (response.isHtml) return res.send(response.body);
   return res.json(response.body || {});
+}
+
+export function hasPaymentSignature(req) {
+  return Boolean(req.get("payment-signature") || req.get("x-payment"));
 }

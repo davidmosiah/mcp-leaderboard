@@ -6,8 +6,8 @@ import { discoveryDocument, offerDocument } from "./offer.mjs";
 import { openApiDocument } from "./openapi.mjs";
 import { adminAuthorized, clientIp, hashIp, publicInquiry, publicOrder, publicReceipt, publicReservation } from "./privacy.mjs";
 import { createFileStore } from "./store.mjs";
-import { publicGithubPr, validateInquiry } from "./validation.mjs";
-import { createX402HttpServer, processOfficialPayment, sendX402Result } from "./x402-server.mjs";
+import { draftPrMatchesRepo, publicGithubPr, validateInquiry } from "./validation.mjs";
+import { createX402HttpServer, hasPaymentSignature, processOfficialPayment, sendX402Result } from "./x402-server.mjs";
 
 function requireAdmin(config) {
   return (req, res, next) => {
@@ -25,11 +25,14 @@ export async function createApp(options = {}) {
   const httpServer = options.httpServer || await createX402HttpServer({
     facilitator: options.facilitator,
     payTo: config.payTo,
-    facilitatorUrl: config.facilitatorUrl,
+    cdpApiKeyId: config.cdpApiKeyId,
+    cdpApiKeySecret: config.cdpApiKeySecret,
     initialize: options.initializeX402 !== false
   });
 
   const app = express();
+  app.locals.store = store;
+  app.locals.config = config;
   app.disable("x-powered-by");
   app.use(express.json({ limit: BODY_LIMIT_BYTES }));
   app.use((req, res, next) => {
@@ -82,10 +85,11 @@ export async function createApp(options = {}) {
     if (parsed.error) return res.status(400).json({ error: parsed.error });
     const result = await store.createInquiry({
       value: parsed.value,
-      ipHash: hashIp(clientIp(req)),
+      ipHash: hashIp(clientIp(req, { trustProxy: config.trustProxy })),
       now: clock(),
       idempotencyKey: req.get("idempotency-key") || null
     });
+    if (result.conflict) return res.status(409).json({ error: "idempotency_conflict" });
     if (result.limited) return res.status(429).json({ error: "rate_limited" });
     log.info("inquiry_received", { inquiry_code: result.response.inquiry_code });
     return res.status(201).json(result.response);
@@ -144,10 +148,44 @@ export async function createApp(options = {}) {
       return res.status(409).json({ error: "not_payable", state: reservation.state });
     }
 
-    const { result, settleResult } = await processOfficialPayment(httpServer, req);
-    if (result.type === "payment-error") return sendX402Result(res, result.response);
-    if (result.type !== "payment-verified") return res.status(500).json({ error: "payment_processing_failed" });
+    if (!hasPaymentSignature(req)) {
+      const { result } = await processOfficialPayment(httpServer, req);
+      if (result.type === "payment-error") return sendX402Result(res, result.response);
+      return res.status(500).json({ error: "payment_processing_failed" });
+    }
+
+    const claim = await store.claimPay({
+      reservationCode: reservation.reservation_code,
+      now
+    });
+    if (claim.existing) {
+      return res.json({ ...publicOrder(claim.existing), order_id: claim.existing.order_id });
+    }
+    if (claim.busy) {
+      const waited = await store.waitForOrder(reservation.reservation_code);
+      if (waited) return res.json({ ...publicOrder(waited), order_id: waited.order_id });
+      return res.status(409).json({ error: "pay_in_progress" });
+    }
+    if (claim.error) return res.status(409).json({ error: claim.error, state: claim.state });
+
+    let result;
+    let settleResult;
+    try {
+      ({ result, settleResult } = await processOfficialPayment(httpServer, req));
+    } catch (error) {
+      await store.releasePayClaim(reservation.reservation_code);
+      throw error;
+    }
+    if (result.type === "payment-error") {
+      await store.releasePayClaim(reservation.reservation_code);
+      return sendX402Result(res, result.response);
+    }
+    if (result.type !== "payment-verified") {
+      await store.releasePayClaim(reservation.reservation_code);
+      return res.status(500).json({ error: "payment_processing_failed" });
+    }
     if (!settleResult?.success || !settleResult.transaction) {
+      await store.releasePayClaim(reservation.reservation_code);
       return res.status(402).json({ error: "settlement_unverified" });
     }
 
@@ -164,7 +202,10 @@ export async function createApp(options = {}) {
         scheme: result.paymentRequirements?.scheme
       }
     });
-    if (created.error) return res.status(409).json({ error: created.error, state: created.state });
+    if (created.error) {
+      await store.releasePayClaim(reservation.reservation_code);
+      return res.status(409).json({ error: created.error, state: created.state });
+    }
     log.info("paid", { order_id: created.order.order_id });
     for (const [key, value] of Object.entries(settleResult.headers || {})) {
       res.setHeader(key, value);
@@ -225,6 +266,12 @@ export async function createApp(options = {}) {
   app.post("/api/admin/delivery/complete", admin, async (req, res) => {
     const draft = req.body?.draft_pr_url;
     if (draft && !publicGithubPr(draft)) return res.status(400).json({ error: "draft_pr_url_invalid" });
+    if (draft) {
+      const order = await store.getOrder(req.body?.order_id);
+      if (order && !draftPrMatchesRepo(draft, order.public_repository_url)) {
+        return res.status(400).json({ error: "draft_pr_repo_mismatch" });
+      }
+    }
     const result = await store.transitionOrder({
       orderId: req.body?.order_id,
       from: "delivery_in_progress",
@@ -252,10 +299,19 @@ export async function createApp(options = {}) {
     const result = await store.refund({
       orderId: req.body?.order_id,
       reason: req.body?.reason,
-      now: clock()
+      now: clock(),
+      proof: req.body?.refund
     });
     if (result.error === "not_found") return res.status(404).json({ error: "not_found" });
     if (result.error) return res.status(409).json({ error: result.error, state: result.state });
+    if (!result.verified) {
+      return res.status(202).json({
+        state: "refund_pending",
+        order_id: result.order.order_id,
+        receipt_id: result.receipt.receipt_id,
+        disclaimer: result.receipt.disclaimer
+      });
+    }
     return res.status(201).json({
       state: "refunded",
       order_id: result.order.order_id,

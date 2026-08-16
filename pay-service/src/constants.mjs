@@ -13,5 +13,12 @@ export const BODY_LIMIT_BYTES = 8 * 1024;
 export const RATE_LIMIT_MAX = 10;
 export const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
 export const X402_VERSION = 2;
-export const SLOT_STATES = new Set(["payment_pending", "paid", "delivery_in_progress"]);
+export const SLOT_STATES = new Set([
+  "payment_pending",
+  "paid",
+  "delivery_in_progress",
+  "delivered",
+  "refund_pending",
+  "refunded"
+]);
 export const SECRET_KEY = /secret|token|password|private_key|authorization|credential|api[_-]?key|ssh/i;

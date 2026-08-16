@@ -1,7 +1,10 @@
 import assert from "node:assert/strict";
 import { after, test } from "node:test";
 import {
+  PRICE_ATOMIC,
   SETTLEMENT_TX,
+  TEST_PAY_TO,
+  TEST_PAYER,
   approveInquiry,
   openInquiry,
   payReservation,
@@ -67,15 +70,39 @@ test("admin list, delivery, cancel, and manual refund with a separate receipt", 
   assert.equal(complete.status, 200);
   assert.equal(complete.json.state, "delivered");
 
-  const refund = await request(service, "/api/admin/refund", {
+  const pendingRefund = await request(service, "/api/admin/refund", {
     method: "POST",
     headers: { authorization: `Bearer ${service.token}` },
     body: { order_id: order.order_id, reason: "manual operator refund" }
   });
+  assert.equal(pendingRefund.status, 202);
+  assert.equal(pendingRefund.json.state, "refund_pending");
+  assert.notEqual(pendingRefund.json.receipt_id, order.order_id);
+  assert.match(pendingRefund.json.disclaimer, /not a verified on-chain refund/i);
+
+  const requestReceipt = await request(service, `/api/receipt/${pendingRefund.json.receipt_id}`);
+  assert.equal(requestReceipt.status, 200);
+  assert.equal(requestReceipt.json.type, "refund_request");
+  assert.equal(requestReceipt.json.original_order_id, order.order_id);
+
+  const refund = await request(service, "/api/admin/refund", {
+    method: "POST",
+    headers: { authorization: `Bearer ${service.token}` },
+    body: {
+      order_id: order.order_id,
+      reason: "manual operator refund",
+      refund: {
+        transaction: `0x${"cd".repeat(32)}`,
+        network: "eip155:8453",
+        amount: PRICE_ATOMIC,
+        payer: TEST_PAY_TO,
+        recipient: TEST_PAYER
+      }
+    }
+  });
   assert.equal(refund.status, 201);
   assert.equal(refund.json.state, "refunded");
   assert.notEqual(refund.json.receipt_id, order.order_id);
-  assert.match(refund.json.disclaimer, /not an automatic/i);
 
   const refundReceipt = await request(service, `/api/receipt/${refund.json.receipt_id}`);
   assert.equal(refundReceipt.status, 200);
