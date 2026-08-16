@@ -4,10 +4,12 @@ Owner-canonical location: **`davidmosiah/mcp-leaderboard` only**.
 The entire MCP Score Improvement vertical — code, contract, x402, state,
 receipts, and metrics — lives in this repository under `pay-service/`.
 
-This document is the executable plan and the operator contract. Follow it in
-order. This phase is **code, tests, runbook, and versioned manifests in the
-repo**. Do not deploy, take real payment, self-buy, send email, open a
-maintainer GitHub issue, merge to `main`, or publish the board from this work.
+This document is the executable plan and the operator contract. The repository
+implementation phase is complete. Production activation was authorized by the
+owner on 2026-08-16 and uses the versioned production unit, route, deployment
+script, isolated state/backup, and a dedicated CDP API key. Activation does not
+authorize self-buy, customer outreach, maintainer issues, refunds, or delivery
+without a real approved inquiry.
 
 ## Separation that must not be mixed
 
@@ -22,9 +24,10 @@ Do **not** add `commerce.delx.ai` or `api.delx.ai` as a payment host.
 Do **not** load pay-service runtime credentials or dependencies into the root
 batch scorer. The weekly Grok Cloud score VM must never receive pay-service env.
 
-Future deploy (later, not this phase): an isolated unit/state/backup named
-`mcp-scoreboard-pay` on the shared host, coordinated with the Delx host
-operator. Candidate manifest: `pay-service/manifests/mcp-scoreboard-pay.candidate.json`.
+Production runs as the isolated unit/state/backup `mcp-scoreboard-pay` on the
+shared host. The active contract is
+`pay-service/manifests/mcp-scoreboard-pay.production.json`; the older candidate
+manifest remains historical evidence and is not deployable.
 
 ## Offer (single service)
 
@@ -260,8 +263,11 @@ must not rewrite the file.
 
 Recovery: restart reloads `private/state.json`. Ignore leftover `*.tmp`.
 Restore from the last intact private snapshot; rebuild the public projection.
-Backup (later deploy): copy `var/private/` as the `mcp-scoreboard-pay` backup
-set. This phase does not configure host backups.
+Production state maps `PAY_SERVICE_DATA_DIR` to
+`/var/lib/mcp-scoreboard-pay`. Backup freezes the single writer and captures
+the private state, public projection, and root-owned environment as the
+encrypted `mcp-scoreboard-pay-state` set. A private off-site roundtrip and
+restore receipt are required before the host audit is green.
 
 Logs may include inquiry/reservation/order codes and states. Logs must not
 include email, IP, Authorization, or payment payloads.
@@ -284,6 +290,12 @@ No production secret is saved in this repository.
 | `PAY_SERVICE_RESERVATION_TTL_SECONDS` | no | Defaults to `86400` |
 | `PAY_SERVICE_PORT` | no | Defaults to `8787` |
 
+Production pins `PAY_SERVICE_PORT=8797`, `PAY_SERVICE_TRUSTED_PROXY=1`, and
+`PAY_SERVICE_DATA_DIR=/var/lib/mcp-scoreboard-pay`. `PAY_SERVICE_PAY_TO` reuses
+the existing public Delx Base receiving address. That does not share a private
+key: this service has its own CDP key, admin token, process, state, receipts,
+metrics, and backup.
+
 `/readyz` fails closed if the admin token is missing or shorter than 32 bytes,
 if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed 20-byte address, or if either CDP
 API secret env is missing. Do not print these values.
@@ -298,6 +310,9 @@ npm test
 # pay-service only
 npm ci --prefix pay-service
 npm test --prefix pay-service
+
+# production deploy: exact committed release only; requires a serverctl lease
+pay-service/ops/deploy-production.sh <full-commit-sha>
 ```
 
 Do not run `npm run all`, do not rewrite `data/*`, `LEADERBOARD.md`, or

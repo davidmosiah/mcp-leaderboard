@@ -17,3 +17,8 @@ Follow `docs/PAY_SERVICE.md`. Tick by making the named test fail, then pass.
 13. [x] Root scorer isolation + host-boundary tests
 14. [x] Secret scan clean, `git diff --check` clean, full `npm test`
 15. [x] Draft PR only — no merge, deploy, payment, email, or maintainer issue
+16. [x] Owner explicitly authorized production activation on 2026-08-16
+17. [x] Version isolated systemd, Caddy, immutable deploy, and backup contracts
+18. [ ] Provision dedicated CDP/admin credentials and reuse only the public Base receive address
+19. [ ] Deploy under `serverctl` lease and `gatewayctl`; verify public live state
+20. [ ] Complete encrypted off-site roundtrip/restore receipt and full host audits

@@ -1,0 +1,42 @@
+[Unit]
+Description=Isolated MCP Score Improvement x402 pay-service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=mcp-scoreboard-pay
+Group=mcp-scoreboard-pay
+WorkingDirectory=/opt/mcp-scoreboard-pay/current/pay-service
+EnvironmentFile=/etc/mcp-scoreboard-pay/pay.env
+ExecStart=/usr/bin/node src/server.mjs
+Restart=on-failure
+RestartSec=5s
+TimeoutStartSec=45s
+TimeoutStopSec=30s
+UMask=0027
+StateDirectory=mcp-scoreboard-pay
+StateDirectoryMode=0750
+ReadWritePaths=/var/lib/mcp-scoreboard-pay
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+RestrictRealtime=true
+LockPersonality=true
+CapabilityBoundingSet=
+SystemCallArchitectures=native
+TasksMax=128
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target

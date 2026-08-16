@@ -1,0 +1,43 @@
+{
+  "unit": "mcp-scoreboard-pay",
+  "phase": "production",
+  "do_not_deploy": false,
+  "repository": "davidmosiah/mcp-leaderboard",
+  "release_commit_required": true,
+  "public_host": "pay.leaderboard.delx.ai",
+  "board_host": "leaderboard.delx.ai",
+  "listener": {
+    "host": "127.0.0.1",
+    "port": 8797
+  },
+  "runtime": {
+    "user": "mcp-scoreboard-pay",
+    "releases": "/opt/mcp-scoreboard-pay/releases",
+    "current": "/opt/mcp-scoreboard-pay/current",
+    "environment_file": "/etc/mcp-scoreboard-pay/pay.env"
+  },
+  "state": {
+    "path": "/var/lib/mcp-scoreboard-pay",
+    "single_writer": true
+  },
+  "backup": {
+    "id": "mcp-scoreboard-pay-state",
+    "encrypted_offsite": true,
+    "restore_receipt_required": true
+  },
+  "wallet": {
+    "policy": "Reuse the existing public Delx Base receiving address as PAY_SERVICE_PAY_TO; never copy or load a wallet private key."
+  },
+  "isolation": {
+    "own_package_json": true,
+    "own_lockfile": true,
+    "own_process": true,
+    "own_state_and_backup": true,
+    "own_admin_token": true,
+    "own_cdp_api_key": true,
+    "root_scorer_loads_pay_service": false,
+    "delx_commerce": false,
+    "api_delx_ai": false,
+    "commerce_delx_ai": false
+  }
+}
