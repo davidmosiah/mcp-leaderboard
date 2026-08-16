@@ -5,10 +5,13 @@ const ADDRESS = /^0x[a-fA-F0-9]{40}$/;
 
 export function loadConfig(env = process.env) {
   const adminToken = env.PAY_SERVICE_ADMIN_TOKEN || "";
+  const agentToken = env.PAY_SERVICE_AGENT_TOKEN || "";
   const payTo = env.PAY_SERVICE_PAY_TO || "";
   return {
     payTo,
     adminToken,
+    agentToken,
+    githubActor: env.PAY_SERVICE_GITHUB_ACTOR || "davidmosiah",
     cdpApiKeyId: env.CDP_API_KEY_ID || "",
     cdpApiKeySecret: env.CDP_API_KEY_SECRET || "",
     trustProxy: env.PAY_SERVICE_TRUSTED_PROXY === "1",
@@ -23,6 +26,8 @@ export function configErrors(config) {
   const errors = [];
   if (!ADDRESS.test(config.payTo)) errors.push("pay_to_invalid");
   if (!config.adminToken || Buffer.byteLength(config.adminToken) < 32) errors.push("admin_token_missing");
+  if (!config.agentToken || Buffer.byteLength(config.agentToken) < 32) errors.push("agent_token_missing");
+  if (config.agentToken && config.agentToken === config.adminToken) errors.push("agent_token_not_isolated");
   if (!config.cdpApiKeyId) errors.push("cdp_api_key_id_missing");
   if (!config.cdpApiKeySecret) errors.push("cdp_api_key_secret_missing");
   return errors;

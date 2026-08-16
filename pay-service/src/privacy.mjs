@@ -12,7 +12,7 @@ export function clientIp(req, { trustProxy = false } = {}) {
   return req.socket?.remoteAddress || "unknown";
 }
 
-export function adminAuthorized(req, token) {
+export function bearerAuthorized(req, token) {
   const header = String(req.headers.authorization || "");
   const provided = header.startsWith("Bearer ") ? header.slice(7) : "";
   const expected = Buffer.from(token || "");
@@ -24,6 +24,8 @@ export function adminAuthorized(req, token) {
   }
   return timingSafeEqual(given, expected);
 }
+
+export const adminAuthorized = bearerAuthorized;
 
 export function publicInquiry(row) {
   if (!row) return null;

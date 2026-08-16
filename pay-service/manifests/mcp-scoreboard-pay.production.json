@@ -16,6 +16,7 @@
     "current": "/opt/mcp-scoreboard-pay/current",
     "environment_file": "/etc/mcp-scoreboard-pay/pay.env",
     "credential_file": "/etc/mcp-scoreboard-pay/cdp-api-key.pem",
+    "agent_credential_file": "/etc/mcp-scoreboard-pay/agent-token",
     "credential_delivery": "systemd LoadCredential",
     "credential_format": "unencrypted PKCS8 PEM ES256"
   },

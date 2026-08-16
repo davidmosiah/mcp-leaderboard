@@ -9,6 +9,11 @@ import { createFileStore } from "./store.mjs";
 import { draftPrMatchesRepo, publicGithubPr, validateInquiry } from "./validation.mjs";
 import { RECONCILIATION_STATES } from "./constants.mjs";
 import { createX402HttpServer, hasPaymentSignature, isExplicitFinalSettleFailure, processOfficialPayment, sendX402Result } from "./x402-server.mjs";
+import { bearerAuthorized } from "./privacy.mjs";
+import { createPublicFitVerifier } from "./fit-verifier.mjs";
+import { createGithubPrVerifier } from "./github-pr-verifier.mjs";
+import { createAgentOperations } from "./agent-operations.mjs";
+import { handleScoreboardAgentMcp } from "./agent-mcp.mjs";
 
 function requireAdmin(config) {
   return (req, res, next) => {
@@ -19,10 +24,29 @@ function requireAdmin(config) {
   };
 }
 
+function requireAgent(config) {
+  return (req, res, next) => {
+    if (!bearerAuthorized(req, config.agentToken)) {
+      return res.status(401).json({ error: "unauthorized" });
+    }
+    return next();
+  };
+}
+
 export async function createApp(options = {}) {
   const config = loadConfig(options.env || process.env);
   const store = options.store || await createFileStore(config.dataDir, { payTo: config.payTo });
   const clock = options.clock || (() => Date.now());
+  const fitVerifier = options.fitVerifier || createPublicFitVerifier();
+  const githubPrVerifier = options.githubPrVerifier || createGithubPrVerifier({ actor: config.githubActor });
+  const agentOperations = createAgentOperations({
+    store,
+    clock,
+    publicBaseUrl: config.publicBaseUrl,
+    reservationTtlMs: config.reservationTtlMs,
+    fitVerifier,
+    githubPrVerifier
+  });
   const httpServer = options.httpServer || await createX402HttpServer({
     facilitator: options.facilitator,
     payTo: config.payTo,
@@ -48,6 +72,7 @@ export async function createApp(options = {}) {
       board: BOARD_HOST,
       offer: "/api/offer",
       openapi: "/openapi.json",
+      mcp: "/mcp",
       x402: "/.well-known/x402",
       independence: "Payment never buys rank, score, editorial treatment, security, merge, deploy, or publication."
     });
@@ -79,6 +104,16 @@ export async function createApp(options = {}) {
 
   app.get("/.well-known/x402", (_req, res) => {
     res.json(discoveryDocument({ payTo: config.payTo }));
+  });
+
+  app.post("/mcp", requireAgent(config), async (req, res) => {
+    await handleScoreboardAgentMcp(req, res, agentOperations);
+  });
+  app.get("/mcp", requireAgent(config), (_req, res) => {
+    res.status(405).set("allow", "POST").json({ error: "method_not_allowed" });
+  });
+  app.delete("/mcp", requireAgent(config), (_req, res) => {
+    res.status(405).set("allow", "POST").json({ error: "method_not_allowed" });
   });
 
   app.post("/api/inquiry", async (req, res) => {

@@ -15,11 +15,12 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `scripts/render-site.mjs` — generate the root, paginated rankings, one canonical HTML scorecard per scored server, sitemap and agent-readable indexes.
 - `scripts/submit-indexnow.mjs` — notify participating search engines after a verified public deployment; its 200/202 receipt proves receipt, never indexing.
 - `docs/GROK_CLOUD_REFRESH.md` — weekly Grok Cloud refresh and publish gates. The old GitHub Actions workflow is archived.
+- `docs/GROK_AUTONOMOUS_OPERATIONS.md` — least-privilege Grok operations, outreach and delivery contract for the isolated pay-service.
 - `docs/MONETIZATION_PILOT.md` — bounded paid-offer draft and hosting/independence gates; selling stays off until every activation gate is explicit.
 - `docs/WOULD_PAY_AGAIN_MODEL_ADAPTATION.md` — evidence behind the Scoreboard Weekly + remediation flywheel, including what was deliberately not copied.
 - `docs/DESIGN_SYSTEM.md` — Registry Observatory visual contract, responsive/accessibility gates and generated-versus-hand-owned boundaries.
 - `docs/PAY_SERVICE.md` — isolated MCP Score Improvement contract on `pay.leaderboard.delx.ai`. The entire vertical (code, x402, state, receipts, metrics) lives in this repo under `pay-service/`.
-- `pay-service/` — isolated Node service with its own `package.json` and lockfile. Never loaded by the root batch scorer. Future host unit name: `mcp-scoreboard-pay`.
+- `pay-service/` — isolated Node service with its own `package.json` and lockfile. Never loaded by the root batch scorer. Production host unit: `mcp-scoreboard-pay`.
 - `data/editions/` — canonical, deterministic MCP Scoreboard Weekly evidence. `render-site.mjs` owns the public issue HTML, JSON, RSS and index.
 - `templates/index.html` — hand-owned source for the public home page. `site/index.html` is generated from it.
 - `site/assets/site.css`, `site/assets/directory.css`, and `site/assets/site.js` — hand-owned shared presentation and progressive enhancement. `design/og-card.html` is the reproducible source for `site/assets/og-card.png`.

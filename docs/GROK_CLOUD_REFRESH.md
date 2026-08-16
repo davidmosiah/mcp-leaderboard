@@ -37,12 +37,11 @@ maintainer's Mac or the shared Hetzner host.
    the new timestamp and the same counts as the committed JSON.
 9. Run `npm run notify:indexnow` only after the public deployment is verified.
    Require an HTTP 200 or 202 receipt for the complete canonical URL set.
-10. If the edition has comparable changes, prepare at most five short outreach
-    drafts for maintainers whose public package changed materially. Each draft
-    must cite the exact public scorecard and evidence. Never send email, open a
-    GitHub issue, or post publicly from this routine. Any later owner-approved
-    send must use `support@delx.ai` or the server-side AgentMail identity, never
-    a personal mailbox.
+10. If the edition has comparable changes, perform the bounded AgentMail
+    outreach in `docs/GROK_AUTONOMOUS_OPERATIONS.md`: no more than five unique
+    first contacts per seven-day window, exact public evidence, no follow-up
+    without a reply, and never a personal mailbox. Do not open GitHub issues or
+    post publicly.
 11. Close or fail the run with a sanitized Delx continuity capsule under stable
     agent id `wb-delx-grok`. Include goal, done, next, blockers and do-not; never
     include environment values, tokens, file contents or private contacts.

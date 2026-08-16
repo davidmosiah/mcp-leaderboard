@@ -1,22 +1,24 @@
 # MCP Score Improvement — isolated pay-service
 
 Owner-canonical location: **`davidmosiah/mcp-leaderboard` only**.
-The entire MCP Score Improvement vertical — code, contract, x402, state,
-receipts, and metrics — lives in this repository under `pay-service/`.
+The entire MCP Score Improvement vertical — code, autonomous operations,
+contract, x402, state, receipts, and metrics — lives in this repository under
+`pay-service/`.
 
 This document is the executable plan and the operator contract. The repository
 implementation phase is complete. Production activation was authorized by the
 owner on 2026-08-16 and uses the versioned production unit, route, deployment
 script, isolated state/backup, and a dedicated CDP API key. Activation does not
-authorize self-buy, customer outreach, maintainer issues, refunds, or delivery
-without a real approved inquiry.
+authorize self-buy, ranking influence, wallet signing, automatic refunds,
+deployment in customer repositories, or private-repository access. The bounded
+autonomous operator contract is `docs/GROK_AUTONOMOUS_OPERATIONS.md`.
 
 ## Separation that must not be mixed
 
 | Surface | Host | Role |
 | --- | --- | --- |
 | Neutral Scoreboard | `https://leaderboard.delx.ai` | Static evidence. No paid CTA. |
-| Pay-service | `https://pay.leaderboard.delx.ai` | Isolated Node service. Inquiry, human fit, reservation, x402, receipts. |
+| Pay-service | `https://pay.leaderboard.delx.ai` | Isolated Node service. Inquiry, deterministic fit, reservation, x402, receipts. |
 | Legacy Commerce URL | `https://commerce.delx.ai/services/mcp-score-improvement` | **Superseded.** Cite only as a later migration leftover. Do not implement a redirect. Do not edit `delx-agent-commerce` or `api.delx.ai`. |
 
 Do **not** send files, routes, catalog, telemetry, or revenue to Delx Commerce.
@@ -33,11 +35,13 @@ manifest remains historical evidence and is not deployable.
 
 **MCP Score Improvement PR — 49 USDC on Base, capacity 5.**
 
-Business flow (document only; do not execute against customers):
+Business flow:
 
 1. Free inquiry (`public_repository_url`, `npm_package`, `scoreboard_url`, `reply_email`).
-2. Fit recommendation (human).
-3. David's human approval.
+2. Deterministic fit verification against live public GitHub, npm, and neutral
+   Scoreboard evidence.
+3. Grok calls the restricted qualification tool; it cannot override a failed
+   check.
 4. Reserve 1 of 5 **founding seats** (lifetime capacity, not concurrency).
 5. Official x402 v2 payment, exactly 49 USDC on Base.
 6. Public order + receipt with verifiable settlement.
@@ -51,10 +55,11 @@ publishes the package.
 Out of scope: private repos, credentials, custom infrastructure, security
 certification, production deployment, guaranteed score/rank, automatic refund.
 
-## Executable TDD sequence
+## Original implementation TDD receipt
 
-Work only on a branch off the validated `main` SHA. Do not rebase onto a
-surprise `origin/main` move.
+The initial draft used this sequence before production activation. New changes
+still follow failing-test-first and the full gates, but production deployment
+now follows the lease/audit runbook below.
 
 1. Re-fetch `origin/main`. Stop if HEAD moved.
 2. Write this contract and the isolation rules in `AGENTS.md` plus the
@@ -71,7 +76,7 @@ surprise `origin/main` move.
    - admin auth (timing-safe), refund receipt, state machine
    - root scorer isolation + host-boundary tests
 5. Implement only enough to pass the observed failure.
-6. Run gates. Keep the PR **draft**. Never merge, never deploy.
+6. Run gates. The original implementation stayed draft until owner approval.
 
 ## HTTP contract
 
@@ -87,7 +92,7 @@ Public host: `https://pay.leaderboard.delx.ai`
 | `GET` | `/.well-known/x402` | public | Host-local x402 v2 discovery document. |
 | `POST` | `/api/inquiry` | public | Strict validation. Idempotent. Never accepts secrets or private repos. |
 | `GET` | `/api/inquiry/:code` | public | Sanitized state. No email/IP. |
-| `POST` | `/api/fit/approve` | Bearer | Human fit required. Creates an unguessable reservation only after approval. |
+| `POST` | `/api/fit/approve` | Admin Bearer | Legacy break-glass fit path. Not available to Grok. |
 | `GET` | `/api/reservation/:code` | public | Sanitized state. `pay_route` only for an approved, unexpired reservation. |
 | `POST` | `/api/pay/:reservation` | x402 v2 | Official receive path. 402 only for an approved live reservation that still needs payment. |
 | `GET` | `/api/order/:id` | public | Sanitized order + verifiable settlement. No private contact. |
@@ -100,6 +105,7 @@ Public host: `https://pay.leaderboard.delx.ai`
 | `POST` | `/api/admin/cancel` | Bearer | Explicit `cancelled` only before payment. Validates conflicts before any mutation. Pre-payment cancel frees the seat. |
 | `POST` | `/api/admin/refund` | Bearer | Without on-chain proof: non-terminal `refund_pending` + `refund_request` receipt. With coherent transfer proof: terminal `refunded` + `refund` receipt. The service never broadcasts a chain refund. |
 | `POST` | `/api/admin/reconcile` | Bearer | Auditable resolution of `payment_reconciliation_required`. `decision: paid` requires a transaction reference; `decision: release` frees the seat. Never retries settle. |
+| `POST` | `/mcp` | Agent Bearer | Stateless Streamable HTTP MCP. Exactly five bounded tools; no admin, wallet, refund, reconcile, cancel, deploy, merge, or publish capability. |
 
 ### Inquiry body
 
@@ -132,7 +138,7 @@ arbitrary client-supplied header.
 inquiry_received
         │
         ▼
-payment_pending   ← reservation created only after human approve
+payment_pending   ← reservation created only after deterministic public fit
         │
         ▼
       paid        ← only after official facilitator verify + settle
@@ -287,6 +293,8 @@ SDK imports PKCS8. Provisioning must convert it with `openssl pkcs8 -topk8
 | --- | --- | --- |
 | `PAY_SERVICE_PAY_TO` | no (public address) | x402 `payTo` on Base. Never a wallet secret. |
 | `PAY_SERVICE_ADMIN_TOKEN` | yes | Bearer for fit/admin. Generate at deploy. Never commit. |
+| `PAY_SERVICE_AGENT_TOKEN` | yes | Separate least-privilege MCP Bearer. Loaded from `/etc/mcp-scoreboard-pay/agent-token`; never place it in `pay.env`, a repo, prompt, log, or artifact. |
+| `PAY_SERVICE_GITHUB_ACTOR` | no | GitHub account required on live matching draft PR proof. Defaults to `davidmosiah`. |
 | `CDP_API_KEY_ID` | yes | CDP JWT key id for authenticated facilitator `verify`/`settle`. Never commit. |
 | `CDP_API_KEY_SECRET` | yes | CDP JWT key secret. Never commit. Never echo from `/readyz`. |
 | `PAY_SERVICE_TRUSTED_PROXY` | no | Set to `1` only behind an edge that overwrites `X-Forwarded-For`. Default: ignore that header. |
@@ -301,9 +309,10 @@ the existing public Delx Base receiving address. That does not share a private
 key: this service has its own CDP key, admin token, process, state, receipts,
 metrics, and backup.
 
-`/readyz` fails closed if the admin token is missing or shorter than 32 bytes,
-if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed 20-byte address, or if either CDP
-API secret env is missing. Do not print these values.
+`/readyz` fails closed if either Bearer is missing, shorter than 32 bytes, or
+shared between admin and agent; if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed
+20-byte address; or if either CDP API secret env is missing. Do not print these
+values.
 
 ## Commands
 

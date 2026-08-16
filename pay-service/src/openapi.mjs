@@ -43,11 +43,20 @@ export function openApiDocument() {
       },
       "/api/receipt/{id}": {
         get: { summary: "Sanitized receipt", parameters: [{ name: "id", in: "path", required: true, schema: { type: "string" } }], responses: { 200: { description: "Receipt" } } }
+      },
+      "/mcp": {
+        post: {
+          summary: "Restricted Grok operations over MCP Streamable HTTP",
+          description: "Exactly five least-privilege tools. No admin, refund, reconcile, wallet, deploy, merge, or publish capability.",
+          security: [{ agentBearerAuth: [] }],
+          responses: { 200: { description: "MCP JSON-RPC response" }, 401: { description: "Unauthorized" } }
+        }
       }
     },
     components: {
       securitySchemes: {
-        bearerAuth: { type: "http", scheme: "bearer", description: "Runtime admin token from env. No production secret is stored in the repository." }
+        bearerAuth: { type: "http", scheme: "bearer", description: "Runtime admin token from env. No production secret is stored in the repository." },
+        agentBearerAuth: { type: "http", scheme: "bearer", description: "Separate least-privilege agent credential loaded by systemd. It is rejected by admin routes." }
       }
     }
   };

@@ -13,6 +13,7 @@ test("GET / identifies the isolated pay host and never Delx Commerce", async () 
   assert.equal(res.json.board, "https://leaderboard.delx.ai");
   assert.equal(res.json.offer, "/api/offer");
   assert.equal(res.json.openapi, "/openapi.json");
+  assert.equal(res.json.mcp, "/mcp");
   assert.doesNotMatch(JSON.stringify(res.json), /commerce\.delx\.ai|api\.delx\.ai/);
 });
 
@@ -51,6 +52,8 @@ test("OpenAPI and x402 discovery are on the pay host", async () => {
   assert.equal(openapi.json.openapi, "3.1.0");
   assert.equal(openapi.json.servers[0].url, "https://pay.leaderboard.delx.ai");
   assert.ok(openapi.json.paths["/api/pay/{reservation}"]);
+  assert.ok(openapi.json.paths["/mcp"]);
+  assert.ok(openapi.json.components.securitySchemes.agentBearerAuth);
   assert.doesNotMatch(JSON.stringify(openapi.json), /commerce\.delx\.ai|api\.delx\.ai/);
 
   const discovery = await request(service, "/.well-known/x402");

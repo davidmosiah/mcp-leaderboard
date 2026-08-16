@@ -5,10 +5,9 @@ neutral publication stays on the existing non-commercial Scoreboard host.
 The commercial offer is **not** implemented under Delx Commerce. An earlier
 idea that put the human offer on `commerce.delx.ai` is superseded. The entire
 MCP Score Improvement vertical belongs only in `davidmosiah/mcp-leaderboard`
-under `pay-service/`, to be served later from `pay.leaderboard.delx.ai`.
-It becomes active only after the isolated unit is deployed and every
-activation gate in `docs/PAY_SERVICE.md` is explicit. This phase is code,
-tests, runbook, and versioned manifests — no deploy and no selling.
+under `pay-service/`, served from `pay.leaderboard.delx.ai`. Production was
+activated on 2026-08-16; the autonomous Grok authority boundary is
+`docs/GROK_AUTONOMOUS_OPERATIONS.md`.
 
 ## One offer
 
@@ -61,9 +60,11 @@ deliverable is narrower and makes no security or certification claim.
    implement a redirect and do not edit the other repository.
 3. Accept a machine inquiry on the pay-service (`POST /api/inquiry`) containing
    only the public repository, npm package, scorecard URL and reply email.
-   Never transmit repository credentials. Human reply identity remains
-   `support@delx.ai` when outreach is later approved.
-4. Take payment only after David's human fit approval reserves 1 of 5 slots.
+   Never transmit repository credentials. Outreach and replies use the
+   connected server-side AgentMail identity, never a personal mailbox.
+4. Take payment only after the restricted Grok MCP verifies live public GitHub,
+   npm, and Scoreboard identity and reserves 1 of 5 slots. A failed check cannot
+   be overridden by the agent.
    Settlement is official x402 v2 (49 USDC on Base) on the pay-service, outside
    the ranking engine and outside `api.delx.ai`.
 5. Measure qualified inquiries and verified external settlement on the

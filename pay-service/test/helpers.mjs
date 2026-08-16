@@ -120,12 +120,15 @@ export async function payReservation(service, code, { signature = "0xvalidsettle
 export async function startService(overrides = {}) {
   const clockState = { now: overrides.now || Date.parse("2026-08-16T12:00:00.000Z") };
   const token = overrides.adminToken || adminToken();
+  const agentToken = overrides.agentToken || adminToken();
   const facilitator = overrides.facilitator || createMockFacilitator();
   const dataDir = overrides.dataDir || mkdtempSync(join(tmpdir(), "mcp-pay-service-"));
   const app = await createApp({
     env: {
       PAY_SERVICE_PAY_TO: TEST_PAY_TO,
       PAY_SERVICE_ADMIN_TOKEN: token,
+      PAY_SERVICE_AGENT_TOKEN: agentToken,
+      PAY_SERVICE_GITHUB_ACTOR: "davidmosiah",
       PAY_SERVICE_PUBLIC_BASE_URL: "https://pay.leaderboard.delx.ai",
       PAY_SERVICE_DATA_DIR: dataDir,
       PAY_SERVICE_RESERVATION_TTL_SECONDS: String(overrides.ttlSeconds || 86400),
@@ -136,6 +139,8 @@ export async function startService(overrides = {}) {
     },
     facilitator,
     clock: () => clockState.now,
+    fitVerifier: overrides.fitVerifier,
+    githubPrVerifier: overrides.githubPrVerifier,
     initializeX402: overrides.initializeX402 !== false
   });
   const server = createServer(app);
@@ -147,6 +152,7 @@ export async function startService(overrides = {}) {
     port,
     base: `http://127.0.0.1:${port}`,
     token,
+    agentToken,
     facilitator,
     dataDir,
     clockState,
