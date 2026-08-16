@@ -211,9 +211,20 @@ A second `PAYMENT-SIGNATURE` must not call settle. Only an explicitly final
 rejected verify or an explicitly final settle failure (`invalid_signature`,
 `invalid_scheme`, `verification_failed`, `unsupported_payload_type`,
 `kyt_risk_detected`, and no transaction) may return the reservation to
-`payment_pending`. Admin `POST /api/admin/reconcile` (`decision: paid|release`)
-is the auditable path that records `paid` from a transaction reference or
-releases the seat.
+`payment_pending`.
+
+On store load, any `payment_pending` reservation with a `pay_claim` and no
+order is fail-closed to `payment_reconciliation_required` and an auditable
+`startup_orphan_claim` event is persisted **before** the process serves
+traffic. Claims are never auto-released. If `createOrder` persistence fails
+after settle, the handler tries to mark reconciliation; if that persist also
+fails, the process exits so the next startup can normalize the orphan claim.
+
+Admin `POST /api/admin/reconcile` (`decision: paid|release`) is the auditable
+path. `paid` requires a contract-valid settlement before creating an order:
+transaction `0x`+64 hex, network `eip155:8453`, amount `49000000`, asset USDC
+on Base, `pay_to` equal to configured `PAY_SERVICE_PAY_TO`, and a 0x payer
+address. Invalid settlement returns 400 and must not create an order.
 
 This phase never calls a live facilitator for a real transfer.
 

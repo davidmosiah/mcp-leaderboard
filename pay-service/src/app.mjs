@@ -21,7 +21,7 @@ function requireAdmin(config) {
 
 export async function createApp(options = {}) {
   const config = loadConfig(options.env || process.env);
-  const store = options.store || await createFileStore(config.dataDir);
+  const store = options.store || await createFileStore(config.dataDir, { payTo: config.payTo });
   const clock = options.clock || (() => Date.now());
   const httpServer = options.httpServer || await createX402HttpServer({
     facilitator: options.facilitator,
@@ -217,19 +217,41 @@ export async function createApp(options = {}) {
       return res.status(409).json({ error: "reconciliation_required", state: "payment_reconciliation_required" });
     }
 
-    const created = await store.createOrder({
-      reservationCode: reservation.reservation_code,
-      now,
-      settlement: {
-        network: settleResult.network,
-        transaction: settleResult.transaction,
-        amount: settleResult.amount || result.paymentRequirements?.amount,
-        asset: result.paymentRequirements?.asset,
-        pay_to: result.paymentRequirements?.payTo,
-        payer: settleResult.payer || null,
-        scheme: result.paymentRequirements?.scheme
+    let created;
+    try {
+      created = await store.createOrder({
+        reservationCode: reservation.reservation_code,
+        now,
+        settlement: {
+          network: settleResult.network,
+          transaction: settleResult.transaction,
+          amount: settleResult.amount || result.paymentRequirements?.amount,
+          asset: result.paymentRequirements?.asset,
+          pay_to: result.paymentRequirements?.payTo,
+          payer: settleResult.payer || null,
+          scheme: result.paymentRequirements?.scheme
+        }
+      });
+    } catch (error) {
+      try {
+        await store.markReconciliationRequired({
+          reservationCode: reservation.reservation_code,
+          now,
+          reason: error.message || "create_order_persist_failed"
+        });
+        return res.status(409).json({
+          error: "reconciliation_required",
+          state: "payment_reconciliation_required"
+        });
+      } catch (persistError) {
+        log.warn("fatal_persist_after_settle", { message: persistError?.message || "persist_failed" });
+        if (typeof options.onFatalPersist === "function") {
+          await options.onFatalPersist(persistError);
+          return res.status(500).json({ error: "internal_error" });
+        }
+        process.exit(1);
       }
-    });
+    }
     if (created.error) {
       await store.markReconciliationRequired({
         reservationCode: reservation.reservation_code,
@@ -361,7 +383,9 @@ export async function createApp(options = {}) {
       note: req.body?.note
     });
     if (result.error === "not_found") return res.status(404).json({ error: "not_found" });
-    if (result.error === "invalid_decision") return res.status(400).json({ error: "invalid_decision" });
+    if (result.error === "invalid_decision" || result.error === "settlement_invalid") {
+      return res.status(400).json({ error: result.error });
+    }
     if (result.error) return res.status(409).json({ error: result.error, state: result.state });
     if (result.decision === "paid") {
       return res.status(201).json({

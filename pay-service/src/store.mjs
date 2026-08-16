@@ -5,6 +5,7 @@ import { join } from "node:path";
 import { CAPACITY, RATE_LIMIT_MAX, RATE_LIMIT_WINDOW_MS, RECONCILIATION_STATES } from "./constants.mjs";
 import { unguessableCode } from "./ids.mjs";
 import { publicOrder, publicReceipt } from "./privacy.mjs";
+import { validateReconcileSettlement } from "./validation.mjs";
 
 const POST_PAYMENT_STATES = new Set([
   "paid",
@@ -109,7 +110,7 @@ async function releaseInstanceLock(lockPath) {
   }
 }
 
-export async function createFileStore(dataDir) {
+export async function createFileStore(dataDir, { payTo } = {}) {
   const privateDir = join(dataDir, "private");
   const publicDir = join(dataDir, "public");
   const statePath = join(privateDir, "state.json");
@@ -133,6 +134,13 @@ export async function createFileStore(dataDir) {
       throw error;
     }
   }
+
+  if (!state.reservations) state.reservations = {};
+  if (!state.orders) state.orders = {};
+  if (!state.inquiries) state.inquiries = {};
+  if (!Array.isArray(state.reconciliations)) state.reconciliations = [];
+  if (!state.metrics) state.metrics = emptyState().metrics;
+  if (typeof state.metrics.reconciliations !== "number") state.metrics.reconciliations = 0;
 
   let chain = Promise.resolve();
   const withLock = (fn) => {
@@ -162,9 +170,46 @@ export async function createFileStore(dataDir) {
     state = next;
   }
 
+  const applyReconciliationLocked = (reservation, now, reason, type = "settlement_unknown") => {
+    reservation.state = "payment_reconciliation_required";
+    reservation.settlement_unknown = true;
+    reservation.reconciliation_reason = reason;
+    reservation.updated_at = new Date(now).toISOString();
+    const inquiry = state.inquiries[reservation.inquiry_code];
+    if (inquiry) inquiry.state = "payment_reconciliation_required";
+    state.reconciliations.push({
+      id: unguessableCode(),
+      type,
+      reservation_code: reservation.reservation_code,
+      created_at: new Date(now).toISOString(),
+      reason
+    });
+    state.metrics.reconciliations += 1;
+  };
+
+  let orphanClaims = 0;
+  for (const reservation of Object.values(state.reservations)) {
+    const hasClaim = Boolean(reservation.pay_claim?.claimed_at);
+    const hasOrder = Boolean(reservation.order_id && state.orders[reservation.order_id]);
+    if (reservation.state === "payment_pending" && hasClaim && !hasOrder) {
+      applyReconciliationLocked(
+        reservation,
+        Date.now(),
+        "orphan_pay_claim_on_startup",
+        "startup_orphan_claim"
+      );
+      orphanClaims += 1;
+    }
+  }
+  if (orphanClaims) await persist(state);
+
   const expireLocked = (now) => {
     for (const reservation of Object.values(state.reservations)) {
-      if (reservation.state === "payment_pending" && now >= Date.parse(reservation.expires_at)) {
+      if (
+        reservation.state === "payment_pending"
+        && !reservation.pay_claim
+        && now >= Date.parse(reservation.expires_at)
+      ) {
         reservation.state = "reservation_expired";
         const inquiry = state.inquiries[reservation.inquiry_code];
         if (inquiry && inquiry.state === "payment_pending") inquiry.state = "reservation_expired";
@@ -396,20 +441,12 @@ export async function createFileStore(dataDir) {
         if (reservation.order_id && state.orders[reservation.order_id]) {
           return { order: state.orders[reservation.order_id] };
         }
-        reservation.state = "payment_reconciliation_required";
-        reservation.settlement_unknown = true;
-        reservation.reconciliation_reason = reason || "settlement_interrupted";
-        reservation.updated_at = new Date(now).toISOString();
-        const inquiry = state.inquiries[reservation.inquiry_code];
-        if (inquiry) inquiry.state = "payment_reconciliation_required";
-        state.reconciliations.push({
-          id: unguessableCode(),
-          type: "settlement_unknown",
-          reservation_code: reservationCode,
-          created_at: new Date(now).toISOString(),
-          reason: reason || "settlement_interrupted"
-        });
-        state.metrics.reconciliations += 1;
+        applyReconciliationLocked(
+          reservation,
+          now,
+          reason || "settlement_interrupted",
+          "settlement_unknown"
+        );
         await persist(state);
         return { reservation };
       });
@@ -422,6 +459,8 @@ export async function createFileStore(dataDir) {
           return { error: "conflict", state: reservation.state };
         }
         if (decision === "paid") {
+          const valid = validateReconcileSettlement(settlement, payTo);
+          if (valid.error) return { error: valid.error };
           const created = createOrderLocked({ reservationCode, settlement, now });
           if (created.error) return created;
           state.reconciliations.push({

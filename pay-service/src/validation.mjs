@@ -1,4 +1,7 @@
-import { BOARD_HOST, SECRET_KEY } from "./constants.mjs";
+import { BOARD_HOST, NETWORK, PRICE_ATOMIC, SECRET_KEY, USDC_BASE } from "./constants.mjs";
+
+const ADDRESS = /^0x[a-fA-F0-9]{40}$/;
+const TX = /^0x[0-9a-fA-F]{64}$/;
 
 const REPO = /^https:\/\/github\.com\/[A-Za-z0-9](?:[A-Za-z0-9]|-(?=[A-Za-z0-9])){0,38}\/[A-Za-z0-9._-]+\/?$/;
 const NPM = /^(?:@[a-z0-9-~][a-z0-9-._~]*\/)?[a-z0-9-~][a-z0-9-._~]*$/;
@@ -61,4 +64,21 @@ export function draftPrMatchesRepo(draftPrUrl, publicRepositoryUrl) {
   const draft = githubOwnerRepo(draftPrUrl);
   const purchased = githubOwnerRepo(publicRepositoryUrl);
   return Boolean(draft && purchased && draft === purchased);
+}
+
+export function validateReconcileSettlement(settlement, payTo) {
+  if (!settlement || typeof settlement !== "object" || Array.isArray(settlement)) {
+    return { error: "settlement_invalid" };
+  }
+  if (!TX.test(String(settlement.transaction || ""))) return { error: "settlement_invalid" };
+  if (String(settlement.network || "") !== NETWORK) return { error: "settlement_invalid" };
+  if (String(settlement.amount || "") !== PRICE_ATOMIC) return { error: "settlement_invalid" };
+  if (String(settlement.asset || "").toLowerCase() !== USDC_BASE.toLowerCase()) {
+    return { error: "settlement_invalid" };
+  }
+  if (String(settlement.pay_to || "").toLowerCase() !== String(payTo || "").toLowerCase()) {
+    return { error: "settlement_invalid" };
+  }
+  if (!ADDRESS.test(String(settlement.payer || ""))) return { error: "settlement_invalid" };
+  return { ok: true };
 }
