@@ -22,7 +22,10 @@ mkdir -p "$work/release/pay-service"
 git -C "$repo_root" archive "$commit" pay-service | tar -xf - -C "$work/release"
 cp "$repo_root/pay-service/ops/mcp-scoreboard-pay.service" "$work/"
 tar -C "$work/release" -czf "$work/${service}-${commit}.tar.gz" pay-service
-sha256sum "$work/${service}-${commit}.tar.gz" > "$work/${service}-${commit}.sha256"
+(
+  cd "$work"
+  sha256sum "${service}-${commit}.tar.gz" > "${service}-${commit}.sha256"
+)
 
 ssh_args=(-i "$identity" -o BatchMode=yes -o IdentitiesOnly=yes)
 scp "${ssh_args[@]}" \

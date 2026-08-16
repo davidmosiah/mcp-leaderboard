@@ -42,6 +42,7 @@ test("Caddy route owns only pay.leaderboard.delx.ai and overwrites forwarded IP"
 test("deploy script pins a commit, verifies dependencies, and never embeds secrets", () => {
   const deploy = read("pay-service/ops/deploy-production.sh");
   assert.match(deploy, /git(?: -C "[^"]+")? archive/);
+  assert.match(deploy, /cd "\$work".*sha256sum "\$\{service\}-\$\{commit\}\.tar\.gz"/s);
   assert.match(deploy, /npm ci --omit=dev --ignore-scripts/);
   assert.match(deploy, /npm audit --omit=dev --audit-level=high/);
   assert.match(deploy, /chown root:\"\$service\" \/etc\/mcp-scoreboard-pay\/pay\.env/);
