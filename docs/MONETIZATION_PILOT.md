@@ -1,9 +1,14 @@
 # Monetization pilot — decision draft
 
-Date prepared: 2026-08-12. Implementation status: the neutral publication is
-kept on the existing non-commercial Scoreboard host; the commercial offer is
-implemented separately under Delx Commerce. It becomes active only after both
-production surfaces are verified from their pushed commits.
+Date prepared: 2026-08-12. Updated: 2026-08-16. Implementation status: the
+neutral publication stays on the existing non-commercial Scoreboard host.
+The commercial offer is **not** implemented under Delx Commerce. An earlier
+idea that put the human offer on `commerce.delx.ai` is superseded. The entire
+MCP Score Improvement vertical belongs only in `davidmosiah/mcp-leaderboard`
+under `pay-service/`, to be served later from `pay.leaderboard.delx.ai`.
+It becomes active only after the isolated unit is deployed and every
+activation gate in `docs/PAY_SERVICE.md` is explicit. This phase is code,
+tests, runbook, and versioned manifests — no deploy and no selling.
 
 ## One offer
 
@@ -50,15 +55,19 @@ deliverable is narrower and makes no security or certification claim.
    `leaderboard.delx.ai/issues/`. It contains no paid CTA and never sells
    ranking, score, editorial treatment or refresh priority.
 2. Publish the separately governed offer at
-   `commerce.delx.ai/services/mcp-score-improvement`, with the same scope,
-   price, capacity and exclusions in human HTML and machine JSON.
-3. Use `support@delx.ai` for a prefilled inquiry containing only the public npm
-   package and scorecard URL. Never transmit repository credentials through the
-   form or URL.
-4. Invoice only after confirming that the public repository and requested work
-   fit the offer. Payment handling remains outside the ranking engine.
-5. Measure scorecard views, `/improve` views and qualified inquiries. Do not
-   claim impressions before the analytics baseline exists.
+   `pay.leaderboard.delx.ai` (`GET /api/offer`, OpenAPI, x402 discovery), with
+   the same scope, price, capacity and exclusions. The old Commerce URL
+   `commerce.delx.ai/services/mcp-score-improvement` is legacy only — do not
+   implement a redirect and do not edit the other repository.
+3. Accept a machine inquiry on the pay-service (`POST /api/inquiry`) containing
+   only the public repository, npm package, scorecard URL and reply email.
+   Never transmit repository credentials. Human reply identity remains
+   `support@delx.ai` when outreach is later approved.
+4. Take payment only after David's human fit approval reserves 1 of 5 slots.
+   Settlement is official x402 v2 (49 USDC on Base) on the pay-service, outside
+   the ranking engine and outside `api.delx.ai`.
+5. Measure qualified inquiries and verified external settlement on the
+   pay-service. Do not claim impressions before the analytics baseline exists.
 
 ## Gates and verdict
 
@@ -66,9 +75,11 @@ deliverable is narrower and makes no security or certification claim.
   includes its anonymous, cookie-free page-view script.
 - The current Scoreboard Vercel account reports `billing.plan = hobby`, so the
   Scoreboard remains neutral and free. No paid CTA is rendered there.
-- The commercial offer lives on the existing Delx Commerce production surface
-  and therefore does not require Vercel Pro, new DNS, a new service, GitHub
-  Actions, or compute on the maintainer's Mac.
+- The commercial offer lives in this repository's isolated `pay-service/`
+  (future host unit `mcp-scoreboard-pay` on `pay.leaderboard.delx.ai`). It
+  does not require Vercel Pro on the Scoreboard, Delx Commerce, `api.delx.ai`,
+  GitHub Actions, or compute on the maintainer's Mac. Deploy is a later
+  operator-coordinated step, not this phase.
 - Proposed measurement window: 14 days after activation.
 - Pass: at least one external paid order, or two qualified external inquiries.
 - Fail: zero qualified inquiries; remove the CTA and return to maintenance.

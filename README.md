@@ -64,6 +64,10 @@ npm run run -- --targets whoop-mcp-unofficial,astral-mcp
 
 Methodology issues and corpus additions welcome via [issues](https://github.com/davidmosiah/mcp-leaderboard/issues).
 
+## Isolated score-improvement service
+
+The public board stays a neutral evidence publication. A separately process-isolated pay-service, documented in [`docs/PAY_SERVICE.md`](docs/PAY_SERVICE.md), will accept inquiries and x402 settlement on `pay.leaderboard.delx.ai`. It is not loaded by the scoring VM, does not change rank or methodology, and is not hosted on Delx Commerce (`commerce.delx.ai` is a superseded leftover only).
+
 ## License
 
 MIT — the engine ([mcp-scorecard](https://github.com/davidmosiah/mcp-scorecard)) and this leaderboard are both open source. Built by [David Mosiah](https://github.com/davidmosiah).

@@ -26,7 +26,9 @@ gradient card.
 - Weekly, scorecard and ranking surfaces share the same typography, header and
   evidence colors.
 - Scoreboard pages stay neutral: no paid CTA, featured position or commercial
-  ranking treatment. The separate Commerce offer does not influence this UI.
+  ranking treatment. The isolated pay-service on `pay.leaderboard.delx.ai`
+  does not influence this UI. Do not deep-link a buy button from generated
+  Scoreboard HTML.
 - Unreachable remains visually and semantically separate from a low score.
 - The readiness/correctness/security limitation stays visible.
 - The public pages keep analytics and typography CSP-compatible: the Vercel

@@ -78,7 +78,10 @@ maintainer's Mac or the shared Hetzner host.
   canonical scorecard pages;
 - diff contains only approved generated outputs and deliberate dependency or
   runbook updates;
-- secret scan is clean.
+- secret scan is clean;
+- pay-service runtime env (`PAY_SERVICE_*`) is unset for every npm/scorer
+  command; the refresh must not install `pay-service/` dependencies, boot
+  `pay.leaderboard.delx.ai`, or rewrite pay-service state.
 
 After deployment, verify the root, a scoped-package scorecard, an unscoped
 scorecard, a ranking page, the dated weekly edition, issue index, latest JSON,

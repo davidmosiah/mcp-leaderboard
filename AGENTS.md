@@ -18,6 +18,8 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `docs/MONETIZATION_PILOT.md` — bounded paid-offer draft and hosting/independence gates; selling stays off until every activation gate is explicit.
 - `docs/WOULD_PAY_AGAIN_MODEL_ADAPTATION.md` — evidence behind the Scoreboard Weekly + remediation flywheel, including what was deliberately not copied.
 - `docs/DESIGN_SYSTEM.md` — Registry Observatory visual contract, responsive/accessibility gates and generated-versus-hand-owned boundaries.
+- `docs/PAY_SERVICE.md` — isolated MCP Score Improvement contract on `pay.leaderboard.delx.ai`. The entire vertical (code, x402, state, receipts, metrics) lives in this repo under `pay-service/`.
+- `pay-service/` — isolated Node service with its own `package.json` and lockfile. Never loaded by the root batch scorer. Future host unit name: `mcp-scoreboard-pay`.
 - `data/editions/` — canonical, deterministic MCP Scoreboard Weekly evidence. `render-site.mjs` owns the public issue HTML, JSON, RSS and index.
 - `templates/index.html` — hand-owned source for the public home page. `site/index.html` is generated from it.
 - `site/assets/site.css`, `site/assets/directory.css`, and `site/assets/site.js` — hand-owned shared presentation and progressive enhancement. `design/og-card.html` is the reproducible source for `site/assets/og-card.png`.
@@ -27,6 +29,7 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - `npm ci`
 - `npm run all` (corpus → run → render)
 - Bounded: `npm run run -- --limit 30` or `--targets a,b`
+- Pay-service (isolated): `npm ci --prefix pay-service` and `npm test --prefix pay-service`. Root `npm test` orchestrates those tests plus the scorer-isolation boundary. The score VM must never receive `PAY_SERVICE_*` env.
 
 ## Rules
 
@@ -38,3 +41,6 @@ this repo only builds the corpus, batch-runs the engine, and renders the board.
 - Keep it fair: auth-gated servers are `unreachable`, not low-scored. Don't penalize what can't be probed.
 - Scoring logic lives in mcp-scorecard, not here. To change what's measured, change the engine.
 - Weekly directional claims require the same recorded scorecard version and the same npm package version in both runs. Otherwise publish a baseline/methodology-change edition and suppress improvement/decline claims.
+- Keep the Scoreboard host neutral: `leaderboard.delx.ai` has no paid CTA. The human offer is **not** on `commerce.delx.ai` (legacy URL only; do not redirect and do not edit Delx Commerce). Payment lives only at `pay.leaderboard.delx.ai`.
+- Do not load `pay-service/` runtime credentials or dependencies into corpus/score/render scripts. Do not send catalog, telemetry, or revenue to `api.delx.ai` or Delx Commerce.
+- Do not hand-edit generated board outputs while working on pay-service. Change `pay-service/` or the isolation tests instead.
