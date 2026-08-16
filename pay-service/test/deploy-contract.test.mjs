@@ -23,6 +23,8 @@ test("systemd unit runs as a dedicated user with a private state directory", () 
   assert.match(unit, /^User=mcp-scoreboard-pay$/m);
   assert.match(unit, /^Group=mcp-scoreboard-pay$/m);
   assert.match(unit, /^EnvironmentFile=\/etc\/mcp-scoreboard-pay\/pay\.env$/m);
+  assert.match(unit, /^LoadCredential=cdp-api-key\.pem:\/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem$/m);
+  assert.match(unit, /CDP_API_KEY_SECRET=.*CREDENTIALS_DIRECTORY\/cdp-api-key\.pem/);
   assert.match(unit, /^WorkingDirectory=\/opt\/mcp-scoreboard-pay\/current\/pay-service$/m);
   assert.match(unit, /^ReadWritePaths=\/var\/lib\/mcp-scoreboard-pay$/m);
   assert.match(unit, /^NoNewPrivileges=true$/m);
@@ -44,6 +46,7 @@ test("deploy script pins a commit, verifies dependencies, and never embeds secre
   assert.match(deploy, /npm audit --omit=dev --audit-level=high/);
   assert.match(deploy, /chown root:\"\$service\" \/etc\/mcp-scoreboard-pay\/pay\.env/);
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/pay\.env/);
+  assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem/);
   assert.match(deploy, /systemctl restart mcp-scoreboard-pay\.service/);
   assert.match(deploy, /curl -fsS http:\/\/127\.0\.0\.1:8797\/readyz/);
   assert.doesNotMatch(deploy, /CDP_API_KEY_SECRET=|PAY_SERVICE_ADMIN_TOKEN=/);

@@ -276,7 +276,9 @@ Unguessable codes: 32 cryptographically random bytes, base64url.
 
 ## Runtime configuration
 
-No production secret is saved in this repository.
+No production secret is saved in this repository. The CDP PEM is stored as
+`/etc/mcp-scoreboard-pay/cdp-api-key.pem` and delivered through systemd
+`LoadCredential`; it is not flattened into the shared environment file.
 
 | Variable | Secret? | Purpose |
 | --- | --- | --- |

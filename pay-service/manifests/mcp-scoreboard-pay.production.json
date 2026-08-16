@@ -14,7 +14,9 @@
     "user": "mcp-scoreboard-pay",
     "releases": "/opt/mcp-scoreboard-pay/releases",
     "current": "/opt/mcp-scoreboard-pay/current",
-    "environment_file": "/etc/mcp-scoreboard-pay/pay.env"
+    "environment_file": "/etc/mcp-scoreboard-pay/pay.env",
+    "credential_file": "/etc/mcp-scoreboard-pay/cdp-api-key.pem",
+    "credential_delivery": "systemd LoadCredential"
   },
   "state": {
     "path": "/var/lib/mcp-scoreboard-pay",

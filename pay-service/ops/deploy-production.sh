@@ -45,6 +45,7 @@ previous=""
 [ -s "$archive" ] && [ -s "$checksum" ] || { echo "missing release artifact" >&2; exit 1; }
 (cd /var/tmp && sha256sum -c "$(basename "$checksum")")
 [ -s /etc/mcp-scoreboard-pay/pay.env ] || { echo "missing production environment" >&2; exit 1; }
+[ -s /etc/mcp-scoreboard-pay/cdp-api-key.pem ] || { echo "missing CDP credential" >&2; exit 1; }
 
 if ! id -u "$service" >/dev/null 2>&1; then
   useradd --system --home-dir "/var/lib/$service" --shell /usr/sbin/nologin "$service"
@@ -54,6 +55,8 @@ install -d -o "$service" -g "$service" -m 0750 "/var/lib/$service"
 install -d -o root -g "$service" -m 0750 /etc/mcp-scoreboard-pay
 chown root:"$service" /etc/mcp-scoreboard-pay/pay.env
 chmod 0640 /etc/mcp-scoreboard-pay/pay.env
+chown root:"$service" /etc/mcp-scoreboard-pay/cdp-api-key.pem
+chmod 0640 /etc/mcp-scoreboard-pay/cdp-api-key.pem
 
 if [ -L "$current" ]; then
   previous="$(readlink -f "$current")"
