@@ -1,0 +1,43 @@
+{
+  "unit": "mcp-scoreboard-pay",
+  "phase": "repo-only-candidate",
+  "do_not_deploy": true,
+  "repository": "davidmosiah/mcp-leaderboard",
+  "path": "pay-service/",
+  "public_host": "pay.leaderboard.delx.ai",
+  "board_host": "leaderboard.delx.ai",
+  "isolation": {
+    "own_package_json": true,
+    "own_lockfile": true,
+    "own_state_and_backup": true,
+    "root_scorer_loads_pay_service": false,
+    "delx_commerce": false,
+    "api_delx_ai": false,
+    "commerce_delx_ai": false
+  },
+  "x402": {
+    "sdk": {
+      "@x402/core": "2.10.0",
+      "@x402/evm": "2.10.0",
+      "@x402/express": "2.10.0",
+      "@x402/extensions": "2.10.0"
+    },
+    "version": 2,
+    "network": "eip155:8453",
+    "asset": "USDC",
+    "asset_address": "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913",
+    "amount_atomic": "49000000",
+    "scheme": "exact",
+    "facilitator_url_config": "PAY_SERVICE_FACILITATOR_URL"
+  },
+  "runtime_env_not_in_repo": [
+    "PAY_SERVICE_ADMIN_TOKEN",
+    "PAY_SERVICE_PAY_TO",
+    "PAY_SERVICE_FACILITATOR_URL"
+  ],
+  "notes": [
+    "Coordinate later with the Delx host operator. This file is not an activation.",
+    "No production secret is stored here.",
+    "commerce.delx.ai remains a superseded leftover documented only in markdown."
+  ]
+}

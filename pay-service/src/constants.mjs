@@ -1,0 +1,17 @@
+export const PAY_HOST = "https://pay.leaderboard.delx.ai";
+export const BOARD_HOST = "https://leaderboard.delx.ai";
+export const SERVICE_ID = "mcp-score-improvement";
+export const SERVICE_NAME = "MCP Score Improvement PR";
+export const NETWORK = "eip155:8453";
+export const USDC_BASE = "0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913";
+export const PRICE_USDC = "49";
+export const PRICE_ATOMIC = "49000000";
+export const PRICE_SDK = "$49.00";
+export const CAPACITY = 5;
+export const DEFAULT_TTL_SECONDS = 86_400;
+export const BODY_LIMIT_BYTES = 8 * 1024;
+export const RATE_LIMIT_MAX = 10;
+export const RATE_LIMIT_WINDOW_MS = 60 * 60 * 1000;
+export const X402_VERSION = 2;
+export const SLOT_STATES = new Set(["payment_pending", "paid", "delivery_in_progress"]);
+export const SECRET_KEY = /secret|token|password|private_key|authorization|credential|api[_-]?key|ssh/i;

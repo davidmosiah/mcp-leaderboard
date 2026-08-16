@@ -103,8 +103,8 @@ engine upgrade or package release into a fabricated maintainer achievement.
 
 ### Commercial conversion
 
-The paid outcome is **MCP Score Improvement PR — 49 USDC** on the existing
-Delx Commerce surface:
+The paid outcome is **MCP Score Improvement PR — 49 USDC** on the isolated
+pay-service in this repository (`pay.leaderboard.delx.ai`):
 
 - five public repositories;
 - free fit review before payment;
@@ -113,9 +113,11 @@ Delx Commerce surface:
 - no private credentials, production deploy, security claim, promised score or
   ranking influence.
 
-The Scoreboard host contains no commercial CTA because it uses Vercel Hobby.
-Commerce hosts the offer and machine contract, avoiding new spend, DNS and
-infrastructure.
+The Scoreboard host contains no commercial CTA because it uses Vercel Hobby
+and must stay a neutral evidence publication. An earlier idea that hosted the
+offer on `commerce.delx.ai` is superseded (legacy URL only; no redirect, no
+edits to Delx Commerce or `api.delx.ai`). The machine contract, x402 receive
+path, durable state and receipts stay in `pay-service/`.
 
 ### Grok automation
 

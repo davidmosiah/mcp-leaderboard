@@ -1,0 +1,21 @@
+{
+  "name": "mcp-scoreboard-pay",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Isolated MCP Score Improvement pay-service for pay.leaderboard.delx.ai. Not loaded by the root batch scorer.",
+  "scripts": {
+    "start": "node src/server.mjs",
+    "test": "node --test --test-reporter=spec test/*.test.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "dependencies": {
+    "@x402/core": "2.10.0",
+    "@x402/evm": "2.10.0",
+    "@x402/express": "2.10.0",
+    "@x402/extensions": "2.10.0",
+    "express": "5.2.1"
+  }
+}
