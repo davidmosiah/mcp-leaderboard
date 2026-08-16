@@ -16,15 +16,16 @@ function sameSecret(actual, expected) {
 function safeRedirectUri(value) {
   try {
     const url = new URL(String(value || ""));
+    const exactCursorCallbacks = new Set([
+      "https://www.cursor.com/agents/mcp/oauth/callback",
+      "http://localhost:8787/callback",
+      "cursor://anysphere.cursor-mcp/oauth/callback"
+    ]);
+    if (exactCursorCallbacks.has(url.toString())) return url.toString();
     if (url.protocol !== "https:" || url.username || url.password || url.hash) return null;
     const host = url.hostname.toLowerCase();
     const trustedGrok = host === "grok.com" || host.endsWith(".grok.com") || host === "x.ai" || host.endsWith(".x.ai");
-    const trustedCursorAgents =
-      host === "www.cursor.com" &&
-      url.pathname === "/agents/mcp/oauth/callback" &&
-      !url.search;
-    const trusted = trustedGrok || trustedCursorAgents;
-    return trusted ? url.toString() : null;
+    return trustedGrok ? url.toString() : null;
   } catch {
     return null;
   }

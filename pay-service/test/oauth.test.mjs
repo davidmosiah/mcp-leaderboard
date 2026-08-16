@@ -149,7 +149,7 @@ test("OAuth rejects untrusted redirect origins and non-PKCE requests", async () 
   assert.equal((await request(service, `/oauth/authorize?${noPkce}`)).status, 400);
 });
 
-test("OAuth permits only the exact Cursor agents callback used by Grok Bot", async () => {
+test("OAuth permits only the exact Cursor callbacks used by Grok Bot", async () => {
   function authorizationQuery(redirectUri) {
     return new URLSearchParams({
       response_type: "code",
@@ -162,15 +162,25 @@ test("OAuth permits only the exact Cursor agents callback used by Grok Bot", asy
     });
   }
 
-  const callback = "https://www.cursor.com/agents/mcp/oauth/callback";
-  assert.equal((await request(service, `/oauth/authorize?${authorizationQuery(callback)}`)).status, 200);
+  for (const callback of [
+    "https://www.cursor.com/agents/mcp/oauth/callback",
+    "http://localhost:8787/callback",
+    "cursor://anysphere.cursor-mcp/oauth/callback"
+  ]) {
+    assert.equal(
+      (await request(service, `/oauth/authorize?${authorizationQuery(callback)}`)).status,
+      200,
+      callback
+    );
+  }
 
   for (const rejected of [
     "https://cursor.com/agents/mcp/oauth/callback",
     "https://www.cursor.com/agents/mcp/oauth/callback/extra",
     "https://attacker.cursor.com/agents/mcp/oauth/callback",
-    "http://localhost:8787/callback",
-    "cursor://anysphere.cursor-mcp/oauth/callback"
+    "http://127.0.0.1:8787/callback",
+    "http://localhost:8788/callback",
+    "cursor://anysphere.cursor-mcp/oauth/callback/extra"
   ]) {
     assert.equal(
       (await request(service, `/oauth/authorize?${authorizationQuery(rejected)}`)).status,
