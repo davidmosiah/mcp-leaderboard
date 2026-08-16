@@ -16,4 +16,4 @@ Follow `docs/PAY_SERVICE.md`. Tick by making the named test fail, then pass.
 12. [x] State machine + admin delivery/cancel/refund
 13. [x] Root scorer isolation + host-boundary tests
 14. [x] Secret scan clean, `git diff --check` clean, full `npm test`
-15. [ ] Draft PR only — no merge, deploy, payment, email, or maintainer issue
+15. [x] Draft PR only — no merge, deploy, payment, email, or maintainer issue
