@@ -12,7 +12,8 @@ EnvironmentFile=/etc/mcp-scoreboard-pay/pay.env
 Environment=NODE_OPTIONS=--dns-result-order=ipv4first
 LoadCredential=cdp-api-key.pem:/etc/mcp-scoreboard-pay/cdp-api-key.pem
 LoadCredential=agent-token:/etc/mcp-scoreboard-pay/agent-token
-ExecStart=/bin/sh -c 'CDP_API_KEY_SECRET=$(cat "$CREDENTIALS_DIRECTORY/cdp-api-key.pem"); PAY_SERVICE_AGENT_TOKEN=$(cat "$CREDENTIALS_DIRECTORY/agent-token"); export CDP_API_KEY_SECRET PAY_SERVICE_AGENT_TOKEN; exec /usr/bin/node src/server.mjs'
+LoadCredential=oauth-client-secret:/etc/mcp-scoreboard-pay/oauth-client-secret
+ExecStart=/bin/sh -c 'CDP_API_KEY_SECRET=$(cat "$CREDENTIALS_DIRECTORY/cdp-api-key.pem"); PAY_SERVICE_AGENT_TOKEN=$(cat "$CREDENTIALS_DIRECTORY/agent-token"); PAY_SERVICE_OAUTH_CLIENT_SECRET=$(cat "$CREDENTIALS_DIRECTORY/oauth-client-secret"); export CDP_API_KEY_SECRET PAY_SERVICE_AGENT_TOKEN PAY_SERVICE_OAUTH_CLIENT_SECRET; exec /usr/bin/node src/server.mjs'
 Restart=on-failure
 RestartSec=5s
 TimeoutStartSec=45s

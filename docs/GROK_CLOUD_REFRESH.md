@@ -12,6 +12,9 @@ maintainer's Mac or the shared Hetzner host.
 - Repository: `davidmosiah/mcp-leaderboard`, default branch only.
 - GitHub access is connector-only. Never expose a token to the shell, npm,
   subprocess environment, files, logs, or artifacts.
+- Scoreboard operations use the private OAuth-connected MCP with only the
+  `scoreboard:operate` scope; OAuth does not grant admin, wallet, host, merge,
+  deploy, publication, or private-repository access.
 
 ## Execution
 

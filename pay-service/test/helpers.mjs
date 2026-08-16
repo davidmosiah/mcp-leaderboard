@@ -121,6 +121,8 @@ export async function startService(overrides = {}) {
   const clockState = { now: overrides.now || Date.parse("2026-08-16T12:00:00.000Z") };
   const token = overrides.adminToken || adminToken();
   const agentToken = overrides.agentToken || adminToken();
+  const oauthClientId = overrides.oauthClientId || "mcp-scoreboard-grok";
+  const oauthClientSecret = overrides.oauthClientSecret || adminToken();
   const facilitator = overrides.facilitator || createMockFacilitator();
   const dataDir = overrides.dataDir || mkdtempSync(join(tmpdir(), "mcp-pay-service-"));
   const app = await createApp({
@@ -128,6 +130,8 @@ export async function startService(overrides = {}) {
       PAY_SERVICE_PAY_TO: TEST_PAY_TO,
       PAY_SERVICE_ADMIN_TOKEN: token,
       PAY_SERVICE_AGENT_TOKEN: agentToken,
+      PAY_SERVICE_OAUTH_CLIENT_ID: oauthClientId,
+      PAY_SERVICE_OAUTH_CLIENT_SECRET: oauthClientSecret,
       PAY_SERVICE_GITHUB_ACTOR: "davidmosiah",
       PAY_SERVICE_PUBLIC_BASE_URL: "https://pay.leaderboard.delx.ai",
       PAY_SERVICE_DATA_DIR: dataDir,
@@ -153,6 +157,8 @@ export async function startService(overrides = {}) {
     base: `http://127.0.0.1:${port}`,
     token,
     agentToken,
+    oauthClientId,
+    oauthClientSecret,
     facilitator,
     dataDir,
     clockState,
@@ -173,7 +179,8 @@ export async function request(service, path, options = {}) {
   const response = await fetch(`${service.base}${path}`, {
     method: options.method || "GET",
     headers,
-    body
+    body,
+    redirect: options.redirect || "follow"
   });
   const text = await response.text();
   let jsonBody = null;

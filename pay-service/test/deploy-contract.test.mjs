@@ -25,9 +25,11 @@ test("systemd unit runs as a dedicated user with a private state directory", () 
   assert.match(unit, /^EnvironmentFile=\/etc\/mcp-scoreboard-pay\/pay\.env$/m);
   assert.match(unit, /^LoadCredential=cdp-api-key\.pem:\/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem$/m);
   assert.match(unit, /^LoadCredential=agent-token:\/etc\/mcp-scoreboard-pay\/agent-token$/m);
+  assert.match(unit, /^LoadCredential=oauth-client-secret:\/etc\/mcp-scoreboard-pay\/oauth-client-secret$/m);
   assert.match(unit, /^Environment=NODE_OPTIONS=--dns-result-order=ipv4first$/m);
   assert.match(unit, /CDP_API_KEY_SECRET=.*CREDENTIALS_DIRECTORY\/cdp-api-key\.pem/);
   assert.match(unit, /PAY_SERVICE_AGENT_TOKEN=.*CREDENTIALS_DIRECTORY\/agent-token/);
+  assert.match(unit, /PAY_SERVICE_OAUTH_CLIENT_SECRET=.*CREDENTIALS_DIRECTORY\/oauth-client-secret/);
   assert.match(unit, /^WorkingDirectory=\/opt\/mcp-scoreboard-pay\/current\/pay-service$/m);
   assert.match(unit, /^ReadWritePaths=\/var\/lib\/mcp-scoreboard-pay$/m);
   assert.match(unit, /^NoNewPrivileges=true$/m);
@@ -52,10 +54,12 @@ test("deploy script pins a commit, verifies dependencies, and never embeds secre
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/pay\.env/);
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem/);
   assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/agent-token/);
+  assert.match(deploy, /chmod 0640 \/etc\/mcp-scoreboard-pay\/oauth-client-secret/);
   assert.match(deploy, /agent credential must be at least 32 bytes/);
+  assert.match(deploy, /OAuth client credential must be at least 32 bytes/);
   assert.match(deploy, /grep -qx -- '-----BEGIN PRIVATE KEY-----' \/etc\/mcp-scoreboard-pay\/cdp-api-key\.pem/);
   assert.match(deploy, /systemctl restart mcp-scoreboard-pay\.service/);
   assert.match(deploy, /curl -fsS http:\/\/127\.0\.0\.1:8797\/readyz/);
-  assert.doesNotMatch(deploy, /CDP_API_KEY_SECRET=|PAY_SERVICE_ADMIN_TOKEN=|PAY_SERVICE_AGENT_TOKEN=/);
+  assert.doesNotMatch(deploy, /CDP_API_KEY_SECRET=|PAY_SERVICE_ADMIN_TOKEN=|PAY_SERVICE_AGENT_TOKEN=|PAY_SERVICE_OAUTH_CLIENT_SECRET=/);
   assert.doesNotMatch(deploy, /rm -rf "\$release"/, "published release directories are immutable");
 });

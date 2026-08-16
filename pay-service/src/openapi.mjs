@@ -48,7 +48,7 @@ export function openApiDocument() {
         post: {
           summary: "Restricted Grok operations over MCP Streamable HTTP",
           description: "Exactly five least-privilege tools. No admin, refund, reconcile, wallet, deploy, merge, or publish capability.",
-          security: [{ agentBearerAuth: [] }],
+          security: [{ scoreboardOAuth: ["scoreboard:operate"] }, { agentBearerAuth: [] }],
           responses: { 200: { description: "MCP JSON-RPC response" }, 401: { description: "Unauthorized" } }
         }
       }
@@ -56,7 +56,18 @@ export function openApiDocument() {
     components: {
       securitySchemes: {
         bearerAuth: { type: "http", scheme: "bearer", description: "Runtime admin token from env. No production secret is stored in the repository." },
-        agentBearerAuth: { type: "http", scheme: "bearer", description: "Separate least-privilege agent credential loaded by systemd. It is rejected by admin routes." }
+        agentBearerAuth: { type: "http", scheme: "bearer", description: "Separate least-privilege agent credential loaded by systemd. It is rejected by admin routes." },
+        scoreboardOAuth: {
+          type: "oauth2",
+          description: "Authorization-code + PKCE bridge for the private Grok connector. It resolves only to the least-privilege agent credential.",
+          flows: {
+            authorizationCode: {
+              authorizationUrl: `${PAY_HOST}/oauth/authorize`,
+              tokenUrl: `${PAY_HOST}/oauth/token`,
+              scopes: { "scoreboard:operate": "Use exactly the five isolated Scoreboard operations" }
+            }
+          }
+        }
       }
     }
   };

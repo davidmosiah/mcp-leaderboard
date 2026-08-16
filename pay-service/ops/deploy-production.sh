@@ -50,8 +50,11 @@ previous=""
 [ -s /etc/mcp-scoreboard-pay/pay.env ] || { echo "missing production environment" >&2; exit 1; }
 [ -s /etc/mcp-scoreboard-pay/cdp-api-key.pem ] || { echo "missing CDP credential" >&2; exit 1; }
 [ -s /etc/mcp-scoreboard-pay/agent-token ] || { echo "missing agent credential" >&2; exit 1; }
+[ -s /etc/mcp-scoreboard-pay/oauth-client-secret ] || { echo "missing OAuth client credential" >&2; exit 1; }
 [ "$(wc -c < /etc/mcp-scoreboard-pay/agent-token)" -ge 32 ] ||
   { echo "agent credential must be at least 32 bytes" >&2; exit 1; }
+[ "$(wc -c < /etc/mcp-scoreboard-pay/oauth-client-secret)" -ge 32 ] ||
+  { echo "OAuth client credential must be at least 32 bytes" >&2; exit 1; }
 grep -qx -- '-----BEGIN PRIVATE KEY-----' /etc/mcp-scoreboard-pay/cdp-api-key.pem ||
   { echo "CDP credential must be unencrypted PKCS8 PEM" >&2; exit 1; }
 openssl pkey -check -noout -in /etc/mcp-scoreboard-pay/cdp-api-key.pem >/dev/null 2>&1 ||
@@ -69,6 +72,8 @@ chown root:"$service" /etc/mcp-scoreboard-pay/cdp-api-key.pem
 chmod 0640 /etc/mcp-scoreboard-pay/cdp-api-key.pem
 chown root:"$service" /etc/mcp-scoreboard-pay/agent-token
 chmod 0640 /etc/mcp-scoreboard-pay/agent-token
+chown root:"$service" /etc/mcp-scoreboard-pay/oauth-client-secret
+chmod 0640 /etc/mcp-scoreboard-pay/oauth-client-secret
 
 if [ -L "$current" ]; then
   previous="$(readlink -f "$current")"

@@ -6,11 +6,14 @@ const ADDRESS = /^0x[a-fA-F0-9]{40}$/;
 export function loadConfig(env = process.env) {
   const adminToken = env.PAY_SERVICE_ADMIN_TOKEN || "";
   const agentToken = env.PAY_SERVICE_AGENT_TOKEN || "";
+  const oauthClientSecret = env.PAY_SERVICE_OAUTH_CLIENT_SECRET || "";
   const payTo = env.PAY_SERVICE_PAY_TO || "";
   return {
     payTo,
     adminToken,
     agentToken,
+    oauthClientId: env.PAY_SERVICE_OAUTH_CLIENT_ID || "mcp-scoreboard-grok",
+    oauthClientSecret,
     githubActor: env.PAY_SERVICE_GITHUB_ACTOR || "davidmosiah",
     cdpApiKeyId: env.CDP_API_KEY_ID || "",
     cdpApiKeySecret: env.CDP_API_KEY_SECRET || "",
@@ -28,6 +31,9 @@ export function configErrors(config) {
   if (!config.adminToken || Buffer.byteLength(config.adminToken) < 32) errors.push("admin_token_missing");
   if (!config.agentToken || Buffer.byteLength(config.agentToken) < 32) errors.push("agent_token_missing");
   if (config.agentToken && config.agentToken === config.adminToken) errors.push("agent_token_not_isolated");
+  if (!config.oauthClientId) errors.push("oauth_client_id_missing");
+  if (!config.oauthClientSecret || Buffer.byteLength(config.oauthClientSecret) < 32) errors.push("oauth_client_secret_missing");
+  if ([config.adminToken, config.agentToken].includes(config.oauthClientSecret)) errors.push("oauth_client_secret_not_isolated");
   if (!config.cdpApiKeyId) errors.push("cdp_api_key_id_missing");
   if (!config.cdpApiKeySecret) errors.push("cdp_api_key_secret_missing");
   return errors;

@@ -14,6 +14,7 @@ import { createPublicFitVerifier } from "./fit-verifier.mjs";
 import { createGithubPrVerifier } from "./github-pr-verifier.mjs";
 import { createAgentOperations } from "./agent-operations.mjs";
 import { handleScoreboardAgentMcp } from "./agent-mcp.mjs";
+import { createScoreboardOAuth } from "./oauth.mjs";
 
 function requireAdmin(config) {
   return (req, res, next) => {
@@ -27,6 +28,7 @@ function requireAdmin(config) {
 function requireAgent(config) {
   return (req, res, next) => {
     if (!bearerAuthorized(req, config.agentToken)) {
+      res.set("www-authenticate", `Bearer resource_metadata="${config.publicBaseUrl}/.well-known/oauth-protected-resource/mcp", scope="scoreboard:operate"`);
       return res.status(401).json({ error: "unauthorized" });
     }
     return next();
@@ -47,6 +49,7 @@ export async function createApp(options = {}) {
     fitVerifier,
     githubPrVerifier
   });
+  const oauth = createScoreboardOAuth({ config, clock });
   const httpServer = options.httpServer || await createX402HttpServer({
     facilitator: options.facilitator,
     payTo: config.payTo,
@@ -60,6 +63,7 @@ export async function createApp(options = {}) {
   app.locals.config = config;
   app.disable("x-powered-by");
   app.use(express.json({ limit: BODY_LIMIT_BYTES }));
+  app.use(express.urlencoded({ extended: false, limit: BODY_LIMIT_BYTES }));
   app.use((req, res, next) => {
     log.info("request", { method: req.method, path: req.path });
     next();
@@ -105,6 +109,19 @@ export async function createApp(options = {}) {
   app.get("/.well-known/x402", (_req, res) => {
     res.json(discoveryDocument({ payTo: config.payTo }));
   });
+
+  app.get("/.well-known/oauth-protected-resource", (_req, res) => {
+    res.json(oauth.protectedResourceMetadata());
+  });
+  app.get("/.well-known/oauth-protected-resource/mcp", (_req, res) => {
+    res.json(oauth.protectedResourceMetadata());
+  });
+  app.get("/.well-known/oauth-authorization-server", (_req, res) => {
+    res.json(oauth.authorizationServerMetadata());
+  });
+  app.get("/oauth/authorize", (req, res) => oauth.authorizePage(req, res));
+  app.post("/oauth/authorize", (req, res) => oauth.authorizeDecision(req, res));
+  app.post("/oauth/token", (req, res) => oauth.token(req, res));
 
   app.post("/mcp", requireAgent(config), async (req, res) => {
     await handleScoreboardAgentMcp(req, res, agentOperations);

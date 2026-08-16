@@ -105,7 +105,7 @@ Public host: `https://pay.leaderboard.delx.ai`
 | `POST` | `/api/admin/cancel` | Bearer | Explicit `cancelled` only before payment. Validates conflicts before any mutation. Pre-payment cancel frees the seat. |
 | `POST` | `/api/admin/refund` | Bearer | Without on-chain proof: non-terminal `refund_pending` + `refund_request` receipt. With coherent transfer proof: terminal `refunded` + `refund` receipt. The service never broadcasts a chain refund. |
 | `POST` | `/api/admin/reconcile` | Bearer | Auditable resolution of `payment_reconciliation_required`. `decision: paid` requires a transaction reference; `decision: release` frees the seat. Never retries settle. |
-| `POST` | `/mcp` | Agent Bearer | Stateless Streamable HTTP MCP. Exactly five bounded tools; no admin, wallet, refund, reconcile, cancel, deploy, merge, or publish capability. |
+| `POST` | `/mcp` | OAuth `scoreboard:operate` / isolated Agent Bearer | Stateless Streamable HTTP MCP. Exactly five bounded tools; no admin, wallet, refund, reconcile, cancel, deploy, merge, or publish capability. |
 
 ### Inquiry body
 
@@ -294,6 +294,8 @@ SDK imports PKCS8. Provisioning must convert it with `openssl pkcs8 -topk8
 | `PAY_SERVICE_PAY_TO` | no (public address) | x402 `payTo` on Base. Never a wallet secret. |
 | `PAY_SERVICE_ADMIN_TOKEN` | yes | Bearer for fit/admin. Generate at deploy. Never commit. |
 | `PAY_SERVICE_AGENT_TOKEN` | yes | Separate least-privilege MCP Bearer. Loaded from `/etc/mcp-scoreboard-pay/agent-token`; never place it in `pay.env`, a repo, prompt, log, or artifact. |
+| `PAY_SERVICE_OAUTH_CLIENT_ID` | no | Single private connector client id. Defaults to `mcp-scoreboard-grok`. |
+| `PAY_SERVICE_OAUTH_CLIENT_SECRET` | yes | Separate confidential OAuth client credential for Grok. Loaded from `/etc/mcp-scoreboard-pay/oauth-client-secret`; never place it in `pay.env`, Git, prompts, logs, or artifacts. |
 | `PAY_SERVICE_GITHUB_ACTOR` | no | GitHub account required on live matching draft PR proof. Defaults to `davidmosiah`. |
 | `CDP_API_KEY_ID` | yes | CDP JWT key id for authenticated facilitator `verify`/`settle`. Never commit. |
 | `CDP_API_KEY_SECRET` | yes | CDP JWT key secret. Never commit. Never echo from `/readyz`. |
@@ -309,10 +311,32 @@ the existing public Delx Base receiving address. That does not share a private
 key: this service has its own CDP key, admin token, process, state, receipts,
 metrics, and backup.
 
-`/readyz` fails closed if either Bearer is missing, shorter than 32 bytes, or
-shared between admin and agent; if `PAY_SERVICE_PAY_TO` is not a 0x-prefixed
-20-byte address; or if either CDP API secret env is missing. Do not print these
-values.
+`/readyz` fails closed if either Bearer or the OAuth client secret is missing,
+shorter than 32 bytes, or shared across roles; if `PAY_SERVICE_PAY_TO` is not a
+0x-prefixed 20-byte address; or if either CDP API secret env is missing. Do not
+print these values.
+
+## Grok OAuth bridge
+
+The private connector uses authorization code with S256 PKCE:
+
+- protected-resource metadata:
+  `/.well-known/oauth-protected-resource/mcp`;
+- authorization-server metadata:
+  `/.well-known/oauth-authorization-server`;
+- authorization endpoint: `/oauth/authorize`;
+- token endpoint: `/oauth/token`;
+- only scope: `scoreboard:operate`;
+- confidential client authentication: `client_secret_post` or
+  `client_secret_basic`;
+- callback origins: HTTPS hosts owned by `grok.com` or `x.ai` only;
+- authorization codes and consent nonces expire after five minutes and are
+  single-use.
+
+The returned access token is the existing isolated agent Bearer. OAuth never
+creates an admin credential, refreshes financial authority, or changes the
+five-tool MCP allowlist. Initial consent is the only interactive step; normal
+hourly operation is autonomous afterward.
 
 ## Commands
 

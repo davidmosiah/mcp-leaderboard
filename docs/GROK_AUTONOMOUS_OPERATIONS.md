@@ -10,9 +10,10 @@ Mac, the shared proxy, systemd, backups, DNS, CDP credentials, or the wallet.
 - GitHub connector: public repositories and draft pull requests only.
 - AgentMail connector: bounded business outreach and replies; never personal
   Gmail.
-- Private remote MCP: `https://pay.leaderboard.delx.ai/mcp`, configured in the
-  Cursor/Grok cloud integration with a dedicated Bearer held outside Git and
-  outside bot prompts.
+- Private remote MCP: `https://pay.leaderboard.delx.ai/mcp`, connected through
+  authorization-code OAuth with mandatory PKCE. Grok stores the resulting
+  dedicated least-privilege Bearer; neither the OAuth client secret nor Bearer
+  enters Git, bot prompts, logs, or generated artifacts.
 - Fresh ephemeral Cursor Cloud VM with Grok 4.6 High Fast for code work.
 
 The private MCP exposes exactly:
@@ -30,6 +31,12 @@ There is deliberately no tool for admin reads, wallet signing, refund,
 reconcile, cancel, deploy, merge, publish, DNS, Caddy, systemd, SSH, secrets,
 or private repositories. The agent token is rejected by all `/api/admin/*`
 routes; the admin token is rejected by `/mcp`.
+
+OAuth does not broaden this boundary. The authorization server accepts only
+the single configured client, the `scoreboard:operate` scope, S256 PKCE, and
+HTTPS callback origins owned by Grok/xAI. Its access token is exactly the
+isolated agent credential, so the five-tool authorization checks remain the
+same after connection.
 
 ## Autonomous loop
 
