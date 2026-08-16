@@ -148,3 +148,34 @@ test("OAuth rejects untrusted redirect origins and non-PKCE requests", async () 
   });
   assert.equal((await request(service, `/oauth/authorize?${noPkce}`)).status, 400);
 });
+
+test("OAuth permits only the exact Cursor agents callback used by Grok Bot", async () => {
+  function authorizationQuery(redirectUri) {
+    return new URLSearchParams({
+      response_type: "code",
+      client_id: service.oauthClientId,
+      redirect_uri: redirectUri,
+      scope: "scoreboard:operate",
+      state: "grok-bot-state",
+      code_challenge: challenge,
+      code_challenge_method: "S256"
+    });
+  }
+
+  const callback = "https://www.cursor.com/agents/mcp/oauth/callback";
+  assert.equal((await request(service, `/oauth/authorize?${authorizationQuery(callback)}`)).status, 200);
+
+  for (const rejected of [
+    "https://cursor.com/agents/mcp/oauth/callback",
+    "https://www.cursor.com/agents/mcp/oauth/callback/extra",
+    "https://attacker.cursor.com/agents/mcp/oauth/callback",
+    "http://localhost:8787/callback",
+    "cursor://anysphere.cursor-mcp/oauth/callback"
+  ]) {
+    assert.equal(
+      (await request(service, `/oauth/authorize?${authorizationQuery(rejected)}`)).status,
+      400,
+      rejected
+    );
+  }
+});

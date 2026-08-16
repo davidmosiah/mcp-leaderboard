@@ -18,7 +18,12 @@ function safeRedirectUri(value) {
     const url = new URL(String(value || ""));
     if (url.protocol !== "https:" || url.username || url.password || url.hash) return null;
     const host = url.hostname.toLowerCase();
-    const trusted = host === "grok.com" || host.endsWith(".grok.com") || host === "x.ai" || host.endsWith(".x.ai");
+    const trustedGrok = host === "grok.com" || host.endsWith(".grok.com") || host === "x.ai" || host.endsWith(".x.ai");
+    const trustedCursorAgents =
+      host === "www.cursor.com" &&
+      url.pathname === "/agents/mcp/oauth/callback" &&
+      !url.search;
+    const trusted = trustedGrok || trustedCursorAgents;
     return trusted ? url.toString() : null;
   } catch {
     return null;
