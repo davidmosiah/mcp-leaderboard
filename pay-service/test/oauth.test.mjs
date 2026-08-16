@@ -56,6 +56,7 @@ test("OAuth authorization code is consented, PKCE-bound, client-bound, and singl
   assert.equal(consent.status, 200, consent.text);
   assert.match(consent.headers.get("content-type") || "", /text\/html/);
   assert.match(consent.text, /Authorize MCP Scoreboard Ops/);
+  assert.doesNotMatch(consent.text, /name="owner_secret"/);
   assert.doesNotMatch(consent.text, new RegExp(service.oauthClientSecret));
   const nonce = consent.text.match(/name="consent_nonce" value="([A-Za-z0-9_-]+)"/)?.[1];
   assert.ok(nonce, consent.text);
@@ -188,4 +189,62 @@ test("OAuth permits only the exact Cursor callbacks used by Grok Bot", async () 
       rejected
     );
   }
+});
+
+test("native Grok Bot OAuth requires one-time owner approval instead of storing the client secret", async () => {
+  const redirectUri = "cursor://anysphere.cursor-mcp/oauth/callback";
+  const query = new URLSearchParams({
+    response_type: "code",
+    client_id: service.oauthClientId,
+    redirect_uri: redirectUri,
+    scope: "scoreboard:operate",
+    state: "grok-bot-owner-approved",
+    code_challenge: challenge,
+    code_challenge_method: "S256"
+  });
+
+  async function newConsent() {
+    const consent = await request(service, `/oauth/authorize?${query}`);
+    assert.equal(consent.status, 200, consent.text);
+    assert.match(consent.text, /name="owner_secret"/);
+    assert.doesNotMatch(consent.text, new RegExp(service.oauthClientSecret));
+    const nonce = consent.text.match(/name="consent_nonce" value="([A-Za-z0-9_-]+)"/)?.[1];
+    assert.ok(nonce, consent.text);
+    return nonce;
+  }
+
+  const missing = await form("/oauth/authorize", {
+    consent_nonce: await newConsent(),
+    decision: "approve"
+  });
+  assert.equal(missing.status, 401);
+
+  const wrong = await form("/oauth/authorize", {
+    consent_nonce: await newConsent(),
+    decision: "approve",
+    owner_secret: "wrong-owner-secret"
+  });
+  assert.equal(wrong.status, 401);
+
+  const approved = await form("/oauth/authorize", {
+    consent_nonce: await newConsent(),
+    decision: "approve",
+    owner_secret: service.oauthClientSecret
+  });
+  assert.equal(approved.status, 302, approved.text);
+  const callback = new URL(approved.headers.get("location"));
+  const code = callback.searchParams.get("code");
+  assert.ok(code);
+
+  const token = await form("/oauth/token", {
+    grant_type: "authorization_code",
+    client_id: service.oauthClientId,
+    client_secret: "",
+    code,
+    redirect_uri: redirectUri,
+    code_verifier: verifier
+  });
+  assert.equal(token.status, 200, token.text);
+  assert.equal(token.json.access_token, service.agentToken);
+  assert.equal(token.json.scope, "scoreboard:operate");
 });

@@ -329,7 +329,13 @@ The private connector uses authorization code with S256 PKCE:
 - only scope: `scoreboard:operate`;
 - confidential client authentication: `client_secret_post` or
   `client_secret_basic`;
-- callback origins: HTTPS hosts owned by `grok.com` or `x.ai` only;
+- callback origins: HTTPS hosts owned by `grok.com` or `x.ai`, plus the exact
+  Cursor agent callbacks `https://www.cursor.com/agents/mcp/oauth/callback`,
+  `http://localhost:8787/callback`, and
+  `cursor://anysphere.cursor-mcp/oauth/callback`; variants remain rejected;
+- native Cursor callbacks require a one-time owner approval code in the
+  consent form. That code is verified against the isolated OAuth secret and is
+  never returned to or stored by Grok Bot;
 - authorization codes and consent nonces expire after five minutes and are
   single-use.
 

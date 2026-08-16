@@ -33,10 +33,13 @@ or private repositories. The agent token is rejected by all `/api/admin/*`
 routes; the admin token is rejected by `/mcp`.
 
 OAuth does not broaden this boundary. The authorization server accepts only
-the single configured client, the `scoreboard:operate` scope, S256 PKCE, and
-HTTPS callback origins owned by Grok/xAI. Its access token is exactly the
-isolated agent credential, so the five-tool authorization checks remain the
-same after connection.
+the single configured client, the `scoreboard:operate` scope, S256 PKCE,
+Grok/xAI HTTPS callbacks, or one of the three exact native Cursor callback
+URIs. A native callback additionally requires the owner to enter the isolated
+OAuth approval code once on `pay.leaderboard.delx.ai`; the secret is never
+stored in Grok Bot. Its resulting access token is exactly the isolated agent
+credential, so the five-tool authorization checks remain the same after
+connection.
 
 ## Autonomous loop
 

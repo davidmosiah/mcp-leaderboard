@@ -3,6 +3,11 @@ import { log } from "./logger.mjs";
 
 const SCOPE = "scoreboard:operate";
 const FIVE_MINUTES_MS = 5 * 60 * 1000;
+const EXACT_CURSOR_CALLBACKS = new Set([
+  "https://www.cursor.com/agents/mcp/oauth/callback",
+  "http://localhost:8787/callback",
+  "cursor://anysphere.cursor-mcp/oauth/callback"
+]);
 
 function sameSecret(actual, expected) {
   const left = Buffer.from(String(actual || ""));
@@ -17,12 +22,7 @@ function sameSecret(actual, expected) {
 function safeRedirectUri(value) {
   try {
     const url = new URL(String(value || ""));
-    const exactCursorCallbacks = new Set([
-      "https://www.cursor.com/agents/mcp/oauth/callback",
-      "http://localhost:8787/callback",
-      "cursor://anysphere.cursor-mcp/oauth/callback"
-    ]);
-    if (exactCursorCallbacks.has(url.toString())) return url.toString();
+    if (EXACT_CURSOR_CALLBACKS.has(url.toString())) return url.toString();
     if (url.protocol !== "https:" || url.username || url.password || url.hash) return null;
     const host = url.hostname.toLowerCase();
     const trustedGrok = host === "grok.com" || host.endsWith(".grok.com") || host === "x.ai" || host.endsWith(".x.ai");
@@ -30,6 +30,10 @@ function safeRedirectUri(value) {
   } catch {
     return null;
   }
+}
+
+function isExactCursorCallback(value) {
+  return EXACT_CURSOR_CALLBACKS.has(String(value || ""));
 }
 
 function escapeHtml(value) {
@@ -129,13 +133,17 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
       const parsed = parseAuthorization(req.query || {});
       if (parsed.error) return oauthError(res, 400, "invalid_request", parsed.error);
       const nonce = randomBytes(32).toString("base64url");
-      pendingConsents.set(nonce, { ...parsed.value, expiresAt: clock() + FIVE_MINUTES_MS });
+      const requiresOwnerApproval = isExactCursorCallback(parsed.value.redirectUri);
+      pendingConsents.set(nonce, { ...parsed.value, requiresOwnerApproval, expiresAt: clock() + FIVE_MINUTES_MS });
+      const ownerApprovalField = requiresOwnerApproval
+        ? '<label for="owner_secret">Owner approval code</label><input id="owner_secret" name="owner_secret" type="password" required autocomplete="off">'
+        : "";
       res.set("cache-control", "no-store").set("content-security-policy", "default-src 'none'; style-src 'unsafe-inline'; form-action 'self'; base-uri 'none'; frame-ancestors 'none'");
       return res.type("html").send(`<!doctype html>
 <html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Authorize MCP Scoreboard Ops</title><style>body{font:16px system-ui;max-width:620px;margin:64px auto;padding:0 24px;color:#151515}main{border:1px solid #ddd;border-radius:16px;padding:28px}button{padding:12px 18px;border-radius:10px;border:0;background:#111;color:#fff;font-weight:650}p{line-height:1.5}.muted{color:#666}</style></head>
+<title>Authorize MCP Scoreboard Ops</title><style>body{font:16px system-ui;max-width:620px;margin:64px auto;padding:0 24px;color:#151515}main{border:1px solid #ddd;border-radius:16px;padding:28px}label,input{display:block}input{box-sizing:border-box;width:100%;margin:8px 0 18px;padding:10px;border:1px solid #bbb;border-radius:8px}button{padding:12px 18px;border-radius:10px;border:0;background:#111;color:#fff;font-weight:650}p{line-height:1.5}.muted{color:#666}</style></head>
 <body><main><h1>Authorize MCP Scoreboard Ops</h1><p>Grant Grok persistent access to five isolated Scoreboard tools: read status and work, qualify a public inquiry, and start or complete delivery only with verified public draft-PR evidence.</p><p class="muted">No wallet signing, refund, admin, server, Delx Commerce, merge, deploy, ranking, email inbox, or private-repository access.</p>
-<form method="post" action="/oauth/authorize"><input type="hidden" name="consent_nonce" value="${escapeHtml(nonce)}"><button type="submit" name="decision" value="approve">Authorize</button></form></main></body></html>`);
+<form method="post" action="/oauth/authorize"><input type="hidden" name="consent_nonce" value="${escapeHtml(nonce)}">${ownerApprovalField}<button type="submit" name="decision" value="approve">Authorize</button></form></main></body></html>`);
     },
 
     authorizeDecision(req, res) {
@@ -144,6 +152,11 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
       const pending = pendingConsents.get(nonce);
       pendingConsents.delete(nonce);
       if (!pending) return oauthError(res, 400, "invalid_request", "consent_expired");
+      const ownerApproved = pending.requiresOwnerApproval && sameSecret(req.body?.owner_secret, config.oauthClientSecret);
+      if (pending.requiresOwnerApproval && !ownerApproved) {
+        log.warn("oauth_consent_rejected", { reason: "owner_approval_required" });
+        return oauthError(res, 401, "access_denied", "owner approval required");
+      }
       const callback = new URL(pending.redirectUri);
       callback.searchParams.set("state", pending.state);
       if (req.body?.decision !== "approve") {
@@ -151,7 +164,7 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
         return res.redirect(302, callback.toString());
       }
       const code = randomBytes(32).toString("base64url");
-      authorizationCodes.set(code, { ...pending, expiresAt: clock() + FIVE_MINUTES_MS });
+      authorizationCodes.set(code, { ...pending, ownerApproved, expiresAt: clock() + FIVE_MINUTES_MS });
       callback.searchParams.set("code", code);
       return res.redirect(302, callback.toString());
     },
@@ -160,7 +173,7 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
       prune();
       const credentials = clientCredentials(req);
       const authMethod = String(req.headers.authorization || "").startsWith("Basic ") ? "client_secret_basic" : "client_secret_post";
-      if (credentials.clientId !== config.oauthClientId || !sameSecret(credentials.clientSecret, config.oauthClientSecret)) {
+      if (credentials.clientId !== config.oauthClientId) {
         log.warn("oauth_token_rejected", { reason: "invalid_client", auth_method: authMethod });
         res.set("www-authenticate", 'Basic realm="mcp-scoreboard-oauth"');
         return oauthError(res, 401, "invalid_client", "client authentication failed");
@@ -175,6 +188,11 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
         log.warn("oauth_token_rejected", { reason: "unknown_or_used_code", auth_method: authMethod });
         return oauthError(res, 400, "invalid_grant", "authorization code is invalid");
       }
+      if (!row.ownerApproved && !sameSecret(credentials.clientSecret, config.oauthClientSecret)) {
+        log.warn("oauth_token_rejected", { reason: "invalid_client", auth_method: authMethod });
+        res.set("www-authenticate", 'Basic realm="mcp-scoreboard-oauth"');
+        return oauthError(res, 401, "invalid_client", "client authentication failed");
+      }
       if (row.clientId !== credentials.clientId || row.redirectUri !== safeRedirectUri(req.body?.redirect_uri)) {
         log.warn("oauth_token_rejected", { reason: "client_or_redirect_mismatch", auth_method: authMethod });
         return oauthError(res, 400, "invalid_grant", "authorization code is invalid");
@@ -186,7 +204,7 @@ export function createScoreboardOAuth({ config, clock = () => Date.now() }) {
         return oauthError(res, 400, "invalid_grant", "PKCE verification failed");
       }
       authorizationCodes.delete(code);
-      log.info("oauth_token_issued", { auth_method: authMethod, scope: SCOPE });
+      log.info("oauth_token_issued", { auth_method: authMethod, scope: SCOPE, owner_approved: Boolean(row.ownerApproved) });
       res.set("cache-control", "no-store").set("pragma", "no-cache");
       return res.json({
         access_token: config.agentToken,
