@@ -4,7 +4,14 @@
     <link>https://leaderboard.delx.ai/issues/</link>
     <description>Evidence-first weekly changes in MCP agent-readiness, generated from the complete public leaderboard run.</description>
     <language>en</language>
-    <lastBuildDate>Wed, 12 Aug 2026 21:41:20 GMT</lastBuildDate>
+    <lastBuildDate>Wed, 19 Aug 2026 14:21:36 GMT</lastBuildDate>
+    <item>
+      <title>MCP Scoreboard Weekly — 2026-08-19</title>
+      <link>https://leaderboard.delx.ai/issues/2026-08-19</link>
+      <guid isPermaLink="true">https://leaderboard.delx.ai/issues/2026-08-19</guid>
+      <pubDate>Wed, 19 Aug 2026 14:21:36 GMT</pubDate>
+      <description>4143 MCP servers scored; ecosystem average 48/100. Score deltas are suppressed because methodology changed or is unknown (mcp-scorecard@unknown → mcp-scorecard@0.5.10).</description>
+    </item>
     <item>
       <title>MCP Scoreboard Weekly — 2026-08-12 baseline</title>
       <link>https://leaderboard.delx.ai/issues/2026-08-12</link>

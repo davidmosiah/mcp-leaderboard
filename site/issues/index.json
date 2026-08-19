@@ -1,7 +1,15 @@
 {
   "schemaVersion": "1",
-  "latest": "2026-08-12",
+  "latest": "2026-08-19",
   "editions": [
+    {
+      "slug": "2026-08-19",
+      "title": "MCP Scoreboard Weekly — 2026-08-19",
+      "kind": "methodology_change",
+      "generatedAt": "2026-08-19T14:21:36.932Z",
+      "canonicalUrl": "https://leaderboard.delx.ai/issues/2026-08-19",
+      "machineUrl": "https://leaderboard.delx.ai/issues/2026-08-19/edition.json"
+    },
     {
       "slug": "2026-08-12",
       "title": "MCP Scoreboard Weekly — 2026-08-12 baseline",
