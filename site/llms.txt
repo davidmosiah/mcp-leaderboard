@@ -2,10 +2,10 @@
 
 > A public, neutral ranking of npm-installable Model Context Protocol servers by agent-readiness. Every score comes from mcp-scorecard booting the server over stdio and evaluating check-level evidence. Refreshed weekly by a fail-closed Grok Cloud routine; nothing is hand-edited.
 
-Updated: 2026-08-19T14:21:36.932Z
-Corpus servers: 7186
-Scored servers: 4143
-Unreachable servers: 3043
+Updated: 2026-08-24T12:38:53.956Z
+Corpus servers: 7351
+Scored servers: 4246
+Unreachable servers: 3105
 Deferred servers: 0
 
 ## Canonical resources

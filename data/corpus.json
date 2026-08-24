@@ -18,7 +18,7 @@
   {
     "name": "io.github.1clawAI/1claw-mcp",
     "npm": "@1claw/mcp",
-    "version": "0.52.0",
+    "version": "0.53.3",
     "repo": "https://github.com/1clawAI/1claw-mcp",
     "status": "active",
     "isLatest": true
@@ -66,7 +66,7 @@
   {
     "name": "io.github.2s-io/mcp",
     "npm": "@2sio/mcp",
-    "version": "1.81.0",
+    "version": "1.82.0",
     "repo": "https://github.com/2s-io/sdk",
     "status": "active",
     "isLatest": true
@@ -138,8 +138,8 @@
   {
     "name": "io.github.aaronsb/google-workspace",
     "npm": "@aaronsb/google-workspace-mcp",
-    "version": "4.4.0",
-    "repo": null,
+    "version": "4.5.0",
+    "repo": "https://github.com/aaronsb/google-workspace-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -162,7 +162,7 @@
   {
     "name": "io.github.aaronsb/slack-mcp",
     "npm": "@aaronsb/slack-mcp",
-    "version": "1.5.2",
+    "version": "2.2.2",
     "repo": "https://github.com/aaronsb/slack-mcp",
     "status": "active",
     "isLatest": true
@@ -176,9 +176,17 @@
     "isLatest": true
   },
   {
+    "name": "io.github.aarwitz/tapp",
+    "npm": "@aarwitz/tapp",
+    "version": "0.17.3",
+    "repo": "https://github.com/aarwitz/tapp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.abd3lraouf-studios/app-store-connect-mcp",
     "npm": "@abd3lraouf/app-store-connect-mcp",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "repo": "https://github.com/abd3lraouf-studios/app-store-connect-mcp",
     "status": "active",
     "isLatest": true
@@ -250,7 +258,7 @@
   {
     "name": "io.github.aborruso/ckan-mcp-server",
     "npm": "@aborruso/ckan-mcp-server",
-    "version": "0.4.118",
+    "version": "0.4.119",
     "repo": "https://github.com/ondata/ckan-mcp-server",
     "status": "active",
     "isLatest": true
@@ -546,7 +554,15 @@
   {
     "name": "io.agentage/find-mcp",
     "npm": "@agentage/find-mcp",
-    "version": "1.2.0",
+    "version": "1.3.0",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "lol.agentarena/arena",
+    "npm": "@agentarena.lol/mcp",
+    "version": "0.1.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -1090,7 +1106,7 @@
   {
     "name": "io.github.ai-hub-open/vk-ads-mcp",
     "npm": "@ai-hub-open/vk-ads-mcp",
-    "version": "0.3.0",
+    "version": "0.7.0",
     "repo": "https://github.com/ai-hub-open/vk-ads-mcp",
     "status": "active",
     "isLatest": true
@@ -1540,6 +1556,14 @@
     "npm": "@allourthings/mcp-server",
     "version": "0.2.0",
     "repo": "https://github.com/matt-harding/allourthings-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.allratestoday/central-bank-mcp",
+    "npm": "@allratestoday/central-bank-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/AllRates-Today/central-bank-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -2560,14 +2584,6 @@
     "isLatest": true
   },
   {
-    "name": "io.github.anymailfinder/mcp-server",
-    "npm": "@anymailfinder/mcp-server",
-    "version": "1.0.7",
-    "repo": "https://github.com/anymailfinder/amf",
-    "status": "active",
-    "isLatest": true
-  },
-  {
     "name": "io.github.anyproto/anytype-mcp",
     "npm": "@anyproto/anytype-mcp",
     "version": "1.0.7",
@@ -2602,7 +2618,7 @@
   {
     "name": "io.github.api-freaks/apifreaks-mcp",
     "npm": "@apifreaks/mcp",
-    "version": "1.1.2",
+    "version": "2.0.0",
     "repo": "https://github.com/api-freaks/apifreaks-mcp",
     "status": "active",
     "isLatest": true
@@ -2634,7 +2650,7 @@
   {
     "name": "io.github.hanjialeGit/mcp-server",
     "npm": "@apocdata-info/mcp-server",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "repo": "https://github.com/ApocData/ApocData-mcp-server",
     "status": "active",
     "isLatest": true
@@ -2698,7 +2714,7 @@
   {
     "name": "io.applyra/mcp-server",
     "npm": "@applyra/mcp-server",
-    "version": "1.4.0",
+    "version": "1.4.2",
     "repo": "https://github.com/applyra-io/mcp-server",
     "status": "active",
     "isLatest": true
@@ -2788,6 +2804,14 @@
     "npm": "@archrad/deterministic",
     "version": "0.4.1",
     "repo": "https://github.com/archradhq/arch-deterministic",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Archstone-Romania/archstone",
+    "npm": "@archstone/cli",
+    "version": "0.11.5",
+    "repo": "https://github.com/Archstone-Romania/archstone",
     "status": "active",
     "isLatest": true
   },
@@ -3016,9 +3040,17 @@
     "isLatest": true
   },
   {
+    "name": "dev.assurly/mcp-server",
+    "npm": "@assurly/mcp-server",
+    "version": "1.2.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.astandrik/local-ydb-mcp",
     "npm": "@astandrik/local-ydb-mcp",
-    "version": "0.16.0",
+    "version": "0.18.1",
     "repo": "https://github.com/astandrik/local-ydb-toolkit",
     "status": "active",
     "isLatest": true
@@ -3082,7 +3114,7 @@
   {
     "name": "io.github.Ataraxy-Labs/sem",
     "npm": "@ataraxy-labs/sem",
-    "version": "0.22.1",
+    "version": "0.23.1",
     "repo": "https://github.com/Ataraxy-Labs/sem",
     "status": "active",
     "isLatest": true
@@ -3402,7 +3434,7 @@
   {
     "name": "com.microsoft/azure",
     "npm": "@azure/mcp",
-    "version": "3.0.0-beta.6",
+    "version": "3.0.0-beta.37",
     "repo": "https://github.com/microsoft/mcp",
     "status": "active",
     "isLatest": true
@@ -3456,6 +3488,30 @@
     "isLatest": true
   },
   {
+    "name": "io.github.barissozudogru/gha-intel",
+    "npm": "@barissozudogru/gha-intel-mcp",
+    "version": "0.4.3",
+    "repo": "https://github.com/barissozudogru/gha-intel-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.barissozudogru/release-intel",
+    "npm": "@barissozudogru/release-intel-mcp",
+    "version": "0.6.1",
+    "repo": "https://github.com/barissozudogru/release-intel-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.barissozudogru/test-intel",
+    "npm": "@barissozudogru/test-intel-mcp",
+    "version": "0.6.1",
+    "repo": "https://github.com/barissozudogru/test-intel-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.maxfain/basedagents",
     "npm": "@basedagents/mcp",
     "version": "0.3.1",
@@ -3466,7 +3522,7 @@
   {
     "name": "io.github.BASHBOP/otito",
     "npm": "@bashbop/otito",
-    "version": "1.7.0",
+    "version": "1.8.0",
     "repo": "https://github.com/BASHBOP/otito",
     "status": "active",
     "isLatest": true
@@ -3506,7 +3562,7 @@
   {
     "name": "io.github.bekirdag/pigeonpost",
     "npm": "@bekirdag/pigeonpost",
-    "version": "0.6.1",
+    "version": "0.7.12",
     "repo": "https://github.com/bekirdag/pigeonpost",
     "status": "active",
     "isLatest": true
@@ -3730,7 +3786,7 @@
   {
     "name": "io.github.BlazingCDN/blazingcdn-mcp",
     "npm": "@blazingcdn/mcp",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "repo": "https://github.com/BlazingCDN/BlazingCDN-MCP",
     "status": "active",
     "isLatest": true
@@ -3864,6 +3920,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.boringSQL/dryrun",
+    "npm": "@boringsql/dryrun",
+    "version": "0.15.1",
+    "repo": "https://github.com/boringSQL/dryrun",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "app.qwady/borough",
     "npm": "@borough/mcp",
     "version": "1.1.0",
@@ -3920,6 +3984,14 @@
     "isLatest": true
   },
   {
+    "name": "io.br8n/mcp",
+    "npm": "@br8n/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/Branded-Mayhem-Collective-LLC/br8n",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.brain-bbqs/neuro",
     "npm": "@brain-bbqs/neuro-mcp",
     "version": "1.0.0",
@@ -3962,7 +4034,7 @@
   {
     "name": "io.github.brave/brave-search-mcp-server",
     "npm": "@brave/brave-search-mcp-server",
-    "version": "2.1.0",
+    "version": "2.1.3",
     "repo": "https://github.com/brave/brave-search-mcp-server",
     "status": "active",
     "isLatest": true
@@ -4096,10 +4168,10 @@
     "isLatest": true
   },
   {
-    "name": "io.github.applefanaimail-blip/bridgenode-mcp",
+    "name": "io.github.bridgenode-ai/bridgenode-mcp",
     "npm": "@bridgenode/mcp",
-    "version": "1.0.0",
-    "repo": "https://github.com/applefanaimail-blip/bridgenode-mcp",
+    "version": "1.0.4",
+    "repo": "https://github.com/bridgenode-ai/bridgenode-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -4108,6 +4180,14 @@
     "npm": "@briefroom/mcp",
     "version": "0.3.0",
     "repo": "https://github.com/briefroom/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.BrightbeamAI/chap",
+    "npm": "@brightbeamai/chap-coordinator-mcp",
+    "version": "0.2.11",
+    "repo": "https://github.com/BrightbeamAI/chap",
     "status": "active",
     "isLatest": true
   },
@@ -4298,7 +4378,7 @@
   {
     "name": "io.github.bytebase/dbhub",
     "npm": "@bytebase/dbhub",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "repo": "https://github.com/bytebase/dbhub",
     "status": "active",
     "isLatest": true
@@ -4322,7 +4402,7 @@
   {
     "name": "io.github.cachly-dev/mcp-server",
     "npm": "@cachly-dev/mcp-server",
-    "version": "0.10.124",
+    "version": "0.10.129",
     "repo": "https://github.com/cachly-dev/cachly-mcp",
     "status": "active",
     "isLatest": true
@@ -4370,7 +4450,7 @@
   {
     "name": "io.github.calypso-so/multimodal-rag-mcp-server",
     "npm": "@calypsohq/multimodal-rag-mcp-server",
-    "version": "1.0.37",
+    "version": "2.1.0",
     "repo": "https://github.com/calypso-so/calypso-mcp-server",
     "status": "active",
     "isLatest": true
@@ -4762,7 +4842,7 @@
   {
     "name": "io.github.chrischall/gemini-mcp",
     "npm": "@chrischall/gemini-mcp",
-    "version": "1.7.0",
+    "version": "1.9.0",
     "repo": "https://github.com/chrischall/gemini-mcp",
     "status": "active",
     "isLatest": true
@@ -4866,7 +4946,7 @@
   {
     "name": "dev.cite42/mcp",
     "npm": "@cite42/mcp",
-    "version": "0.1.17",
+    "version": "0.3.0",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -4874,7 +4954,7 @@
   {
     "name": "io.github.ckalima/pipedrive-mcp-server",
     "npm": "@ckalima/pipedrive-mcp-server",
-    "version": "2.5.0",
+    "version": "2.7.0",
     "repo": "https://github.com/ckalima/pipedrive-mcp-server",
     "status": "active",
     "isLatest": true
@@ -4898,7 +4978,7 @@
   {
     "name": "ai.clarx/mcp",
     "npm": "@clarxai/mcp",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repo": "https://github.com/Gernika-Labs/clarx-cloud",
     "status": "active",
     "isLatest": true
@@ -5002,7 +5082,7 @@
   {
     "name": "io.github.Cuneiform-LLC/clearlist",
     "npm": "@clearlist/mcp-server",
-    "version": "0.9.4",
+    "version": "0.9.12",
     "repo": "https://github.com/Cuneiform-LLC/clearlist-mcp",
     "status": "active",
     "isLatest": true
@@ -5036,6 +5116,14 @@
     "npm": "@clicks-protocol/mcp-server",
     "version": "0.3.2",
     "repo": "https://github.com/clicks-protocol/clicks-protocol",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.clicksend/clicksend-mcp-server",
+    "npm": "@clicksend/clicksend-mcp-server",
+    "version": "2026.8.23",
+    "repo": "https://github.com/ClickSend/clicksend-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -5106,7 +5194,7 @@
   {
     "name": "io.github.TencentCloudBase/cloudbase-mcp",
     "npm": "@cloudbase/cloudbase-mcp",
-    "version": "2.28.1",
+    "version": "2.31.0",
     "repo": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit",
     "status": "active",
     "isLatest": true
@@ -5146,7 +5234,7 @@
   {
     "name": "io.github.Coaspe/sap-abap-mcp",
     "npm": "@coaspe/sap-abap-mcp",
-    "version": "1.3.1",
+    "version": "1.4.0",
     "repo": "https://github.com/Coaspe/sap-abap-mcp",
     "status": "active",
     "isLatest": true
@@ -6298,7 +6386,7 @@
   {
     "name": "io.github.cogdepot/cogdepot",
     "npm": "@cogdepot/mcp-server",
-    "version": "0.2.0",
+    "version": "0.4.0",
     "repo": "https://github.com/cogdepot/mcp-server",
     "status": "active",
     "isLatest": true
@@ -6322,8 +6410,8 @@
   {
     "name": "com.halffee/coinrebate",
     "npm": "@coinrebate/mcp-server",
-    "version": "2.1.0",
-    "repo": "https://github.com/skheman2026-sketch/coinrebate",
+    "version": "2.3.0",
+    "repo": "https://github.com/skheman2026-sketch/coinrebate-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -6410,7 +6498,7 @@
   {
     "name": "io.github.ComplyEdge/complyedge",
     "npm": "@complyedge/mcp",
-    "version": "0.1.1",
+    "version": "0.1.4",
     "repo": "https://github.com/ComplyEdge/complyedge",
     "status": "active",
     "isLatest": true
@@ -6426,7 +6514,7 @@
   {
     "name": "io.github.dogrucanemek-alt/conarium",
     "npm": "@conarium-ai/core",
-    "version": "0.2.32",
+    "version": "0.2.47",
     "repo": "https://github.com/dogrucanemek-alt/conarium",
     "status": "active",
     "isLatest": true
@@ -6536,6 +6624,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.pooriaarab/content-rabbit",
+    "npm": "@contentrabbit/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/pooriaarab/content-rabbit",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Contentrain/contentrain",
     "npm": "@contentrain/mcp",
     "version": "3.1.0",
@@ -6640,6 +6736,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.afurlane/copilot-datagate",
+    "npm": "@copilot-datagate/cli",
+    "version": "0.4.0",
+    "repo": "https://github.com/afurlane/copilot-datagate",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.copperline-labs/rendex-mcp",
     "npm": "@copperline/rendex-mcp",
     "version": "1.8.2",
@@ -6714,7 +6818,7 @@
   {
     "name": "io.github.countersign-network/countersign",
     "npm": "@countersign/mcp",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repo": "https://github.com/countersign-network/packages",
     "status": "active",
     "isLatest": true
@@ -6780,6 +6884,14 @@
     "npm": "@crawlconsole/mcp",
     "version": "0.1.4",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.kvdm-co-pilot/cmp-inspector",
+    "npm": "@create-cmp/inspector",
+    "version": "0.6.2",
+    "repo": "https://github.com/kvdm-co-pilot/create-cmp",
     "status": "active",
     "isLatest": true
   },
@@ -7016,10 +7128,34 @@
     "isLatest": true
   },
   {
+    "name": "io.github.icohangar-ops/agent-conductor",
+    "npm": "@cubiczan/agent-conductor",
+    "version": "0.1.0",
+    "repo": "https://github.com/icohangar-ops/agent-conductor",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.icohangar-ops/chp-mcp",
+    "npm": "@cubiczan/chp-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/icohangar-ops/cubiczan-chp-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Cubiczan/codesentinel",
     "npm": "@cubiczan/codesentinel-mcp",
     "version": "1.0.0",
     "repo": null,
+    "status": "deprecated",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.icohangar-ops/governed-mcp-gateway",
+    "npm": "@cubiczan/governed-mcp-gateway",
+    "version": "0.1.0",
+    "repo": "https://github.com/icohangar-ops/governed-mcp-gateway",
     "status": "active",
     "isLatest": true
   },
@@ -7058,7 +7194,7 @@
   {
     "name": "io.github.cyanheads/anime-mcp-server",
     "npm": "@cyanheads/anime-mcp-server",
-    "version": "0.1.3",
+    "version": "0.1.5",
     "repo": "https://github.com/cyanheads/anime-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7066,7 +7202,7 @@
   {
     "name": "io.github.cyanheads/arxiv-mcp-server",
     "npm": "@cyanheads/arxiv-mcp-server",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "repo": "https://github.com/cyanheads/arxiv-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7082,7 +7218,7 @@
   {
     "name": "io.github.cyanheads/attack-surface-mcp-server",
     "npm": "@cyanheads/attack-surface-mcp-server",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "repo": "https://github.com/cyanheads/attack-surface-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7106,7 +7242,7 @@
   {
     "name": "io.github.cyanheads/bls-labor-mcp-server",
     "npm": "@cyanheads/bls-labor-mcp-server",
-    "version": "0.4.11",
+    "version": "0.4.12",
     "repo": "https://github.com/cyanheads/bls-labor-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7130,7 +7266,7 @@
   {
     "name": "io.github.cyanheads/brapi-mcp-server",
     "npm": "@cyanheads/brapi-mcp-server",
-    "version": "0.7.10",
+    "version": "0.7.11",
     "repo": "https://github.com/cyanheads/brapi-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7138,7 +7274,7 @@
   {
     "name": "io.github.cyanheads/calculator-mcp-server",
     "npm": "@cyanheads/calculator-mcp-server",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "repo": "https://github.com/cyanheads/calculator-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7146,7 +7282,7 @@
   {
     "name": "io.github.cyanheads/cdc-health-mcp-server",
     "npm": "@cyanheads/cdc-health-mcp-server",
-    "version": "0.8.5",
+    "version": "0.8.6",
     "repo": "https://github.com/cyanheads/cdc-health-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7170,7 +7306,7 @@
   {
     "name": "io.github.cyanheads/clipboard-mcp-server",
     "npm": "@cyanheads/clipboard-mcp-server",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "repo": "https://github.com/cyanheads/clipboard-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7178,7 +7314,7 @@
   {
     "name": "io.github.cyanheads/coingecko-mcp-server",
     "npm": "@cyanheads/coingecko-mcp-server",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/cyanheads/coingecko-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7186,7 +7322,7 @@
   {
     "name": "io.github.cyanheads/college-scorecard-mcp-server",
     "npm": "@cyanheads/college-scorecard-mcp-server",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "repo": "https://github.com/cyanheads/college-scorecard-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7226,7 +7362,7 @@
   {
     "name": "io.github.cyanheads/cyanheads-mcp-server",
     "npm": "@cyanheads/cyanheads-mcp-server",
-    "version": "0.4.0",
+    "version": "0.4.1",
     "repo": "https://github.com/cyanheads/cyanheads-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7242,7 +7378,7 @@
   {
     "name": "io.github.cyanheads/docgen-mcp-server",
     "npm": "@cyanheads/docgen-mcp-server",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repo": "https://github.com/cyanheads/docgen-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7274,7 +7410,7 @@
   {
     "name": "io.github.cyanheads/ensembl-mcp-server",
     "npm": "@cyanheads/ensembl-mcp-server",
-    "version": "0.4.2",
+    "version": "0.4.3",
     "repo": "https://github.com/cyanheads/ensembl-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7282,7 +7418,7 @@
   {
     "name": "io.github.cyanheads/epa-mcp-server",
     "npm": "@cyanheads/epa-mcp-server",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repo": "https://github.com/cyanheads/epa-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7290,7 +7426,7 @@
   {
     "name": "io.github.cyanheads/eur-lex-mcp-server",
     "npm": "@cyanheads/eur-lex-mcp-server",
-    "version": "0.9.8",
+    "version": "0.9.9",
     "repo": "https://github.com/cyanheads/eur-lex-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7298,7 +7434,7 @@
   {
     "name": "io.github.cyanheads/eurostat-mcp-server",
     "npm": "@cyanheads/eurostat-mcp-server",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "repo": "https://github.com/cyanheads/eurostat-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7306,7 +7442,7 @@
   {
     "name": "io.github.cyanheads/evals-mcp-server",
     "npm": "@cyanheads/evals-mcp-server",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/cyanheads/evals-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7338,7 +7474,7 @@
   {
     "name": "io.github.cyanheads/fbi-crime-mcp-server",
     "npm": "@cyanheads/fbi-crime-mcp-server",
-    "version": "0.1.6",
+    "version": "0.1.7",
     "repo": "https://github.com/cyanheads/fbi-crime-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7354,7 +7490,7 @@
   {
     "name": "io.github.cyanheads/federal-regulations-mcp-server",
     "npm": "@cyanheads/federal-regulations-mcp-server",
-    "version": "0.2.2",
+    "version": "0.2.4",
     "repo": "https://github.com/cyanheads/federal-regulations-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7362,7 +7498,7 @@
   {
     "name": "io.github.cyanheads/federal-reserve-mcp-server",
     "npm": "@cyanheads/federal-reserve-mcp-server",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "repo": "https://github.com/cyanheads/federal-reserve-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7370,7 +7506,7 @@
   {
     "name": "io.github.cyanheads/fema-mcp-server",
     "npm": "@cyanheads/fema-mcp-server",
-    "version": "0.1.13",
+    "version": "0.1.14",
     "repo": "https://github.com/cyanheads/fema-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7378,7 +7514,7 @@
   {
     "name": "io.github.cyanheads/finnhub-mcp-server",
     "npm": "@cyanheads/finnhub-mcp-server",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/cyanheads/finnhub-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7410,7 +7546,7 @@
   {
     "name": "io.github.cyanheads/gdelt-mcp-server",
     "npm": "@cyanheads/gdelt-mcp-server",
-    "version": "0.2.6",
+    "version": "0.2.7",
     "repo": "https://github.com/cyanheads/gdelt-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7426,7 +7562,7 @@
   {
     "name": "io.github.cyanheads/gnomad-genetics-mcp-server",
     "npm": "@cyanheads/gnomad-genetics-mcp-server",
-    "version": "0.1.5",
+    "version": "0.2.0",
     "repo": "https://github.com/cyanheads/gnomad-genetics-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7434,7 +7570,7 @@
   {
     "name": "io.github.cyanheads/guardian-mcp-server",
     "npm": "@cyanheads/guardian-mcp-server",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/cyanheads/guardian-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7442,7 +7578,7 @@
   {
     "name": "io.github.cyanheads/gutenberg-mcp-server",
     "npm": "@cyanheads/gutenberg-mcp-server",
-    "version": "0.1.6",
+    "version": "0.1.8",
     "repo": "https://github.com/cyanheads/gutenberg-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7466,7 +7602,7 @@
   {
     "name": "io.github.cyanheads/internet-archive-mcp-server",
     "npm": "@cyanheads/internet-archive-mcp-server",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "repo": "https://github.com/cyanheads/internet-archive-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7474,7 +7610,7 @@
   {
     "name": "io.github.cyanheads/libofcongress-mcp-server",
     "npm": "@cyanheads/libofcongress-mcp-server",
-    "version": "0.2.16",
+    "version": "0.2.17",
     "repo": "https://github.com/cyanheads/libofcongress-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7482,7 +7618,7 @@
   {
     "name": "io.github.cyanheads/macos-mcp-server",
     "npm": "@cyanheads/macos-mcp-server",
-    "version": "0.1.4",
+    "version": "0.1.5",
     "repo": "https://github.com/cyanheads/macos-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7490,7 +7626,7 @@
   {
     "name": "io.github.cyanheads/mailchimp-mcp-server",
     "npm": "@cyanheads/mailchimp-mcp-server",
-    "version": "0.3.7",
+    "version": "0.3.8",
     "repo": "https://github.com/cyanheads/mailchimp-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7498,7 +7634,7 @@
   {
     "name": "io.github.cyanheads/mcp-ts-core",
     "npm": "@cyanheads/mcp-ts-core",
-    "version": "0.11.5",
+    "version": "0.12.3",
     "repo": "https://github.com/cyanheads/mcp-ts-core",
     "status": "active",
     "isLatest": true
@@ -7514,7 +7650,7 @@
   {
     "name": "io.github.cyanheads/met-museum-mcp-server",
     "npm": "@cyanheads/met-museum-mcp-server",
-    "version": "0.2.5",
+    "version": "0.2.6",
     "repo": "https://github.com/cyanheads/met-museum-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7522,7 +7658,7 @@
   {
     "name": "io.github.cyanheads/musicbrainz-mcp-server",
     "npm": "@cyanheads/musicbrainz-mcp-server",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "repo": "https://github.com/cyanheads/musicbrainz-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7530,7 +7666,7 @@
   {
     "name": "io.github.cyanheads/national-parks-mcp-server",
     "npm": "@cyanheads/national-parks-mcp-server",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "repo": "https://github.com/cyanheads/national-parks-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7538,7 +7674,7 @@
   {
     "name": "io.github.cyanheads/nhtsa-vehicle-safety-mcp-server",
     "npm": "@cyanheads/nhtsa-vehicle-safety-mcp-server",
-    "version": "0.9.4",
+    "version": "0.9.5",
     "repo": "https://github.com/cyanheads/nhtsa-vehicle-safety-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7626,7 +7762,7 @@
   {
     "name": "io.github.cyanheads/onebusaway-mcp-server",
     "npm": "@cyanheads/onebusaway-mcp-server",
-    "version": "0.1.13",
+    "version": "0.1.14",
     "repo": "https://github.com/cyanheads/onebusaway-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7634,7 +7770,7 @@
   {
     "name": "io.github.cyanheads/open-meteo-mcp-server",
     "npm": "@cyanheads/open-meteo-mcp-server",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "repo": "https://github.com/cyanheads/open-meteo-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7642,7 +7778,7 @@
   {
     "name": "io.github.cyanheads/openalex-mcp-server",
     "npm": "@cyanheads/openalex-mcp-server",
-    "version": "0.7.8",
+    "version": "0.7.9",
     "repo": "https://github.com/cyanheads/openalex-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7746,7 +7882,7 @@
   {
     "name": "io.github.cyanheads/pentest-mcp-server",
     "npm": "@cyanheads/pentest-mcp-server",
-    "version": "0.1.6",
+    "version": "0.1.8",
     "repo": "https://github.com/cyanheads/pentest-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7754,7 +7890,7 @@
   {
     "name": "io.github.cyanheads/pixoo-mcp-server",
     "npm": "@cyanheads/pixoo-mcp-server",
-    "version": "1.0.0",
+    "version": "1.1.1",
     "repo": "https://github.com/cyanheads/pixoo-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7762,7 +7898,7 @@
   {
     "name": "io.github.cyanheads/pokeapi-mcp-server",
     "npm": "@cyanheads/pokeapi-mcp-server",
-    "version": "0.1.7",
+    "version": "0.1.8",
     "repo": "https://github.com/cyanheads/pokeapi-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7770,7 +7906,7 @@
   {
     "name": "io.github.cyanheads/pubchem-mcp-server",
     "npm": "@cyanheads/pubchem-mcp-server",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "repo": "https://github.com/cyanheads/pubchem-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7778,7 +7914,7 @@
   {
     "name": "io.github.cyanheads/pubmed-mcp-server",
     "npm": "@cyanheads/pubmed-mcp-server",
-    "version": "2.10.2",
+    "version": "2.10.4",
     "repo": "https://github.com/cyanheads/pubmed-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7818,7 +7954,7 @@
   {
     "name": "io.github.cyanheads/secedgar-mcp-server",
     "npm": "@cyanheads/secedgar-mcp-server",
-    "version": "0.15.0",
+    "version": "0.15.1",
     "repo": "https://github.com/cyanheads/secedgar-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7834,7 +7970,7 @@
   {
     "name": "io.github.cyanheads/shift-mcp-server",
     "npm": "@cyanheads/shift-mcp-server",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "repo": "https://github.com/cyanheads/shift-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7850,7 +7986,7 @@
   {
     "name": "io.github.cyanheads/socrata-mcp-server",
     "npm": "@cyanheads/socrata-mcp-server",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "repo": "https://github.com/cyanheads/socrata-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7858,7 +7994,7 @@
   {
     "name": "io.github.cyanheads/sports-mcp-server",
     "npm": "@cyanheads/sports-mcp-server",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "repo": "https://github.com/cyanheads/sports-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7866,7 +8002,7 @@
   {
     "name": "io.github.cyanheads/stackexchange-mcp-server",
     "npm": "@cyanheads/stackexchange-mcp-server",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "repo": "https://github.com/cyanheads/stackexchange-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7882,7 +8018,7 @@
   {
     "name": "io.github.cyanheads/tmdb-mcp-server",
     "npm": "@cyanheads/tmdb-mcp-server",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/cyanheads/tmdb-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7890,7 +8026,7 @@
   {
     "name": "io.github.cyanheads/toolkit-mcp-server",
     "npm": "@cyanheads/toolkit-mcp-server",
-    "version": "2.2.0",
+    "version": "2.2.2",
     "repo": "https://github.com/cyanheads/toolkit-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7898,7 +8034,7 @@
   {
     "name": "io.github.cyanheads/transitland-mcp-server",
     "npm": "@cyanheads/transitland-mcp-server",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "https://github.com/cyanheads/transitland-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7914,7 +8050,7 @@
   {
     "name": "io.github.cyanheads/un-comtrade-mcp-server",
     "npm": "@cyanheads/un-comtrade-mcp-server",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "repo": "https://github.com/cyanheads/un-comtrade-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7922,7 +8058,7 @@
   {
     "name": "io.github.cyanheads/uniprot-mcp-server",
     "npm": "@cyanheads/uniprot-mcp-server",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repo": "https://github.com/cyanheads/uniprot-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7946,7 +8082,7 @@
   {
     "name": "io.github.cyanheads/usgs-water-mcp-server",
     "npm": "@cyanheads/usgs-water-mcp-server",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "repo": "https://github.com/cyanheads/usgs-water-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7970,7 +8106,7 @@
   {
     "name": "io.github.cyanheads/whois-mcp-server",
     "npm": "@cyanheads/whois-mcp-server",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "repo": "https://github.com/cyanheads/whois-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7978,7 +8114,7 @@
   {
     "name": "io.github.cyanheads/wikidata-mcp-server",
     "npm": "@cyanheads/wikidata-mcp-server",
-    "version": "0.1.17",
+    "version": "0.1.18",
     "repo": "https://github.com/cyanheads/wikidata-mcp-server",
     "status": "active",
     "isLatest": true
@@ -7994,7 +8130,7 @@
   {
     "name": "io.github.cyanheads/workflows-mcp-server",
     "npm": "@cyanheads/workflows-mcp-server",
-    "version": "0.2.0",
+    "version": "0.3.0",
     "repo": "https://github.com/cyanheads/workflows-mcp-server",
     "status": "active",
     "isLatest": true
@@ -8280,6 +8416,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.darkmatter-hub/mcp-server",
+    "npm": "@darkmatterhub/mcp-server",
+    "version": "0.3.1",
+    "repo": "https://github.com/darkmatter-hub/mcp",
+    "status": "deprecated",
+    "isLatest": true
+  },
+  {
     "name": "io.github.darrenjrobinson/hibp",
     "npm": "@darrenjrobinson/hibp-mcp",
     "version": "1.0.3",
@@ -8306,7 +8450,7 @@
   {
     "name": "io.github.dasasian/gdocs-mcp",
     "npm": "@dasasian/gdocs-mcp",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "repo": "https://github.com/dasasian/gdocs-mcp",
     "status": "active",
     "isLatest": true
@@ -8482,7 +8626,7 @@
   {
     "name": "com.dealsurface/dealsurface",
     "npm": "@dealsurface/mcp-server",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -8524,6 +8668,14 @@
     "npm": "@decionis/mcp",
     "version": "0.1.2",
     "repo": "https://github.com/decionis/agent-safe-pipeline",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.deckflow/deckprobe",
+    "npm": "@deckflow/deckprobe-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/deckflow/deckprobe-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -8666,7 +8818,7 @@
   {
     "name": "io.github.depixapp/depix-mcp",
     "npm": "@depixapp/mcp",
-    "version": "2.2.1",
+    "version": "2.3.1",
     "repo": "https://github.com/depixapp/depix-mcp",
     "status": "active",
     "isLatest": true
@@ -8684,6 +8836,14 @@
     "npm": "@designscan/extractor",
     "version": "0.4.0",
     "repo": "https://github.com/ms-zaman/DesignScan",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.desplega-ai/agent-swarm",
+    "npm": "@desplega.ai/agent-swarm",
+    "version": "1.135.0",
+    "repo": "https://github.com/desplega-ai/agent-swarm",
     "status": "active",
     "isLatest": true
   },
@@ -8706,7 +8866,7 @@
   {
     "name": "io.github.devlensio/devlens",
     "npm": "@devlensio/cli",
-    "version": "0.4.0",
+    "version": "0.5.5",
     "repo": "https://github.com/devlensio/devlensOSS",
     "status": "active",
     "isLatest": true
@@ -8770,7 +8930,7 @@
   {
     "name": "io.github.diagrammo/dgmo-mcp",
     "npm": "@diagrammo/dgmo-mcp",
-    "version": "0.28.0",
+    "version": "0.28.1",
     "repo": "https://github.com/diagrammo/dgmo-mcp",
     "status": "active",
     "isLatest": true
@@ -8778,7 +8938,7 @@
   {
     "name": "io.github.RedHold/diagrams-so-mcp",
     "npm": "@diagrams-so/mcp",
-    "version": "1.4.5",
+    "version": "1.4.6",
     "repo": "https://github.com/RedHold/diagrams-mcp-app-core",
     "status": "active",
     "isLatest": true
@@ -9042,7 +9202,7 @@
   {
     "name": "io.github.discourse/mcp",
     "npm": "@discourse/mcp",
-    "version": "0.2.9",
+    "version": "0.3.0",
     "repo": "https://github.com/discourse/discourse-mcp",
     "status": "active",
     "isLatest": true
@@ -9136,6 +9296,70 @@
     "isLatest": true
   },
   {
+    "name": "io.github.dockndevai/mcp-azure",
+    "npm": "@dockndevai/mcp-azure",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-azure",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-azure-devops",
+    "npm": "@dockndevai/mcp-azure-devops",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-azure-devops",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-clickhouse",
+    "npm": "@dockndevai/mcp-clickhouse",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-clickhouse",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-debezium",
+    "npm": "@dockndevai/mcp-debezium",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-debezium",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-kafka",
+    "npm": "@dockndevai/mcp-kafka",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-kafka",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-keycloak",
+    "npm": "@dockndevai/mcp-keycloak",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-keycloak",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-kubernetes",
+    "npm": "@dockndevai/mcp-kubernetes",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-kubernetes",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dockndevai/mcp-oci",
+    "npm": "@dockndevai/mcp-oci",
+    "version": "0.1.0",
+    "repo": "https://github.com/dockndevai/mcp-oci",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.documentero/documentero-mcp",
     "npm": "@documentero/mcp",
     "version": "0.1.2",
@@ -9178,7 +9402,7 @@
   {
     "name": "io.github.ABTdomain/domainkits-mcp",
     "npm": "@domainkits/mcp",
-    "version": "0.1.4",
+    "version": "2.1.1",
     "repo": "https://github.com/ABTdomain/domainkits-mcp",
     "status": "active",
     "isLatest": true
@@ -9227,14 +9451,6 @@
     "name": "io.github.dpesch/mantisbt-mcp-server",
     "npm": "@dpesch/mantisbt-mcp-server",
     "version": "1.11.0",
-    "repo": null,
-    "status": "active",
-    "isLatest": true
-  },
-  {
-    "name": "com.it.dpf/mcp-server",
-    "npm": "@dpf.it.com/mcp-server",
-    "version": "0.1.2",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -9482,7 +9698,7 @@
   {
     "name": "io.github.eat-pray-ai/yutu",
     "npm": "@eat-pray-ai/yutu",
-    "version": "0.10.11-dev2",
+    "version": "0.10.11-dev3",
     "repo": "https://github.com/eat-pray-ai/yutu",
     "status": "active",
     "isLatest": true
@@ -9618,7 +9834,7 @@
   {
     "name": "io.github.Eilodon/calm-mcp",
     "npm": "@eilodon/calm-mcp",
-    "version": "0.7.0",
+    "version": "0.8.0",
     "repo": "https://github.com/Eilodon/CALM",
     "status": "active",
     "isLatest": true
@@ -9714,7 +9930,7 @@
   {
     "name": "io.github.emailens/mcp",
     "npm": "@emailens/mcp",
-    "version": "0.4.1",
+    "version": "0.6.2",
     "repo": "https://github.com/emailens/mcp",
     "status": "active",
     "isLatest": true
@@ -9738,7 +9954,7 @@
   {
     "name": "io.github.emiliaprotocol/mcp-server",
     "npm": "@emilia-protocol/mcp-server",
-    "version": "1.0.4",
+    "version": "2.1.1",
     "repo": "https://github.com/emiliaprotocol/emilia-protocol",
     "status": "active",
     "isLatest": true
@@ -9792,10 +10008,10 @@
     "isLatest": true
   },
   {
-    "name": "io.github.adebayojuwon200-pixel/eodly",
+    "name": "io.github.layergen/eodly-mcp",
     "npm": "@eodly/mcp",
-    "version": "0.1.1",
-    "repo": "https://github.com/adebayojuwon200-pixel/eodly",
+    "version": "0.2.1",
+    "repo": "https://github.com/layergen/eodly-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -10010,7 +10226,7 @@
   {
     "name": "io.github.extensiondev/mcp",
     "npm": "@extension.dev/mcp",
-    "version": "10.8.0",
+    "version": "10.9.0",
     "repo": "https://github.com/extensiondev/mcp",
     "status": "active",
     "isLatest": true
@@ -10058,8 +10274,8 @@
   {
     "name": "io.github.ned-del/fairseal-mcp-server",
     "npm": "@fairseal/mcp-server",
-    "version": "0.1.2",
-    "repo": "https://github.com/ned-del/fairseal",
+    "version": "0.1.3",
+    "repo": "https://github.com/fairseal-io/fairseal",
     "status": "active",
     "isLatest": true
   },
@@ -10234,7 +10450,7 @@
   {
     "name": "io.github.dearlordylord/voila-mcp",
     "npm": "@firfi/voila-mcp",
-    "version": "0.2.1",
+    "version": "0.3.0",
     "repo": "https://github.com/dearlordylord/voila-sdk",
     "status": "active",
     "isLatest": true
@@ -10252,6 +10468,14 @@
     "npm": "@first-ch/tools-mcp",
     "version": "0.4.1",
     "repo": "https://github.com/First-CH/firstch-tools-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.firsthandapi/mcp-server",
+    "npm": "@firsthandapi/mcp-server",
+    "version": "0.3.1",
+    "repo": "https://github.com/jjfisherdev/firsthandapi-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -10354,7 +10578,7 @@
   {
     "name": "ai.flydocs/flydocs",
     "npm": "@flydocs/cli",
-    "version": "1.3.8",
+    "version": "1.3.10",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -10370,7 +10594,7 @@
   {
     "name": "io.github.frndchagas/coolify-mcp",
     "npm": "@fndchagas/coolify-mcp",
-    "version": "2.2.1",
+    "version": "2.3.1",
     "repo": "https://github.com/frndchagas/coolify-mcp",
     "status": "active",
     "isLatest": true
@@ -10378,7 +10602,7 @@
   {
     "name": "io.github.frndchagas/expo-android",
     "npm": "@fndchagas/expo-android",
-    "version": "0.5.1",
+    "version": "0.5.2",
     "repo": "https://github.com/frndchagas/expo-android",
     "status": "active",
     "isLatest": true
@@ -10394,7 +10618,7 @@
   {
     "name": "io.github.focusgts/eds-mcp-server",
     "npm": "@focusgts/eds-mcp-server",
-    "version": "0.14.0",
+    "version": "0.15.0",
     "repo": "https://github.com/Focus-GTS/eds-mcp-server",
     "status": "active",
     "isLatest": true
@@ -10418,7 +10642,7 @@
   {
     "name": "io.github.forcedreamai/mcp-server",
     "npm": "@forcedream/mcp-server",
-    "version": "0.12.1",
+    "version": "0.12.2",
     "repo": "https://github.com/forcedreamai/forcedream-mcp",
     "status": "active",
     "isLatest": true
@@ -10506,7 +10730,7 @@
   {
     "name": "io.form/formio-mcp",
     "npm": "@formio/mcp",
-    "version": "0.10.0",
+    "version": "0.11.0",
     "repo": "https://github.com/formio/ai",
     "status": "active",
     "isLatest": true
@@ -10682,7 +10906,7 @@
   {
     "name": "io.github.fruggr/zendesk-mcp-server",
     "npm": "@fruggr/zendesk-mcp-server",
-    "version": "2.18.0",
+    "version": "2.19.0",
     "repo": "https://github.com/fruggr/zendesk-mcp-server",
     "status": "active",
     "isLatest": true
@@ -10898,8 +11122,8 @@
   {
     "name": "io.github.gblinproject/gblin-treasury-risk-regime",
     "npm": "@gblin-protocol/mcp-server",
-    "version": "0.2.6",
-    "repo": "https://github.com/gblinproject/GBLIN-MCP",
+    "version": "0.3.0",
+    "repo": "https://github.com/gblinproject/gblin-treasury-risk-regime",
     "status": "active",
     "isLatest": true
   },
@@ -10922,7 +11146,7 @@
   {
     "name": "io.github.geml-spec/geml",
     "npm": "@geml/geml",
-    "version": "1.8.2",
+    "version": "1.8.4",
     "repo": "https://github.com/geml-spec/geml",
     "status": "active",
     "isLatest": true
@@ -11266,7 +11490,7 @@
   {
     "name": "io.github.mfbahc/colter",
     "npm": "@getcolter/cli",
-    "version": "0.3.2",
+    "version": "0.4.0",
     "repo": "https://github.com/mfbahc/colter",
     "status": "active",
     "isLatest": true
@@ -11290,7 +11514,7 @@
   {
     "name": "io.github.getmarrow/marrow",
     "npm": "@getmarrow/mcp",
-    "version": "3.9.64",
+    "version": "3.9.74",
     "repo": "https://github.com/getmarrow/marrow-mcp",
     "status": "active",
     "isLatest": true
@@ -11394,7 +11618,7 @@
   {
     "name": "io.github.kindrat86/vc-deal-flow-signal",
     "npm": "@gitdealflow/mcp-signal",
-    "version": "2.2.0",
+    "version": "2.2.2",
     "repo": "https://github.com/kindrat86/mcp-deal-flow-signal",
     "status": "active",
     "isLatest": true
@@ -11426,7 +11650,7 @@
   {
     "name": "io.github.devlint/gitwand",
     "npm": "@gitwand/mcp",
-    "version": "3.6.6",
+    "version": "3.7.1",
     "repo": "https://github.com/devlint/GitWand",
     "status": "active",
     "isLatest": true
@@ -11452,6 +11676,14 @@
     "npm": "@glassypic/mcp-server",
     "version": "2.0.2",
     "repo": "https://github.com/onepunchtechnology/glassypic-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.glbforge/glbforge",
+    "npm": "@glbforge/mcp",
+    "version": "0.4.1",
+    "repo": "https://github.com/glbforge/glbforge",
     "status": "active",
     "isLatest": true
   },
@@ -11578,7 +11810,7 @@
   {
     "name": "io.github.goreleaser/mcp",
     "npm": "@goreleaser/mcp",
-    "version": "0.5.1",
+    "version": "0.6.0",
     "repo": "https://github.com/goreleaser/mcp",
     "status": "active",
     "isLatest": true
@@ -11634,7 +11866,7 @@
   {
     "name": "com.gradusmusic/notation",
     "npm": "@gradusmusic/notation-mcp",
-    "version": "0.2.6",
+    "version": "0.6.1",
     "repo": "https://github.com/delmas41/gradusnotation",
     "status": "active",
     "isLatest": true
@@ -11644,6 +11876,14 @@
     "npm": "@graneth/mcp-server",
     "version": "0.7.1",
     "repo": "https://github.com/zubovartemiy/graneth-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.granitebps/twitter-mcp",
+    "npm": "@granitebps/twitter-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/granitebps/twitter-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -11660,6 +11900,14 @@
     "npm": "@grantex/mcp",
     "version": "0.1.9",
     "repo": "https://github.com/mishrasanjeev/grantex",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.chaingrantor/grantor-mcp",
+    "npm": "@grantor/mcp",
+    "version": "0.1.6",
+    "repo": null,
     "status": "active",
     "isLatest": true
   },
@@ -11874,8 +12122,40 @@
   {
     "name": "io.github.Harusame64/desktop-touch-mcp",
     "npm": "@harusame64/desktop-touch-mcp",
-    "version": "1.14.3",
+    "version": "1.15.0",
     "repo": "https://github.com/Harusame64/desktop-touch-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hasdata/google-maps",
+    "npm": "@hasdata/google-maps-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/HasData/google-maps-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hasdata/google-search",
+    "npm": "@hasdata/google-search-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/HasData/google-search-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hasdata/instagram",
+    "npm": "@hasdata/instagram-mcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/HasData/instagram-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.hasdata/youtube",
+    "npm": "@hasdata/youtube-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/HasData/youtube-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -12040,9 +12320,17 @@
     "isLatest": true
   },
   {
+    "name": "io.github.HiAi-gg/docsmint",
+    "npm": "@hiai-gg/docsmint",
+    "version": "0.6.8",
+    "repo": "https://github.com/HiAi-gg/docsmint",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.high5-ventures/apple-reminders",
     "npm": "@high5ventures/apple-reminders-mcp",
-    "version": "1.0.3",
+    "version": "1.0.4",
     "repo": "https://github.com/high5-ventures/apple-reminders-for-claude",
     "status": "active",
     "isLatest": true
@@ -12106,7 +12394,7 @@
   {
     "name": "dev.homespun/homespun",
     "npm": "@homespunapps/mcp",
-    "version": "1.6.64",
+    "version": "1.6.73",
     "repo": "https://github.com/homespunapps/homespun",
     "status": "active",
     "isLatest": true
@@ -12130,7 +12418,7 @@
   {
     "name": "org.hookline/mcp",
     "npm": "@hookline/mcp",
-    "version": "0.8.0",
+    "version": "0.9.1",
     "repo": "https://github.com/hookline-org/mcp",
     "status": "active",
     "isLatest": true
@@ -12226,7 +12514,7 @@
   {
     "name": "io.github.houtini-ai/seo-audit-console",
     "npm": "@houtini/seo-audit-console",
-    "version": "0.7.8",
+    "version": "0.8.0",
     "repo": "https://github.com/houtini-ai/seo-audit",
     "status": "active",
     "isLatest": true
@@ -12266,7 +12554,7 @@
   {
     "name": "io.github.hpp-io/x402-mcp-bridge",
     "npm": "@hpp-io/x402-mcp-bridge",
-    "version": "0.1.16",
+    "version": "0.1.18",
     "repo": "https://github.com/hpp-io/x402-mcp-bridge",
     "status": "active",
     "isLatest": true
@@ -12282,7 +12570,7 @@
   {
     "name": "app.htmldrop/mcp",
     "npm": "@htmldrop.app/mcp",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -12418,7 +12706,7 @@
   {
     "name": "io.github.hypnosis/ssh-mcp-server",
     "npm": "@hypnosis/ssh-mcp-server",
-    "version": "2.0.3",
+    "version": "2.3.0",
     "repo": "https://github.com/hypnosis/ssh-mcp-server",
     "status": "active",
     "isLatest": true
@@ -12474,7 +12762,7 @@
   {
     "name": "io.github.koraykoylu/ibanchecker-mcp",
     "npm": "@ibanchecker/mcp",
-    "version": "1.1.2",
+    "version": "1.2.1",
     "repo": "https://github.com/koraykoylu/ibanchecker-mcp",
     "status": "active",
     "isLatest": true
@@ -12544,10 +12832,10 @@
     "isLatest": true
   },
   {
-    "name": "io.github.Royalti-io/ikenga-pkg-mcp-iyke",
+    "name": "dev.ikenga/mcp-iyke",
     "npm": "@ikenga/mcp-iyke",
-    "version": "0.1.2",
-    "repo": "https://github.com/Royalti-io/ikenga-pkg-mcp-iyke",
+    "version": "0.2.3",
+    "repo": "https://github.com/ikenga-hq/ikenga-pkgs",
     "status": "active",
     "isLatest": true
   },
@@ -12610,8 +12898,16 @@
   {
     "name": "org.imqueue/mcp",
     "npm": "@imqueue/mcp",
-    "version": "3.5.1",
+    "version": "3.7.0",
     "repo": "https://github.com/imqueue/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.IMRRD/powershell-mcp",
+    "npm": "@imrrd/powershell-mcp",
+    "version": "0.5.2",
+    "repo": "https://github.com/IMRRD/powershell-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -12620,6 +12916,14 @@
     "npm": "@inavi-maps/mcp-server",
     "version": "0.3.10",
     "repo": "https://github.com/inavi-systems/inavi-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.yaotsakpo/ledgerfc",
+    "npm": "@inbin/ledgerfc-mcp",
+    "version": "0.3.0",
+    "repo": "https://github.com/yaotsakpo/ledgerfc-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -12682,7 +12986,7 @@
   {
     "name": "io.github.IndigoProtocol/indigo-mcp",
     "npm": "@indigoprotocol/indigo-mcp",
-    "version": "0.2.1",
+    "version": "0.4.1",
     "repo": "https://github.com/IndigoProtocol/indigo-mcp",
     "status": "active",
     "isLatest": true
@@ -12706,7 +13010,7 @@
   {
     "name": "io.github.infino-ai/code-context",
     "npm": "@infino-ai/code-context",
-    "version": "0.2.0",
+    "version": "0.4.0",
     "repo": "https://github.com/infino-ai/code-context",
     "status": "active",
     "isLatest": true
@@ -12714,7 +13018,7 @@
   {
     "name": "io.github.infino-ai/mcp-server",
     "npm": "@infino-ai/mcp-server",
-    "version": "0.10.0",
+    "version": "0.10.2",
     "repo": "https://github.com/infino-ai/infino-mcp",
     "status": "active",
     "isLatest": true
@@ -13034,7 +13338,7 @@
   {
     "name": "io.github.rezmeplxrf/insightsentry_mcp",
     "npm": "@insightsentry/mcp",
-    "version": "1.4.35",
+    "version": "1.4.38",
     "repo": "https://github.com/rezmeplxrf/insight_mcp",
     "status": "active",
     "isLatest": true
@@ -13250,7 +13554,7 @@
   {
     "name": "io.github.iwe-org/iwe",
     "npm": "@iwe-org/mcp",
-    "version": "0.19.1",
+    "version": "0.20.0",
     "repo": "https://github.com/iwe-org/iwe",
     "status": "active",
     "isLatest": true
@@ -13442,7 +13746,7 @@
   {
     "name": "io.github.jigyasudham/veto",
     "npm": "@jigyasudham/veto",
-    "version": "3.1.0",
+    "version": "3.2.0",
     "repo": "https://github.com/jigyasudham/veto",
     "status": "active",
     "isLatest": true
@@ -13562,7 +13866,7 @@
   {
     "name": "io.github.juanklagos/sdd-mcp",
     "npm": "@juanklagos/sdd-mcp",
-    "version": "2.3.0",
+    "version": "2.6.0",
     "repo": "https://github.com/juanklagos/spec-driven-development-template",
     "status": "active",
     "isLatest": true
@@ -13634,7 +13938,7 @@
   {
     "name": "dev.jasonpearson/auto-mobile",
     "npm": "@kaeawc/auto-mobile",
-    "version": "0.0.59",
+    "version": "0.0.63",
     "repo": "https://github.com/kaeawc/auto-mobile",
     "status": "active",
     "isLatest": true
@@ -13706,7 +14010,7 @@
   {
     "name": "io.github.michielinksee/bantou",
     "npm": "@kansei-link/bantou",
-    "version": "0.2.2",
+    "version": "0.2.3",
     "repo": "https://github.com/michielinksee/bantou",
     "status": "active",
     "isLatest": true
@@ -13922,7 +14226,7 @@
   {
     "name": "ai.kinlab/kin",
     "npm": "@kinlab/kin-mcp",
-    "version": "0.5.40",
+    "version": "0.5.51",
     "repo": "https://github.com/firelock-ai/kin",
     "status": "active",
     "isLatest": true
@@ -14338,7 +14642,7 @@
   {
     "name": "io.github.lazyants/hetzner",
     "npm": "@lazyants/hetzner-mcp-server",
-    "version": "2.3.1",
+    "version": "2.5.0",
     "repo": "https://github.com/lazyants/hetzner-mcp-server",
     "status": "active",
     "isLatest": true
@@ -14346,7 +14650,7 @@
   {
     "name": "io.github.lazyants/lexware",
     "npm": "@lazyants/lexware-mcp-server",
-    "version": "5.0.0",
+    "version": "5.2.0",
     "repo": "https://github.com/lazyants/lexware-mcp-server",
     "status": "active",
     "isLatest": true
@@ -14354,7 +14658,7 @@
   {
     "name": "io.github.lazyants/transkribus",
     "npm": "@lazyants/transkribus-mcp-server",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "repo": "https://github.com/lazyants/transkribus-mcp-server",
     "status": "active",
     "isLatest": true
@@ -14404,6 +14708,14 @@
     "npm": "@leakferret/mcp",
     "version": "0.1.13",
     "repo": "https://github.com/leakferrethq/leakferret",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.leanroute/mcp-server",
+    "npm": "@leanroute/mcp-server",
+    "version": "0.1.3",
+    "repo": "https://github.com/leanroute/ai-gateway",
     "status": "active",
     "isLatest": true
   },
@@ -14458,7 +14770,7 @@
   {
     "name": "io.github.letoribo/mcp-graphql-enhanced",
     "npm": "@letoribo/mcp-graphql-enhanced",
-    "version": "4.14.4",
+    "version": "4.14.5",
     "repo": "https://github.com/letoribo/mcp-graphql-enhanced",
     "status": "active",
     "isLatest": true
@@ -14738,7 +15050,7 @@
   {
     "name": "io.github.loncadev/baron",
     "npm": "@lonca/baron-mcp-server",
-    "version": "0.33.0",
+    "version": "0.36.0",
     "repo": "https://github.com/loncadev/baron",
     "status": "active",
     "isLatest": true
@@ -14858,8 +15170,8 @@
   {
     "name": "io.github.luno-cms/mcp",
     "npm": "@luno-cms/mcp",
-    "version": "0.2.17",
-    "repo": "https://github.com/luno-cms/luno",
+    "version": "0.2.31",
+    "repo": "https://github.com/luno-cms/mcp",
     "status": "active",
     "isLatest": true
   },
@@ -14892,6 +15204,14 @@
     "npm": "@lyellr88/buddy-mcp",
     "version": "1.4.4",
     "repo": "https://github.com/Lyellr88/buddy-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.m00nreport/mcp-server",
+    "npm": "@m00nsolutions/mcp-server",
+    "version": "1.5.3",
+    "repo": "https://github.com/m00nreport/mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -15004,6 +15324,14 @@
     "npm": "@mailrith/mcp-server",
     "version": "1.1.0",
     "repo": "https://github.com/anrawool/mailrith-agent-platform",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.heocoi/mailsink",
+    "npm": "@mailsink/mcp",
+    "version": "0.1.5",
+    "repo": "https://github.com/heocoi/mailsink-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -15474,7 +15802,7 @@
   {
     "name": "io.github.Keesan12/martin-loop",
     "npm": "@martinloop/mcp",
-    "version": "0.5.3",
+    "version": "0.5.5",
     "repo": "https://github.com/Keesan12/martin-loop",
     "status": "active",
     "isLatest": true
@@ -15514,7 +15842,7 @@
   {
     "name": "io.github.StuMason/coolify",
     "npm": "@masonator/coolify-mcp",
-    "version": "2.19.3",
+    "version": "2.19.4",
     "repo": "https://github.com/StuMason/coolify-mcp",
     "status": "active",
     "isLatest": true
@@ -16104,6 +16432,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.mentu-ai/metamcp",
+    "npm": "@mentu/metamcp",
+    "version": "1.0.0",
+    "repo": "https://github.com/mentu-ai/metamcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.merchinary/docs",
     "npm": "@merchinary/docs-mcp",
     "version": "0.1.1",
@@ -16376,6 +16712,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.milcho0604/velog",
+    "npm": "@milcho0604/velog-mcp",
+    "version": "0.7.2",
+    "repo": "https://github.com/milcho0604/velog-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.miller-joe/comfyui-mcp",
     "npm": "@miller-joe/comfyui-mcp",
     "version": "0.2.1",
@@ -16418,7 +16762,7 @@
   {
     "name": "xyz.mindjack/mcp",
     "npm": "@mindjack/mcp",
-    "version": "1.3.0",
+    "version": "1.4.4",
     "repo": "https://github.com/freyotrisolana/mindjack-mcp",
     "status": "active",
     "isLatest": true
@@ -16816,6 +17160,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.MM-sheng/404-directory",
+    "npm": "@mmvv1638/404-directory-mcp",
+    "version": "0.9.2",
+    "repo": "https://github.com/MM-sheng/404-directory",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.mnemopay/sdk",
     "npm": "@mnemopay/sdk",
     "version": "1.11.0",
@@ -16834,7 +17186,7 @@
   {
     "name": "io.github.mnemoverse/mcp-memory-server",
     "npm": "@mnemoverse/mcp-memory-server",
-    "version": "0.8.4",
+    "version": "0.9.1",
     "repo": "https://github.com/mnemoverse/mcp-memory-server",
     "status": "active",
     "isLatest": true
@@ -16992,6 +17344,14 @@
     "isLatest": true
   },
   {
+    "name": "dev.mossforge/databroker",
+    "npm": "@mossforge/databroker-mcp",
+    "version": "0.4.7",
+    "repo": "https://github.com/mossforge/databroker",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.apolocine/mosta-net",
     "npm": "@mostajs/net",
     "version": "2.0.42",
@@ -17020,6 +17380,14 @@
     "npm": "@mrfentmen/opensearch-mcp",
     "version": "1.0.1",
     "repo": "https://github.com/mrfentmen/opensearch-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.mrfqcentic/mcp-notify",
+    "npm": "@mrfqcentic/mcp-notify",
+    "version": "0.2.1",
+    "repo": "https://github.com/mrfqcentic/mcp-notify",
     "status": "active",
     "isLatest": true
   },
@@ -17266,7 +17634,7 @@
   {
     "name": "io.github.Muvon/octobrain",
     "npm": "@muvon/octobrain",
-    "version": "0.11.0",
+    "version": "0.11.1",
     "repo": "https://github.com/muvon/octobrain",
     "status": "active",
     "isLatest": true
@@ -17274,7 +17642,7 @@
   {
     "name": "io.github.Muvon/octocode",
     "npm": "@muvon/octocode",
-    "version": "0.21.0",
+    "version": "0.22.0",
     "repo": "https://github.com/muvon/octocode",
     "status": "active",
     "isLatest": true
@@ -17282,7 +17650,7 @@
   {
     "name": "io.github.Muvon/octofs",
     "npm": "@muvon/octofs",
-    "version": "0.10.1",
+    "version": "0.10.3",
     "repo": "https://github.com/muvon/octofs",
     "status": "active",
     "isLatest": true
@@ -17392,6 +17760,14 @@
     "isLatest": true
   },
   {
+    "name": "com.clearedindex/mcp",
+    "npm": "@n747ai/clearedindex-mcp-server",
+    "version": "1.4.1",
+    "repo": "https://github.com/N747AI/clearedindex-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Rakesh1002/namemyapp",
     "npm": "@namemyapp/mcp",
     "version": "1.1.5",
@@ -17458,7 +17834,7 @@
   {
     "name": "io.github.neat-technologies/neat",
     "npm": "@neat.is/mcp",
-    "version": "0.9.0",
+    "version": "0.9.4",
     "repo": "https://github.com/NEAT-Technologies/Neat",
     "status": "active",
     "isLatest": true
@@ -17474,7 +17850,7 @@
   {
     "name": "io.github.neiltron/apple-health-mcp",
     "npm": "@neiltron/apple-health-mcp",
-    "version": "1.2.1",
+    "version": "1.4.1",
     "repo": "https://github.com/neiltron/apple-health-mcp",
     "status": "active",
     "isLatest": true
@@ -17514,7 +17890,7 @@
   {
     "name": "io.nestr/mcp",
     "npm": "@nestr/mcp",
-    "version": "0.1.97",
+    "version": "0.1.99",
     "repo": "https://github.com/nestr-dev/nestr-mcp",
     "status": "active",
     "isLatest": true
@@ -17522,7 +17898,7 @@
   {
     "name": "io.github.neturely/okffs",
     "npm": "@neturely/okffs",
-    "version": "0.11.0",
+    "version": "0.12.0",
     "repo": "https://github.com/neturely/okffs",
     "status": "active",
     "isLatest": true
@@ -17546,7 +17922,7 @@
   {
     "name": "com.neuronsearchlab/mcp",
     "npm": "@neuronsearchlab/mcp",
-    "version": "0.6.3",
+    "version": "1.0.0",
     "repo": "https://github.com/NeuronSearchLab/mcp",
     "status": "active",
     "isLatest": true
@@ -17658,7 +18034,7 @@
   {
     "name": "io.github.ni-c/mcp-hub",
     "npm": "@ni-c/mcp-hub",
-    "version": "0.8.0",
+    "version": "0.9.1",
     "repo": "https://github.com/ni-c/mcp-hub",
     "status": "active",
     "isLatest": true
@@ -17700,6 +18076,14 @@
     "npm": "@nimblework/sk-cli",
     "version": "0.1.5",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.nimbus-agent/nimbus",
+    "npm": "@nimbus-dev/mcp",
+    "version": "0.4.0",
+    "repo": "https://github.com/nimbus-agent/nimbus-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -17866,7 +18250,7 @@
   {
     "name": "io.github.NormiHQ/normi",
     "npm": "@normi/mcp-dvf",
-    "version": "0.2.1",
+    "version": "0.2.4",
     "repo": "https://github.com/NormiHQ/Normi",
     "status": "active",
     "isLatest": true
@@ -17906,7 +18290,7 @@
   {
     "name": "io.github.noticedso/cli",
     "npm": "@noticed/cli",
-    "version": "0.3.2",
+    "version": "0.3.3",
     "repo": "https://github.com/noticedso/cli",
     "status": "active",
     "isLatest": true
@@ -18168,6 +18552,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.MegaPanchamZ/okfshare-mcp",
+    "npm": "@okfshare/mcp",
+    "version": "0.1.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.oksigenia/checker-mcp",
     "npm": "@oksigenia/checker-mcp",
     "version": "0.1.1",
@@ -18212,6 +18604,14 @@
     "npm": "@oktopeak/mycase-mcp",
     "version": "1.0.4",
     "repo": "https://github.com/oktopeak/mycase-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.olano-ai/mcp-singapore",
+    "npm": "@olano/mcp-singapore",
+    "version": "0.4.1",
+    "repo": "https://github.com/olano-ai/mcp-singapore",
     "status": "active",
     "isLatest": true
   },
@@ -18504,6 +18904,38 @@
     "isLatest": true
   },
   {
+    "name": "org.openlyuseful/linear-project",
+    "npm": "@openly-useful/linear-project-mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/Openly-Useful/linear-project-skills",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "org.openlyuseful/operations-pulse",
+    "npm": "@openly-useful/operations-pulse-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/Openly-Useful/operations-pulse",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "org.openlyuseful/project-status",
+    "npm": "@openly-useful/project-status-mcp",
+    "version": "1.2.1",
+    "repo": "https://github.com/Openly-Useful/project-status",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "org.openlyuseful/runglance",
+    "npm": "@openly-useful/runglance-mcp",
+    "version": "1.2.1",
+    "repo": "https://github.com/Openly-Useful/project-status",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.vncsleal/openplan",
     "npm": "@openplan/mcp",
     "version": "0.1.22",
@@ -18578,7 +19010,7 @@
   {
     "name": "io.github.Opita-Code/dark-memory-mcp",
     "npm": "@opitacode/dark-memory-mcp",
-    "version": "2.19.1",
+    "version": "2.20.0",
     "repo": "https://github.com/Opita-Code/dark-memory-mcp",
     "status": "active",
     "isLatest": true
@@ -18746,7 +19178,7 @@
   {
     "name": "io.github.oscardvs/zoteus",
     "npm": "@oscardvs/zoteus",
-    "version": "1.4.1",
+    "version": "1.6.0",
     "repo": "https://github.com/oscardvs/zoteus",
     "status": "active",
     "isLatest": true
@@ -18770,7 +19202,7 @@
   {
     "name": "io.github.Ostico/bruno-mcp-studio",
     "npm": "@ostico/bruno-mcp",
-    "version": "2.4.0",
+    "version": "2.5.0",
     "repo": "https://github.com/Ostico/bruno-mcp-studio",
     "status": "active",
     "isLatest": true
@@ -18810,7 +19242,7 @@
   {
     "name": "io.github.mcp-telegram/mcp-telegram",
     "npm": "@overpod/mcp-telegram",
-    "version": "1.41.2",
+    "version": "1.41.5",
     "repo": "https://github.com/mcp-telegram/mcp-telegram",
     "status": "active",
     "isLatest": true
@@ -18962,7 +19394,7 @@
   {
     "name": "io.github.getpapi/papi",
     "npm": "@papi-ai/server",
-    "version": "0.7.80",
+    "version": "0.7.85",
     "repo": "https://github.com/getpapi/papi",
     "status": "active",
     "isLatest": true
@@ -19266,7 +19698,7 @@
   {
     "name": "io.pdfbroker/pdf",
     "npm": "@pdfbroker/mcp-server",
-    "version": "1.1.1",
+    "version": "1.2.0",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -19484,7 +19916,7 @@
     "npm": "@picahq/mcp",
     "version": "2.0.3",
     "repo": "https://github.com/picahq/mcp",
-    "status": "active",
+    "status": "deprecated",
     "isLatest": true
   },
   {
@@ -19540,6 +19972,22 @@
     "npm": "@pinappai/mcp",
     "version": "0.9.9",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.piotr-agier/google-drive-mcp",
+    "npm": "@piotr-agier/google-drive-mcp",
+    "version": "2.6.0",
+    "repo": "https://github.com/piotr-agier/google-drive-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.pipeshub-ai/mcp",
+    "npm": "@pipeshub-ai/mcp",
+    "version": "2.3.3",
+    "repo": "https://github.com/pipeshub-ai/mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -19816,6 +20264,14 @@
     "isLatest": true
   },
   {
+    "name": "dev.postbag/mcp",
+    "npm": "@postbag/mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/faahim/postbag",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Postcept/mcp",
     "npm": "@postcept/mcp",
     "version": "0.3.3",
@@ -19826,8 +20282,16 @@
   {
     "name": "ai.posteverywhere/mcp",
     "npm": "@posteverywhere/mcp",
-    "version": "1.5.1",
+    "version": "1.7.0",
     "repo": "https://github.com/posteverywhere/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.postfleet/postfleet",
+    "npm": "@postfleet/mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/Thestral12/postfleet-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -20056,6 +20520,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.KozakHou/project-bourne",
+    "npm": "@project-bourne/mcp",
+    "version": "0.6.0",
+    "repo": "https://github.com/KozakHou/project-bourne",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.chrismcdermut/proletariat-cli",
     "npm": "@proletariat/cli",
     "version": "0.3.134",
@@ -20082,7 +20554,7 @@
   {
     "name": "co.promptguard/security",
     "npm": "@promptguard/mcp-server",
-    "version": "1.0.0",
+    "version": "1.1.2",
     "repo": "https://github.com/acebot712/promptguard",
     "status": "active",
     "isLatest": true
@@ -20314,7 +20786,7 @@
   {
     "name": "io.github.putervision/state-memory-mcp",
     "npm": "@putervision/state-memory-mcp",
-    "version": "0.10.0",
+    "version": "1.0.0",
     "repo": "https://github.com/putervision/state-memory-mcp",
     "status": "active",
     "isLatest": true
@@ -20322,7 +20794,7 @@
   {
     "name": "io.github.putervision/vision-memory-mcp",
     "npm": "@putervision/vision-memory-mcp",
-    "version": "0.9.0",
+    "version": "1.0.0",
     "repo": "https://github.com/putervision/vision-memory-mcp",
     "status": "active",
     "isLatest": true
@@ -20370,7 +20842,7 @@
   {
     "name": "io.qase/mcp-server",
     "npm": "@qase/mcp-server",
-    "version": "2.2.1",
+    "version": "2.2.2",
     "repo": "https://github.com/qase-tms/qase-mcp-server",
     "status": "active",
     "isLatest": true
@@ -20476,6 +20948,14 @@
     "npm": "@quackai/q402-mcp",
     "version": "0.11.23",
     "repo": "https://github.com/quackai-org/q402-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Quality-Max/qmax-mcp",
+    "npm": "@qualitymax/qmax-mcp",
+    "version": "0.4.2",
+    "repo": "https://github.com/Quality-Max/qmax-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -20650,7 +21130,7 @@
   {
     "name": "io.github.armandocodecr/ramp-kit",
     "npm": "@ramp-kit/mcp",
-    "version": "0.1.7",
+    "version": "0.1.9",
     "repo": "https://github.com/armandocodecr/latam-ramp-kit",
     "status": "active",
     "isLatest": true
@@ -20770,7 +21250,7 @@
   {
     "name": "io.github.Reachpad/reachpad-mcp",
     "npm": "@reachpad/mcp",
-    "version": "0.1.4",
+    "version": "0.3.0",
     "repo": "https://github.com/Reachpad/reachpad-mcp",
     "status": "active",
     "isLatest": true
@@ -20850,7 +21330,7 @@
   {
     "name": "io.github.Regsorm/code-index",
     "npm": "@regsorm/code-index-mcp",
-    "version": "0.51.1",
+    "version": "0.67.0",
     "repo": "https://github.com/Regsorm/code-index-mcp",
     "status": "active",
     "isLatest": true
@@ -20874,7 +21354,7 @@
   {
     "name": "io.github.majiayu000/remem",
     "npm": "@remem-ai/remem",
-    "version": "0.6.78",
+    "version": "0.6.82",
     "repo": "https://github.com/majiayu000/remem",
     "status": "active",
     "isLatest": true
@@ -20946,7 +21426,7 @@
   {
     "name": "io.github.replynodes/mcp",
     "npm": "@replynodes/mcp",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/replynodes/replynodes-mcp",
     "status": "active",
     "isLatest": true
@@ -20978,7 +21458,7 @@
   {
     "name": "io.github.webmyc/respira-wordpress",
     "npm": "@respira/wordpress-mcp-server",
-    "version": "8.3.6",
+    "version": "8.3.10",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -21002,7 +21482,7 @@
   {
     "name": "com.luneresearch/lune",
     "npm": "@retrograde-labs/lune-mcp-server",
-    "version": "2.0.2",
+    "version": "2.1.0",
     "repo": "https://github.com/RetrogradeLabs/lune-mcp-server",
     "status": "active",
     "isLatest": true
@@ -21050,7 +21530,7 @@
   {
     "name": "io.github.rigour-labs/rigour",
     "npm": "@rigour-labs/mcp",
-    "version": "5.5.4",
+    "version": "6.0.0",
     "repo": "https://github.com/rigour-labs/rigour",
     "status": "active",
     "isLatest": true
@@ -21458,7 +21938,7 @@
   {
     "name": "io.github.roomi-fields/notebooklm-mcp",
     "npm": "@roomi-fields/notebooklm-mcp",
-    "version": "3.0.4",
+    "version": "3.1.2",
     "repo": "https://github.com/roomi-fields/notebooklm-mcp",
     "status": "active",
     "isLatest": true
@@ -21480,9 +21960,17 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Roshan6335/mcpsentry",
+    "npm": "@roshan6335/mcpsentry",
+    "version": "0.1.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.rotifer-protocol/mcp-server",
     "npm": "@rotifer/mcp-server",
-    "version": "0.16.1",
+    "version": "0.17.0",
     "repo": "https://github.com/rotifer-protocol/rotifer-mcp-server",
     "status": "active",
     "isLatest": true
@@ -21626,7 +22114,7 @@
   {
     "name": "io.github.runapi-builder/grok-imagine-mcp",
     "npm": "@runapi.ai/grok-imagine-mcp",
-    "version": "0.1.11",
+    "version": "0.1.12",
     "repo": "https://github.com/runapi-ai/grok-imagine-mcp",
     "status": "active",
     "isLatest": true
@@ -21690,7 +22178,7 @@
   {
     "name": "io.github.runapi-builder/runapi-mcp",
     "npm": "@runapi.ai/mcp",
-    "version": "0.11.0",
+    "version": "0.12.0",
     "repo": "https://github.com/runapi-ai/mcp",
     "status": "active",
     "isLatest": true
@@ -21754,7 +22242,7 @@
   {
     "name": "io.github.runapi-builder/seedance-mcp",
     "npm": "@runapi.ai/seedance-mcp",
-    "version": "0.1.11",
+    "version": "0.2.0",
     "repo": "https://github.com/runapi-ai/seedance-mcp",
     "status": "active",
     "isLatest": true
@@ -21770,7 +22258,7 @@
   {
     "name": "io.github.runapi-builder/suno-mcp",
     "npm": "@runapi.ai/suno-mcp",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "repo": "https://github.com/runapi-ai/suno-mcp",
     "status": "active",
     "isLatest": true
@@ -22008,6 +22496,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.UladzKha/samuraizer",
+    "npm": "@samuraizer/mcp-server",
+    "version": "0.1.6",
+    "repo": "https://github.com/UladzKha/samuraizer-cli",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.jwgale/sanctum",
     "npm": "@sanctumai/mcp-server",
     "version": "0.3.2",
@@ -22042,7 +22538,7 @@
   {
     "name": "io.github.SAP/fiori-mcp-server",
     "npm": "@sap-ux/fiori-mcp-server",
-    "version": "1.11.10",
+    "version": "1.11.13",
     "repo": "https://github.com/SAP/open-ux-tools",
     "status": "active",
     "isLatest": true
@@ -22138,7 +22634,7 @@
   {
     "name": "com.savvly/savvly",
     "npm": "@savvly/mcp-server",
-    "version": "1.0.88",
+    "version": "1.0.92",
     "repo": "https://github.com/Savvly/savvly-mcp",
     "status": "active",
     "isLatest": true
@@ -22336,6 +22832,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Edison-Watch/sealgate-mcp",
+    "npm": "@sealgate/mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/Edison-Watch/sealgate-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.seasonsagents-art/webaz",
     "npm": "@seasonkoh/webaz",
     "version": "0.1.16",
@@ -22364,6 +22868,14 @@
     "npm": "@securecode/mcp-server",
     "version": "0.15.2",
     "repo": "https://github.com/juanisidoro/securecode-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "online.securestamp/action-proof",
+    "npm": "@securestamp/execution-guardian-mcp",
+    "version": "0.3.0-beta.2",
+    "repo": "https://github.com/sergioortizlatorre2/securestamp",
     "status": "active",
     "isLatest": true
   },
@@ -22402,7 +22914,7 @@
   {
     "name": "dev.seekrit/mcp",
     "npm": "@seekrit/mcp",
-    "version": "0.6.1",
+    "version": "0.8.0",
     "repo": "https://github.com/mileszim/seekrit",
     "status": "active",
     "isLatest": true
@@ -22488,6 +23000,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.sendsoon/ai",
+    "npm": "@sendsoon/ai",
+    "version": "0.1.2",
+    "repo": "https://github.com/sendsoon/ai",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Stahldavid/sensegrep",
     "npm": "@sensegrep/mcp",
     "version": "1.5.3",
@@ -22522,7 +23042,7 @@
   {
     "name": "io.github.Sequesign/sequesign",
     "npm": "@sequesign/mcp",
-    "version": "0.3.0",
+    "version": "0.4.1",
     "repo": "https://github.com/Sequesign/mcp",
     "status": "active",
     "isLatest": true
@@ -22546,7 +23066,7 @@
   {
     "name": "io.github.Servation/job-search-mcp",
     "npm": "@servation/job-search-mcp",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/Servation/job-search-mcp",
     "status": "active",
     "isLatest": true
@@ -22648,6 +23168,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.shakaran/symfony-agent-mcp",
+    "npm": "@shakaran/symfony-agent-mcp",
+    "version": "1.0.2",
+    "repo": "https://github.com/shakaran/symfony-agent-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.sharedmemoryai/memory",
     "npm": "@sharedmemory/mcp-server",
     "version": "2.1.1",
@@ -22728,6 +23256,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.sheetrender/sheetrender-mcp",
+    "npm": "@sheetrender/mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/sheetrender/sheetrender-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.octoco-ltd/sheetsdata-mcp",
     "npm": "@sheetsdata/mcp",
     "version": "1.3.2",
@@ -22746,7 +23282,7 @@
   {
     "name": "io.github.The-Pixel-Boys/shield-kya",
     "npm": "@shield-agent/kya",
-    "version": "0.1.3",
+    "version": "0.1.7",
     "repo": "https://github.com/The-Pixel-Boys/shield-kya",
     "status": "active",
     "isLatest": true
@@ -22834,7 +23370,7 @@
   {
     "name": "com.shipstatic/mcp",
     "npm": "@shipstatic/mcp",
-    "version": "1.3.3",
+    "version": "1.3.5",
     "repo": "https://github.com/shipstatic/mcp",
     "status": "active",
     "isLatest": true
@@ -22898,7 +23434,7 @@
   {
     "name": "ai.shumi/mcp",
     "npm": "@shumi-ai/mcp",
-    "version": "0.1.3",
+    "version": "1.1.0",
     "repo": "https://github.com/mayrsascha/shumi-mcp",
     "status": "active",
     "isLatest": true
@@ -23146,7 +23682,7 @@
   {
     "name": "io.github.smith-horn/skillsmith",
     "npm": "@skillsmith/mcp-server",
-    "version": "0.7.9",
+    "version": "0.7.11",
     "repo": "https://github.com/smith-horn/skillsmith",
     "status": "active",
     "isLatest": true
@@ -23242,7 +23778,7 @@
   {
     "name": "com.smartbear/smartbear-mcp",
     "npm": "@smartbear/mcp",
-    "version": "0.36.0",
+    "version": "0.37.0",
     "repo": "https://github.com/SmartBear/smartbear-mcp",
     "status": "active",
     "isLatest": true
@@ -23250,7 +23786,7 @@
   {
     "name": "dev.smartergpt/axf",
     "npm": "@smartergpt/axf",
-    "version": "1.1.0",
+    "version": "2.1.1",
     "repo": "https://github.com/Guffawaffle/axf",
     "status": "active",
     "isLatest": true
@@ -23312,6 +23848,14 @@
     "isLatest": true
   },
   {
+    "name": "com.snopekgames/godai",
+    "npm": "@snopek-games/godai",
+    "version": "0.4.2",
+    "repo": "https://gitlab.com/snopek-games/godai",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.snowmead/oxcode",
     "npm": "@snowmead/oxcode-mcp",
     "version": "0.4.1",
@@ -23346,7 +23890,7 @@
   {
     "name": "io.github.Softeria/ms-365-mcp-server",
     "npm": "@softeria/ms-365-mcp-server",
-    "version": "0.145.1",
+    "version": "0.146.0",
     "repo": "https://github.com/Softeria/ms-365-mcp-server",
     "status": "active",
     "isLatest": true
@@ -23512,10 +24056,18 @@
     "isLatest": true
   },
   {
+    "name": "io.github.speechweave/mcp",
+    "npm": "@speechweave/mcp",
+    "version": "1.9.0",
+    "repo": "https://github.com/speechweave/speechweave-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "me.speedof/speed-test",
     "npm": "@speedofme/mcp",
-    "version": "1.1.1",
-    "repo": null,
+    "version": "1.1.2",
+    "repo": "https://github.com/SpeedOfMe/speedofme-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -23594,7 +24146,7 @@
   {
     "name": "net.spintax/mcp",
     "npm": "@spintax/mcp",
-    "version": "0.2.3",
+    "version": "0.3.0",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -23652,6 +24204,14 @@
     "npm": "@srmorete/mobile-device-mcp",
     "version": "0.1.10",
     "repo": "https://github.com/srmorete/mobile-device-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "cc.ssave/tiktok-instagram-downloader",
+    "npm": "@ssavecc/mcp-server",
+    "version": "0.1.1",
+    "repo": "https://github.com/ssavecc/ssave-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -23732,6 +24292,14 @@
     "npm": "@stacksfinder/mcp-server",
     "version": "1.3.7",
     "repo": "https://github.com/hoklims/stacksfinder-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.staminna/directus-mcp-server",
+    "npm": "@staminna/directus-mcp-server",
+    "version": "12.3.2",
+    "repo": "https://github.com/staminna/mcp-server-claude",
     "status": "active",
     "isLatest": true
   },
@@ -24106,7 +24674,7 @@
   {
     "name": "io.github.sudomock/mcp",
     "npm": "@sudomock/mcp",
-    "version": "2.4.0",
+    "version": "2.6.0",
     "repo": "https://github.com/sudomock/mcp-server",
     "status": "active",
     "isLatest": true
@@ -24130,7 +24698,7 @@
   {
     "name": "io.github.Suigar-Gaming/mcp",
     "npm": "@suigar/mcp",
-    "version": "1.0.0-beta.24",
+    "version": "1.0.0-beta.25",
     "repo": "https://github.com/Suigar-Gaming/ts-sdks",
     "status": "active",
     "isLatest": true
@@ -24170,7 +24738,7 @@
   {
     "name": "com.supabase/mcp",
     "npm": "@supabase/mcp-server-supabase",
-    "version": "0.10.0",
+    "version": "0.11.0",
     "repo": "https://github.com/supabase/mcp",
     "status": "active",
     "isLatest": true
@@ -24272,6 +24840,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.sudzikcoin/pingpoint",
+    "npm": "@suverselabs/pingpoint-mcp",
+    "version": "0.4.1",
+    "repo": "https://github.com/sudzikcoin/pingpoint-freight-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.0xSoftBoi/suwappu",
     "npm": "@suwappu/mcp-server",
     "version": "0.1.1",
@@ -24292,6 +24868,14 @@
     "npm": "@svensxl/mcp-weather-server",
     "version": "1.0.1",
     "repo": "https://github.com/svensxl/mcp-weather-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.svgrid/svgrid",
+    "npm": "@svgrid/mcp",
+    "version": "2.6.1",
+    "repo": "https://github.com/sv-grid/sv-grid",
     "status": "active",
     "isLatest": true
   },
@@ -24472,10 +25056,26 @@
     "isLatest": true
   },
   {
+    "name": "io.github.puglieseweb/systemdox-runbooks",
+    "npm": "@systemdox/runbook-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/puglieseweb/product-systemdox",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.mission69b/t2000",
     "npm": "@t2000/mcp",
     "version": "0.20.1",
     "repo": "https://github.com/mission69b/t2000",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.t3ratech/mcp-session-bridge",
+    "npm": "@t3ratech/mcp-session-bridge",
+    "version": "1.0.2",
+    "repo": "https://github.com/t3ratech/t3rnel-browser-plugin",
     "status": "active",
     "isLatest": true
   },
@@ -24492,6 +25092,14 @@
     "npm": "@taazkareem/clickup-mcp-server",
     "version": "0.12.12",
     "repo": "https://github.com/taazkareem/clickup-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.tabnas/mcp",
+    "npm": "@tabnas/mcp",
+    "version": "0.1.15",
+    "repo": "https://github.com/tabnas/mcp",
     "status": "active",
     "isLatest": true
   },
@@ -24554,7 +25162,7 @@
   {
     "name": "io.github.talonicdev/talonic-mcp",
     "npm": "@talonic/mcp",
-    "version": "0.1.74",
+    "version": "0.1.75",
     "repo": "https://github.com/talonicdev/talonic-mcp",
     "status": "active",
     "isLatest": true
@@ -24618,7 +25226,7 @@
   {
     "name": "io.github.team-monet/monet",
     "npm": "@team-monet/monet",
-    "version": "1.6.3",
+    "version": "1.7.1",
     "repo": "https://github.com/team-monet/monet",
     "status": "active",
     "isLatest": true
@@ -24684,6 +25292,14 @@
     "npm": "@temporal-cortex/cortex-mcp",
     "version": "0.5.0",
     "repo": "https://github.com/billylui/temporal-cortex-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.LuxorLabs/tenki-mcp",
+    "npm": "@tenkicloud/mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/LuxorLabs/tenki-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -24756,6 +25372,14 @@
     "npm": "@textavia/mcp",
     "version": "0.1.2",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.textbee/mcp",
+    "npm": "@textbee/mcp",
+    "version": "0.0.2",
+    "repo": "https://github.com/textbee/textbee-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -25402,7 +26026,7 @@
   {
     "name": "io.github.nirholas/activity-mcp",
     "npm": "@three-ws/activity-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25410,7 +26034,7 @@
   {
     "name": "io.github.nirholas/agenc-mcp",
     "npm": "@three-ws/agenc-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25418,7 +26042,7 @@
   {
     "name": "io.github.nirholas/agent-sniper",
     "npm": "@three-ws/agent-sniper",
-    "version": "0.1.5",
+    "version": "0.1.6",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25426,7 +26050,7 @@
   {
     "name": "io.github.nirholas/agentcore-payments-mcp",
     "npm": "@three-ws/agentcore-payments-mcp",
-    "version": "0.1.2",
+    "version": "0.1.4",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25434,7 +26058,7 @@
   {
     "name": "io.github.nirholas/agora-mcp",
     "npm": "@three-ws/agora-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25442,7 +26066,7 @@
   {
     "name": "io.github.nirholas/alerts-mcp",
     "npm": "@three-ws/alerts-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25450,7 +26074,7 @@
   {
     "name": "io.github.nirholas/alibaba-cloud",
     "npm": "@three-ws/alibaba-cloud-mcp",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25458,7 +26082,7 @@
   {
     "name": "io.github.nirholas/assistant-widget",
     "npm": "@three-ws/assistant-mcp",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25466,7 +26090,7 @@
   {
     "name": "io.github.nirholas/audio-mcp",
     "npm": "@three-ws/audio-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25474,7 +26098,7 @@
   {
     "name": "io.github.nirholas/autopilot-mcp",
     "npm": "@three-ws/autopilot-mcp",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25490,7 +26114,7 @@
   {
     "name": "io.github.nirholas/threews-avatar",
     "npm": "@three-ws/avatar-mcp",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25498,7 +26122,7 @@
   {
     "name": "io.github.nirholas/billing-mcp",
     "npm": "@three-ws/billing-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25506,7 +26130,7 @@
   {
     "name": "io.github.nirholas/brain-mcp",
     "npm": "@three-ws/brain-mcp",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25514,7 +26138,7 @@
   {
     "name": "io.github.nirholas/clash-mcp",
     "npm": "@three-ws/clash-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25530,7 +26154,7 @@
   {
     "name": "io.github.nirholas/copy-mcp",
     "npm": "@three-ws/copy-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25546,7 +26170,7 @@
   {
     "name": "io.github.nirholas/ibm-watsonx",
     "npm": "@three-ws/ibm-watsonx-mcp",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25554,7 +26178,7 @@
   {
     "name": "io.github.nirholas/ibm-x402-mcp",
     "npm": "@three-ws/ibm-x402-mcp",
-    "version": "1.1.2",
+    "version": "1.1.3",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25562,7 +26186,7 @@
   {
     "name": "io.github.nirholas/intel-mcp",
     "npm": "@three-ws/intel-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25570,7 +26194,7 @@
   {
     "name": "io.github.nirholas/kol-mcp",
     "npm": "@three-ws/kol-mcp",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25578,7 +26202,7 @@
   {
     "name": "io.github.nirholas/loom-mcp",
     "npm": "@three-ws/loom-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25586,7 +26210,7 @@
   {
     "name": "io.github.nirholas/marketplace-mcp",
     "npm": "@three-ws/marketplace-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25594,7 +26218,7 @@
   {
     "name": "io.github.nirholas/x402-bridge",
     "npm": "@three-ws/mcp-bridge",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25602,7 +26226,7 @@
   {
     "name": "io.github.nirholas/3d-agent-mcp",
     "npm": "@three-ws/mcp-server",
-    "version": "1.2.1",
+    "version": "1.2.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25610,7 +26234,7 @@
   {
     "name": "io.github.nirholas/metaplex-agent",
     "npm": "@three-ws/metaplex-agent-mcp",
-    "version": "0.1.2",
+    "version": "0.2.0",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25618,7 +26242,7 @@
   {
     "name": "io.github.nirholas/naming-mcp",
     "npm": "@three-ws/naming-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25626,15 +26250,23 @@
   {
     "name": "io.github.nirholas/notifications-mcp",
     "npm": "@three-ws/notifications-mcp",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/nirholas/three.ws",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.nirholas/onchain-agent-wallets",
+    "npm": "@three-ws/onchain-agent-wallets",
+    "version": "0.1.0",
+    "repo": "https://github.com/nirholas/onchain-agent-wallets",
     "status": "active",
     "isLatest": true
   },
   {
     "name": "io.github.nirholas/portfolio-mcp",
     "npm": "@three-ws/portfolio-mcp",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25642,7 +26274,7 @@
   {
     "name": "io.github.nirholas/provenance-mcp",
     "npm": "@three-ws/provenance-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25650,7 +26282,7 @@
   {
     "name": "io.github.nirholas/pumpfun-solana-mcp",
     "npm": "@three-ws/pumpfun-mcp",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25658,7 +26290,7 @@
   {
     "name": "io.github.nirholas/scene-mcp",
     "npm": "@three-ws/scene-mcp",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25666,7 +26298,7 @@
   {
     "name": "io.github.nirholas/signals-mcp",
     "npm": "@three-ws/signals-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25674,7 +26306,7 @@
   {
     "name": "io.github.nirholas/three-token-mcp",
     "npm": "@three-ws/three-token-mcp",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25682,7 +26314,7 @@
   {
     "name": "io.github.nirholas/tutor-mcp",
     "npm": "@three-ws/tutor-mcp",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25690,7 +26322,7 @@
   {
     "name": "io.github.nirholas/vanity-mcp",
     "npm": "@three-ws/vanity-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25706,7 +26338,7 @@
   {
     "name": "io.github.nirholas/x402-mcp",
     "npm": "@three-ws/x402-mcp",
-    "version": "0.2.1",
+    "version": "0.2.2",
     "repo": "https://github.com/nirholas/three.ws",
     "status": "active",
     "isLatest": true
@@ -25802,7 +26434,7 @@
   {
     "name": "io.github.tide-foundation/raziel",
     "npm": "@tideorg/mcp",
-    "version": "1.9.15",
+    "version": "1.9.23",
     "repo": "https://github.com/tide-foundation/raziel-mcp",
     "status": "active",
     "isLatest": true
@@ -25938,7 +26570,7 @@
   {
     "name": "io.github.toggl/toggl-mcp",
     "npm": "@togglhq/mcp",
-    "version": "1.6.0",
+    "version": "1.6.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -26208,6 +26840,14 @@
     "isLatest": true
   },
   {
+    "name": "io.traql/mcp-server",
+    "npm": "@traql/mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/traql/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.trestlescan/trestle",
     "npm": "@trestlescan/mcp",
     "version": "1.4.1",
@@ -26220,6 +26860,14 @@
     "npm": "@treza/mcp",
     "version": "0.1.1",
     "repo": "https://github.com/treza-labs/treza-sdk",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.TrigGuard-AI/trigguard",
+    "npm": "@trigguard/mcp-server",
+    "version": "1.2.0",
+    "repo": "https://github.com/TrigGuard-AI/TrigGuard",
     "status": "active",
     "isLatest": true
   },
@@ -26418,7 +27066,7 @@
   {
     "name": "io.github.tyler-mitchell/type-atlas",
     "npm": "@type-atlas/mcp",
-    "version": "0.3.0",
+    "version": "0.6.3",
     "repo": "https://github.com/tyler-mitchell/type-atlas",
     "status": "active",
     "isLatest": true
@@ -26432,9 +27080,17 @@
     "isLatest": true
   },
   {
+    "name": "dev.typeship/typeship",
+    "npm": "@typeship-ax/mcp",
+    "version": "0.6.0",
+    "repo": "https://github.com/typeship-ax/mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.uarlouski/testrail-mcp-server",
     "npm": "@uarlouski/testrail-mcp-server",
-    "version": "2.3.0",
+    "version": "2.4.0",
     "repo": "https://github.com/uarlouski/testrail-mcp-server",
     "status": "active",
     "isLatest": true
@@ -26472,9 +27128,17 @@
     "isLatest": true
   },
   {
+    "name": "com.uibeats/mcp",
+    "npm": "@uibeats/mcp",
+    "version": "0.1.3",
+    "repo": "https://github.com/nikhils4/ui-beats",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.uindow/uindow",
     "npm": "@uindow/cli",
-    "version": "0.0.151",
+    "version": "0.0.152",
     "repo": "https://github.com/uindow/uindow",
     "status": "active",
     "isLatest": true
@@ -26920,6 +27584,14 @@
     "isLatest": true
   },
   {
+    "name": "com.unlimitedtts/tts",
+    "npm": "@unlimitedtts/mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/sisygoboom/unlimitedtts-agents",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.info-arnav/unlocalhost",
     "npm": "@unlocalhost/unlocalhost",
     "version": "0.1.1",
@@ -27330,7 +28002,7 @@
   {
     "name": "io.github.vantioai/vantio-optics",
     "npm": "@vantio/optics-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/vantioai/vantio-open-core",
     "status": "active",
     "isLatest": true
@@ -27378,7 +28050,7 @@
   {
     "name": "io.github.vectros-ai/mcp-server",
     "npm": "@vectros-ai/mcp-server",
-    "version": "0.14.0",
+    "version": "0.15.0",
     "repo": "https://github.com/vectros-ai/vectros-mcp-server",
     "status": "active",
     "isLatest": true
@@ -27394,7 +28066,7 @@
   {
     "name": "org.velocms/mcp",
     "npm": "@velocms/mcp",
-    "version": "0.1.2",
+    "version": "0.1.3",
     "repo": "https://github.com/VeloCMS/velocms-mcp",
     "status": "active",
     "isLatest": true
@@ -27570,7 +28242,7 @@
   {
     "name": "io.github.VibeTechnologies/vibe-mcp",
     "npm": "@vibebrowser/mcp",
-    "version": "0.3.5",
+    "version": "0.3.6",
     "repo": "https://github.com/VibeTechnologies/vibe-mcp",
     "status": "active",
     "isLatest": true
@@ -27642,7 +28314,7 @@
   {
     "name": "com.vibgrate/ai-context",
     "npm": "@vibgrate/cli",
-    "version": "2026.819.1",
+    "version": "2026.819.3",
     "repo": "https://github.com/vibgrate/cli",
     "status": "active",
     "isLatest": true
@@ -27858,8 +28530,8 @@
   {
     "name": "io.github.MattKilmer/voteship",
     "npm": "@voteship/mcp-server",
-    "version": "0.1.4",
-    "repo": "https://github.com/MattKilmer/voteship",
+    "version": "0.2.3",
+    "repo": "https://github.com/MattKilmer/voteship-agent-toolkit",
     "status": "active",
     "isLatest": true
   },
@@ -27898,7 +28570,7 @@
   {
     "name": "io.github.vshulcz/deja-vu",
     "npm": "@vshulcz/deja-vu",
-    "version": "0.17.3",
+    "version": "0.18.0",
     "repo": "https://github.com/vshulcz/deja-vu",
     "status": "active",
     "isLatest": true
@@ -28018,7 +28690,7 @@
   {
     "name": "ai.wavespeed/mcp",
     "npm": "@wavespeed/mcp",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "repo": "https://github.com/WaveSpeedAI/mcp-server",
     "status": "active",
     "isLatest": true
@@ -28124,6 +28796,14 @@
     "npm": "@webuplink/mcp",
     "version": "0.1.1",
     "repo": "https://github.com/webuplink-dev/webuplink-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.useweckr/weckr",
+    "npm": "@weckr/mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/Ghiles3232/weckr-sdks",
     "status": "active",
     "isLatest": true
   },
@@ -28248,6 +28928,14 @@
     "isLatest": true
   },
   {
+    "name": "dev.whiteintel/whiteintel",
+    "npm": "@whiteintel/mcp-server",
+    "version": "0.7.10",
+    "repo": "https://github.com/Hei33enberg/WhiteIntel-OS",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Whoisjson/mcp-server",
     "npm": "@whoisjson/mcp-server",
     "version": "1.0.3",
@@ -28322,7 +29010,7 @@
   {
     "name": "ai.withone/mcp",
     "npm": "@withone/mcp",
-    "version": "1.2.3",
+    "version": "1.2.4",
     "repo": "https://github.com/withoneai/mcp",
     "status": "active",
     "isLatest": true
@@ -28436,6 +29124,14 @@
     "npm": "@woyax/mcp-ozon-seller",
     "version": "1.0.0",
     "repo": "https://github.com/woyaxnini/mcp-ozon-seller",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.wpconvert/mcp",
+    "npm": "@wpconvert/mcp",
+    "version": "0.3.1",
+    "repo": "https://github.com/FTWAgency/wpconvert-devtools",
     "status": "active",
     "isLatest": true
   },
@@ -28594,7 +29290,7 @@
   {
     "name": "tech.xns/relayer",
     "npm": "@xns-cloud/relayer-mcp",
-    "version": "0.9.3",
+    "version": "0.10.1",
     "repo": "https://gitlab.com/scpcorp/relayer-mcp",
     "status": "active",
     "isLatest": true
@@ -28650,7 +29346,7 @@
   {
     "name": "io.github.xxxoooxoxo/wiff",
     "npm": "@xxxoooxoxo/wiff",
-    "version": "0.7.1",
+    "version": "0.9.0",
     "repo": "https://github.com/xxxoooxoxo/wiff",
     "status": "active",
     "isLatest": true
@@ -28658,7 +29354,7 @@
   {
     "name": "io.github.XZXZZX-Ai/bilibili-mcp",
     "npm": "@xzxzzx/bilibili-mcp",
-    "version": "1.12.0",
+    "version": "1.13.1",
     "repo": "https://github.com/XZXZZX-Ai/bilibili-mcp",
     "status": "active",
     "isLatest": true
@@ -28676,6 +29372,14 @@
     "npm": "@yamaru-eu/hardware-probe",
     "version": "1.1.2",
     "repo": "https://github.com/yamaru-eu/hardware-probe",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.yanlinglabs/video-extract-mcp",
+    "npm": "@yanlinglabs/video-extract-mcp",
+    "version": "0.12.7",
+    "repo": "https://github.com/yanlingLabs/video-extract-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -28698,7 +29402,7 @@
   {
     "name": "io.github.YawLabs/aws-mcp",
     "npm": "@yawlabs/aws-mcp",
-    "version": "1.8.0",
+    "version": "1.8.2",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28706,7 +29410,7 @@
   {
     "name": "io.github.YawLabs/caddy-mcp",
     "npm": "@yawlabs/caddy-mcp",
-    "version": "2.2.0",
+    "version": "2.3.2",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28714,7 +29418,7 @@
   {
     "name": "io.github.YawLabs/ctxlint",
     "npm": "@yawlabs/ctxlint",
-    "version": "0.23.0",
+    "version": "0.24.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28722,7 +29426,7 @@
   {
     "name": "io.github.YawLabs/electron-mcp",
     "npm": "@yawlabs/electron-mcp",
-    "version": "1.4.0",
+    "version": "1.4.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28730,7 +29434,7 @@
   {
     "name": "io.github.YawLabs/fetch-mcp",
     "npm": "@yawlabs/fetch-mcp",
-    "version": "0.5.0",
+    "version": "0.5.2",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28738,7 +29442,7 @@
   {
     "name": "io.github.YawLabs/lemonsqueezy-mcp",
     "npm": "@yawlabs/lemonsqueezy-mcp",
-    "version": "0.13.0",
+    "version": "0.13.2",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28746,7 +29450,7 @@
   {
     "name": "io.github.YawLabs/mcp",
     "npm": "@yawlabs/mcp",
-    "version": "0.75.4",
+    "version": "0.76.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28754,7 +29458,7 @@
   {
     "name": "io.github.YawLabs/mcp-compliance",
     "npm": "@yawlabs/mcp-compliance",
-    "version": "0.17.0",
+    "version": "0.17.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28778,7 +29482,7 @@
   {
     "name": "io.github.YawLabs/npmjs-mcp",
     "npm": "@yawlabs/npmjs-mcp",
-    "version": "0.15.0",
+    "version": "0.15.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28786,7 +29490,7 @@
   {
     "name": "io.github.YawLabs/postgres-mcp",
     "npm": "@yawlabs/postgres-mcp",
-    "version": "0.10.0",
+    "version": "0.12.0",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28794,7 +29498,7 @@
   {
     "name": "io.github.YawLabs/redis-mcp",
     "npm": "@yawlabs/redis-mcp",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28802,7 +29506,7 @@
   {
     "name": "io.github.YawLabs/ssh-mcp",
     "npm": "@yawlabs/ssh-mcp",
-    "version": "0.14.0",
+    "version": "0.14.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28810,7 +29514,7 @@
   {
     "name": "io.github.YawLabs/tailscale-mcp",
     "npm": "@yawlabs/tailscale-mcp",
-    "version": "0.16.0",
+    "version": "0.17.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -28978,7 +29682,7 @@
   {
     "name": "io.github.zereight/gitlab-mcp",
     "npm": "@zereight/mcp-gitlab",
-    "version": "2.1.49",
+    "version": "2.1.52",
     "repo": "https://github.com/zereight/gitlab-mcp",
     "status": "active",
     "isLatest": true
@@ -29002,7 +29706,7 @@
   {
     "name": "com.plcsense/mcp",
     "npm": "@zeugwerk/plcsense",
-    "version": "1.1.17",
+    "version": "1.1.18",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -29012,14 +29716,6 @@
     "npm": "@zhound/d365fo-mcp-server",
     "version": "2.0.1",
     "repo": "https://github.com/zhound420/D365FO-claude-connector",
-    "status": "active",
-    "isLatest": true
-  },
-  {
-    "name": "io.github.ZiggsAI/ziggs",
-    "npm": "@ziggs-ai/ziggs-mcp",
-    "version": "0.11.0",
-    "repo": "https://github.com/ZiggsAI/agentplus",
     "status": "active",
     "isLatest": true
   },
@@ -29108,6 +29804,14 @@
     "npm": "37soul-mcp",
     "version": "0.4.4",
     "repo": "https://github.com/xnjiang/37soul-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.nirholas/3d-ar-studio",
+    "npm": "3d-ar-studio-mcp",
+    "version": "0.3.0",
+    "repo": "https://github.com/nirholas/3D-AR-Studio",
     "status": "active",
     "isLatest": true
   },
@@ -29288,6 +29992,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.PritaS/actionforge",
+    "npm": "actionforge-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/PritaS/actionforge-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Burakfenerci5/actionproof",
     "npm": "actionproof",
     "version": "0.0.3",
@@ -29322,7 +30034,7 @@
   {
     "name": "co.addressintel/permits",
     "npm": "addressintel-mcp",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "repo": "https://github.com/RantumBits/addressintel-mcp",
     "status": "active",
     "isLatest": true
@@ -29554,7 +30266,7 @@
   {
     "name": "io.github.callstack/agent-device",
     "npm": "agent-device",
-    "version": "0.20.9",
+    "version": "0.20.10",
     "repo": "https://github.com/callstack/agent-device",
     "status": "active",
     "isLatest": true
@@ -29674,7 +30386,7 @@
   {
     "name": "io.github.aeoess/agent-passport-mcp",
     "npm": "agent-passport-system-mcp",
-    "version": "4.0.0",
+    "version": "5.0.0",
     "repo": "https://github.com/aeoess/agent-passport-mcp",
     "status": "active",
     "isLatest": true
@@ -29706,7 +30418,7 @@
   {
     "name": "io.github.mlava/agent-ready-mcp",
     "npm": "agent-ready-mcp",
-    "version": "0.7.3",
+    "version": "0.7.5",
     "repo": "https://github.com/mlava/agent-ready-mcp",
     "status": "active",
     "isLatest": true
@@ -29834,7 +30546,7 @@
   {
     "name": "io.github.MikeyPetrillo/agent402",
     "npm": "agent402-mcp",
-    "version": "0.12.12",
+    "version": "0.13.0",
     "repo": "https://github.com/MikeyPetrillo/Agent402",
     "status": "active",
     "isLatest": true
@@ -29906,7 +30618,7 @@
   {
     "name": "io.github.hoornet/agentdocs-mcp",
     "npm": "agentdocs-mcp",
-    "version": "0.9.3",
+    "version": "0.10.1",
     "repo": "https://github.com/hoornet/agentdocs-mcp",
     "status": "active",
     "isLatest": true
@@ -30122,7 +30834,7 @@
   {
     "name": "io.github.ihorponom/agentpack",
     "npm": "agentpack-cli",
-    "version": "1.6.1",
+    "version": "1.6.2",
     "repo": "https://github.com/ihorponom/agentpack",
     "status": "active",
     "isLatest": true
@@ -30340,6 +31052,14 @@
     "npm": "ai-agent-bank-mcp-server",
     "version": "1.0.2",
     "repo": "https://github.com/WirterNow/ai-agent-bank-mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.subodhkc/ai-appsec",
+    "npm": "ai-appsec",
+    "version": "0.1.0",
+    "repo": "https://github.com/subodhkc/ai-appsec",
     "status": "active",
     "isLatest": true
   },
@@ -30642,7 +31362,7 @@
   {
     "name": "io.github.akomyagin/aimcpgate",
     "npm": "aimcpgate",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "repo": "https://github.com/akomyagin/aiMCPGate",
     "status": "active",
     "isLatest": true
@@ -30768,10 +31488,10 @@
     "isLatest": true
   },
   {
-    "name": "io.github.SEKeener/airtreks-mcp",
+    "name": "io.github.Airtreks/airtreks-mcp",
     "npm": "airtreks-mcp",
-    "version": "1.0.1",
-    "repo": "https://github.com/SEKeener/airtreks-mcp",
+    "version": "1.2.2",
+    "repo": "https://github.com/Airtreks/airtreks-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -30834,7 +31554,7 @@
   {
     "name": "com.moosejudge/alces-mcp",
     "npm": "alces-mcp",
-    "version": "0.8.1",
+    "version": "1.0.0",
     "repo": "https://gitlab.com/moosejudge/alces-mcp",
     "status": "active",
     "isLatest": true
@@ -30866,7 +31586,7 @@
   {
     "name": "io.github.alimbenhelal-pro/alm-xpp-mcp",
     "npm": "almxppmcp",
-    "version": "1.4.3",
+    "version": "1.5.1",
     "repo": "https://github.com/alimbenhelal-pro/ALM-XPP-MCP",
     "status": "active",
     "isLatest": true
@@ -30908,6 +31628,14 @@
     "npm": "altmetric-mcp",
     "version": "1.1.2",
     "repo": "https://github.com/altmetric/altmetric-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "software.altweb/altweb-context",
+    "npm": "altweb-context",
+    "version": "1.1.0",
+    "repo": "https://github.com/danielsoimu/altweb",
     "status": "active",
     "isLatest": true
   },
@@ -30962,7 +31690,7 @@
   {
     "name": "io.github.BourbonDog/amicus",
     "npm": "amicus",
-    "version": "4.7.1",
+    "version": "4.8.0",
     "repo": "https://github.com/BourbonDog/amicus",
     "status": "active",
     "isLatest": true
@@ -30970,7 +31698,7 @@
   {
     "name": "io.github.jyswee/analyga",
     "npm": "analyga",
-    "version": "0.1.5",
+    "version": "0.1.8",
     "repo": "https://github.com/jyswee/analyga",
     "status": "active",
     "isLatest": true
@@ -31058,7 +31786,7 @@
   {
     "name": "io.github.antics-gg/antics-mcp",
     "npm": "antics-mcp",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "repo": "https://github.com/antics-gg/antics-mcp",
     "status": "active",
     "isLatest": true
@@ -31184,6 +31912,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.garrrikkotua/app-intel",
+    "npm": "app-intel-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/garrrikkotua/app-intel-sdk",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.mikusnuz/app-publish",
     "npm": "app-publish-mcp",
     "version": "0.3.1",
@@ -31194,7 +31930,7 @@
   {
     "name": "io.github.meyusufdemirci/app-store-operator",
     "npm": "app-store-operator",
-    "version": "0.3.4",
+    "version": "0.3.5",
     "repo": "https://github.com/meyusufdemirci/app-store-operator",
     "status": "active",
     "isLatest": true
@@ -31218,7 +31954,7 @@
   {
     "name": "io.github.appium/appium-mcp",
     "npm": "appium-mcp",
-    "version": "1.92.4",
+    "version": "1.92.5",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -31458,7 +32194,7 @@
   {
     "name": "io.github.pedroknigge/arkgate",
     "npm": "arkgate",
-    "version": "4.6.4",
+    "version": "4.6.6",
     "repo": "https://github.com/pedroknigge/arkgate",
     "status": "active",
     "isLatest": true
@@ -31698,7 +32434,7 @@
   {
     "name": "io.github.Evilander/audrey",
     "npm": "audrey",
-    "version": "1.1.3",
+    "version": "1.2.2",
     "repo": "https://github.com/Evilander/Audrey",
     "status": "active",
     "isLatest": true
@@ -31724,6 +32460,14 @@
     "npm": "auseklis",
     "version": "0.4.0",
     "repo": "https://github.com/igmizo/auseklis",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.ChangkeunJ/australian-law-mcp",
+    "npm": "australian-law-mcp",
+    "version": "0.1.4",
+    "repo": "https://github.com/ChangkeunJ/australian-law-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -31778,7 +32522,7 @@
   {
     "name": "io.github.xnjiang/autowhisper-mcp",
     "npm": "autowhisper-mcp",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "repo": "https://github.com/xnjiang/autowhisper-mcp",
     "status": "active",
     "isLatest": true
@@ -31938,7 +32682,7 @@
   {
     "name": "io.github.singularitybpjade/balance-engine",
     "npm": "balance-engine-mcp",
-    "version": "0.1.9",
+    "version": "0.1.10",
     "repo": "https://github.com/singularitybpjade/balance-engine",
     "status": "active",
     "isLatest": true
@@ -32248,9 +32992,9 @@
     "isLatest": true
   },
   {
-    "name": "io.github.urbanmorph/bharatlas-mcp",
+    "name": "io.github.sathya-sankaran/bharatlas-mcp",
     "npm": "bharatlas-mcp",
-    "version": "1.0.3",
+    "version": "1.1.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -32530,7 +33274,7 @@
   {
     "name": "io.github.fauguste/boondmanager-mcp-server",
     "npm": "boondmanager-mcp-server",
-    "version": "2.12.2",
+    "version": "2.14.0",
     "repo": "https://github.com/fauguste/boondmanager-mcp-server",
     "status": "active",
     "isLatest": true
@@ -32642,7 +33386,7 @@
   {
     "name": "io.github.miisodev/brainllm",
     "npm": "brainllm",
-    "version": "10.5.2",
+    "version": "11.0.0",
     "repo": "https://github.com/miisodev/BrainLLM",
     "status": "active",
     "isLatest": true
@@ -32650,7 +33394,7 @@
   {
     "name": "io.github.spacecowboyian/brains",
     "npm": "brains-mcp",
-    "version": "1.67.2",
+    "version": "1.68.9",
     "repo": "https://github.com/spacecowboyian/brains",
     "status": "active",
     "isLatest": true
@@ -32754,7 +33498,7 @@
   {
     "name": "io.github.brilliantdirectories/brilliant-directories-mcp",
     "npm": "brilliant-directories-mcp",
-    "version": "6.58.592",
+    "version": "6.58.608",
     "repo": "https://github.com/brilliantdirectories/brilliant-directories-mcp",
     "status": "active",
     "isLatest": true
@@ -32778,7 +33522,7 @@
   {
     "name": "io.github.Furowu/brokre",
     "npm": "brokre",
-    "version": "0.2.22",
+    "version": "0.2.23",
     "repo": "https://github.com/Furowu/brokre",
     "status": "active",
     "isLatest": true
@@ -32810,7 +33554,7 @@
   {
     "name": "io.github.browser-gateway/browser-gateway",
     "npm": "browser-gateway",
-    "version": "0.4.0",
+    "version": "0.4.13",
     "repo": "https://github.com/browser-gateway/browser-gateway",
     "status": "active",
     "isLatest": true
@@ -32906,7 +33650,7 @@
   {
     "name": "io.github.jyswee/buggazi",
     "npm": "buggazi",
-    "version": "2.14.26",
+    "version": "2.14.28",
     "repo": "https://github.com/jyswee/buggazi",
     "status": "active",
     "isLatest": true
@@ -32978,7 +33722,7 @@
   {
     "name": "com.bykaranteli/mcp",
     "npm": "bykaranteli-mcp",
-    "version": "0.8.0",
+    "version": "0.9.0",
     "repo": "https://github.com/bykarantelicom/bykaranteli-mcp",
     "status": "active",
     "isLatest": true
@@ -32986,7 +33730,7 @@
   {
     "name": "io.github.0rkz/byte-protocol",
     "npm": "byte-mcp-server",
-    "version": "0.12.1",
+    "version": "0.12.2",
     "repo": "https://github.com/0rkz/byte-mcp-server",
     "status": "active",
     "isLatest": true
@@ -33074,7 +33818,7 @@
   {
     "name": "io.github.caelum29/calibre-mcp",
     "npm": "calibre-mcp",
-    "version": "0.7.3",
+    "version": "0.7.4",
     "repo": "https://github.com/caelum29/calibre-mcp",
     "status": "active",
     "isLatest": true
@@ -33178,7 +33922,7 @@
   {
     "name": "io.github.bruchris/canvas-lms-mcp",
     "npm": "canvas-lms-mcp",
-    "version": "1.27.0",
+    "version": "1.27.4",
     "repo": "https://github.com/bruchris/canvas-lms-mcp",
     "status": "active",
     "isLatest": true
@@ -33298,7 +34042,7 @@
   {
     "name": "io.github.claymore666/ccu-mcp",
     "npm": "ccu-mcp",
-    "version": "1.9.1",
+    "version": "1.10.0",
     "repo": "https://github.com/claymore666/ccu-mcp",
     "status": "active",
     "isLatest": true
@@ -33392,6 +34136,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.John0n1/chainrpc-mcp",
+    "npm": "chainrpc-mcp",
+    "version": "2.0.2",
+    "repo": "https://github.com/John0n1/chainrpc-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.raulbr90/changebook",
     "npm": "changebook",
     "version": "0.7.1",
@@ -33452,6 +34204,14 @@
     "npm": "chassis-mcp",
     "version": "0.1.2",
     "repo": "https://github.com/dvd90/chassis",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.munhq/chat-recall",
+    "npm": "chat-recall",
+    "version": "0.5.6",
+    "repo": "https://github.com/munhq/chat-recall",
     "status": "active",
     "isLatest": true
   },
@@ -33616,6 +34376,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Openly-Useful/citewire",
+    "npm": "citewire",
+    "version": "0.2.0",
+    "repo": "https://github.com/Openly-Useful/citewire",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.cituna/cituna-mcp",
     "npm": "cituna-mcp",
     "version": "1.0.1",
@@ -33770,7 +34538,7 @@
   {
     "name": "io.github.MuhammadTalhaMT/intercom",
     "npm": "claude-intercom",
-    "version": "2.0.0",
+    "version": "2.1.0",
     "repo": "https://github.com/MuhammadTalhaMT/claude-intercom",
     "status": "active",
     "isLatest": true
@@ -33860,6 +34628,14 @@
     "npm": "claude-wrap-mcp",
     "version": "0.1.0",
     "repo": "https://github.com/Alex-Kaff/claude-wrap-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.aidevelopers2/claudeclear-mcp",
+    "npm": "claudeclear-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/aidevelopers2/claudeclear-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -33994,7 +34770,7 @@
   {
     "name": "io.github.cyanheads/clinicaltrialsgov-mcp-server",
     "npm": "clinicaltrialsgov-mcp-server",
-    "version": "2.9.1",
+    "version": "2.9.2",
     "repo": "https://github.com/cyanheads/clinicaltrialsgov-mcp-server",
     "status": "active",
     "isLatest": true
@@ -34128,6 +34904,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.ajemba/codasms-mcp",
+    "npm": "codasms-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/ajemba/codasms-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.BenAHammond/code-auditor-mcp",
     "npm": "code-auditor-mcp",
     "version": "2.0.2",
@@ -34194,7 +34978,7 @@
   {
     "name": "io.github.Synvoya/codeinspectus",
     "npm": "codeinspectus",
-    "version": "2.5.0",
+    "version": "2.6.0",
     "repo": "https://github.com/Synvoya/codeinspectus",
     "status": "active",
     "isLatest": true
@@ -34234,7 +35018,7 @@
   {
     "name": "io.github.andreilungeanu/codex-delegate-mcp",
     "npm": "codex-delegate-mcp",
-    "version": "1.21.1",
+    "version": "2.0.0",
     "repo": "https://github.com/andreilungeanu/codex-delegate-mcp",
     "status": "active",
     "isLatest": true
@@ -34276,6 +35060,14 @@
     "npm": "cogmemai-mcp",
     "version": "3.17.0",
     "repo": "https://github.com/hifriendbot/cogmemai-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.skylarng89/cogmemory-mcp",
+    "npm": "cogmemory-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/skylarng89/cogmemory-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -34370,7 +35162,7 @@
   {
     "name": "io.github.artokun/comfyui-mcp",
     "npm": "comfyui-mcp",
-    "version": "0.52.6",
+    "version": "0.52.89",
     "repo": "https://github.com/artokun/comfyui-mcp",
     "status": "active",
     "isLatest": true
@@ -34882,7 +35674,7 @@
   {
     "name": "io.github.mysleekdesigns/crawlforge-mcp-server",
     "npm": "crawlforge-mcp-server",
-    "version": "5.0.0",
+    "version": "5.0.5",
     "repo": "https://github.com/mysleekdesigns/crawlforge-mcp",
     "status": "active",
     "isLatest": true
@@ -34906,7 +35698,7 @@
   {
     "name": "io.github.Octonove/crbro-memory",
     "npm": "crbro-memory",
-    "version": "1.4.0",
+    "version": "1.12.0",
     "repo": "https://github.com/Octonove/crbro-memory",
     "status": "active",
     "isLatest": true
@@ -35074,7 +35866,7 @@
   {
     "name": "io.github.AlgoVaultFi/crypto-quant-signal-mcp",
     "npm": "crypto-quant-signal-mcp",
-    "version": "1.27.0",
+    "version": "1.28.1",
     "repo": "https://github.com/AlgoVaultLabs/crypto-quant-signal-mcp",
     "status": "active",
     "isLatest": true
@@ -35162,7 +35954,7 @@
   {
     "name": "io.github.andreilungeanu/cursor-delegate-mcp",
     "npm": "cursor-delegate-mcp",
-    "version": "1.22.0",
+    "version": "2.0.0",
     "repo": "https://github.com/andreilungeanu/cursor-delegate-mcp",
     "status": "active",
     "isLatest": true
@@ -35180,6 +35972,14 @@
     "npm": "cursor-telegram-chat",
     "version": "0.1.23",
     "repo": "https://github.com/udah1/cursor-chat-bridge",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "co.cuvo/website",
+    "npm": "cuvo-health",
+    "version": "1.0.0",
+    "repo": null,
     "status": "active",
     "isLatest": true
   },
@@ -35608,6 +36408,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.RooneyTech/dendro-react",
+    "npm": "dendro-react-mcp",
+    "version": "0.7.0",
+    "repo": "https://github.com/RooneyTech/dendro-react",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.vladic-corp/denpyo-mcp",
     "npm": "denpyo-mcp",
     "version": "0.1.1",
@@ -35666,7 +36474,7 @@
   {
     "name": "io.github.atef-ataya/depwire",
     "npm": "depwire-cli",
-    "version": "1.14.3",
+    "version": "1.16.0",
     "repo": "https://github.com/depwire/depwire",
     "status": "active",
     "isLatest": true
@@ -35674,7 +36482,7 @@
   {
     "name": "io.github.DHEBP/dero-mcp-server",
     "npm": "dero-mcp-server",
-    "version": "0.5.2",
+    "version": "0.6.0",
     "repo": "https://github.com/DHEBP/dero-mcp-server",
     "status": "active",
     "isLatest": true
@@ -35962,7 +36770,7 @@
   {
     "name": "io.github.carrotly-ai/disclosures",
     "npm": "disclosures",
-    "version": "0.1.1",
+    "version": "0.7.0",
     "repo": "https://github.com/carrotly-ai/disclosures",
     "status": "active",
     "isLatest": true
@@ -36154,7 +36962,7 @@
   {
     "name": "io.github.jblaz6335/ai-data-marketplace",
     "npm": "dopaminedesk-ai-data-marketplace-mcp",
-    "version": "2.8.3",
+    "version": "2.11.2",
     "repo": "https://github.com/jblaz6335/mcp-server-aidatamarketplace",
     "status": "active",
     "isLatest": true
@@ -36236,6 +37044,22 @@
     "npm": "drengr",
     "version": "0.10.6",
     "repo": "https://github.com/SharminSirajudeen/drengr-community",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.dribba/dribba",
+    "npm": "dribba",
+    "version": "1.1.0",
+    "repo": "https://github.com/dribbaengineering/dribba",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.dhughes6071/driftwatch",
+    "npm": "driftwatch-mcp",
+    "version": "0.1.2",
+    "repo": "https://github.com/dhughes6071/driftwatch",
     "status": "active",
     "isLatest": true
   },
@@ -36338,7 +37162,7 @@
   {
     "name": "io.github.iseppo/e-arveldaja-mcp",
     "npm": "e-arveldaja-mcp",
-    "version": "0.25.3",
+    "version": "0.25.5",
     "repo": "https://github.com/iseppo/e-arveldaja-mcp",
     "status": "active",
     "isLatest": true
@@ -36458,7 +37282,7 @@
   {
     "name": "io.github.editmamei/editmamei",
     "npm": "editmamei",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "repo": "https://github.com/editmamei/editmamei",
     "status": "active",
     "isLatest": true
@@ -36562,7 +37386,7 @@
   {
     "name": "ai.elicitly/elicitly",
     "npm": "elicitly",
-    "version": "0.4.1",
+    "version": "0.5.1",
     "repo": "https://github.com/elicitly/elicitly",
     "status": "active",
     "isLatest": true
@@ -36736,6 +37560,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.cherninlab/ennodia",
+    "npm": "ennodia",
+    "version": "0.2.0",
+    "repo": "https://github.com/cherninlab/ennodia",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.bitterdev/enpass-mcp",
     "npm": "enpass-mcp",
     "version": "0.1.0",
@@ -36812,6 +37644,14 @@
     "npm": "envsync-le-mcp",
     "version": "2.2.5",
     "repo": "https://github.com/nolindnaidoo/envsync-le",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.eonik/mcp",
+    "npm": "eonik-mcp",
+    "version": "2.0.0",
+    "repo": "https://github.com/eonik-ai/eonik-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -37042,7 +37882,7 @@
   {
     "name": "com.execbro/execbro",
     "npm": "execbro",
-    "version": "2.9.1",
+    "version": "2.9.3",
     "repo": "https://github.com/igorzheludkov/execbro",
     "status": "active",
     "isLatest": true
@@ -37138,16 +37978,8 @@
   {
     "name": "com.familiarvtt/familiar",
     "npm": "familiar-vtt",
-    "version": "2.23.0",
+    "version": "2.24.0",
     "repo": null,
-    "status": "active",
-    "isLatest": true
-  },
-  {
-    "name": "io.famulor/famulor-mcp",
-    "npm": "famulor-mcp",
-    "version": "0.3.1",
-    "repo": "https://github.com/bekservice/Famulor-MCP",
     "status": "active",
     "isLatest": true
   },
@@ -37298,7 +38130,7 @@
   {
     "name": "com.fiatdock/fiatdock-mcp",
     "npm": "fiatdock-mcp",
-    "version": "1.7.7",
+    "version": "1.7.9",
     "repo": "https://github.com/fiatdock/fiatdock",
     "status": "active",
     "isLatest": true
@@ -37420,6 +38252,14 @@
     "npm": "filetopdf-mcp",
     "version": "0.1.1",
     "repo": "https://github.com/FileToPDF/filetopdf-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.FutureAiIndustries/fimemory",
+    "npm": "fimemory",
+    "version": "0.5.0",
+    "repo": "https://github.com/FutureAiIndustries/FI-Memory",
     "status": "active",
     "isLatest": true
   },
@@ -37696,6 +38536,14 @@
     "isLatest": true
   },
   {
+    "name": "com.fluxdots/mcp",
+    "npm": "fluxdots-mcp",
+    "version": "1.1.2",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.churichard/fluxmail",
     "npm": "fluxmail",
     "version": "0.7.0",
@@ -37722,7 +38570,7 @@
   {
     "name": "ai.fodda/mcp-server",
     "npm": "fodda-mcp",
-    "version": "1.32.1",
+    "version": "1.46.31",
     "repo": "https://github.com/piers-fawkes/fodda-mcp",
     "status": "active",
     "isLatest": true
@@ -37786,7 +38634,7 @@
   {
     "name": "io.github.ddevetak/footballcharts-mcp",
     "npm": "footballcharts-mcp",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "repo": "https://github.com/ddevetak/footballcharts-mcp",
     "status": "active",
     "isLatest": true
@@ -38010,7 +38858,7 @@
   {
     "name": "io.github.SoapyRED/freightutils",
     "npm": "freightutils-mcp",
-    "version": "2.16.0",
+    "version": "2.17.2",
     "repo": "https://github.com/SoapyRED/freightutils-mcp",
     "status": "active",
     "isLatest": true
@@ -38026,7 +38874,7 @@
   {
     "name": "io.github.Goran-Arsov/freshjots-mcp",
     "npm": "freshjots-mcp",
-    "version": "0.1.3",
+    "version": "0.2.0",
     "repo": "https://github.com/Goran-Arsov/freshjots-mcp",
     "status": "active",
     "isLatest": true
@@ -38170,7 +39018,7 @@
   {
     "name": "io.github.juan-sibbo/gam-seller-mcp-node",
     "npm": "gam-seller-mcp-node",
-    "version": "0.8.3",
+    "version": "0.8.10",
     "repo": "https://github.com/juan-sibbo/gam-seller-mcp-node",
     "status": "active",
     "isLatest": true
@@ -38234,7 +39082,7 @@
   {
     "name": "io.github.GCTRL-TECH/gctrl",
     "npm": "gctrl-mcp",
-    "version": "1.0.1",
+    "version": "1.1.0",
     "repo": "https://github.com/GCTRL-TECH/platform",
     "status": "active",
     "isLatest": true
@@ -38512,6 +39360,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.neprel/git-a2a",
+    "npm": "git-a2a",
+    "version": "1.2.0",
+    "repo": "https://github.com/neprel/git-a2a",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.engrmaziz/git-archaeologist",
     "npm": "git-archaeologist-mcp",
     "version": "0.1.1",
@@ -38538,7 +39394,7 @@
   {
     "name": "com.githits/githits",
     "npm": "githits",
-    "version": "0.9.3",
+    "version": "0.10.0",
     "repo": "https://github.com/githits-com/githits-cli",
     "status": "active",
     "isLatest": true
@@ -38658,7 +39514,7 @@
   {
     "name": "io.github.jbobbink/glippy-mcp",
     "npm": "glippy-mcp",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "repo": "https://github.com/jbobbink/glippy",
     "status": "active",
     "isLatest": true
@@ -38690,7 +39546,7 @@
   {
     "name": "io.github.glongusmain/glongus-mcp",
     "npm": "glongus-mcp",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/glongusmain/glongus-mcp",
     "status": "active",
     "isLatest": true
@@ -38786,7 +39642,7 @@
   {
     "name": "io.github.tomyud1/godot-mcp",
     "npm": "godot-mcp-server",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "repo": "https://github.com/tomyud1/godot-mcp",
     "status": "active",
     "isLatest": true
@@ -38874,7 +39730,7 @@
   {
     "name": "io.github.hjqcan/goodmemory",
     "npm": "goodmemory",
-    "version": "0.7.4",
+    "version": "0.7.5",
     "repo": "https://github.com/hjqcan/GoodMemory",
     "status": "active",
     "isLatest": true
@@ -39060,6 +39916,14 @@
     "npm": "gotify-rmcp",
     "version": "0.1.3",
     "repo": "https://github.com/jmagar/gotify-rmcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.malonestar/gov-data-mcp",
+    "npm": "gov-data-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/malonestar/gov-data-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -39250,7 +40114,7 @@
   {
     "name": "io.github.Nuruvala/grok-build-mcp-server",
     "npm": "grok-build-mcp-server",
-    "version": "0.2.4",
+    "version": "0.2.5",
     "repo": "https://github.com/Nuruvala/grok-build-to-claude",
     "status": "active",
     "isLatest": true
@@ -39276,6 +40140,14 @@
     "npm": "groundcheck-mcp",
     "version": "0.6.0",
     "repo": "https://github.com/beepboop2025/groundcheck",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.ohhavefun/groundlink",
+    "npm": "groundlink-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/ohhavefun/groundlink",
     "status": "active",
     "isLatest": true
   },
@@ -39530,7 +40402,7 @@
   {
     "name": "io.github.PhilipAD/health-export-mcp",
     "npm": "health-export-mcp",
-    "version": "1.4.0",
+    "version": "1.4.3",
     "repo": "https://github.com/PhilipAD/health-export-mcp",
     "status": "active",
     "isLatest": true
@@ -39666,7 +40538,7 @@
   {
     "name": "io.github.hermoso-ai/hermoso",
     "npm": "hermoso",
-    "version": "0.1.90",
+    "version": "0.1.142",
     "repo": "https://github.com/hermoso-ai/hermoso",
     "status": "active",
     "isLatest": true
@@ -39724,6 +40596,14 @@
     "npm": "hig-mcp",
     "version": "0.2.1",
     "repo": "https://github.com/raintree-technology/hig-doctor",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.eminyilmz/high-performance-mcp-server",
+    "npm": "high-performance-mcp-server",
+    "version": "0.1.0",
+    "repo": "https://github.com/eminyilmz/high-performance-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -39810,7 +40690,7 @@
   {
     "name": "io.github.klimPaskov/hoi4-agent-tools",
     "npm": "hoi4-agent-tools",
-    "version": "2.5.2",
+    "version": "2.6.0",
     "repo": "https://github.com/klimPaskov/hoi4-agent-tools",
     "status": "active",
     "isLatest": true
@@ -39824,10 +40704,26 @@
     "isLatest": true
   },
   {
+    "name": "io.github.flukeatzerocool/holonovel",
+    "npm": "holonovel",
+    "version": "2026.8.22",
+    "repo": "https://github.com/flukeatzerocool/holonovel",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.jazib/homebase",
     "npm": "homebase-mcp",
     "version": "1.0.4",
     "repo": "https://github.com/jazib/homebase-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Higangssh/homebutler",
+    "npm": "homebutler",
+    "version": "0.22.0",
+    "repo": "https://github.com/Higangssh/homebutler",
     "status": "active",
     "isLatest": true
   },
@@ -39866,7 +40762,7 @@
   {
     "name": "io.github.MeMikko/hoodgrow-mcp",
     "npm": "hoodgrow-mcp",
-    "version": "0.9.0",
+    "version": "0.9.1",
     "repo": "https://github.com/MeMikko/hoodgrow-mcp",
     "status": "active",
     "isLatest": true
@@ -39876,6 +40772,14 @@
     "npm": "hooka-mcp",
     "version": "0.1.2",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.plus8bit/hosaka",
+    "npm": "hosaka-mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/plus8bit/deadchannel",
     "status": "active",
     "isLatest": true
   },
@@ -39898,7 +40802,7 @@
   {
     "name": "io.github.hostinger/hostinger-api-mcp",
     "npm": "hostinger-api-mcp",
-    "version": "1.42.0",
+    "version": "1.45.5",
     "repo": "https://github.com/hostinger/api-mcp-server",
     "status": "active",
     "isLatest": true
@@ -40384,6 +41288,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.flukeatzerocool/infobroker",
+    "npm": "infobroker",
+    "version": "2026.8.23",
+    "repo": "https://github.com/flukeatzerocool/infobroker",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Mogacode-ma/infomaniak-mcp-agent",
     "npm": "infomaniak-mcp-agent",
     "version": "0.15.1",
@@ -40464,6 +41376,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.aaglis/intelliboard-mcp",
+    "npm": "intelliboard-mcp",
+    "version": "0.18.1",
+    "repo": "https://github.com/aaglis/intelliboard",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.threadlinqs/intelthreadlinqs-mcp",
     "npm": "intelthreadlinqs-mcp",
     "version": "8.1.1",
@@ -40492,6 +41412,14 @@
     "npm": "interviewer-mcp",
     "version": "0.4.0",
     "repo": "https://github.com/girik-chadha/interviewer-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "ai.intodns/scanner",
+    "npm": "intodns-mcp",
+    "version": "1.10.1",
+    "repo": "https://github.com/RoscoNL/intodns-mcp-server",
     "status": "active",
     "isLatest": true
   },
@@ -40698,7 +41626,7 @@
   {
     "name": "io.github.morluto/jacobian",
     "npm": "jacobian",
-    "version": "0.12.0",
+    "version": "0.13.0",
     "repo": "https://github.com/morluto/jacobian",
     "status": "active",
     "isLatest": true
@@ -40780,6 +41708,14 @@
     "npm": "jedanderson-corpus-mcp",
     "version": "1.0.0",
     "repo": "https://github.com/jedanderson432/jedanderson-site",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.rrvrs/jira-alerts-mcp",
+    "npm": "jira-alerts-mcp",
+    "version": "1.1.0",
+    "repo": "https://github.com/rrvrs/jira-alerts-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -41032,6 +41968,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.miracleweasel/katto-mcp",
+    "npm": "katto-mcp",
+    "version": "0.5.1",
+    "repo": "https://github.com/miracleweasel/katto-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "ai.kavel/kavel-mcp",
     "npm": "kavel-mcp",
     "version": "0.1.1",
@@ -41082,7 +42026,7 @@
   {
     "name": "io.github.nicolascroce/keepsake",
     "npm": "keepsake-mcp",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "repo": "https://github.com/nicolascroce/keepsake-mcp",
     "status": "active",
     "isLatest": true
@@ -41250,7 +42194,7 @@
   {
     "name": "io.github.ChunSam/kiwoom-mcp-server",
     "npm": "kiwoom-mcp-server",
-    "version": "0.52.1",
+    "version": "0.52.6",
     "repo": "https://github.com/ChunSam/kiwoom-mcp-server",
     "status": "active",
     "isLatest": true
@@ -41280,9 +42224,17 @@
     "isLatest": true
   },
   {
+    "name": "com.getklo/klo-mcp",
+    "npm": "klo-mcp",
+    "version": "2.7.0",
+    "repo": "https://github.com/elvniv/klo-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.Deviank88/knowledge-rail",
     "npm": "knowledge-rail",
-    "version": "2.4.0",
+    "version": "2.6.1",
     "repo": "https://github.com/Deviank88/KnowledgeRail",
     "status": "active",
     "isLatest": true
@@ -41490,7 +42442,7 @@
   {
     "name": "io.github.pkolawa/krs-poland-mcp-server",
     "npm": "krs-poland-mcp-server",
-    "version": "1.0.17",
+    "version": "1.3.4",
     "repo": "https://github.com/pkolawa/krs-poland-mcp-server",
     "status": "active",
     "isLatest": true
@@ -41688,6 +42640,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Web3kaneco/lazy-lions-mcp",
+    "npm": "lazy-lions-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Web3kaneco/lazy-lions-hub",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.lazymac2x/smart-data-extractor",
     "npm": "lazymac-mcp-smart-data-extractor",
     "version": "1.0.0",
@@ -41738,7 +42698,7 @@
   {
     "name": "io.github.joepangallo/mcp-audit-server",
     "npm": "ledd-mcp-audit-server",
-    "version": "2.1.0",
+    "version": "3.0.1",
     "repo": "https://github.com/joepangallo/mcp-audit-server",
     "status": "active",
     "isLatest": true
@@ -41884,6 +42844,14 @@
     "npm": "lightning-faucet-mcp",
     "version": "2.0.5",
     "repo": "https://github.com/lightningfaucet/mcp-server",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "fm.lightning/lightning-fm-mcp",
+    "npm": "lightning-fm-mcp",
+    "version": "0.1.5",
+    "repo": "https://github.com/Lightning-FM/lightning-fm-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -42216,6 +43184,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.logisky/logisheets-mcp",
+    "npm": "logisheets-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/logisky/logisheets-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.imankha/log-reducer",
     "npm": "logreducer",
     "version": "0.1.1",
@@ -42466,7 +43442,7 @@
   {
     "name": "io.github.woladi/macos-vision-mcp",
     "npm": "macos-vision-mcp",
-    "version": "0.4.9",
+    "version": "0.5.0",
     "repo": "https://github.com/woladi/macos-vision-mcp",
     "status": "active",
     "isLatest": true
@@ -42570,7 +43546,7 @@
   {
     "name": "io.github.csitte/mailwarden",
     "npm": "mailwarden",
-    "version": "0.13.0",
+    "version": "0.14.0",
     "repo": "https://github.com/csitte/mailwarden",
     "status": "active",
     "isLatest": true
@@ -42660,6 +43636,14 @@
     "npm": "markdown-forge-mcp",
     "version": "1.0.3",
     "repo": "https://github.com/ryudi84/sovereign-mcp-servers",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.drsound/markdown-to-whatsapp",
+    "npm": "markdown-to-whatsapp",
+    "version": "1.0.2",
+    "repo": "https://github.com/drsound/markdown-to-whatsapp",
     "status": "active",
     "isLatest": true
   },
@@ -42968,6 +43952,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Dror-Bengal/mcp-anything",
+    "npm": "mcp-anything",
+    "version": "0.2.0",
+    "repo": "https://github.com/Dror-Bengal/mcp-anything",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.vpatser1/mcp-api-doc-generator",
     "npm": "mcp-api-doc-generator",
     "version": "1.1.4",
@@ -42978,7 +43970,7 @@
   {
     "name": "io.github.theSharque/mcp-architector",
     "npm": "mcp-architector",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "repo": "https://github.com/theSharque/mcp-architect",
     "status": "active",
     "isLatest": true
@@ -43034,7 +44026,7 @@
   {
     "name": "io.studiomeyer/server-attestation",
     "npm": "mcp-attest-demo",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "repo": "https://github.com/studiomeyer-io/mcp-server-attestation",
     "status": "active",
     "isLatest": true
@@ -43122,7 +44114,7 @@
   {
     "name": "io.github.smeet666/mcp-bideetmusique",
     "npm": "mcp-bideetmusique",
-    "version": "0.3.0",
+    "version": "1.0.0",
     "repo": "https://github.com/smeet666/mcp-bideetmusique",
     "status": "active",
     "isLatest": true
@@ -43402,7 +44394,7 @@
   {
     "name": "io.github.lozit/mcp-freestyle",
     "npm": "mcp-freestyle",
-    "version": "0.1.3",
+    "version": "0.1.4",
     "repo": "https://github.com/lozit/mcp-freestyle",
     "status": "active",
     "isLatest": true
@@ -43452,6 +44444,14 @@
     "npm": "mcp-google-ads",
     "version": "1.0.1",
     "repo": "https://github.com/mharnett/mcp-google-ads",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.leonardosepulvedat/mcp-google-analytics",
+    "npm": "mcp-google-analytics",
+    "version": "1.3.0",
+    "repo": "https://github.com/leonardosepulvedat/mcp-google-analytics",
     "status": "active",
     "isLatest": true
   },
@@ -43594,7 +44594,7 @@
   {
     "name": "io.studiomeyer/hook-conformance",
     "npm": "mcp-hook-conformance",
-    "version": "0.1.1",
+    "version": "0.1.3",
     "repo": "https://github.com/studiomeyer-io/mcp-hook-conformance",
     "status": "active",
     "isLatest": true
@@ -43610,7 +44610,7 @@
   {
     "name": "io.github.shinpr/mcp-image",
     "npm": "mcp-image",
-    "version": "0.12.2",
+    "version": "0.13.0",
     "repo": "https://github.com/shinpr/mcp-image",
     "status": "active",
     "isLatest": true
@@ -43834,7 +44834,7 @@
   {
     "name": "io.github.shinpr/mcp-local-rag",
     "npm": "mcp-local-rag",
-    "version": "0.17.4",
+    "version": "0.18.0",
     "repo": "https://github.com/shinpr/mcp-local-rag",
     "status": "active",
     "isLatest": true
@@ -43984,6 +44984,22 @@
     "isLatest": true
   },
   {
+    "name": "io.github.gistrec/mcp-mysql-client",
+    "npm": "mcp-mysql-client",
+    "version": "1.0.0",
+    "repo": "https://github.com/gistrec/mcp-mysql-client",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.leonardosepulvedat/mcp-n8n",
+    "npm": "mcp-n8n",
+    "version": "1.5.0",
+    "repo": "https://github.com/leonardosepulvedat/mcp-n8n",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.codeFi/mcp-nano-banana",
     "npm": "mcp-nano-banana",
     "version": "1.2.2",
@@ -44096,6 +45112,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.tobee89/mcp-paperless-ngx",
+    "npm": "mcp-paperless-ngx",
+    "version": "0.1.1",
+    "repo": "https://github.com/tobee89/mcp-paperless-ngx",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.studiomeyer/personal-suite",
     "npm": "mcp-personal-suite",
     "version": "0.5.6",
@@ -44194,7 +45218,7 @@
   {
     "name": "io.studiomeyer/protocol-conformance",
     "npm": "mcp-protocol-conformance",
-    "version": "0.1.1",
+    "version": "0.2.1",
     "repo": "https://github.com/studiomeyer-io/mcp-protocol-conformance",
     "status": "active",
     "isLatest": true
@@ -44354,7 +45378,7 @@
   {
     "name": "io.github.ihor-sokoliuk/mcp-searxng",
     "npm": "mcp-searxng",
-    "version": "1.15.0",
+    "version": "2.0.0",
     "repo": "https://github.com/ihor-sokoliuk/mcp-searxng",
     "status": "active",
     "isLatest": true
@@ -44578,7 +45602,7 @@
   {
     "name": "io.github.paulhkang94/markview",
     "npm": "mcp-server-markview",
-    "version": "1.7.1",
+    "version": "1.7.2",
     "repo": "https://github.com/paulhkang94/markview",
     "status": "active",
     "isLatest": true
@@ -44674,7 +45698,7 @@
   {
     "name": "app.scfcontrolsplatform/mcp-server-scf",
     "npm": "mcp-server-scf",
-    "version": "2.0.1",
+    "version": "2.1.0",
     "repo": "https://github.com/MarkAC007/mcp-server-scf",
     "status": "active",
     "isLatest": true
@@ -44746,7 +45770,7 @@
   {
     "name": "io.github.mereditharmcgee/the-commons",
     "npm": "mcp-server-the-commons",
-    "version": "1.6.0",
+    "version": "1.7.0",
     "repo": "https://github.com/mereditharmcgee/the-commons",
     "status": "active",
     "isLatest": true
@@ -44788,6 +45812,14 @@
     "npm": "mcp-server-xtrust",
     "version": "1.0.2",
     "repo": "https://github.com/xtrustinfo/mcp-server-xtrust",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.A1-x-Tech/mcp-shopify-admin",
+    "npm": "mcp-shopify-admin",
+    "version": "1.1.0",
+    "repo": "https://github.com/A1-x-Tech/mcp-shopify-admin",
     "status": "active",
     "isLatest": true
   },
@@ -44890,7 +45922,7 @@
   {
     "name": "io.studiomeyer/stdio-shellguard",
     "npm": "mcp-stdio-shellguard",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/studiomeyer-io/mcp-stdio-shellguard",
     "status": "active",
     "isLatest": true
@@ -44930,7 +45962,7 @@
   {
     "name": "io.github.subodhkc/mcp-tenant-isolation",
     "npm": "mcp-tenant-isolation",
-    "version": "1.6.2",
+    "version": "2.0.0",
     "repo": "https://github.com/subodhkc/mcp-tenant-isolation",
     "status": "active",
     "isLatest": true
@@ -44938,7 +45970,7 @@
   {
     "name": "io.studiomeyer/tenant-pair",
     "npm": "mcp-tenant-pair-demo",
-    "version": "0.1.1",
+    "version": "0.1.2",
     "repo": "https://github.com/studiomeyer-io/mcp-tenant-pair",
     "status": "active",
     "isLatest": true
@@ -44964,6 +45996,14 @@
     "npm": "mcp-token-optimizer",
     "version": "0.1.1",
     "repo": "https://github.com/rccola990-cloud/mcp-token-optimizer",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.glira/mcp-tomticket",
+    "npm": "mcp-tomticket",
+    "version": "1.0.0",
+    "repo": "https://github.com/glira/mcp-tomticket",
     "status": "active",
     "isLatest": true
   },
@@ -45098,7 +46138,7 @@
   {
     "name": "io.github.gistrec/mcp-yandex-kit",
     "npm": "mcp-yandex-kit",
-    "version": "1.4.0",
+    "version": "1.5.0",
     "repo": "https://github.com/ztemerbekov/a1-yandex-kit-skills",
     "status": "active",
     "isLatest": true
@@ -45164,6 +46204,14 @@
     "npm": "mcpbrowser",
     "version": "0.2.1",
     "repo": "https://github.com/cherchyk/MCPBrowser",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "dev.mcpcomp/diagnostics",
+    "npm": "mcpcomp",
+    "version": "0.6.1",
+    "repo": null,
     "status": "active",
     "isLatest": true
   },
@@ -45252,6 +46300,14 @@
     "npm": "media-context-mcp",
     "version": "0.1.4",
     "repo": "https://github.com/vishalguptax/media-context-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Cripacx/mediagen",
+    "npm": "mediagen",
+    "version": "0.3.0",
+    "repo": "https://github.com/Cripacx/mediagen",
     "status": "active",
     "isLatest": true
   },
@@ -45418,7 +46474,7 @@
   {
     "name": "io.github.AVIDS2/memorix",
     "npm": "memorix",
-    "version": "1.7.2",
+    "version": "1.8.1",
     "repo": "https://github.com/AVIDS2/memorix",
     "status": "active",
     "isLatest": true
@@ -45434,7 +46490,7 @@
   {
     "name": "io.github.apurv101/memory-vault",
     "npm": "memory-vault",
-    "version": "0.2.2",
+    "version": "0.3.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -45458,7 +46514,7 @@
   {
     "name": "io.github.MarcelRoozekrans/memorylens-mcp",
     "npm": "memorylens-mcp",
-    "version": "1.7.1",
+    "version": "2.1.2",
     "repo": "https://github.com/MarcelRoozekrans/memorylens-mcp",
     "status": "active",
     "isLatest": true
@@ -45530,7 +46586,7 @@
   {
     "name": "io.github.tci-nebula/mermaid-render-mcp",
     "npm": "mermaid-render-mcp",
-    "version": "1.2.0",
+    "version": "1.3.0",
     "repo": "https://github.com/tci-nebula/mermaid-mcp",
     "status": "active",
     "isLatest": true
@@ -45556,6 +46612,14 @@
     "npm": "meshcheck-mcp",
     "version": "0.1.1",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.trondbjoroy/met-mcp",
+    "npm": "met-mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/trondbjoroy/met-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -45666,7 +46730,7 @@
   {
     "name": "io.github.AliKarami/mikromcp",
     "npm": "mikromcp",
-    "version": "1.9.0",
+    "version": "1.10.0",
     "repo": "https://github.com/AliKarami/MikroMCP",
     "status": "active",
     "isLatest": true
@@ -46298,7 +47362,7 @@
   {
     "name": "com.mythsensus/mythsensus-mcp",
     "npm": "mythsensus-mcp",
-    "version": "0.3.7",
+    "version": "0.3.10",
     "repo": "https://github.com/PattrickChenforclaudeuse/mythsensus-mcp",
     "status": "active",
     "isLatest": true
@@ -46520,6 +47584,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.sincekmori/negirau",
+    "npm": "negirau-mcp",
+    "version": "0.2.0",
+    "repo": "https://github.com/sincekmori/negirau",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.SpicyRiceCakes/nelly-elephant-mcp",
     "npm": "nelly-elephant-mcp",
     "version": "1.0.3",
@@ -46572,6 +47644,14 @@
     "npm": "neural-memory-mcp",
     "version": "4.27.2",
     "repo": "https://github.com/nhadaututtheky/neural-memory",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.neurarch-ai/neurarch-mcp",
+    "npm": "neurarch-mcp",
+    "version": "0.9.1",
+    "repo": "https://github.com/neurarch-ai/neurarch-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -46674,7 +47754,7 @@
   {
     "name": "io.github.paivapiovesan/next-finance",
     "npm": "next-finance-mcp",
-    "version": "0.9.149",
+    "version": "0.9.154",
     "repo": "https://github.com/paivapiovesan/next-finance-mcp",
     "status": "active",
     "isLatest": true
@@ -46698,7 +47778,7 @@
   {
     "name": "io.github.yaminbkk/nexusmem",
     "npm": "nexusmem",
-    "version": "0.3.2",
+    "version": "0.8.0",
     "repo": "https://github.com/yaminbkk/NexusMem",
     "status": "active",
     "isLatest": true
@@ -46754,7 +47834,7 @@
   {
     "name": "io.github.node-opcua/node-opcua-modeler-mcp-server",
     "npm": "node-opcua-modeler-mcp-server",
-    "version": "1.4.2",
+    "version": "1.5.0",
     "repo": "https://github.com/node-opcua/node-opcua-modeler-mcp-server",
     "status": "active",
     "isLatest": true
@@ -46828,6 +47908,14 @@
     "npm": "norolu-frameworks-mcp",
     "version": "0.1.3",
     "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.trondbjoroy/norway-location-transport-mcp",
+    "npm": "norway-location-transport-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/trondbjoroy/norway-location-transport-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -46922,7 +48010,7 @@
   {
     "name": "io.github.cyanheads/ntfy-mcp-server",
     "npm": "ntfy-mcp-server",
-    "version": "2.3.0",
+    "version": "2.3.2",
     "repo": "https://github.com/cyanheads/ntfy-mcp-server",
     "status": "active",
     "isLatest": true
@@ -47106,7 +48194,7 @@
   {
     "name": "io.github.flowing-abyss/obsidian-hybrid-search",
     "npm": "obsidian-hybrid-search",
-    "version": "0.15.0",
+    "version": "0.15.1",
     "repo": "https://github.com/flowing-abyss/obsidian-hybrid-search",
     "status": "active",
     "isLatest": true
@@ -47122,7 +48210,7 @@
   {
     "name": "io.github.cyanheads/obsidian-mcp-server",
     "npm": "obsidian-mcp-server",
-    "version": "3.2.12",
+    "version": "3.5.0",
     "repo": "https://github.com/cyanheads/obsidian-mcp-server",
     "status": "active",
     "isLatest": true
@@ -47132,6 +48220,22 @@
     "npm": "obsidian-sync-mcp",
     "version": "0.5.2",
     "repo": "https://github.com/es617/obsidian-sync-mcp.git",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Taump/obyte-mcp",
+    "npm": "obyte-mcp",
+    "version": "0.3.1",
+    "repo": "https://github.com/Taump/obyte-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.chrisssun18-bot/oceanalt-aml",
+    "npm": "oceanalt-aml-mcp",
+    "version": "0.2.1",
+    "repo": "https://github.com/chrisssun18-bot/oceanalt",
     "status": "active",
     "isLatest": true
   },
@@ -47234,7 +48338,7 @@
   {
     "name": "io.github.chrischall/ofw-mcp",
     "npm": "ofw-mcp",
-    "version": "2.10.2",
+    "version": "2.11.0",
     "repo": "https://github.com/chrischall/ofw-mcp",
     "status": "active",
     "isLatest": true
@@ -47290,7 +48394,7 @@
   {
     "name": "io.github.omitly/omitly-mcp",
     "npm": "omitly-mcp",
-    "version": "0.1.14",
+    "version": "0.1.15",
     "repo": "https://github.com/omitly/omitly-mcp",
     "status": "active",
     "isLatest": true
@@ -47426,7 +48530,7 @@
   {
     "name": "io.github.mrosnerr/open-zk-kb",
     "npm": "open-zk-kb",
-    "version": "1.4.3",
+    "version": "1.4.4",
     "repo": "https://github.com/mrosnerr/open-zk-kb",
     "status": "active",
     "isLatest": true
@@ -47626,7 +48730,7 @@
   {
     "name": "io.github.The-OpenROAD-Project/openroad-mcp",
     "npm": "openroad-mcp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repo": "https://github.com/The-OpenROAD-Project/openroad-mcp",
     "status": "active",
     "isLatest": true
@@ -47666,7 +48770,7 @@
   {
     "name": "io.github.Kentucky-ai/opentakeoff",
     "npm": "opentakeoff-mcp",
-    "version": "0.9.49",
+    "version": "0.9.63",
     "repo": "https://github.com/Kentucky-ai/opentakeoff",
     "status": "active",
     "isLatest": true
@@ -47760,6 +48864,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.ECD5A/orchestrui",
+    "npm": "orchestrui",
+    "version": "0.3.0",
+    "repo": "https://github.com/ECD5A/OrchestrUI",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.npraught/orcpin",
     "npm": "orcpin-mcp",
     "version": "0.4.0",
@@ -47802,7 +48914,7 @@
   {
     "name": "io.github.MattJeff/orizn-visa-mcp",
     "npm": "orizn-visa-mcp",
-    "version": "1.2.0",
+    "version": "1.3.1",
     "repo": "https://github.com/MattJeff/orizn-mcp-server",
     "status": "active",
     "isLatest": true
@@ -48056,6 +49168,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.ruslanlap/pagespeed-insights-mcp",
+    "npm": "pagespeed-insights-mcp",
+    "version": "1.5.3",
+    "repo": "https://github.com/ruslanlap/pagespeed-insights-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "dev.pagelens/pagewatch",
     "npm": "pagewatch-mcp",
     "version": "0.1.0",
@@ -48186,7 +49306,7 @@
   {
     "name": "io.github.patchloom/patchloom",
     "npm": "patchloom",
-    "version": "0.28.1",
+    "version": "0.30.0",
     "repo": "https://github.com/patchloom/patchloom",
     "status": "active",
     "isLatest": true
@@ -48362,7 +49482,7 @@
   {
     "name": "io.github.Nizoka/pdfnative-mcp",
     "npm": "pdfnative-mcp",
-    "version": "1.5.0",
+    "version": "1.6.0",
     "repo": "https://github.com/Nizoka/pdfnative-mcp",
     "status": "active",
     "isLatest": true
@@ -48698,7 +49818,7 @@
   {
     "name": "io.github.chuofringer/placeroot",
     "npm": "placeroot",
-    "version": "0.9.7",
+    "version": "0.9.9",
     "repo": "https://github.com/chuofringer/placeroot",
     "status": "active",
     "isLatest": true
@@ -48786,7 +49906,7 @@
   {
     "name": "io.github.ostapondo/plonk",
     "npm": "plonk-mcp",
-    "version": "0.3.2",
+    "version": "0.3.5",
     "repo": "https://github.com/ostapondo/plonk",
     "status": "active",
     "isLatest": true
@@ -48994,7 +50114,7 @@
   {
     "name": "io.github.CodesWhat/portkey-admin-mcp",
     "npm": "portkey-admin-mcp",
-    "version": "0.9.0",
+    "version": "0.10.1",
     "repo": "https://github.com/CodesWhat/portkey-admin-mcp",
     "status": "active",
     "isLatest": true
@@ -49122,7 +50242,7 @@
   {
     "name": "io.github.Perufitlife/postwire-mcp",
     "npm": "postwire-mcp",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repo": "https://github.com/Perufitlife/postwire-mcp",
     "status": "active",
     "isLatest": true
@@ -49160,10 +50280,10 @@
     "isLatest": true
   },
   {
-    "name": "io.github.IMRRD/powershell-mcp",
-    "npm": "powershell-mcp",
-    "version": "0.3.1",
-    "repo": "https://github.com/IMRRD/powershell-mcp",
+    "name": "io.github.CynaCons/powerscroll",
+    "npm": "powerscroll-mcp",
+    "version": "0.67.1",
+    "repo": "https://github.com/CynaCons/PowerScroll",
     "status": "active",
     "isLatest": true
   },
@@ -49410,7 +50530,7 @@
   {
     "name": "io.github.proplineapi/propline-mcp",
     "npm": "propline-mcp",
-    "version": "0.24.0",
+    "version": "0.26.0",
     "repo": "https://github.com/proplineapi/propline-mcp",
     "status": "active",
     "isLatest": true
@@ -49680,6 +50800,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.cantbeblank96/qodercli-mcp",
+    "npm": "qodercli-mcp",
+    "version": "0.4.3",
+    "repo": "https://github.com/cantbeblank96/qodercli-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.alexey-pelykh/qontoctl",
     "npm": "qontoctl",
     "version": "3.0.1",
@@ -49810,7 +50938,7 @@
   {
     "name": "io.github.laf-rge/quickbooks-mcp",
     "npm": "quickbooks-mcp",
-    "version": "0.9.0",
+    "version": "0.10.0",
     "repo": "https://github.com/laf-rge/quickbooks-mcp",
     "status": "active",
     "isLatest": true
@@ -49962,7 +51090,7 @@
   {
     "name": "ai.ravenmcp/raven-mcp",
     "npm": "raven-mcp",
-    "version": "2.5.0",
+    "version": "2.5.1",
     "repo": "https://github.com/rhinocap/raven-mcp",
     "status": "active",
     "isLatest": true
@@ -50058,7 +51186,7 @@
   {
     "name": "io.github.ykastelnik/realevents",
     "npm": "realevents-mcp",
-    "version": "1.3.0",
+    "version": "1.4.0",
     "repo": "https://github.com/ykastelnik/realevents-mcp",
     "status": "active",
     "isLatest": true
@@ -50184,6 +51312,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.sergey-goncharenko/redpill",
+    "npm": "redpill-mcp",
+    "version": "0.1.3",
+    "repo": "https://github.com/sergey-goncharenko/redpill-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.tryreelestate/reel-estate-mcp",
     "npm": "reel-estate-mcp",
     "version": "0.3.4",
@@ -50290,7 +51426,7 @@
   {
     "name": "io.github.47-ronn/remote-agents",
     "npm": "remote-agents",
-    "version": "0.1.37",
+    "version": "0.1.40",
     "repo": "https://github.com/47-ronn/tunshell_mcp_agents",
     "status": "active",
     "isLatest": true
@@ -50536,6 +51672,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.parikshitmadahar/rightcard-mcp",
+    "npm": "rightcard-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/parikshitmadahar/rightcard-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.RPER2001/rigshare",
     "npm": "rigshare-mcp",
     "version": "1.4.0",
@@ -50636,6 +51780,14 @@
     "npm": "rn-devtools-hub",
     "version": "0.15.1",
     "repo": "https://github.com/rn-devtools-hub/rn-devtools-hub",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.gregkozakiewicz/roast-my-design-system",
+    "npm": "roast-my-design-system",
+    "version": "5.2.4",
+    "repo": "https://github.com/gregkozakiewicz/roast-my-design-system",
     "status": "active",
     "isLatest": true
   },
@@ -50754,7 +51906,7 @@
   {
     "name": "io.github.MarcelRoozekrans/roslyn-codelens",
     "npm": "roslyn-codelens-mcp",
-    "version": "2.17.0",
+    "version": "2.18.0",
     "repo": "https://github.com/MarcelRoozekrans/roslyn-codelens-mcp",
     "status": "active",
     "isLatest": true
@@ -50866,7 +52018,7 @@
   {
     "name": "one.faf/rust-faf-mcp",
     "npm": "rust-faf-mcp",
-    "version": "0.4.1",
+    "version": "0.4.3",
     "repo": "https://github.com/Wolfe-Jam/rust-faf-mcp",
     "status": "active",
     "isLatest": true
@@ -50938,7 +52090,7 @@
   {
     "name": "io.github.achiya-automation/safari-mcp",
     "npm": "safari-mcp",
-    "version": "2.16.1",
+    "version": "2.16.3",
     "repo": "https://github.com/achiya-automation/safari-mcp",
     "status": "active",
     "isLatest": true
@@ -51130,7 +52282,7 @@
   {
     "name": "com.sapiensinteticos/sapiens",
     "npm": "sapiens-mcp",
-    "version": "1.56.1",
+    "version": "1.59.1",
     "repo": "https://github.com/inhabitants/sapiens-mcp",
     "status": "active",
     "isLatest": true
@@ -51354,7 +52506,7 @@
   {
     "name": "io.github.JuanCF/scrcpy-mcp",
     "npm": "scrcpy-mcp",
-    "version": "0.4.1",
+    "version": "0.5.0",
     "repo": "https://github.com/JuanCF/scrcpy-mcp",
     "status": "active",
     "isLatest": true
@@ -51410,7 +52562,7 @@
   {
     "name": "store.scvd/tab",
     "npm": "scvd-tab",
-    "version": "0.4.3",
+    "version": "0.5.0",
     "repo": "https://github.com/seancrecord/scvd-general-store-repo",
     "status": "active",
     "isLatest": true
@@ -51496,6 +52648,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.yyeongjin/secret-mcp",
+    "npm": "secret-design-mcp",
+    "version": "0.6.0",
+    "repo": "https://github.com/yyeongjin/secret_mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.irrenwill/secret-safe-env",
     "npm": "secret-safe-env",
     "version": "0.1.2",
@@ -51506,7 +52666,7 @@
   {
     "name": "io.github.jyswee/secretcarousel",
     "npm": "secretcarousel",
-    "version": "2.13.0",
+    "version": "2.15.0",
     "repo": "https://github.com/jyswee/secretcarousel",
     "status": "active",
     "isLatest": true
@@ -51546,7 +52706,7 @@
   {
     "name": "st.seedfa/seedfast",
     "npm": "seedfast",
-    "version": "2.5.1",
+    "version": "2.6.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -51570,7 +52730,7 @@
   {
     "name": "io.github.shaqmughal/seekstone",
     "npm": "seekstone",
-    "version": "0.13.1",
+    "version": "0.15.0",
     "repo": "https://github.com/shaqmughal/seekstone",
     "status": "active",
     "isLatest": true
@@ -51626,7 +52786,7 @@
   {
     "name": "io.github.nteract/semiotic",
     "npm": "semiotic",
-    "version": "3.8.9",
+    "version": "3.9.1",
     "repo": "https://github.com/nteract/semiotic",
     "status": "active",
     "isLatest": true
@@ -51634,7 +52794,7 @@
   {
     "name": "io.github.kyungseopk1m/semver-checks",
     "npm": "semver-checks",
-    "version": "0.10.0",
+    "version": "0.12.0",
     "repo": "https://github.com/kyungseopk1m/semver-checks",
     "status": "active",
     "isLatest": true
@@ -51914,7 +53074,7 @@
   {
     "name": "io.github.PranavNagrecha/sf-intelligence",
     "npm": "sf-intelligence",
-    "version": "0.3.0",
+    "version": "0.3.1",
     "repo": "https://github.com/PranavNagrecha/Salesforce-Intelligence",
     "status": "active",
     "isLatest": true
@@ -52080,6 +53240,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.alex-brecher/shopify-multi-store",
+    "npm": "shopify-multi-store-mcp-server",
+    "version": "1.5.0",
+    "repo": "https://github.com/alex-brecher/shopify-multi-store",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.jpka/shopify-operations-mcp",
     "npm": "shopify-operations-mcp",
     "version": "0.1.2",
@@ -52218,7 +53386,7 @@
   {
     "name": "io.github.TranQui004/signalint",
     "npm": "signalint-mcp",
-    "version": "0.3.7",
+    "version": "0.4.0",
     "repo": "https://github.com/TranQui004/signalint",
     "status": "active",
     "isLatest": true
@@ -52418,7 +53586,7 @@
   {
     "name": "io.github.skillselion/skillselion-mcp",
     "npm": "skillselion-mcp",
-    "version": "0.9.6",
+    "version": "0.9.10",
     "repo": "https://github.com/skillselion/skillselion-mcp",
     "status": "active",
     "isLatest": true
@@ -52442,7 +53610,7 @@
   {
     "name": "io.github.JessieJanie/skim402",
     "npm": "skim-mcp",
-    "version": "0.1.6",
+    "version": "0.1.9",
     "repo": "https://github.com/JessieJanie/skim402.git",
     "status": "active",
     "isLatest": true
@@ -52570,7 +53738,7 @@
   {
     "name": "io.github.msdanyg/smart-connections-mcp",
     "npm": "smart-connections-mcp",
-    "version": "2.0.0",
+    "version": "2.0.1",
     "repo": "https://github.com/msdanyg/smart-connections-mcp",
     "status": "active",
     "isLatest": true
@@ -52594,7 +53762,7 @@
   {
     "name": "io.github.jojo-labs/smart-web",
     "npm": "smart-web-mcp",
-    "version": "0.43.8",
+    "version": "0.44.0",
     "repo": "https://github.com/jojo-labs/smart-web",
     "status": "active",
     "isLatest": true
@@ -52644,6 +53812,14 @@
     "npm": "snapforge-mcp",
     "version": "1.3.0",
     "repo": "https://github.com/sporty303/snapforge-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.reeinharddd/snapmcp",
+    "npm": "snapmcp",
+    "version": "2.3.2",
+    "repo": "https://github.com/reeinharddd/snapmcp",
     "status": "active",
     "isLatest": true
   },
@@ -52800,6 +53976,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.medianemi-beep/soma",
+    "npm": "soma-verify-mcp",
+    "version": "0.1.0",
+    "repo": "https://github.com/medianemi-beep/soma-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.rekordcloud/sonovault",
     "npm": "sonovault-mcp",
     "version": "1.0.2",
@@ -52914,7 +54098,7 @@
   {
     "name": "io.github.spacefast/mcp",
     "npm": "spacefast",
-    "version": "0.0.24",
+    "version": "0.0.26",
     "repo": "https://github.com/spacefast/plugins",
     "status": "active",
     "isLatest": true
@@ -53016,6 +54200,14 @@
     "isLatest": true
   },
   {
+    "name": "ai.spiderbrain/spiderbrain",
+    "npm": "spiderbrain",
+    "version": "0.2.3",
+    "repo": "https://github.com/aabhisrv/Spiderbrain.ai-Coremind",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.isaacviannadev/spikeme",
     "npm": "spikeme-mcp",
     "version": "0.5.6",
@@ -53058,7 +54250,7 @@
   {
     "name": "io.github.chrischall/splitwise-mcp",
     "npm": "splitwise-mcp",
-    "version": "2.1.6",
+    "version": "2.2.1",
     "repo": "https://github.com/chrischall/splitwise-mcp",
     "status": "active",
     "isLatest": true
@@ -53194,7 +54386,7 @@
   {
     "name": "ee.stacktr/publish",
     "npm": "stacktree-mcp",
-    "version": "0.5.0",
+    "version": "0.6.0",
     "repo": "https://github.com/stevysmith/stacktree-mcp",
     "status": "active",
     "isLatest": true
@@ -53634,7 +54826,7 @@
   {
     "name": "io.github.shinpr/sub-agents-mcp",
     "npm": "sub-agents-mcp",
-    "version": "0.12.1",
+    "version": "0.13.1",
     "repo": "https://github.com/shinpr/sub-agents-mcp",
     "status": "active",
     "isLatest": true
@@ -53692,6 +54884,14 @@
     "npm": "sundr-mcp",
     "version": "0.2.2",
     "repo": "https://github.com/KeithWyatt/sundr",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "com.supwire/sup",
+    "npm": "sup-network",
+    "version": "0.1.8",
+    "repo": null,
     "status": "active",
     "isLatest": true
   },
@@ -53826,7 +55026,7 @@
   {
     "name": "io.github.mikimatsub/swsd",
     "npm": "swsd-mcp",
-    "version": "2.3.0",
+    "version": "2.3.1",
     "repo": "https://github.com/mikimatsub/swsd-mcp",
     "status": "active",
     "isLatest": true
@@ -53884,6 +55084,14 @@
     "npm": "tablafocus-mcp",
     "version": "0.1.1",
     "repo": "https://github.com/sreeramkongeseri/TablaFocusMCP",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.andey0Saikiran/tableau-lineage",
+    "npm": "tableau-lineage-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/andey0Saikiran/tableau-lineage",
     "status": "active",
     "isLatest": true
   },
@@ -54032,18 +55240,26 @@
     "isLatest": true
   },
   {
-    "name": "io.github.aarwitz/tapp",
-    "npm": "tapp-mcp",
-    "version": "0.10.0",
-    "repo": "https://github.com/aarwitz/tapp",
-    "status": "active",
-    "isLatest": true
-  },
-  {
     "name": "io.github.mgriffen/tapsite",
     "npm": "tapsite",
     "version": "4.0.1",
     "repo": "https://github.com/mgriffen/tapsite",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.mickeyappol-create/target5",
+    "npm": "target5-mcp",
+    "version": "0.1.1",
+    "repo": "https://github.com/mickeyappol-create/target5-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.opsloft/tariff-resolver",
+    "npm": "tariff-resolver",
+    "version": "1.0.2",
+    "repo": "https://github.com/opsloft/tariff-resolver",
     "status": "active",
     "isLatest": true
   },
@@ -54208,6 +55424,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.nileshpatil6/telegram-slack-mcp",
+    "npm": "telegram-slack-mcp",
+    "version": "0.3.0",
+    "repo": "https://github.com/nileshpatil6/telegram-slack-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.telegraphprotocol/telegraph",
     "npm": "telegraph-protocol-mcp",
     "version": "1.0.0",
@@ -54364,6 +55588,14 @@
     "npm": "testdino-mcp",
     "version": "1.0.2",
     "repo": "https://github.com/testdino-inc/testdino-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Eason0in/testlink-mcp",
+    "npm": "testlink-mcp",
+    "version": "1.0.3",
+    "repo": "https://github.com/Eason0in/testlink-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -54608,6 +55840,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.Sandeeprdy1729/timps-swarm",
+    "npm": "timps-swarm",
+    "version": "2.2.3",
+    "repo": "https://github.com/Sandeeprdy1729/timps-swarm",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.RamaAditya49/titen-memory",
     "npm": "titen-memory",
     "version": "0.7.2",
@@ -54650,7 +55890,7 @@
   {
     "name": "io.github.gilesdawe/tokei-agent",
     "npm": "tokei-agent",
-    "version": "0.3.3",
+    "version": "0.3.4",
     "repo": "https://github.com/gilesdawe/tokei-agent",
     "status": "active",
     "isLatest": true
@@ -54738,7 +55978,7 @@
   {
     "name": "com.tokportal/mcp",
     "npm": "tokportal-mcp",
-    "version": "1.12.1",
+    "version": "1.13.1",
     "repo": "https://github.com/tokportal/tokportal-mcp",
     "status": "active",
     "isLatest": true
@@ -54778,7 +56018,7 @@
   {
     "name": "io.github.Nadeus/toolradar",
     "npm": "toolradar-mcp",
-    "version": "1.0.1",
+    "version": "2.1.0",
     "repo": "https://github.com/Nadeus/toolradar-mcp",
     "status": "active",
     "isLatest": true
@@ -54866,7 +56106,7 @@
   {
     "name": "io.github.tracetify/tracetify-mcp",
     "npm": "tracetify-mcp",
-    "version": "0.3.0",
+    "version": "0.4.0",
     "repo": "https://github.com/tracetify/tracetify-mcp",
     "status": "active",
     "isLatest": true
@@ -55028,6 +56268,14 @@
     "npm": "tronbyt-mcp",
     "version": "0.1.0",
     "repo": "https://github.com/jonfishr/tronbyt-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Shann5/true-solar-time",
+    "npm": "true-solar-time-mcp",
+    "version": "1.0.1",
+    "repo": "https://github.com/Shann5/true-solar-time-mcp",
     "status": "active",
     "isLatest": true
   },
@@ -55288,10 +56536,26 @@
     "isLatest": true
   },
   {
+    "name": "io.github.AlexanderKaan/uisandbox",
+    "npm": "uisandbox-mcp",
+    "version": "0.3.2",
+    "repo": "https://github.com/AlexanderKaan/uisandbox",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.mishaovcharenko/uiscanner",
     "npm": "uiscanner-mcp",
     "version": "0.3.1",
     "repo": "https://github.com/mishaovcharenko/uiscanner",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.yusufcemres/uisight",
+    "npm": "uisight",
+    "version": "0.1.3",
+    "repo": "https://github.com/sololabstr/uisight",
     "status": "active",
     "isLatest": true
   },
@@ -55330,7 +56594,7 @@
   {
     "name": "io.github.emergent-wisdom/understanding-graph",
     "npm": "understanding-graph",
-    "version": "0.1.5",
+    "version": "0.1.29",
     "repo": "https://github.com/emergent-wisdom/understanding-graph",
     "status": "active",
     "isLatest": true
@@ -55434,7 +56698,7 @@
   {
     "name": "io.github.chrischall/untappd-mcp",
     "npm": "untappd-mcp",
-    "version": "1.8.6",
+    "version": "1.8.7",
     "repo": "https://github.com/chrischall/untappd-mcp",
     "status": "active",
     "isLatest": true
@@ -55466,7 +56730,7 @@
   {
     "name": "com.uptybots/monitoring",
     "npm": "uptybots-mcp-server",
-    "version": "1.0.6",
+    "version": "1.3.1",
     "repo": null,
     "status": "active",
     "isLatest": true
@@ -55690,7 +56954,7 @@
   {
     "name": "io.github.shunyagatha/vecline",
     "npm": "vecline",
-    "version": "2.1.1",
+    "version": "2.1.4",
     "repo": "https://github.com/shunyagatha/Vecline",
     "status": "active",
     "isLatest": true
@@ -55722,7 +56986,7 @@
   {
     "name": "com.dethboy/vedetta",
     "npm": "vedetta-mcp",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "repo": "https://github.com/lacryptorina/vedetta-mcp",
     "status": "active",
     "isLatest": true
@@ -55952,6 +57216,14 @@
     "isLatest": true
   },
   {
+    "name": "com.viberevert/viberevert",
+    "npm": "viberevert",
+    "version": "0.7.1-beta.4",
+    "repo": "https://github.com/madeinplutofabio/vibe-revert",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.pooriaarab/vibeshare-live",
     "npm": "vibeshare-live",
     "version": "0.2.5",
@@ -56016,6 +57288,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.VinvAI/vinv",
+    "npm": "vinv-mcp",
+    "version": "0.0.5",
+    "repo": "https://github.com/VinvAI/VinvAI",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "com.vipsallowed/vips",
     "npm": "vipsallowed",
     "version": "1.2.1",
@@ -56068,6 +57348,14 @@
     "npm": "visus-mcp",
     "version": "0.6.1",
     "repo": "https://github.com/visus-mcp/visus-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.Backas03/vitaminmcp",
+    "npm": "vitaminmcp",
+    "version": "3.0.0",
+    "repo": "https://github.com/Backas03/VitaminMCP-minecraft",
     "status": "active",
     "isLatest": true
   },
@@ -56272,6 +57560,14 @@
     "isLatest": true
   },
   {
+    "name": "io.github.rynald0cst0ltziam/warden",
+    "npm": "warden-ai",
+    "version": "0.7.1",
+    "repo": null,
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.sukrutkrdg/warden402-mcp",
     "npm": "warden402-mcp",
     "version": "0.1.0",
@@ -56336,10 +57632,26 @@
     "isLatest": true
   },
   {
+    "name": "io.github.MirrorEdgeAI/waves",
+    "npm": "waves-mcp",
+    "version": "0.5.3",
+    "repo": "https://github.com/MirrorEdgeAI/waves-claude",
+    "status": "active",
+    "isLatest": true
+  },
+  {
     "name": "io.github.YarnSh39/wavestreamer",
     "npm": "wavestreamer-mcp",
     "version": "0.1.3",
     "repo": "https://github.com/YarnSh39/wavestreamer",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.razvangirgiz/wazap",
+    "npm": "wazap-mcp",
+    "version": "0.10.0",
+    "repo": "https://github.com/razvangirgiz/wazap",
     "status": "active",
     "isLatest": true
   },
@@ -56378,7 +57690,7 @@
   {
     "name": "io.github.sergii-ziborov/weavatrix",
     "npm": "weavatrix",
-    "version": "1.8.0",
+    "version": "1.9.0",
     "repo": "https://github.com/sergii-ziborov/weavatrix",
     "status": "active",
     "isLatest": true
@@ -56402,7 +57714,7 @@
   {
     "name": "io.github.sergii-ziborov/weavatrix-online",
     "npm": "weavatrix-online",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "repo": "https://github.com/sergii-ziborov/weavatrix-online",
     "status": "active",
     "isLatest": true
@@ -56410,7 +57722,7 @@
   {
     "name": "io.github.sergii-ziborov/weavatrix-refactor",
     "npm": "weavatrix-refactor",
-    "version": "1.0.6",
+    "version": "1.0.8",
     "repo": "https://github.com/sergii-ziborov/weavatrix-refactor",
     "status": "active",
     "isLatest": true
@@ -56474,7 +57786,7 @@
   {
     "name": "io.github.vuluu2k/webcake-landing-mcp",
     "npm": "webcake-landing-mcp",
-    "version": "1.5.0",
+    "version": "1.5.1",
     "repo": "https://github.com/vuluu2k/webcake-landing-mcp",
     "status": "active",
     "isLatest": true
@@ -56492,6 +57804,14 @@
     "npm": "webcheck-mcp",
     "version": "0.1.3",
     "repo": "https://github.com/yifanyifan897645/webcheck-mcp",
+    "status": "active",
+    "isLatest": true
+  },
+  {
+    "name": "io.github.putervision/webcrypt",
+    "npm": "webcrypt",
+    "version": "1.0.1",
+    "repo": "https://github.com/putervision/webcrypt",
     "status": "active",
     "isLatest": true
   },
@@ -56554,7 +57874,7 @@
   {
     "name": "io.github.YOLKINS/weeek-mcp",
     "npm": "weeek-mcp",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "repo": "https://github.com/YOLKINS/weeek-mcp",
     "status": "active",
     "isLatest": true
@@ -56842,7 +58162,7 @@
   {
     "name": "io.github.Wopee-io/wopee-mcp",
     "npm": "wopee-mcp",
-    "version": "1.29.1",
+    "version": "1.30.0",
     "repo": "https://github.com/Wopee-io/wopee-mcp",
     "status": "active",
     "isLatest": true
@@ -57074,7 +58394,7 @@
   {
     "name": "io.github.nirholas/xactions",
     "npm": "xactions",
-    "version": "3.4.4",
+    "version": "3.5.0",
     "repo": "https://github.com/nirholas/XActions",
     "status": "active",
     "isLatest": true
@@ -57290,7 +58610,7 @@
   {
     "name": "io.github.Dempty-glitch/z-zero-mcp",
     "npm": "z-zero-mcp-server",
-    "version": "1.9.0",
+    "version": "1.10.1",
     "repo": "https://github.com/Dempty-glitch/Z-Zero-mcp",
     "status": "active",
     "isLatest": true
