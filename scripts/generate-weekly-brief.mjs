@@ -11,7 +11,13 @@ const argValue = (flag, fallback = null) => {
 const readJson = (path) => JSON.parse(readFileSync(path, "utf8"));
 const gitJson = (path) => {
   try {
-    return JSON.parse(execFileSync("git", ["show", `HEAD:${path}`], { encoding: "utf8", stdio: ["ignore", "pipe", "ignore"] }));
+    // Production leaderboards are several MB. Node's default 1 MiB maxBuffer
+    // would ENOBUFS and silently fall through to a false baseline edition.
+    return JSON.parse(execFileSync("git", ["show", `HEAD:${path}`], {
+      encoding: "utf8",
+      stdio: ["ignore", "pipe", "ignore"],
+      maxBuffer: 64 * 1024 * 1024
+    }));
   } catch {
     return null;
   }
