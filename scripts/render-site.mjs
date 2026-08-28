@@ -242,7 +242,13 @@ html = html
 if (!html.includes('href="/llms.txt"')) {
   html = html.replace(
     '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">',
-    '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">\n  <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable project summary">\n  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">'
+    '<link rel="alternate" type="application/json" href="/leaderboard.json" title="Machine-readable leaderboard data">\n  <link rel="alternate" type="text/plain" href="/llms.txt" title="AI-readable project summary">\n  <link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">\n  <link rel="alternate" type="text/plain" href="/agents.txt" title="Agent entry points">'
+  );
+}
+if (!html.includes('href="/agents.txt"')) {
+  html = html.replace(
+    '<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">',
+    '<link rel="alternate" type="text/plain" href="/llms-full.txt" title="Complete AI-readable ranking">\n  <link rel="alternate" type="text/plain" href="/agents.txt" title="Agent entry points">'
   );
 }
 if (!html.includes('/_vercel/insights/script.js')) {
@@ -549,6 +555,34 @@ Each entry links to a canonical HTML scorecard with visible check-level evidence
 ${scored.map((result, index) => `${index + 1}. [${result.npm}](${serverUrl(result.npm)}) — ${result.score}/100; biggest gap: ${result.topGap || "none reported"}`).join("\n")}
 `;
 writeFileSync("site/llms-full.txt", llmsFull);
+
+const agents = `# MCP Leaderboard agent entry points
+
+HOME ${ORIGIN}/
+RANKINGS ${ORIGIN}/rankings/2
+LATEST_WEEKLY ${ORIGIN}/issues/latest/
+LATEST_WEEKLY_JSON ${ORIGIN}/issues/latest.json
+DATASET ${ORIGIN}/leaderboard.json
+SUMMARY ${ORIGIN}/llms.txt
+FULL_INDEX ${ORIGIN}/llms-full.txt
+SITEMAP ${ORIGIN}/sitemap.xml
+WEEKLY_FEED ${ORIGIN}/issues/feed.xml
+METHODOLOGY ${ORIGIN}/#method
+SOURCE https://github.com/davidmosiah/mcp-leaderboard
+ENGINE https://github.com/davidmosiah/mcp-scorecard
+REGISTRY https://registry.modelcontextprotocol.io
+
+Updated: ${data.generatedAt}
+Corpus servers: ${data.counts.total}
+Scored servers: ${data.counts.scored}
+Unreachable servers: ${data.counts.unreachable}
+Deferred servers: ${data.counts.deferred}
+
+# Interpretation
+
+The board measures agent-readiness shape and metadata. It does not certify correctness, security, uptime or business quality. Unreachable is a separate state, not a disguised zero. The editorial surface contains no paid ranking or placement.
+`;
+writeFileSync("site/agents.txt", agents);
 
 copyFileSync("data/leaderboard.json", "site/leaderboard.json");
 console.log(`rendered site/ — ${scored.length} scorecards, ${pageCount} ranking pages, generated ${dateShort}`);

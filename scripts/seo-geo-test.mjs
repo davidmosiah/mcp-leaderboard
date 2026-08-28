@@ -46,6 +46,7 @@ assert.ok(scored.length > 100, "fixture must contain a substantive scored corpus
 
 const index = secondIndex;
 assertAnalytics(index, "root");
+assert.match(index, /href="\/agents\.txt"/);
 assert.doesNotMatch(index, /GitHub Action/i, "public copy must describe the Grok Cloud refresh");
 for (const result of scored.slice(0, 100)) {
   assert.match(index, new RegExp(`href="${serverUrl(result.npm).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}"`));
@@ -106,5 +107,12 @@ assert.match(llms, /https:\/\/leaderboard\.delx\.ai\/llms-full\.txt/);
 const llmsFull = readFileSync("site/llms-full.txt", "utf8");
 assert.match(llmsFull, new RegExp(data.generatedAt.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
 assert.match(llmsFull, new RegExp(serverUrl(scored[0].npm).replace(/[.*+?^${}()|[\]\\]/g, "\\$&")));
+
+const agents = readFileSync("site/agents.txt", "utf8");
+assert.match(agents, new RegExp(`HOME ${origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/`));
+assert.match(agents, new RegExp(`DATASET ${origin.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}/leaderboard\\.json`));
+assert.match(agents, /SITEMAP https:\/\/leaderboard\.delx\.ai\/sitemap\.xml/);
+assert.match(agents, new RegExp(`Updated: ${data.generatedAt.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}`));
+assert.doesNotMatch(agents, /GitHub Action/i);
 
 console.log(`seo/geo gate: ok (${scored.length} detail pages)`);

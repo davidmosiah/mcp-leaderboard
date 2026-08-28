@@ -1,0 +1,25 @@
+# MCP Leaderboard agent entry points
+
+HOME https://leaderboard.delx.ai/
+RANKINGS https://leaderboard.delx.ai/rankings/2
+LATEST_WEEKLY https://leaderboard.delx.ai/issues/latest/
+LATEST_WEEKLY_JSON https://leaderboard.delx.ai/issues/latest.json
+DATASET https://leaderboard.delx.ai/leaderboard.json
+SUMMARY https://leaderboard.delx.ai/llms.txt
+FULL_INDEX https://leaderboard.delx.ai/llms-full.txt
+SITEMAP https://leaderboard.delx.ai/sitemap.xml
+WEEKLY_FEED https://leaderboard.delx.ai/issues/feed.xml
+METHODOLOGY https://leaderboard.delx.ai/#method
+SOURCE https://github.com/davidmosiah/mcp-leaderboard
+ENGINE https://github.com/davidmosiah/mcp-scorecard
+REGISTRY https://registry.modelcontextprotocol.io
+
+Updated: 2026-08-24T12:38:53.956Z
+Corpus servers: 7351
+Scored servers: 4246
+Unreachable servers: 3105
+Deferred servers: 0
+
+# Interpretation
+
+The board measures agent-readiness shape and metadata. It does not certify correctness, security, uptime or business quality. Unreachable is a separate state, not a disguised zero. The editorial surface contains no paid ranking or placement.
