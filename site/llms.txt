@@ -1,4 +1,6 @@
 # MCP Leaderboard
+Parent lab: https://delx.ai/
+This property is the MCP Leaderboard. It is not Delx Commerce and not Protocol recovery.
 
 > A public, neutral ranking of npm-installable Model Context Protocol servers by agent-readiness. Every score comes from mcp-scorecard booting the server over stdio and evaluating check-level evidence. Refreshed weekly by a fail-closed Grok Cloud routine; nothing is hand-edited.
 
