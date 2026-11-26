@@ -295,6 +295,8 @@ export function renderEditionHtml(edition) {
   <title>${esc(edition.title)} · MCP Leaderboard</title>
   <meta name="description" content="${esc(description)}">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f2efe5">
   <link rel="canonical" href="${edition.canonicalUrl}">
   <link rel="alternate" type="application/json" href="${edition.machineUrl}">
   <link rel="alternate" type="application/rss+xml" href="${ORIGIN}/issues/feed.xml" title="MCP Scoreboard Weekly">
@@ -310,6 +312,21 @@ ${jsonForHtml(structuredData)}
 <body>
   <a class="skip-link" href="#main">Skip to content</a>
   <div class="paper-grid" aria-hidden="true"></div>
+  <nav class="delx-ecosystem-bar" aria-label="Delx ecosystem">
+    <div class="delx-ecosystem-bar-inner">
+      <a class="delx-eco-brand" href="https://delx.ai/">
+        <span class="delx-eco-wordmark">DELX</span>
+        <span class="delx-eco-badge">LAB</span>
+        <span class="delx-eco-sep" aria-hidden="true">·</span>
+        <span class="delx-eco-prop">MCP Leaderboard</span>
+      </a>
+      <div class="delx-eco-links">
+        <a href="https://delx.ai/">Delx Lab</a>
+        <a href="https://delx.ai/solutions/x402-pay-per-result-apis">APIs (x402)</a>
+        <a href="https://ontology.delx.ai/docs">Protocol</a>
+      </div>
+    </div>
+  </nav>
   <header class="site-header"><a class="brand" href="${ORIGIN}/"><span class="brand-index" aria-hidden="true">MCP<br>01</span><span class="brand-wordmark"><strong>Leaderboard</strong><small>Weekly evidence by Delx</small></span></a><nav class="nav"><a href="${ORIGIN}/">Leaderboard</a><a href="${ORIGIN}/issues/">Weekly</a><a class="nav-mark" href="${edition.machineUrl}">JSON ↗</a></nav></header>
   <main id="main" class="directory-main">
     <article class="scorecard-page weekly-edition">
